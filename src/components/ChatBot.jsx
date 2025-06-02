@@ -41,9 +41,19 @@ export default function ChatBot() {
     <div className="fixed bottom-6 left-6 z-50 flex flex-col items-start">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition"
+        className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full shadow-lg transition flex items-center gap-2"
       >
-        {isOpen ? <FaTimes /> : <FaRobot />}
+        {isOpen ? (
+          <>
+            <FaTimes />
+            <span>Close</span>
+          </>
+        ) : (
+          <>
+            <FaRobot />
+            <span>Chat Now</span>
+          </>
+        )}
       </button>
 
       {isOpen && (
