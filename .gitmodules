@@ -1,0 +1,3 @@
+[submodule "chatbot-server"]
+	path = chatbot-server
+	url = https://github.com/kstephens0331/amw-cooling-heating-chatbot-server.git
