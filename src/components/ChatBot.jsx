@@ -17,7 +17,7 @@ export default function ChatBot() {
     setMessages(updatedMessages);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/chat', {
+      const response = await axios.post('https://amw-cooling-heating-chatbot-server-production.up.railway.app/api/chat', {
         history: updatedMessages.map((m) => ({
           role: m.from === 'bot' ? 'assistant' : 'user',
           content: m.text,
