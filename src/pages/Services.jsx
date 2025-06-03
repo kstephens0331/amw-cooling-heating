@@ -156,10 +156,6 @@ export default function Services() {
       </section>
       <section className="bg-white py-8">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-semibold text-center text-blue-900 mb-4">Our Trusted Manufacturers</h2>
-          <p className="text-sm md:text-base text-center text-gray-700 mb-6 max-w-2xl mx-auto">
-            We partner with industry-leading manufacturers to bring you the best in HVAC technology and reliability.
-          </p>
           <ManufacturerCarousel />
         </div>
       </section>
