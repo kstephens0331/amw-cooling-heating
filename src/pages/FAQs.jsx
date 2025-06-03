@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import FinancingCTA from '../components/FinancingCTA';
+import Footer from '../components/Footer';
 
 const faqs = [
   {
@@ -488,6 +489,7 @@ export default function FAQs() {
       </section>
 
       <FinancingCTA />
+      <Footer />
     </main>
   );
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { FaCheckCircle, FaDollarSign, FaHandshake } from 'react-icons/fa';
+import Footer from '../components/Footer';
 
 export default function Financing() {
   return (
@@ -116,6 +117,7 @@ export default function Financing() {
           Let’s Get Started
         </a>
       </section>
+      <Footer />
     </main>
   );
 }

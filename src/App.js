@@ -6,18 +6,15 @@ import Navbar from './components/Navbar';
 import InstantContact from './components/InstantContact';
 import ChatBot from './components/ChatBot';
 
-// Home page sections
-import HeroSection from './components/HeroSection';
-import QuickStats from './components/QuickStats';
-import AboutUsPreview from './components/AboutUsPreview';
-import MapSection from './components/MapSection';
-
-// Full About Us page
+// Full page
 import AboutUs from './pages/AboutUs';
 import Services from './pages/Services';
 import FAQs from './pages/FAQs';
 import Financing from './pages/Financing';
 import TestimonialsPage from './pages/TestimonialsPage'
+import HomePage from './pages/HomePage';
+import Contact from './pages/Contact';
+
 
 function App() {
   return (
@@ -25,24 +22,14 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          {/* Home page */}
-          <Route
-            path="/"
-            element={
-              <main>
-                <HeroSection />
-                <QuickStats />
-                <AboutUsPreview />
-                <MapSection />
-              </main>
-            }
-          />
+          <Route path="/" element={<HomePage />} />
           {/* Full About Us page */}
           <Route path="/about" element={<AboutUs />} />
           <Route path="/services" element={<Services />} />
           <Route path="/faqs" element={<FAQs />} />
           <Route path="/financing" element={<Financing />} />
           <Route path="/testimonials" element={<TestimonialsPage />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <InstantContact />
          <ChatBot />

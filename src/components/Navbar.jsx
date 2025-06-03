@@ -18,6 +18,7 @@ const Navbar = () => {
           <Link to="/faqs" className="hover:text-orange-500">FAQs</Link>
           <Link to="/financing" className="hover:text-orange-500">Financing</Link>
           <Link to="/testimonials" className="hover:text-orange-500">Testimonials</Link>
+          <Link to="/contact" className="hover:text-orange-500">Contact</Link>
         </nav>
 
         {/* Social Icons with Updated Links and Brand Colors */}

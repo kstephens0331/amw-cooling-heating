@@ -2,6 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import ManufacturerCarousel from '../components/ManufacturerCarousel';
+import Footer from '../components/Footer';
 
 export default function Services() {
   return (
@@ -162,6 +163,7 @@ export default function Services() {
           <ManufacturerCarousel />
         </div>
       </section>
+      <Footer />
     </main>
   );
 }
