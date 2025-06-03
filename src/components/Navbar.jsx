@@ -31,7 +31,7 @@ const Navbar = () => {
             <FaFacebook size={18} />
           </a>
           <a
-            href="https://www.instagram.com/p/DKNmevRyLli/"
+            href="https://www.instagram.com/amwairconditioning/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-pink-500 hover:text-pink-700 transition"

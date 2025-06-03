@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 // Shared components
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
 import InstantContact from './components/InstantContact';
 import ChatBot from './components/ChatBot';
 
@@ -18,6 +17,7 @@ import AboutUs from './pages/AboutUs';
 import Services from './pages/Services';
 import FAQs from './pages/FAQs';
 import Financing from './pages/Financing';
+import TestimonialsPage from './pages/TestimonialsPage'
 
 function App() {
   return (
@@ -42,8 +42,8 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/faqs" element={<FAQs />} />
           <Route path="/financing" element={<Financing />} />
+          <Route path="/testimonials" element={<TestimonialsPage />} />
         </Routes>
-        <Footer />
         <InstantContact />
          <ChatBot />
       </Router>
