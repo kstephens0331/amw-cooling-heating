@@ -15,7 +15,7 @@ const FinancingCTA = () => {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="https://www.mysynchrony.com/"
+            href="https://www.synchrony.com/mmc/M9235023900"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-6 py-3 bg-blue-600 text-white rounded shadow hover:bg-blue-700 transition"
@@ -23,7 +23,7 @@ const FinancingCTA = () => {
             Apply with Synchrony
           </a>
           <a
-            href="https://www.ftlfinance.com/"
+            href="https://beta.apptracker.ftlfinance.com/new/C221059"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-6 py-3 bg-orange-500 text-white rounded shadow hover:bg-orange-600 transition"

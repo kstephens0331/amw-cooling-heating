@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaFacebook, FaInstagram, FaYelp } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
+import nateLogo from '../assets/images/nate.png';
 
 export default function AboutUs() {
   return (
@@ -91,18 +92,32 @@ export default function AboutUs() {
           </div>
         </section>
 
-        {/* Expertise and Credentials */}
-        <section className="py-8">
-          <div className="container mx-auto px-4 text-center max-w-3xl">
-            <h2 className="text-2xl md:text-3xl font-semibold mb-2 text-blue-900">Expertise and Credentials</h2>
-            <p className="text-sm md:text-base text-gray-700 mb-2">
-              Our reputation as a trusted HVAC provider is built on a solid foundation of experience, industry certifications, and a relentless commitment to quality.
-            </p>
-            <p className="text-sm md:text-base text-gray-700 mb-2">
-              When you choose AMW Cooling & Heating LLC, you’re choosing a family-owned business dedicated to providing efficient, effective solutions that prioritize your comfort, safety, and satisfaction.
-            </p>
-          </div>
-        </section>
+{/* Expertise and Credentials */}
+<section className="py-8">
+  <div className="container mx-auto px-4 max-w-4xl flex flex-col md:flex-row items-center gap-6">
+    {/* Logo Left */}
+    <div className="w-32 h-32 flex-shrink-0">
+      <img
+  src={nateLogo}
+  alt="NATE Certified Logo"
+  className="w-full h-full object-contain"
+/>
+    </div>
+
+    {/* Text Right */}
+    <div className="text-center md:text-left">
+      <h2 className="text-2xl md:text-3xl font-semibold mb-2 text-blue-900">
+        Expertise and Credentials
+      </h2>
+      <p className="text-sm md:text-base text-gray-700 mb-2">
+        Our reputation as a trusted HVAC provider is built on a solid foundation of experience, industry certifications, and a relentless commitment to quality.
+      </p>
+      <p className="text-sm md:text-base text-gray-700 mb-2">
+        When you choose AMW Cooling & Heating LLC, you’re choosing a family-owned business dedicated to providing efficient, effective solutions that prioritize your comfort, safety, and satisfaction.
+      </p>
+    </div>
+  </div>
+</section>
 
         {/* CTA */}
         <section className="py-8 bg-blue-50 text-center">

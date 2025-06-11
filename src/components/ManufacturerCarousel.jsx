@@ -17,6 +17,7 @@ import Rheem from '../assets/images/rheem-logo-png_seeklogo-321920.png';
 import Sporlan from '../assets/images/sporlan-logo-png-transparent.png';
 import WR from '../assets/images/wr-logo-png_seeklogo-154035.png';
 import York from '../assets/images/york-logo-png_seeklogo-155309.png';
+import Ruud from '../assets/images/Ruud.png';
 
 
 export default function ManufacturerCarousel() {
@@ -35,6 +36,7 @@ export default function ManufacturerCarousel() {
     { name: 'Sporlan', src: Sporlan },
     { name: 'WR', src: WR },
     { name: 'York', src: York },
+    { name: 'Ruud', src: Ruud },
   ];
 
   return (
