@@ -1,5 +1,4 @@
-import React, { useRef, useEffect } from 'react';
-import emailjs from '@emailjs/browser';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import logo from '../assets/images/FullLogo_Transparent.png';
 import { Link } from 'react-router-dom';
@@ -7,25 +6,7 @@ import { FaFacebook, FaInstagram, FaYelp } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
 
 export default function Contact() {
-  const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs.sendForm(
-      'your_service_id',
-      'your_template_id',
-      form.current,
-      'your_public_key'
-    )
-    .then(() => {
-      alert('Message sent successfully!');
-      e.target.reset();
-    }, (error) => {
-      console.error(error.text);
-      alert('There was an error sending your message.');
-    });
-  };
 
   useEffect(() => {
     const script = document.createElement('script');
@@ -50,31 +31,38 @@ export default function Contact() {
 
         <div className="flex flex-col md:flex-row gap-8">
           {/* Contact Form */}
-          <form ref={form} onSubmit={sendEmail} className="flex-1 bg-gray-50 p-6 rounded-lg shadow-md">
-            <div className="mb-4">
-              <label className="block text-sm font-semibold mb-1">Full Name</label>
-              <input name="user_name" type="text" className="w-full border border-gray-300 rounded px-3 py-2" required />
-            </div>
+          <form
+  action="https://formspree.io/f/mqabprnq"
+  method="POST"
+  className="flex-1 bg-gray-50 p-6 rounded-lg shadow-md"
+>
+  <div className="mb-4">
+    <label className="block text-sm font-semibold mb-1">Full Name</label>
+    <input name="name" type="text" className="w-full border border-gray-300 rounded px-3 py-2" required />
+  </div>
 
-            <div className="mb-4">
-              <label className="block text-sm font-semibold mb-1">Email Address</label>
-              <input name="user_email" type="email" className="w-full border border-gray-300 rounded px-3 py-2" required />
-            </div>
+  <div className="mb-4">
+    <label className="block text-sm font-semibold mb-1">Email Address</label>
+    <input name="email" type="email" className="w-full border border-gray-300 rounded px-3 py-2" required />
+  </div>
 
-            <div className="mb-4">
-              <label className="block text-sm font-semibold mb-1">Phone Number</label>
-              <input name="user_phone" type="tel" className="w-full border border-gray-300 rounded px-3 py-2" />
-            </div>
+  <div className="mb-4">
+    <label className="block text-sm font-semibold mb-1">Phone Number</label>
+    <input name="phone" type="tel" className="w-full border border-gray-300 rounded px-3 py-2" />
+  </div>
 
-            <div className="mb-4">
-              <label className="block text-sm font-semibold mb-1">Message</label>
-              <textarea name="message" rows="5" className="w-full border border-gray-300 rounded px-3 py-2" required></textarea>
-            </div>
+  <div className="mb-4">
+    <label className="block text-sm font-semibold mb-1">Message</label>
+    <textarea name="message" rows="5" className="w-full border border-gray-300 rounded px-3 py-2" required></textarea>
+  </div>
 
-            <button type="submit" className="bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 transition text-sm">
-              Send Message
-            </button>
-          </form>
+  <button
+    type="submit"
+    className="bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 transition text-sm"
+  >
+    Send Message
+  </button>
+</form>
 
           {/* Business Contact Info */}
           <div className="flex-1 text-sm md:text-base bg-gray-50 p-6 rounded-lg shadow-md">
