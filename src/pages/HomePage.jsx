@@ -21,41 +21,39 @@ export default function HomePage() {
           name="keywords"
           content="HVAC services, air conditioning repair, heating maintenance, Conroe TX, The Woodlands HVAC, AMW Cooling & Heating"
         />
-        <script type="application/ld+json">
-{`
-{
-  "@context": "https://schema.org",
-  "@type": "HVACBusiness",
-  "name": "AMW Cooling & Heating LLC",
-  "image": "https://amw-cooling-heating.vercel.app/images/FullLogo_Transparent.webp",
-  "url": "https://amw-cooling-heating.vercel.app",
-  "telephone": "+1-936-587-7612",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Conroe",
-    "addressRegion": "TX",
-    "postalCode": "77301",
-    "addressCountry": "US"
-  },
-  "priceRange": "$$",
-  "openingHours": "Mo-Fr 08:00-17:00",
-  "areaServed": {
-    "@type": "GeoCircle",
-    "geoMidpoint": {
-      "@type": "GeoCoordinates",
-      "latitude": 30.3258133,
-      "longitude": -95.4718028
-    },
-    "geoRadius": 40000
-  },
-  "sameAs": [
-    "https://www.facebook.com/profile.php?id=61569862892114",
-    "https://www.instagram.com/amwairconditioning",
-    "https://www.yelp.com/biz/amw-cooling-and-heating-conroe
-  ]
-}
-`}
-</script>
+ <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "HVACBusiness",
+      "name": "AMW Cooling & Heating LLC",
+      "image": "https://amw-cooling-heating.vercel.app/images/FullLogo_Transparent.webp",
+      "url": "https://amw-cooling-heating.vercel.app",
+      "telephone": "+1-936-587-7612",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Conroe",
+        "addressRegion": "TX",
+        "postalCode": "77301",
+        "addressCountry": "US"
+      },
+      "priceRange": "$$",
+      "openingHours": "Mo-Fr 08:00-17:00",
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 30.3258133,
+          "longitude": -95.4718028
+        },
+        "geoRadius": 40000
+      },
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61569862892114",
+        "https://www.instagram.com/amwairconditioning",
+        "https://www.yelp.com/biz/amw-cooling-and-heating-conroe"
+      ]
+    })}
+  </script>
 
       </Helmet>
 
