@@ -1,21 +1,22 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-
-// Shared components
+import { lazy, Suspense } from 'react';
 import Navbar from './components/Navbar';
 import InstantContact from './components/InstantContact';
 import ChatBot from './components/ChatBot';
-import HeroLandingPage from './components/HeroLandingPage';
 
-// Full page
-import AboutUs from './pages/AboutUs';
-import Services from './pages/Services';
-import FAQs from './pages/FAQs';
-import Financing from './pages/Financing';
-import TestimonialsPage from './pages/TestimonialsPage'
-import HomePage from './pages/HomePage';
-import Contact from './pages/Contact';
-import NotFound from './pages/NotFound';
+
+// Lazy-loaded pages
+const HomePage = lazy(() => import('./pages/HomePage'));
+const AboutUs = lazy(() => import('./pages/AboutUs'));
+const Services = lazy(() => import('./pages/Services'));
+const FAQs = lazy(() => import('./pages/FAQs'));
+const Financing = lazy(() => import('./pages/Financing'));
+const TestimonialsPage = lazy(() => import('./pages/TestimonialsPage'));
+const Contact = lazy(() => import('./pages/Contact'));
+const NotFound = lazy(() => import('./pages/NotFound'));
+const HeroLandingPage = lazy(() => import('./components/HeroLandingPage'));
+
 
 
 function App() {
@@ -25,16 +26,78 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          {/* Full About Us page */}
-          <Route path="/about" element={<AboutUs />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/faqs" element={<FAQs />} />
-          <Route path="/financing" element={<Financing />} />
-          <Route path="/testimonials" element={<TestimonialsPage />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/" element={<HeroLandingPage />} />
-          <Route path="*" element={<NotFound />} />
+          <Route
+    path="/"
+    element={
+      <Suspense fallback={<div>Loading Home...</div>}>
+        <HomePage />
+      </Suspense>
+    }
+  />
+  <Route
+    path="/about"
+    element={
+      <Suspense fallback={<div>Loading About Us...</div>}>
+        <AboutUs />
+      </Suspense>
+    }
+  />
+  <Route
+    path="/services"
+    element={
+      <Suspense fallback={<div>Loading Services...</div>}>
+        <Services />
+      </Suspense>
+    }
+  />
+  <Route
+    path="/faqs"
+    element={
+      <Suspense fallback={<div>Loading FAQs...</div>}>
+        <FAQs />
+      </Suspense>
+    }
+  />
+  <Route
+    path="/financing"
+    element={
+      <Suspense fallback={<div>Loading Financing...</div>}>
+        <Financing />
+      </Suspense>
+    }
+  />
+  <Route
+    path="/testimonials"
+    element={
+      <Suspense fallback={<div>Loading Testimonials...</div>}>
+        <TestimonialsPage />
+      </Suspense>
+    }
+  />
+  <Route
+    path="/contact"
+    element={
+      <Suspense fallback={<div>Loading Contact Page...</div>}>
+        <Contact />
+      </Suspense>
+    }
+  />
+  <Route
+    path="*"
+    element={
+      <Suspense fallback={<div>Loading Not Found Page...</div>}>
+        <NotFound />
+      </Suspense>
+    }
+  />
+  <Route
+  path="/hero"
+  element={
+    <Suspense fallback={<div>Loading Hero...</div>}>
+      <HeroLandingPage />
+    </Suspense>
+  }
+/>
         </Routes>
         <InstantContact />
          <ChatBot />
