@@ -47,7 +47,7 @@ const VoiceSearch = ({ onResult }) => {
   return (
     <button
   onClick={handleListen}
-  className={`w-12 h-12 p-2 rounded-full bg-orange-500 hover:bg-orange-600 text-white shadow transition flex items-center justify-center ${
+  className={`w-12 h-12 p-2 rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow transition flex items-center justify-center ${
     isListening ? "animate-pulse" : ""
   }`}
   aria-label="Tap to search by voice"

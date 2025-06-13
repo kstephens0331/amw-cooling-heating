@@ -74,13 +74,16 @@ export default function QuickStats() {
 </h2>
         <div className="flex flex-col lg:flex-row items-center gap-8 mb-12">
           {/* Left Side Image */}
-          <div className="w-full lg:max-w-md overflow-hidden rounded-3xl shadow-md order-1 bg-white">
-            <img
-              src={WhyChoose}
-              alt="Josh meeting customer with tools in hand"
-              className="w-full h-full object-contain" loading="lazy"
-            />
-          </div>
+<div className="w-full max-w-sm aspect-[7/8] overflow-hidden rounded-3xl shadow-md self-start">
+  <img
+    src={WhyChoose}
+    alt="Josh meeting customer with tools in hand"
+    width="420"
+    height="480"
+    className="w-full h-full object-cover object-top"
+    loading="lazy"
+  />
+</div>
 
           {/* Right Side Boxes */}
           <div className="lg:w-1/2 w-full min-h-[20rem] grid grid-cols-1 gap-4 order-2">
