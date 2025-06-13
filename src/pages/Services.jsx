@@ -1,5 +1,3 @@
-// src/pages/Services.jsx
-import React from 'react';
 import { Helmet } from 'react-helmet';
 import ManufacturerCarousel from '../components/ManufacturerCarousel';
 import { Link } from 'react-router-dom';

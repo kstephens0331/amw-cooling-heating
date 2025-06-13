@@ -1,5 +1,3 @@
-// src/components/QuickStats.jsx
-import React from 'react';
 import { motion } from 'framer-motion';
 import WhyChoose from '../assets/images/DSC_1930.webp';
 

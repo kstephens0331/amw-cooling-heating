@@ -1,4 +1,3 @@
-import React from 'react';
 import hero from '../assets/images/DSC_2136-2.webp';
 
 export default function MobileHero() {

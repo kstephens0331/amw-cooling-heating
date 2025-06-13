@@ -1,5 +1,3 @@
-// src/components/MapSection.jsx
-import React from 'react';
 import { MapContainer, TileLayer, Polygon } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 

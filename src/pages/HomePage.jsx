@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaYelp } from 'react-icons/fa';
@@ -12,6 +11,7 @@ export default function HomePage() {
   return (
     <div className="bg-white text-gray-800 font-sans">
       <Helmet>
+        <link rel="preload" as="image" href="src/assets/images/DSC_2136-2.webp" />
         <title>AMW Cooling & Heating LLC | HVAC Services in Conroe, The Woodlands, TX</title>
         <meta
           name="description"

@@ -1,5 +1,3 @@
-// src/components/HeroSection.jsx
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import hero from '../assets/images/DSC_2136-2.webp';

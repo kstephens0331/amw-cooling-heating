@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet';
 import { FaCheckCircle, FaDollarSign, FaHandshake } from 'react-icons/fa';
 import { Link } from 'react-router-dom';

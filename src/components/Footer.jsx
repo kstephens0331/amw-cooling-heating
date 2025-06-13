@@ -1,5 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaYelp } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
 
@@ -20,7 +18,7 @@ const Footer = () => {
           <div className="flex justify-center md:justify-end gap-4 text-white text-xl mb-2">
             <a href="#"><FaFacebook /></a>
             <a href="#"><FaInstagram /></a>
-            <a href="#"><FaGoogle /></a>
+            <a href="#"><FcGoogle /></a>
             <a href="#"><FaYelp /></a>
           </div>
           <div className="text-xs text-white">

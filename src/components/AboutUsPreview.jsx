@@ -1,5 +1,3 @@
-// src/components/AboutUsPreview.jsx
-import React from 'react';
 import { Link } from 'react-router-dom';
 import aboutus from '../assets/images/DSC_1887.webp';
 

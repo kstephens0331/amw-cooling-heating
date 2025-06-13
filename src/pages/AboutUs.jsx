@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -135,7 +134,7 @@ export default function AboutUs() {
 
           <nav className="flex-1 flex flex-wrap gap-4 justify-center md:justify-start text-sm mt-4 md:mt-0">
             <Link to="/" className="hover:text-orange-400 transition">Home</Link>
-            <Link to="/about" className="hover:text-orange-400 transition"aria-label="Learn more about AMW Cooling and Heating">About Us</Link>
+            <Link to="/about" className="hover:text-orange-400 transition" aria-label="Learn more about AMW Cooling and Heating" >About Us</Link>
             <Link to="/services" className="hover:text-orange-400 transition">Services</Link>
             <Link to="/faqs" className="hover:text-orange-400 transition">FAQs</Link>
             <Link to="/financing" className="hover:text-orange-400 transition">Financing</Link>
