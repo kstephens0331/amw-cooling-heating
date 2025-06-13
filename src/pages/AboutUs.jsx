@@ -49,7 +49,7 @@ export default function AboutUs() {
             alt="Joshua" 
               width="300"
              height="300"
-            className="w-full h-full object-cover -rotate-45 w-[300-px] h-[300px]"  loading="lazy"/>
+            className="aspect-[1/1] max-w-[300px] object-cover -rotate-45"  loading="lazy" />
           </div>
         </div>
       </motion.div>
@@ -66,7 +66,7 @@ export default function AboutUs() {
           alt="Anjelica - co-owner of AMW Cooling & Heating" 
           width="300"
           height="300"
-          className='w-full h-full object-cover -rotate-45 w-[300-px] h-[300-px]' loading="lazy"/>
+          className='object-cover -rotate-45 w-[300-px] h-[300-px]' loading="lazy"/>
         </div>
                   </div>
         <div className="order-1 lg:order-2 text-sm md:text-base text-gray-700">

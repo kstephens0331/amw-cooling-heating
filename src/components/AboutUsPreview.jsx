@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 import aboutus from '../assets/images/DSC_1887.webp';
 
@@ -26,16 +27,14 @@ export default function AboutUsPreview() {
         </div>
 
         {/* Right Side Image */}
-        <div className="w-full lg:max-w-md overflow-hidden rounded-3xl shadow-md order-1 bg-white">
-         <img
-  src={aboutus}
-  alt="Josh and Anjelica - Owners"
-  width="600"
-  height="400"
-  className="rounded-lg shadow-md w-[400px] h-[400px]"
-  loading="lazy"
-/>
-        </div>
+        <div className="w-full max-w-sm aspect-[2/3] overflow-hidden rounded-lg shadow-md">
+  <img
+    src={aboutus}
+    alt="Josh and Anjelica - Owners"
+    className="w-full h-full object-cover"
+    loading="lazy"
+  />
+</div>
       </div>
     </section>
   );
