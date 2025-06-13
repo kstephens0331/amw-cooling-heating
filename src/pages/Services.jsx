@@ -13,6 +13,8 @@ import repairs_maintenance from '../assets/images/DSC_2058.jpg';
 import air from '../assets/images/air-quality.jpg'
 import emergency from '../assets/images/emergency.png'
 
+
+
 export default function Services() {
   return (
     <main className="bg-gray-50 text-gray-800 font-sans">
@@ -43,126 +45,123 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="container mx-auto px-4">
-        {/* 1️⃣ Heating Services */}
-        <div className="bg-white rounded shadow p-4 flex flex-col-reverse lg:flex-row items-center gap-6 my-8">
+            <section className="container mx-auto px-4 space-y-16 py-12">
+        {/* 1️⃣ Heating Services - IMAGE RIGHT */}
+        <div className="flex flex-col lg:flex-row items-center gap-10">
+          <div className="w-full lg:w-1/2"><div className='w-[260px] h-[260px] transform rotate-45 overflow-hidden rounded-xl shadow-lg border border-gray-200 bg-white mx-auto'><img src={heating} alt="Heating services" className='w-full h-full object-cover -rotate-45' /></div>
+          </div>
           <div className="w-full lg:w-1/2 text-sm md:text-base text-gray-700">
             <h2 className="text-xl md:text-2xl font-semibold text-blue-900 mb-2">🔥 Heating Services</h2>
             <ul className="list-disc list-inside space-y-1">
-              <li> <strong>New Heater Installations</strong> – Efficient furnaces, heat pumps, and hybrid systems.</li>
-              <li> <strong>Heater Repairs</strong> – Quick, reliable fixes for all heating units.</li>
-              <li> <strong>Seasonal Maintenance</strong> – Keep your system running at peak efficiency.</li>
-              <li> <strong>System Upgrades</strong> – Modern performance and energy savings.</li>
-              <li> <strong>Thermostat Services</strong> – Precision controls for comfort and economy.</li>
+              <li><strong>New Heater Installations</strong> – Efficient furnaces, heat pumps, and hybrid systems.</li>
+              <li><strong>Heater Repairs</strong> – Quick, reliable fixes for all heating units.</li>
+              <li><strong>Seasonal Maintenance</strong> – Keep your system running at peak efficiency.</li>
+              <li><strong>System Upgrades</strong> – Modern performance and energy savings.</li>
+              <li><strong>Thermostat Services</strong> – Precision controls for comfort and economy.</li>
             </ul>
-          </div>
-          <div className="w-full lg:max-w-md overflow-hidden rounded-3xl shadow-md order-1 bg-white">
-            <img src={heating} />
           </div>
         </div>
 
-        {/* 2️⃣ Air Conditioning Services */}
-        <div className="bg-white rounded shadow p-4 flex flex-col lg:flex-row items-center gap-6 my-8">
-          <div className="w-full lg:max-w-md overflow-hidden rounded-3xl shadow-md order-1 bg-white">
-            <img src={cooling} />
+        {/* 2️⃣ Cooling Services - IMAGE LEFT */}
+        <div className="flex flex-col lg:flex-row-reverse items-center gap-10">
+          <div className="w-full lg:w-1/2"><div className='w-[260px] h-[260px] transform rotate-45 overflow-hidden rounded-xl shadow-lg border border-gray-200 bg-white mx-auto'>
+  <img src={cooling} alt="Cooling services" className='w-full h-full object-cover -rotate-45' />
+</div>
           </div>
           <div className="w-full lg:w-1/2 text-sm md:text-base text-gray-700">
             <h2 className="text-xl md:text-2xl font-semibold text-blue-900 mb-2">❄️ Air Conditioning Services</h2>
             <ul className="list-disc list-inside space-y-1">
-              <li> <strong>AC Installations</strong> – Energy-efficient air conditioning systems.</li>
-              <li> <strong>AC Repairs</strong> – Fast service to restore cool air quickly.</li>
-              <li> <strong>Seasonal Tune-Ups</strong> – Prevent breakdowns and maintain performance.</li>
-              <li> <strong>Humidity Management</strong> – Keep your indoor air comfortable.</li>
-              <li> <strong>Smart Thermostats</strong> – Control cooling from anywhere.</li>
+              <li><strong>AC Installations</strong> – Energy-efficient air conditioning systems.</li>
+              <li><strong>AC Repairs</strong> – Fast service to restore cool air quickly.</li>
+              <li><strong>Seasonal Tune-Ups</strong> – Prevent breakdowns and maintain performance.</li>
+              <li><strong>Humidity Management</strong> – Keep your indoor air comfortable.</li>
+              <li><strong>Smart Thermostats</strong> – Control cooling from anywhere.</li>
             </ul>
           </div>
         </div>
 
-        {/* 3️⃣ Ventilation Services */}
-        <div className="bg-white rounded shadow p-4 flex flex-col-reverse lg:flex-row items-center gap-6 my-8">
+        {/* 3️⃣ Ventilation Services - IMAGE RIGHT */}
+        <div className="flex flex-col lg:flex-row items-center gap-10">
+          <div className="w-full lg:w-1/2"><div className='w-[260px] h-[260px] transform rotate-45 overflow-hidden rounded-xl shadow-lg border border-gray-200 bg-white mx-auto'><img src={ventilation} alt="Ventilation services" className='w-full h-full object-cover -rotate-45' /></div>
+          </div>
           <div className="w-full lg:w-1/2 text-sm md:text-base text-gray-700">
             <h2 className="text-xl md:text-2xl font-semibold text-blue-900 mb-2">🌬️ Ventilation Services</h2>
             <ul className="list-disc list-inside space-y-1">
-              <li> <strong>Ductwork Installation</strong> – Balanced airflow in every room.</li>
-              <li> <strong>Ventilation Repairs</strong> – Remove blockages and fix leaks.</li>
-              <li> <strong>Airflow Balancing</strong> – Even temperatures throughout your space.</li>
-              <li> <strong>Whole-House Ventilation</strong> – Remove stale air, bring in fresh air.</li>
-              <li> <strong>Exhaust Systems</strong> – Proper moisture control and ventilation.</li>
+              <li><strong>Ductwork Installation</strong> – Balanced airflow in every room.</li>
+              <li><strong>Ventilation Repairs</strong> – Remove blockages and fix leaks.</li>
+              <li><strong>Airflow Balancing</strong> – Even temperatures throughout your space.</li>
+              <li><strong>Whole-House Ventilation</strong> – Remove stale air, bring in fresh air.</li>
+              <li><strong>Exhaust Systems</strong> – Proper moisture control and ventilation.</li>
             </ul>
-          </div>
-          <div className="w-full lg:max-w-md overflow-hidden rounded-3xl shadow-md order-1 bg-white">
-            <img src={ventilation} alt="Ventilation services" className="w-full h-full object-cover" />
           </div>
         </div>
 
-        {/* 4️⃣ New Installations */}
-        <div className="bg-white rounded shadow p-4 flex flex-col lg:flex-row items-center gap-6 my-8">
-          <div className="w-full lg:max-w-md overflow-hidden rounded-3xl shadow-md order-1 bg-white">
-            <img src={new_install} alt="New system installations" className="w-full h-full object-cover" />
+        {/* 4️⃣ New Installations - IMAGE LEFT */}
+        <div className="flex flex-col lg:flex-row-reverse items-center gap-10">
+          <div className="w-full lg:w-1/2"><div className='w-[260px] h-[260px] transform rotate-45 overflow-hidden rounded-xl shadow-md mx-auto'><img src={new_install} alt="New Install services" className='w-full h-full object-cover -rotate-45' /></div>
           </div>
           <div className="w-full lg:w-1/2 text-sm md:text-base text-gray-700">
             <h2 className="text-xl md:text-2xl font-semibold text-blue-900 mb-2">🆕 New Installations</h2>
             <ul className="list-disc list-inside space-y-1">
-              <li> <strong>New Construction HVAC</strong> – Tailored systems for your building.</li>
-              <li> <strong>System Replacements</strong> – Upgrade outdated equipment.</li>
-              <li> <strong>Load Calculations</strong> – Optimal sizing for peak efficiency.</li>
-              <li> <strong>Smart Integration</strong> – Modern, connected controls.</li>
-              <li> <strong>Post-Install Testing</strong> – Ensure perfect operation.</li>
+              <li><strong>New Construction HVAC</strong> – Tailored systems for your building.</li>
+              <li><strong>System Replacements</strong> – Upgrade outdated equipment.</li>
+              <li><strong>Load Calculations</strong> – Optimal sizing for peak efficiency.</li>
+              <li><strong>Smart Integration</strong> – Modern, connected controls.</li>
+              <li><strong>Post-Install Testing</strong> – Ensure perfect operation.</li>
             </ul>
           </div>
         </div>
 
-        {/* 5️⃣ Repairs and Maintenance */}
-        <div className="bg-white rounded shadow p-4 flex flex-col-reverse lg:flex-row items-center gap-6 my-8">
+        {/* 5️⃣ Repairs and Maintenance - IMAGE RIGHT */}
+        <div className="flex flex-col lg:flex-row items-center gap-10">
+          <div className="w-full lg:w-1/2"><div className='w-[260px] h-[260px] transform rotate-45 overflow-hidden rounded-xl shadow-md mx-auto'><img src={repairs_maintenance} alt="Maintenance services" className='w-full h-full object-cover -rotate-45' /></div>
+          </div>
           <div className="w-full lg:w-1/2 text-sm md:text-base text-gray-700">
             <h2 className="text-xl md:text-2xl font-semibold text-blue-900 mb-2">🛠️ Repairs & Maintenance</h2>
             <ul className="list-disc list-inside space-y-1">
-              <li> <strong>Emergency Repairs</strong> – Quick fixes for urgent issues.</li>
-              <li> <strong>Preventative Maintenance</strong> – Keep your system running smoothly.</li>
-              <li> <strong>Seasonal Tune-Ups</strong> – Maximize lifespan and performance.</li>
-              <li> <strong>Inspections & Diagnostics</strong> – Identify and fix issues early.</li>
-              <li> <strong>Efficiency Optimization</strong> – Save on energy bills year-round.</li>
+              <li><strong>Emergency Repairs</strong> – Quick fixes for urgent issues.</li>
+              <li><strong>Preventative Maintenance</strong> – Keep your system running smoothly.</li>
+              <li><strong>Seasonal Tune-Ups</strong> – Maximize lifespan and performance.</li>
+              <li><strong>Inspections & Diagnostics</strong> – Identify and fix issues early.</li>
+              <li><strong>Efficiency Optimization</strong> – Save on energy bills year-round.</li>
             </ul>
-          </div>
-          <div className="w-full lg:max-w-md overflow-hidden rounded-3xl shadow-md order-1 bg-white">
-            <img src={repairs_maintenance} alt="Repairs and maintenance" className="w-full h-full object-cover" />
           </div>
         </div>
 
-        {/* 6️⃣ Air Quality Solutions */}
-        <div className="bg-white rounded shadow p-4 flex flex-col lg:flex-row items-center gap-6 my-8">
-          <div className="w-full lg:max-w-md overflow-hidden rounded-3xl shadow-md order-1 bg-white">
-            <img src={air} alt="Air quality solutions" className="w-full h-full object-cover" />
+        {/* 6️⃣ Air Quality Solutions - IMAGE LEFT */}
+        <div className="flex flex-col lg:flex-row-reverse items-center gap-10">
+          <div className="w-full lg:w-1/2"><div className='w-[260px] h-[260px] transform rotate-45 overflow-hidden rounded-xl shadow-md mx-auto'><img src={air} alt="Air quality services" className='w-full h-full object-cover -rotate-45' /></div>
           </div>
           <div className="w-full lg:w-1/2 text-sm md:text-base text-gray-700">
             <h2 className="text-xl md:text-2xl font-semibold text-blue-900 mb-2">🌿 Air Quality Solutions</h2>
             <ul className="list-disc list-inside space-y-1">
-              <li> <strong>Air Filtration</strong> – Cleaner, healthier air.</li>
-              <li> <strong>Humidity Control</strong> – Comfort in every season.</li>
-              <li> <strong>Air Purification</strong> – Eliminate allergens and pollutants.</li>
-              <li> <strong>IAQ Testing</strong> – Comprehensive indoor air analysis.</li>
+              <li><strong>Air Filtration</strong> – Cleaner, healthier air.</li>
+              <li><strong>Humidity Control</strong> – Comfort in every season.</li>
+              <li><strong>Air Purification</strong> – Eliminate allergens and pollutants.</li>
+              <li><strong>IAQ Testing</strong> – Comprehensive indoor air analysis.</li>
             </ul>
           </div>
         </div>
 
-        {/* 7️⃣ Emergency Services */}
-        <div className="bg-white rounded shadow p-4 flex flex-col-reverse lg:flex-row items-center gap-6 my-8">
+        {/* 7️⃣ Emergency Services - IMAGE RIGHT */}
+        <div className="flex flex-col lg:flex-row items-center gap-10">
+          <div className="w-full lg:w-1/2"><div className='w-[260px] h-[260px] transform rotate-45 overflow-hidden rounded-xl shadow-md mx-auto'><img src={emergency} alt="Emergency services" className='w-full h-full object-cover -rotate-45' /></div>
+          </div>
           <div className="w-full lg:w-1/2 text-sm md:text-base text-gray-700">
             <h2 className="text-xl md:text-2xl font-semibold text-blue-900 mb-2">🚨 Emergency Services</h2>
             <ul className="list-disc list-inside space-y-1">
-              <li> <strong>After Hours Service</strong> – Emergency services provided between 5pm-9pm as well as weekends.*</li>
-              <li> <strong>Immediate Response</strong> – Fast action to restore comfort.</li>
-              <li> <strong>Emergency Repairs</strong> – Rapid, effective fixes when it matters.</li>
-              <li> <strong>Direct Support</strong> – Call us anytime for urgent needs.</li>
-              <li> <strong>Peace of Mind</strong> – Your comfort and safety are our top priorities.</li>
-              <li> *Additional charges may apply for after hours services.</li>
+              <li><strong>After Hours Service</strong> – Emergency services provided between 5pm–9pm and weekends.*</li>
+              <li><strong>Immediate Response</strong> – Fast action to restore comfort.</li>
+              <li><strong>Emergency Repairs</strong> – Rapid, effective fixes when it matters.</li>
+              <li><strong>Direct Support</strong> – Call us anytime for urgent needs.</li>
+              <li><strong>Peace of Mind</strong> – Your comfort and safety are our top priorities.</li>
+              <li className="italic text-xs">*Additional charges may apply for after hours services.</li>
             </ul>
           </div>
-          <div className="w-full lg:max-w-md overflow-hidden rounded-3xl shadow-md order-1 bg-white">
-            <img src={emergency} alt="Emergency services" className="w-full h-full object-cover" />
-          </div>
         </div>
+
       </section>
+
       <section className="bg-white py-8">
         <div className="container mx-auto px-4">
           <ManufacturerCarousel />
