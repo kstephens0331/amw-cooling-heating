@@ -48,9 +48,9 @@ export default function HomePage() {
         "geoRadius": 40000
       },
       "sameAs": [
-        "https://www.facebook.com/profile.php?id=61569862892114",
+        "https://www.facebook.com/amwairconditioning",
         "https://www.instagram.com/amwairconditioning",
-        "https://www.yelp.com/biz/amw-cooling-and-heating-conroe"
+        "https://www.yelp.com/biz/amw-cooling-and-heating-conroe",
       ]
     })}
   </script>
