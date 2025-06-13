@@ -1,5 +1,5 @@
 import React from 'react';
-import hero from '../assets/images/DSC_2136-2.jpg';
+import hero from '../assets/images/DSC_2136-2.webp';
 
 export default function MobileHero() {
   return (
@@ -7,8 +7,8 @@ export default function MobileHero() {
       {/* Background Image */}
       <img
         src={hero}
-        alt="AMW Cooling & Heating truck"
-        className="absolute inset-0 w-full h-full object-cover object-bottom"
+        alt="AMW Cooling & Heating truck at sunset with phone number"
+        className="absolute inset-0 w-full h-full object-cover object-bottom" loading="lazy"
       />
 
       {/* Overlay */}

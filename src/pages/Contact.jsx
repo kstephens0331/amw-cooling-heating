@@ -5,6 +5,18 @@ import { Link } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaYelp } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
 
+<Helmet>
+  <title>Contact Us | AMW Cooling & Heating LLC</title>
+  <meta
+    name="description"
+    content="Get in touch with AMW Cooling & Heating for expert HVAC service. Call, email, or use our contact form to schedule an appointment today."
+  />
+  <meta
+    name="keywords"
+    content="contact AMW Cooling, HVAC phone number, HVAC appointment Conroe, heating cooling service request"
+  />
+</Helmet>
+
 export default function Contact() {
 
 

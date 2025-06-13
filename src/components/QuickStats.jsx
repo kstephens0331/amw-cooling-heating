@@ -1,7 +1,7 @@
 // src/components/QuickStats.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
-import WhyChoose from '../assets/images/DSC_1930.jpg';
+import WhyChoose from '../assets/images/DSC_1930.webp';
 
 const stats = [
   { number: '8+', label: 'Years of Experience' },
@@ -79,8 +79,8 @@ export default function QuickStats() {
           <div className="w-full lg:max-w-md overflow-hidden rounded-3xl shadow-md order-1 bg-white">
             <img
               src={WhyChoose}
-              alt="Josh and Angelica"
-              className="w-full h-full object-contain"
+              alt="Josh meeting customer with tools in hand"
+              className="w-full h-full object-contain" loading="lazy"
             />
           </div>
 

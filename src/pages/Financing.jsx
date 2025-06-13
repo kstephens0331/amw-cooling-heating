@@ -5,6 +5,19 @@ import { Link } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaYelp } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
 
+<Helmet>
+  <title>Financing Options | AMW Cooling & Heating LLC</title>
+  <meta
+    name="description"
+    content="Learn about flexible HVAC financing options from AMW Cooling & Heating LLC. We make comfort affordable with convenient payment plans."
+  />
+  <meta
+    name="keywords"
+    content="HVAC financing, payment plans, AC loan, Conroe HVAC financing, flexible HVAC payments"
+  />
+</Helmet>
+
+
 export default function Financing() {
   return (
     <main className="bg-white text-gray-800">

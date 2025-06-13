@@ -1,7 +1,7 @@
 // src/components/AboutUsPreview.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import aboutus from '../assets/images/DSC_1887.jpg';
+import aboutus from '../assets/images/DSC_1887.webp';
 
 export default function AboutUsPreview() {
   return (
@@ -31,7 +31,7 @@ export default function AboutUsPreview() {
         <div className="w-full lg:max-w-md overflow-hidden rounded-3xl shadow-md order-1 bg-white">
           <img
             src={aboutus}
-            alt="Josh and Angelica"
+            alt="Josh and Anjelica - Owners of AMW Cooling & Heating LLC"
             className="w-full h-full object-contain"
           />
         </div>

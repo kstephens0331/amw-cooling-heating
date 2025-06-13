@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaFacebook, FaInstagram, FaYelp } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
-import nateLogo from '../assets/images/nate.png';
-import Anjelica from '../assets/images/DSC_2077.jpg'
-import Josh from '../assets/images/DSC_2157.jpg'
+import nateLogo from '../assets/images/nate.webp';
+import Anjelica from '../assets/images/DSC_2077.webp'
+import Josh from '../assets/images/DSC_2157.webp'
 
 export default function AboutUs() {
   return (
@@ -46,7 +46,7 @@ export default function AboutUs() {
         </div>
         <div className="order-1 lg:order-1">
           <div className="w-[260px] h-[260px] transform rotate-45 overflow-hidden rounded-xl shadow-lg border border-gray-200 bg-white mx-auto">
-            <img src={Josh} alt="Joshua" className="w-full h-full object-cover -rotate-45" />
+            <img src={Josh} alt="Joshua" className="w-full h-full object-cover -rotate-45" loading="lazy"/>
           </div>
         </div>
       </motion.div>
@@ -59,7 +59,7 @@ export default function AboutUs() {
         transition={{ duration: 0.6 }}
         className="flex flex-col lg:flex-row-reverse items-center gap-10 pb-12">
                   <div className="w-full lg:w-1/2"><div className='w-[260px] h-[260px] transform rotate-45 overflow-hidden rounded-xl shadow-lg border border-gray-200 bg-white mx-auto'>
-          <img src={Anjelica} alt="Anjelica" className='w-full h-full object-cover -rotate-45' />
+          <img src={Anjelica} alt="Anjelica - co-owner of AMW Cooling & Heating" className='w-full h-full object-cover -rotate-45' loading="lazy"/>
         </div>
                   </div>
         <div className="order-1 lg:order-2 text-sm md:text-base text-gray-700">
@@ -91,7 +91,7 @@ export default function AboutUs() {
         </div>
         <div className="w-full lg:w-1/2">
           <div className="w-[260px] h-[260px] transform rotate-45 overflow-hidden rounded-xl shadow-lg border border-gray-200 bg-white mx-auto">
-            <img src={nateLogo} alt="NATE Certified" className="w-full h-full object-cover -rotate-45" />
+            <img src={nateLogo} alt="NATE Certified" className="w-full h-full object-cover -rotate-45" loading="lazy"/>
           </div>
         </div>
       </motion.div>

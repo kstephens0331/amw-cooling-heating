@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Shared components
 import Navbar from './components/Navbar';
@@ -15,6 +15,7 @@ import Financing from './pages/Financing';
 import TestimonialsPage from './pages/TestimonialsPage'
 import HomePage from './pages/HomePage';
 import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
           <Route path="/testimonials" element={<TestimonialsPage />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/" element={<HeroLandingPage />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <InstantContact />
          <ChatBot />

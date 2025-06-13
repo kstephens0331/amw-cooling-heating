@@ -3,21 +3,21 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
-import AmericanStandard from '../assets/images/american-standard-heating-air-conditioning-seeklogo.png';
-import Bryant from '../assets/images/bryant-heating-cooling-systems-logo-png_seeklogo-304441.png';
-import Carrier from '../assets/images/CARR_BIG.png';
-import Copeland from '../assets/images/copeland-seeklogo.png';
-import Danfoss from '../assets/images/danfoss-1-logo-black-and-white.png';
-import EMR from '../assets/images/EMR_BIG.png';
-import Goodman from '../assets/images/goodman-ac-logo.png';
-import Honeywell from '../assets/images/HON_BIG.png';
+import AmericanStandard from '../assets/images/american-standard-heating-air-conditioning-seeklogo.webp';
+import Bryant from '../assets/images/bryant-heating-cooling-systems-logo-png_seeklogo-304441.webp';
+import Carrier from '../assets/images/CARR_BIG.webp';
+import Copeland from '../assets/images/copeland-seeklogo.webp';
+import Danfoss from '../assets/images/danfoss-1-logo-black-and-white.webp';
+import EMR from '../assets/images/EMR_BIG.webp';
+import Goodman from '../assets/images/goodman-ac-logo.webp';
+import Honeywell from '../assets/images/HON_BIG.webp';
 import Johnstone from '../assets/images/johnstone-supply-logo.svg';
-import LII from '../assets/images/LII_BIG.png';
-import Rheem from '../assets/images/rheem-logo-png_seeklogo-321920.png';
-import Sporlan from '../assets/images/sporlan-logo-png-transparent.png';
-import WR from '../assets/images/wr-logo-png_seeklogo-154035.png';
-import York from '../assets/images/york-logo-png_seeklogo-155309.png';
-import Ruud from '../assets/images/Ruud.png';
+import LII from '../assets/images/LII_BIG.webp';
+import Rheem from '../assets/images/rheem-logo-png_seeklogo-321920.webp';
+import Sporlan from '../assets/images/sporlan-logo-png-transparent.webp';
+import WR from '../assets/images/wr-logo-png_seeklogo-154035.webp';
+import York from '../assets/images/york-logo-png_seeklogo-155309.webp';
+import Ruud from '../assets/images/Ruud.webp';
 
 
 export default function ManufacturerCarousel() {

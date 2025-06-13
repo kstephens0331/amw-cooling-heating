@@ -1,5 +1,18 @@
 import React, { useEffect } from 'react';
 import { FaQuoteLeft } from 'react-icons/fa';
+import { Helmet } from 'react-helmet';
+
+<Helmet>
+  <title>Customer Testimonials | AMW Cooling & Heating LLC</title>
+  <meta
+    name="description"
+    content="Read what our customers have to say about AMW Cooling & Heating. See real reviews from homeowners and businesses in Conroe, The Woodlands, and surrounding areas."
+  />
+  <meta
+    name="keywords"
+    content="HVAC reviews, customer testimonials, AMW Cooling feedback, Conroe HVAC trusted, The Woodlands heating and cooling"
+  />
+</Helmet>
 
 export default function TestimonialsPage() {
   useEffect(() => {

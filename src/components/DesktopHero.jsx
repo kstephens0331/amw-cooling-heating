@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import hero from '../assets/images/DSC_2136-2.jpg';
+import hero from '../assets/images/DSC_2136-2.webp';
 
 export default function HeroSection() {
   return (
@@ -10,8 +10,8 @@ export default function HeroSection() {
       {/* Background Image */}
       <img
         src={hero}
-        alt="AMW Cooling & Heating truck"
-        className="absolute inset-0 w-full h-full object-cover object-bottom"
+        alt="AMW Cooling & Heating truck at sunset with phone number"
+        className="absolute inset-0 w-full h-full object-cover object-bottom" loading="lazy"
       />
 
       {/* Overlay */}

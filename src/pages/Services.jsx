@@ -5,15 +5,25 @@ import ManufacturerCarousel from '../components/ManufacturerCarousel';
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaYelp } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
-import heating from '../assets/images/IMG_1163.jpg';
-import cooling from '../assets/images/DSC_2035.jpg';
-import ventilation from '../assets/images/DSC_1976.jpg';
-import new_install from '../assets/images/DSC_1997.jpg';
-import repairs_maintenance from '../assets/images/DSC_2058.jpg';
-import air from '../assets/images/air-quality.jpg'
-import emergency from '../assets/images/emergency.png'
+import heating from '../assets/images/IMG_1163.webp';
+import cooling from '../assets/images/DSC_2035.webp';
+import ventilation from '../assets/images/DSC_1976.webp';
+import new_install from '../assets/images/DSC_1997.webp';
+import repairs_maintenance from '../assets/images/DSC_2058.webp';
+import air from '../assets/images/air-quality.webp'
+import emergency from '../assets/images/emergency.webp'
 
-
+<Helmet>
+  <title>HVAC Services | AMW Cooling & Heating LLC</title>
+  <meta
+    name="description"
+    content="Explore our expert HVAC services, including installation, repair, and maintenance for residential and commercial clients across Conroe, The Woodlands, and beyond."
+  />
+  <meta
+    name="keywords"
+    content="HVAC services, AC installation, heater repair, air conditioning Conroe TX, The Woodlands HVAC, AMW Cooling"
+  />
+</Helmet>
 
 export default function Services() {
   return (
@@ -48,7 +58,7 @@ export default function Services() {
             <section className="container mx-auto px-4 space-y-16 py-12">
         {/* 1️⃣ Heating Services - IMAGE RIGHT */}
         <div className="flex flex-col lg:flex-row items-center gap-10">
-          <div className="w-full lg:w-1/2"><div className='w-[260px] h-[260px] transform rotate-45 overflow-hidden rounded-xl shadow-lg border border-gray-200 bg-white mx-auto'><img src={heating} alt="Heating services" className='w-full h-full object-cover -rotate-45' /></div>
+          <div className="w-full lg:w-1/2"><div className='w-[260px] h-[260px] transform rotate-45 overflow-hidden rounded-xl shadow-lg border border-gray-200 bg-white mx-auto'><img src={heating} alt="Heating services" className='w-full h-full object-cover -rotate-45' loading="lazy"/></div>
           </div>
           <div className="w-full lg:w-1/2 text-sm md:text-base text-gray-700">
             <h2 className="text-xl md:text-2xl font-semibold text-blue-900 mb-2">🔥 Heating Services</h2>
@@ -65,7 +75,7 @@ export default function Services() {
         {/* 2️⃣ Cooling Services - IMAGE LEFT */}
         <div className="flex flex-col lg:flex-row-reverse items-center gap-10">
           <div className="w-full lg:w-1/2"><div className='w-[260px] h-[260px] transform rotate-45 overflow-hidden rounded-xl shadow-lg border border-gray-200 bg-white mx-auto'>
-  <img src={cooling} alt="Cooling services" className='w-full h-full object-cover -rotate-45' />
+  <img src={cooling} alt="Cooling services" className='w-full h-full object-cover -rotate-45' loading="lazy"/>
 </div>
           </div>
           <div className="w-full lg:w-1/2 text-sm md:text-base text-gray-700">
@@ -82,7 +92,7 @@ export default function Services() {
 
         {/* 3️⃣ Ventilation Services - IMAGE RIGHT */}
         <div className="flex flex-col lg:flex-row items-center gap-10">
-          <div className="w-full lg:w-1/2"><div className='w-[260px] h-[260px] transform rotate-45 overflow-hidden rounded-xl shadow-lg border border-gray-200 bg-white mx-auto'><img src={ventilation} alt="Ventilation services" className='w-full h-full object-cover -rotate-45' /></div>
+          <div className="w-full lg:w-1/2"><div className='w-[260px] h-[260px] transform rotate-45 overflow-hidden rounded-xl shadow-lg border border-gray-200 bg-white mx-auto'><img src={ventilation} alt="Ventilation services" className='w-full h-full object-cover -rotate-45' loading="lazy"/></div>
           </div>
           <div className="w-full lg:w-1/2 text-sm md:text-base text-gray-700">
             <h2 className="text-xl md:text-2xl font-semibold text-blue-900 mb-2">🌬️ Ventilation Services</h2>
@@ -98,7 +108,7 @@ export default function Services() {
 
         {/* 4️⃣ New Installations - IMAGE LEFT */}
         <div className="flex flex-col lg:flex-row-reverse items-center gap-10">
-          <div className="w-full lg:w-1/2"><div className='w-[260px] h-[260px] transform rotate-45 overflow-hidden rounded-xl shadow-md mx-auto'><img src={new_install} alt="New Install services" className='w-full h-full object-cover -rotate-45' /></div>
+          <div className="w-full lg:w-1/2"><div className='w-[260px] h-[260px] transform rotate-45 overflow-hidden rounded-xl shadow-md mx-auto'><img src={new_install} alt="New Install services" className='w-full h-full object-cover -rotate-45' loading="lazy"/></div>
           </div>
           <div className="w-full lg:w-1/2 text-sm md:text-base text-gray-700">
             <h2 className="text-xl md:text-2xl font-semibold text-blue-900 mb-2">🆕 New Installations</h2>
@@ -114,7 +124,7 @@ export default function Services() {
 
         {/* 5️⃣ Repairs and Maintenance - IMAGE RIGHT */}
         <div className="flex flex-col lg:flex-row items-center gap-10">
-          <div className="w-full lg:w-1/2"><div className='w-[260px] h-[260px] transform rotate-45 overflow-hidden rounded-xl shadow-md mx-auto'><img src={repairs_maintenance} alt="Maintenance services" className='w-full h-full object-cover -rotate-45' /></div>
+          <div className="w-full lg:w-1/2"><div className='w-[260px] h-[260px] transform rotate-45 overflow-hidden rounded-xl shadow-md mx-auto'><img src={repairs_maintenance} alt="Maintenance services" className='w-full h-full object-cover -rotate-45' loading="lazy"/></div>
           </div>
           <div className="w-full lg:w-1/2 text-sm md:text-base text-gray-700">
             <h2 className="text-xl md:text-2xl font-semibold text-blue-900 mb-2">🛠️ Repairs & Maintenance</h2>
@@ -130,7 +140,7 @@ export default function Services() {
 
         {/* 6️⃣ Air Quality Solutions - IMAGE LEFT */}
         <div className="flex flex-col lg:flex-row-reverse items-center gap-10">
-          <div className="w-full lg:w-1/2"><div className='w-[260px] h-[260px] transform rotate-45 overflow-hidden rounded-xl shadow-md mx-auto'><img src={air} alt="Air quality services" className='w-full h-full object-cover -rotate-45' /></div>
+          <div className="w-full lg:w-1/2"><div className='w-[260px] h-[260px] transform rotate-45 overflow-hidden rounded-xl shadow-md mx-auto'><img src={air} alt="Air quality services" className='w-full h-full object-cover -rotate-45' loading="lazy"/></div>
           </div>
           <div className="w-full lg:w-1/2 text-sm md:text-base text-gray-700">
             <h2 className="text-xl md:text-2xl font-semibold text-blue-900 mb-2">🌿 Air Quality Solutions</h2>
@@ -145,7 +155,7 @@ export default function Services() {
 
         {/* 7️⃣ Emergency Services - IMAGE RIGHT */}
         <div className="flex flex-col lg:flex-row items-center gap-10">
-          <div className="w-full lg:w-1/2"><div className='w-[260px] h-[260px] transform rotate-45 overflow-hidden rounded-xl shadow-md mx-auto'><img src={emergency} alt="Emergency services" className='w-full h-full object-cover -rotate-45' /></div>
+          <div className="w-full lg:w-1/2"><div className='w-[260px] h-[260px] transform rotate-45 overflow-hidden rounded-xl shadow-md mx-auto'><img src={emergency} alt="Emergency services" className='w-full h-full object-cover -rotate-45' loading="lazy"/></div>
           </div>
           <div className="w-full lg:w-1/2 text-sm md:text-base text-gray-700">
             <h2 className="text-xl md:text-2xl font-semibold text-blue-900 mb-2">🚨 Emergency Services</h2>

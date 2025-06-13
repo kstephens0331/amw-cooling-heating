@@ -5,6 +5,18 @@ import { Link } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaYelp } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
 
+<Helmet>
+  <title>FAQs | AMW Cooling & Heating LLC</title>
+  <meta
+    name="description"
+    content="Get answers to frequently asked questions about our HVAC services, maintenance plans, emergency repairs, pricing, and scheduling options."
+  />
+  <meta
+    name="keywords"
+    content="HVAC FAQ, air conditioning help, common HVAC questions, AMW Cooling & Heating support, HVAC maintenance info"
+  />
+</Helmet>
+
 const faqs = [
   {
     category: 'General HVAC',
