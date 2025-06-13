@@ -25,7 +25,7 @@ export default function MobileHero() {
           </p>
           <a
             href="/contact"
-            className="inline-block px-3 py-2 bg-orange-600 text-white rounded shadow hover:bg-orange-700 transition text-xs font-semibold"
+            className="inline-block px-3 py-2 bg-blue-600 text-white rounded shadow hover:bg-blue-700 transition text-xs font-semibold"
           >
             Schedule Your Consultation
           </a>
