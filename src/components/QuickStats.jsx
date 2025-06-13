@@ -68,43 +68,43 @@ export default function QuickStats() {
           Our dedication to customer comfort extends beyond the numbers.
         </p>
 
-{/* Why Choose Us */}
-<h2 className="text-2xl md:text-4xl font-semibold text-center text-blue-900 mb-4">
-  Why Choose Us
-</h2>
-<div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 mb-12 min-h-[650px]">
-  {/* Left Side Image */}
-  <div className="w-full max-w-sm aspect-[7/8] overflow-hidden rounded-3xl shadow-md self-start">
-    <img
-      src={WhyChoose}
-      alt="Josh meeting customer with tools in hand"
-      width="420"
-      height="480"
-      className="w-full h-full object-cover object-top"
-      loading="lazy"
-    />
-  </div>
+        {/* Why Choose Us */}
+        <h2 className="text-2xl md:text-4xl font-semibold text-center text-blue-900 mb-4">
+          Why Choose Us
+        </h2>
+        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 mb-12 min-h-[650px]">
+          {/* Left Side Image */}
+          <div className="w-full max-w-sm aspect-[7/8] overflow-hidden rounded-3xl shadow-md self-start">
+            <img
+              src={WhyChoose}
+              alt="Josh meeting customer with tools in hand"
+              width="420"
+              height="480"
+              className="w-full h-full object-cover object-top"
+              loading="lazy"
+            />
+          </div>
 
   {/* Right Side Features */}
-  <div className="lg:w-1/2 w-full grid grid-cols-1 gap-4 order-2">
-    {features.map((item, idx) => (
-      <div
-        key={idx}
-        className="bg-white rounded-xl shadow-md p-4 flex items-start space-x-4 min-h-[130px]"
-      >
-        <div className="text-2xl">{item.icon}</div>
-        <div>
-          <h3 className="text-xl md:text-1xl font-semibold text-blue-900 mb-1">
-            {item.title}
-          </h3>
-          <p className="text-sm text-gray-700 leading-snug line-clamp-2 md:line-clamp-3 min-h-[2.5rem]">
-            {item.description}
-          </p>
+  <div className="lg:w-1/2 w-full min-h-[20rem] grid grid-cols-1 gap-6 order-2">
+            {features.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-white rounded-xl shadow-md p-4 flex items-start space-x-4"
+              >
+                <div className="text-2xl">{item.icon}</div>
+                <div>
+                  <h3 className="text-lg md:text-xl font-semibold text-blue-900 mb-1">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm md:text-base text-gray-700 leading-snug">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    ))}
-  </div>
-</div>
       </div>
     </section>
   );
