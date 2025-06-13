@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import Footer from './components/Footer';
 
       <Helmet>
         <title>Page Not Found | AMW Cooling & Heating LLC</title>
@@ -30,6 +31,7 @@ export default function NotFound() {
         >
           Return Home
         </Link>
+        <Footer />
       </main>
     </>
   );
