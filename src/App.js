@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 
 // Shared components
 import Navbar from './components/Navbar';
@@ -19,6 +20,7 @@ import NotFound from './pages/NotFound';
 
 function App() {
   return (
+    <HelmetProvider>
     <div className="bg-white text-gray-800 font-sans">
       <Router>
         <Navbar />
@@ -38,6 +40,7 @@ function App() {
          <ChatBot />
       </Router>
     </div>
+   </HelmetProvider>
   );
 }
 

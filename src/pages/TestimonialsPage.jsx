@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { FaQuoteLeft } from 'react-icons/fa';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 
 <Helmet>
   <title>Customer Testimonials | AMW Cooling & Heating LLC</title>

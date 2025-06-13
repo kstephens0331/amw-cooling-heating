@@ -86,24 +86,24 @@ export default function QuickStats() {
 </div>
 
           {/* Right Side Boxes */}
-          <div className="lg:w-1/2 w-full min-h-[20rem] grid grid-cols-1 gap-4 order-2">
-            {features.map((item, idx) => (
-              <div
-                key={idx}
-                className="bg-white rounded-xl shadow-md p-4 flex items-start space-x-4"
-              >
-                <div className="text-2xl">{item.icon}</div>
-                <div>
-                  <h3 className="text-xl md:text-1xl font-semibold text-blue-900 mb-1">
-                    {item.title}
-                  </h3>
-                  <p className="text-base md:text-lg text-gray-700">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+<div className="lg:w-1/2 w-full min-h-[20rem] grid grid-cols-1 gap-3 order-2">
+  {features.map((item, idx) => (
+    <div
+      key={idx}
+      className="bg-white rounded-xl shadow-md p-3 flex items-start space-x-3"
+    >
+      <div className="text-xl">{item.icon}</div>
+      <div>
+        <h3 className="text-base font-semibold text-blue-900 mb-1">
+          {item.title}
+        </h3>
+        <p className="text-sm text-gray-700 leading-snug line-clamp-2 min-h-[2.5rem]">
+          {item.description}
+        </p>
+      </div>
+    </div>
+  ))}
+</div>
         </div>
       </div>
     </section>
