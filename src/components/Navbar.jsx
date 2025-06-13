@@ -1,13 +1,49 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaYelp, FaBars, FaTimes } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
 import logo from '../assets/images/FullLogo_Transparent.webp'
+import VoiceSearch from "./VoiceSearch";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
+
+  const navigate = useNavigate();
+
+const speak = (text) => {
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = "en-US";
+  window.speechSynthesis.speak(utterance);
+};
+
+const handleVoiceResult = (query) => {
+  console.log("Voice search for:", query);
+
+  if (query.includes("about")) {
+    speak("Taking you to our About Us page.");
+    navigate("/about");
+  } else if (query.includes("contact") || query.includes("phone")) {
+    speak("Opening the contact page.");
+    navigate("/contact");
+  } else if (query.includes("services") || query.includes("repair")) {
+    speak("Showing our services.");
+    navigate("/services");
+  } else if (query.includes("quote") || query.includes("estimate")) {
+    speak("Let's get you a quote.");
+    navigate("/contact");
+  } else if (query.includes("home") || query.includes("main")) {
+    speak("Going back to the homepage.");
+    navigate("/");
+  } else if (query.includes("finance") || query.includes("payment")) {
+    speak("Here are your financing options.");
+    navigate("/financing");
+  } else {
+    speak("Sorry, I didn't catch that.");
+    alert(`No match for "${query}"`);
+  }
+};
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50 w-full">
@@ -23,6 +59,7 @@ const Navbar = () => {
   </span>
 </Link>
 
+
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-6 text-gray-700">
           <Link to="/" className="hover:text-orange-700">Home</Link>
@@ -33,6 +70,7 @@ const Navbar = () => {
           <Link to="/testimonials" className="hover:text-orange-700">Testimonials</Link>
           <Link to="/contact" className="hover:text-orange-700">Contact</Link>
         </nav>
+        <VoiceSearch onResult={handleVoiceResult} />
 
         {/* Mobile Icon */}
         <button onClick={toggleMenu} className="md:hidden text-gray-700 z-50" aria-label="Menu">
@@ -50,6 +88,7 @@ const Navbar = () => {
           <Link to="/financing" className="block" onClick={closeMenu}>Financing</Link>
           <Link to="/testimonials" className="block" onClick={closeMenu}>Testimonials</Link>
           <Link to="/contact" className="block" onClick={closeMenu}>Contact</Link>
+          <VoiceSearch onResult={handleVoiceResult} />
 
           {/* Social Icons */}
           <div className="flex justify-start space-x-4 pt-3">
