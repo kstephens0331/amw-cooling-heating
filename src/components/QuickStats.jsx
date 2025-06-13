@@ -1,6 +1,7 @@
 // src/components/QuickStats.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
+import WhyChoose from '../assets/images/DSC_1930.jpg';
 
 const stats = [
   { number: '8+', label: 'Years of Experience' },
@@ -75,11 +76,11 @@ export default function QuickStats() {
 </h2>
         <div className="flex flex-col lg:flex-row items-center gap-8 mb-12">
           {/* Left Side Image */}
-          <div className="lg:w-1/2 w-full h-96 overflow-hidden rounded-3xl shadow-md order-1">
+          <div className="w-full lg:max-w-md overflow-hidden rounded-3xl shadow-md order-1 bg-white">
             <img
-              src="/placeholders/josh-angelica-placeholder.jpg" // replace with real image
+              src={WhyChoose}
               alt="Josh and Angelica"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
             />
           </div>
 

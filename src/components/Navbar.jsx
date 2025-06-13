@@ -1,16 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaFacebook, FaInstagram, FaYelp } from 'react-icons/fa';
-import { FcGoogle } from 'react-icons/fc'; // Google colorful icon
+import { FaFacebook, FaInstagram, FaYelp, FaBars, FaTimes } from 'react-icons/fa';
+import { FcGoogle } from 'react-icons/fc';
+import logo from '../assets/images/FullLogo_Transparent.png'
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const closeMenu = () => setIsOpen(false);
+
   return (
     <header className="bg-white shadow-md sticky top-0 z-50 w-full">
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-        {/* Logo */}
-        <div className="text-2xl font-bold text-blue-600">AMW Cooling & Heating</div>
+<Link to="/" className="flex items-center space-x-2">
+  <img
+    src={logo}
+    alt="AMW Logo"
+    className="h-14 w-auto object-contain"
+  />
+  <span className="text-lg md:text-2xl font-bold text-blue-600 whitespace-nowrap">
+    AMW Cooling & Heating LLC
+  </span>
+</Link>
 
-        {/* Navigation */}
+        {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-6 text-gray-700">
           <Link to="/" className="hover:text-orange-500">Home</Link>
           <Link to="/about" className="hover:text-orange-500">About Us</Link>
@@ -21,41 +34,40 @@ const Navbar = () => {
           <Link to="/contact" className="hover:text-orange-500">Contact</Link>
         </nav>
 
-        {/* Social Icons with Updated Links and Brand Colors */}
-        <div className="flex space-x-3 items-center">
-          <a
-            href="https://www.facebook.com/people/AMW-Cooling-Heating-LLC/61569862892114/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 hover:text-blue-800 transition"
-          >
-            <FaFacebook size={18} />
-          </a>
-          <a
-            href="https://www.instagram.com/amwairconditioning/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-pink-500 hover:text-pink-700 transition"
-          >
-            <FaInstagram size={18} />
-          </a>
-          <a
-            href="https://www.google.com/search?sca_esv=f6bc877b3d7fa12d&rlz=1C1UEAD_enUS1100US1100&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-Ew1xWYRh3W0x95s4I1CY56p8ZDCU0RELO-yfbJ2A3BPTIYULwgDJs1JMco_ssAI31rRlsh52piMFkTrezcULB24LRNBJZFtx7Ep6HasQcQHtaXQRUKjSK2LYiEhZ9pKL6HGbGVCbuZrD8W32y3cPnVMTFXcMDE00lIt89eSmCQG6BqJXvg%3D%3D&q=AMW+Cooling+%26+Heating+%7C+HVAC+Repair+Emergency+Service+%7C+AC+Unit+Install+Conroe+Reviews&sa=X&ved=2ahUKEwii5f-o59KNAxV4KEQIHYxDEtcQ0bkNegQIPBAD&biw=1817&bih=944&dpr=1"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FcGoogle size={18} /> {/* Colorful Google icon */}
-          </a>
-          <a
-            href="https://www.yelp.com/biz/amw-cooling-and-heating-conroe"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-red-500 hover:text-red-700 transition"
-          >
-            <FaYelp size={18} />
-          </a>
-        </div>
+        {/* Mobile Icon */}
+        <button onClick={toggleMenu} className="md:hidden text-gray-700 z-50" aria-label="Menu">
+          {isOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
+        </button>
       </div>
+
+      {/* Mobile Dropdown Menu */}
+      {isOpen && (
+        <div className="md:hidden bg-white shadow-lg border-t border-gray-200 px-4 py-4 space-y-3 text-gray-700">
+          <Link to="/" className="block" onClick={closeMenu}>Home</Link>
+          <Link to="/about" className="block" onClick={closeMenu}>About Us</Link>
+          <Link to="/services" className="block" onClick={closeMenu}>Services</Link>
+          <Link to="/faqs" className="block" onClick={closeMenu}>FAQs</Link>
+          <Link to="/financing" className="block" onClick={closeMenu}>Financing</Link>
+          <Link to="/testimonials" className="block" onClick={closeMenu}>Testimonials</Link>
+          <Link to="/contact" className="block" onClick={closeMenu}>Contact</Link>
+
+          {/* Social Icons */}
+          <div className="flex justify-start space-x-4 pt-3">
+            <a href="https://www.facebook.com/people/AMW-Cooling-Heating-LLC/61569862892114/" target="_blank" rel="noopener noreferrer" className="text-blue-600">
+              <FaFacebook />
+            </a>
+            <a href="https://www.instagram.com/amwairconditioning/" target="_blank" rel="noopener noreferrer" className="text-pink-500">
+              <FaInstagram />
+            </a>
+            <a href="https://www.google.com/search?q=AMW+Cooling+%26+Heating+Reviews" target="_blank" rel="noopener noreferrer">
+              <FcGoogle />
+            </a>
+            <a href="https://www.yelp.com/biz/amw-cooling-and-heating-conroe" target="_blank" rel="noopener noreferrer" className="text-red-500">
+              <FaYelp />
+            </a>
+          </div>
+        </div>
+      )}
     </header>
   );
 };

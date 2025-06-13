@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaYelp } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
-import HeroSection from '../components/HeroSection';
+import HeroLandingPage from '../components/HeroLandingPage';
 import QuickStats from '../components/QuickStats';
 import AboutUsPreview from '../components/AboutUsPreview';
 import MapSection from '../components/MapSection';
@@ -24,7 +24,7 @@ export default function HomePage() {
       </Helmet>
 
       <main>
-        <HeroSection />
+        <HeroLandingPage />
         <QuickStats />
         <AboutUsPreview />
         <MapSection />

@@ -5,6 +5,13 @@ import ManufacturerCarousel from '../components/ManufacturerCarousel';
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaYelp } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
+import heating from '../assets/images/IMG_1163.jpg';
+import cooling from '../assets/images/DSC_2035.jpg';
+import ventilation from '../assets/images/DSC_1976.jpg';
+import new_install from '../assets/images/DSC_1997.jpg';
+import repairs_maintenance from '../assets/images/DSC_2058.jpg';
+import air from '../assets/images/air-quality.jpg'
+import emergency from '../assets/images/emergency.png'
 
 export default function Services() {
   return (
@@ -49,15 +56,15 @@ export default function Services() {
               <li> <strong>Thermostat Services</strong> – Precision controls for comfort and economy.</li>
             </ul>
           </div>
-          <div className="w-full lg:w-1/2 h-64 rounded overflow-hidden shadow">
-            <img src="/placeholders/heating-placeholder.jpg" alt="Heating services" className="w-full h-full object-cover" />
+          <div className="w-full lg:max-w-md overflow-hidden rounded-3xl shadow-md order-1 bg-white">
+            <img src={heating} />
           </div>
         </div>
 
         {/* 2️⃣ Air Conditioning Services */}
         <div className="bg-white rounded shadow p-4 flex flex-col lg:flex-row items-center gap-6 my-8">
-          <div className="w-full lg:w-1/2 h-64 rounded overflow-hidden shadow">
-            <img src="/placeholders/cooling-placeholder.jpg" alt="Cooling services" className="w-full h-full object-cover" />
+          <div className="w-full lg:max-w-md overflow-hidden rounded-3xl shadow-md order-1 bg-white">
+            <img src={cooling} />
           </div>
           <div className="w-full lg:w-1/2 text-sm md:text-base text-gray-700">
             <h2 className="text-xl md:text-2xl font-semibold text-blue-900 mb-2">❄️ Air Conditioning Services</h2>
@@ -83,15 +90,15 @@ export default function Services() {
               <li> <strong>Exhaust Systems</strong> – Proper moisture control and ventilation.</li>
             </ul>
           </div>
-          <div className="w-full lg:w-1/2 h-64 rounded overflow-hidden shadow">
-            <img src="/placeholders/ventilation-placeholder.jpg" alt="Ventilation services" className="w-full h-full object-cover" />
+          <div className="w-full lg:max-w-md overflow-hidden rounded-3xl shadow-md order-1 bg-white">
+            <img src={ventilation} alt="Ventilation services" className="w-full h-full object-cover" />
           </div>
         </div>
 
         {/* 4️⃣ New Installations */}
         <div className="bg-white rounded shadow p-4 flex flex-col lg:flex-row items-center gap-6 my-8">
-          <div className="w-full lg:w-1/2 h-64 rounded overflow-hidden shadow">
-            <img src="/placeholders/new-install-placeholder.jpg" alt="New system installations" className="w-full h-full object-cover" />
+          <div className="w-full lg:max-w-md overflow-hidden rounded-3xl shadow-md order-1 bg-white">
+            <img src={new_install} alt="New system installations" className="w-full h-full object-cover" />
           </div>
           <div className="w-full lg:w-1/2 text-sm md:text-base text-gray-700">
             <h2 className="text-xl md:text-2xl font-semibold text-blue-900 mb-2">🆕 New Installations</h2>
@@ -117,15 +124,15 @@ export default function Services() {
               <li> <strong>Efficiency Optimization</strong> – Save on energy bills year-round.</li>
             </ul>
           </div>
-          <div className="w-full lg:w-1/2 h-64 rounded overflow-hidden shadow">
-            <img src="/placeholders/maintenance-placeholder.jpg" alt="Repairs and maintenance" className="w-full h-full object-cover" />
+          <div className="w-full lg:max-w-md overflow-hidden rounded-3xl shadow-md order-1 bg-white">
+            <img src={repairs_maintenance} alt="Repairs and maintenance" className="w-full h-full object-cover" />
           </div>
         </div>
 
         {/* 6️⃣ Air Quality Solutions */}
         <div className="bg-white rounded shadow p-4 flex flex-col lg:flex-row items-center gap-6 my-8">
-          <div className="w-full lg:w-1/2 h-64 rounded overflow-hidden shadow">
-            <img src="/placeholders/air-quality-placeholder.jpg" alt="Air quality solutions" className="w-full h-full object-cover" />
+          <div className="w-full lg:max-w-md overflow-hidden rounded-3xl shadow-md order-1 bg-white">
+            <img src={air} alt="Air quality solutions" className="w-full h-full object-cover" />
           </div>
           <div className="w-full lg:w-1/2 text-sm md:text-base text-gray-700">
             <h2 className="text-xl md:text-2xl font-semibold text-blue-900 mb-2">🌿 Air Quality Solutions</h2>
@@ -151,8 +158,8 @@ export default function Services() {
               <li> *Additional charges may apply for after hours services.</li>
             </ul>
           </div>
-          <div className="w-full lg:w-1/2 h-64 rounded overflow-hidden shadow">
-            <img src="/placeholders/emergency-placeholder.jpg" alt="Emergency services" className="w-full h-full object-cover" />
+          <div className="w-full lg:max-w-md overflow-hidden rounded-3xl shadow-md order-1 bg-white">
+            <img src={emergency} alt="Emergency services" className="w-full h-full object-cover" />
           </div>
         </div>
       </section>

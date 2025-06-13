@@ -1,6 +1,7 @@
 // src/components/AboutUsPreview.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
+import aboutus from '../assets/images/DSC_1887.jpg';
 
 export default function AboutUsPreview() {
   return (
@@ -27,11 +28,11 @@ export default function AboutUsPreview() {
         </div>
 
         {/* Right Side Image */}
-        <div className="md:w-1/2 w-full h-72 overflow-hidden rounded-3xl shadow-md">
+        <div className="w-full lg:max-w-md overflow-hidden rounded-3xl shadow-md order-1 bg-white">
           <img
-            src="/placeholders/aboutus-placeholder.jpg"
+            src={aboutus}
             alt="Josh and Angelica"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain"
           />
         </div>
       </div>

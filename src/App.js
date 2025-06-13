@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import InstantContact from './components/InstantContact';
 import ChatBot from './components/ChatBot';
+import HeroLandingPage from './components/HeroLandingPage';
 
 // Full page
 import AboutUs from './pages/AboutUs';
@@ -30,6 +31,7 @@ function App() {
           <Route path="/financing" element={<Financing />} />
           <Route path="/testimonials" element={<TestimonialsPage />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/" element={<HeroLandingPage />} />
         </Routes>
         <InstantContact />
          <ChatBot />
