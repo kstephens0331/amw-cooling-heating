@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaYelp, FaBars, FaTimes } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
-import logo from '../assets/images/FullLogo_Transparent.png'
+import logo from '../assets/images/FullLogo_Transparent.webp'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
