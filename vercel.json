@@ -1,7 +1,7 @@
 {
   "headers": [
     {
-      "source": "/images/(.*)",
+      "source": "/(.*)\\.(js|css|webp|png|jpg|svg|woff2?)",
       "headers": [
         {
           "key": "Cache-Control",
