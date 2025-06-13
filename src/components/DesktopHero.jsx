@@ -11,7 +11,9 @@ export default function HeroSection() {
       <img
         src={hero}
         alt="AMW Cooling & Heating truck at sunset with phone number"
-        className="absolute inset-0 w-full h-full object-cover object-bottom" loading="lazy"
+        width="1280"
+        height="720"
+        className="absolute inset-0 w-full h-full object-cover object-bottom" fetchpriority="high"
       />
 
       {/* Overlay */}

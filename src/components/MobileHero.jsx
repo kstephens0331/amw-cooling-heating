@@ -8,7 +8,7 @@ export default function MobileHero() {
       <img
         src={hero}
         alt="AMW Cooling & Heating truck at sunset with phone number"
-        className="absolute inset-0 w-full h-full object-cover object-bottom" loading="lazy"
+        className="absolute inset-0 w-full h-full object-cover object-bottom" fetchpriority="high"
       />
 
       {/* Overlay */}

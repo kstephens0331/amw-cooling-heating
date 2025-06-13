@@ -66,7 +66,7 @@ export default function QuickStats() {
         <div className="my-12 border-t border-gray-300 w-1/4 mx-auto"></div>
 
         {/* Intro text */}
-        <p className="text-center text-gray-600 mb-8">
+        <p className="text-center text-gray-800 mb-8">
           Our dedication to customer comfort extends beyond the numbers.
         </p>
 

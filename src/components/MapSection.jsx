@@ -21,7 +21,7 @@ const MapSection = () => {
         <h2 className="text-2xl md:text-3xl font-semibold text-center text-blue-900 mb-4">
   Our Service Area
 </h2>
-<p className="text-sm md:text-base text-center text-gray-700 mb-6 max-w-2xl mx-auto">
+<p className="text-sm md:text-base text-center text-gray-800 mb-6 max-w-2xl mx-auto">
   We proudly serve Conroe, Montgomery County, The Woodlands, Spring, Willis, and surrounding areas.
 </p>
 

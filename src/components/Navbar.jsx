@@ -25,13 +25,13 @@ const Navbar = () => {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-6 text-gray-700">
-          <Link to="/" className="hover:text-orange-500">Home</Link>
-          <Link to="/about" className="hover:text-orange-500">About Us</Link>
-          <Link to="/services" className="hover:text-orange-500">Services</Link>
-          <Link to="/faqs" className="hover:text-orange-500">FAQs</Link>
-          <Link to="/financing" className="hover:text-orange-500">Financing</Link>
-          <Link to="/testimonials" className="hover:text-orange-500">Testimonials</Link>
-          <Link to="/contact" className="hover:text-orange-500">Contact</Link>
+          <Link to="/" className="hover:text-orange-700">Home</Link>
+          <Link to="/about" className="hover:text-orange-700">About Us</Link>
+          <Link to="/services" className="hover:text-orange-700">Services</Link>
+          <Link to="/faqs" className="hover:text-orange-700">FAQs</Link>
+          <Link to="/financing" className="hover:text-orange-700">Financing</Link>
+          <Link to="/testimonials" className="hover:text-orange-700">Testimonials</Link>
+          <Link to="/contact" className="hover:text-orange-700">Contact</Link>
         </nav>
 
         {/* Mobile Icon */}
@@ -53,16 +53,16 @@ const Navbar = () => {
 
           {/* Social Icons */}
           <div className="flex justify-start space-x-4 pt-3">
-            <a href="https://www.facebook.com/people/AMW-Cooling-Heating-LLC/61569862892114/" target="_blank" rel="noopener noreferrer" className="text-blue-600">
+            <a href="https://www.facebook.com/people/AMW-Cooling-Heating-LLC/61569862892114/" target="_blank" rel="noopener noreferrer" className="text-blue-600" aria-label="AMW Facebook page">
               <FaFacebook />
             </a>
-            <a href="https://www.instagram.com/amwairconditioning/" target="_blank" rel="noopener noreferrer" className="text-pink-500">
+            <a href="https://www.instagram.com/amwairconditioning/" target="_blank" rel="noopener noreferrer" className="text-pink-700" aria-label="AMW Instagram profile">
               <FaInstagram />
             </a>
-            <a href="https://www.google.com/search?q=AMW+Cooling+%26+Heating+Reviews" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.google.com/search?q=AMW+Cooling+%26+Heating+Reviews" target="_blank" rel="noopener noreferrer" aria-label="AMW Google reviews">
               <FcGoogle />
             </a>
-            <a href="https://www.yelp.com/biz/amw-cooling-and-heating-conroe" target="_blank" rel="noopener noreferrer" className="text-red-500">
+            <a href="https://www.yelp.com/biz/amw-cooling-and-heating-conroe" target="_blank" rel="noopener noreferrer" className="text-red-700" aria-label="AMW Yelp listing">
               <FaYelp />
             </a>
           </div>

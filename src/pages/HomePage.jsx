@@ -93,6 +93,7 @@ export default function HomePage() {
       target="_blank"
       rel="noopener noreferrer"
       className="hover:text-blue-300 transition"
+      aria-label="AMW Facebook page"
     >
       <FaFacebook />
     </a>
@@ -101,6 +102,7 @@ export default function HomePage() {
       target="_blank"
       rel="noopener noreferrer"
       className="hover:text-pink-400 transition"
+      aria-label="AMW Instagram profile"
     >
       <FaInstagram />
     </a>
@@ -108,6 +110,7 @@ export default function HomePage() {
       href="https://www.google.com/search?sca_esv=f6bc877b3d7fa12d&..."
       target="_blank"
       rel="noopener noreferrer"
+      aria-label="AMW Google reviews"
     >
       <FcGoogle />
     </a>
@@ -116,6 +119,7 @@ export default function HomePage() {
       target="_blank"
       rel="noopener noreferrer"
       className="hover:text-red-400 transition"
+      aria-label="AMW Yelp listing"
     >
       <FaYelp />
     </a>

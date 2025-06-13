@@ -46,7 +46,11 @@ export default function AboutUs() {
         </div>
         <div className="order-1 lg:order-1">
           <div className="w-[260px] h-[260px] transform rotate-45 overflow-hidden rounded-xl shadow-lg border border-gray-200 bg-white mx-auto">
-            <img src={Josh} alt="Joshua" className="w-full h-full object-cover -rotate-45" loading="lazy"/>
+            <img src={Josh} 
+            alt="Joshua" 
+              width="300"
+             height="300"
+            className="w-full h-full object-cover -rotate-45 w-[300-px] h-[300px]"  loading="lazy"/>
           </div>
         </div>
       </motion.div>
@@ -59,7 +63,11 @@ export default function AboutUs() {
         transition={{ duration: 0.6 }}
         className="flex flex-col lg:flex-row-reverse items-center gap-10 pb-12">
                   <div className="w-full lg:w-1/2"><div className='w-[260px] h-[260px] transform rotate-45 overflow-hidden rounded-xl shadow-lg border border-gray-200 bg-white mx-auto'>
-          <img src={Anjelica} alt="Anjelica - co-owner of AMW Cooling & Heating" className='w-full h-full object-cover -rotate-45' loading="lazy"/>
+          <img src={Anjelica}
+          alt="Anjelica - co-owner of AMW Cooling & Heating" 
+          width="300"
+          height="300"
+          className='w-full h-full object-cover -rotate-45 w-[300-px] h-[300-px]' loading="lazy"/>
         </div>
                   </div>
         <div className="order-1 lg:order-2 text-sm md:text-base text-gray-700">
@@ -105,7 +113,7 @@ export default function AboutUs() {
         className="text-center pt-12 pb-24"
       >
         <h3 className="text-xl font-semibold text-blue-900 mb-2">Schedule Your Consultation</h3>
-        <p className="text-gray-600 max-w-lg mx-auto mb-4">
+        <p className="text-gray-800 max-w-lg mx-auto mb-4">
           At AMW Cooling & Heating, we specialize in a full range of HVAC solutions. Let Josh and Anjelica guide you through the process and deliver results you can rely on.
         </p>
         <button className="bg-blue-600 text-white px-6 py-2 rounded shadow hover:bg-blue-700 transition">
