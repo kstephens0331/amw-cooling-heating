@@ -6,13 +6,16 @@ export default function HeroSection() {
   return (
     <section className="relative h-[75vh] w-full overflow-hidden">
       {/* Background Image */}
-      <img
-        src={hero}
-        alt="AMW Cooling & Heating truck at sunset with phone number"
-        width="1280"
-        height="720"
-        className="absolute inset-0 w-full h-full object-cover object-bottom" fetchpriority="high"
-      />
+<img
+  src={hero}
+  srcSet={`${hero} 640w, ${hero} 1024w, ${hero} 1360w`}
+  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
+  alt="AMW Cooling & Heating truck at sunset with phone number"
+  width="1280"
+  height="auto"
+  className="absolute inset-0 w-full h-full object-cover object-bottom"
+  fetchpriority="high"
+/>
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/5 z-10" />

@@ -28,12 +28,16 @@ export default function AboutUsPreview() {
 
         {/* Right Side Image */}
         <div className="w-full max-w-sm aspect-[2/3] overflow-hidden rounded-lg shadow-md">
-  <img
-    src={aboutus}
-    alt="Josh and Anjelica - Owners"
-    className="w-full h-full object-cover"
-    loading="lazy"
-  />
+<img
+  src={aboutus}
+  srcSet={`${aboutus} 400w, ${aboutus} 600w, ${aboutus} 800w`}
+  sizes="(max-width: 640px) 100vw, 400px"
+  alt="Josh Meeting a customer"
+  width="400"
+  height="400"
+  className="rounded-lg shadow-md w-[400px] h-[400px] object-top object-cover"
+  loading="lazy"
+/>
 </div>
       </div>
     </section>

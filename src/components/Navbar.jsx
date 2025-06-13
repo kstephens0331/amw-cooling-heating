@@ -75,7 +75,7 @@ const handleVoiceResult = (query) => {
         {/* Mobile Icon */}
         <button
   onClick={toggleMenu}
-  className="md:hidden text-gray-700 z-50 w-12 h-12 flex items-center justify-center"
+  className="md:hidden text-gray-700 z-50 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-700"
   aria-label="Menu"
 >
   {isOpen ? <FaTimes size={22} /> : <FaBars size={22} />}

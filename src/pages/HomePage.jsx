@@ -5,7 +5,8 @@ import { FcGoogle } from 'react-icons/fc';
 import HeroLandingPage from '../components/HeroLandingPage';
 import QuickStats from '../components/QuickStats';
 import AboutUsPreview from '../components/AboutUsPreview';
-import MapSection from '../components/MapSection';
+import React, { Suspense, lazy } from "react";
+const MapSection = lazy(() => import("../components/MapSection"));
 
 export default function HomePage() {
   return (
@@ -54,14 +55,21 @@ export default function HomePage() {
       ]
     })}
   </script>
+  <link rel="preconnect" href="https://a.tile.openstreetmap.org" />
+  <link rel="preconnect" href="https://b.tile.openstreetmap.org" />
+  <link rel="preconnect" href="https://c.tile.openstreetmap.org" />
+  <link rel="dns-prefetch" href="https://a.tile.openstreetmap.org" />
+  <link rel="dns-prefetch" href="https://b.tile.openstreetmap.org" />
+  <link rel="dns-prefetch" href="https://c.tile.openstreetmap.org" />
 </Helmet>
 
       <main>
         <HeroLandingPage />
         <QuickStats />
         <AboutUsPreview />
+        <Suspense fallback={<div className="text-center py-12">Loading map...</div>}>
         <MapSection />
-        
+        </Suspense>
         {/* Footer placed inside <main> */}
         <footer className="bg-blue-600 text-white py-8 mt-12">
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8 px-4">
