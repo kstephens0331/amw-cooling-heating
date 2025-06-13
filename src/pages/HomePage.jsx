@@ -10,18 +10,18 @@ import MapSection from '../components/MapSection';
 export default function HomePage() {
   return (
     <div className="bg-white text-gray-800 font-sans">
-      <Helmet>
-        <link rel="preload" as="image" href="src/assets/images/DSC_2136-2.webp" />
-        <title>AMW Cooling & Heating LLC | HVAC Services in Conroe, The Woodlands, TX</title>
-        <meta
-          name="description"
-          content="AMW Cooling & Heating LLC provides reliable HVAC installations, repairs, and maintenance for homes and businesses in Conroe, The Woodlands, Spring, Montgomery County, and Willis. Contact us today!"
-        />
-        <meta
-          name="keywords"
-          content="HVAC services, air conditioning repair, heating maintenance, Conroe TX, The Woodlands HVAC, AMW Cooling & Heating"
-        />
- <script type="application/ld+json">
+    <Helmet>
+  <link rel="preload" as="image" href="/images/DSC_2136-2.webp" />
+  <title>AMW Cooling & Heating LLC | HVAC Services in Conroe, The Woodlands, TX</title>
+  <meta
+    name="description"
+    content="AMW Cooling & Heating LLC provides reliable HVAC installations, repairs, and maintenance for homes and businesses in Conroe, The Woodlands, Spring, Montgomery County, and Willis. Contact us today!"
+  />
+  <meta
+    name="keywords"
+    content="HVAC services, air conditioning repair, heating maintenance, Conroe TX, The Woodlands HVAC, AMW Cooling & Heating"
+  />
+  <script type="application/ld+json">
     {JSON.stringify({
       "@context": "https://schema.org",
       "@type": "HVACBusiness",
@@ -50,12 +50,11 @@ export default function HomePage() {
       "sameAs": [
         "https://www.facebook.com/amwairconditioning",
         "https://www.instagram.com/amwairconditioning",
-        "https://www.yelp.com/biz/amw-cooling-and-heating-conroe",
+        "https://www.yelp.com/biz/amw-cooling-and-heating-conroe"
       ]
     })}
   </script>
-
-      </Helmet>
+</Helmet>
 
       <main>
         <HeroLandingPage />
