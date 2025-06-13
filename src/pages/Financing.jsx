@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { FaCheckCircle, FaDollarSign, FaHandshake } from 'react-icons/fa';
-import Footer from './components/Footer';
+import Footer from '../components/Footer';
 
 <Helmet>
   <title>Financing Options | AMW Cooling & Heating LLC</title>

@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import Footer from './components/Footer';
+import Footer from '../components/Footer';
 import HeroLandingPage from '../components/HeroLandingPage';
 import QuickStats from '../components/QuickStats';
 import AboutUsPreview from '../components/AboutUsPreview';

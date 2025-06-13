@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import ManufacturerCarousel from '../components/ManufacturerCarousel';
-import Footer from './components/Footer';
+import Footer from '../components/Footer';
 import heating from '../assets/images/IMG_1163.webp';
 import cooling from '../assets/images/DSC_2035.webp';
 import ventilation from '../assets/images/DSC_1976.webp';

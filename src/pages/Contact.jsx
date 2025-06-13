@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import logo from '../assets/images/FullLogo_Transparent.png';
-import { Link } from 'react-router-dom';
-import { FaFacebook, FaInstagram, FaYelp } from 'react-icons/fa';
-import { FcGoogle } from 'react-icons/fc';
+import Footer from '../components/Footer';
 
 <Helmet>
   <title>Contact Us | AMW Cooling & Heating LLC</title>

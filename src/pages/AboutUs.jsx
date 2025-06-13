@@ -1,12 +1,9 @@
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaFacebook, FaInstagram, FaYelp } from 'react-icons/fa';
-import { FcGoogle } from 'react-icons/fc';
 import nateLogo from '../assets/images/nate.webp';
 import Anjelica from '../assets/images/DSC_2077.webp'
 import Josh from '../assets/images/DSC_2157.webp'
-import Footer from './components/Footer';
+import Footer from '../components/Footer';
 
 export default function AboutUs() {
   return (

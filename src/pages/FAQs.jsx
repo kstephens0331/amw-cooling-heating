@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import FinancingCTA from '../components/FinancingCTA';
-import Footer from './components/Footer';
+import Footer from '../components/Footer';
 
 <Helmet>
   <title>FAQs | AMW Cooling & Heating LLC</title>
