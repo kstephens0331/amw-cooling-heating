@@ -73,9 +73,13 @@ const handleVoiceResult = (query) => {
         <VoiceSearch onResult={handleVoiceResult} />
 
         {/* Mobile Icon */}
-        <button onClick={toggleMenu} className="md:hidden text-gray-700 z-50" aria-label="Menu">
-          {isOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
-        </button>
+        <button
+  onClick={toggleMenu}
+  className="md:hidden text-gray-700 z-50 w-12 h-12 flex items-center justify-center"
+  aria-label="Menu"
+>
+  {isOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
+</button>
       </div>
 
       {/* Mobile Dropdown Menu */}

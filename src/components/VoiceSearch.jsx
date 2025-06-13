@@ -46,14 +46,14 @@ const VoiceSearch = ({ onResult }) => {
 
   return (
     <button
-      onClick={handleListen}
-      aria-label="Activate voice search"
-      className={`p-2 rounded-full bg-orange-500 hover:bg-orange-600 text-white shadow transition ${
-        isListening ? "animate-pulse" : ""
-      }`}
-    >
-      🎤
-    </button>
+  onClick={handleListen}
+  className={`w-12 h-12 p-2 rounded-full bg-orange-500 hover:bg-orange-600 text-white shadow transition flex items-center justify-center ${
+    isListening ? "animate-pulse" : ""
+  }`}
+  aria-label="Tap to search by voice"
+>
+  🎤
+</button>
   );
 };
 
