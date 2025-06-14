@@ -1,4 +1,4 @@
-import hero from '../assets/images/DSC_2135.jpg';
+import hero from '../assets/images/DSC_2135.webp';
 
 export default function MobileHero() {
   return (
