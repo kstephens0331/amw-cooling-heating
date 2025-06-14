@@ -11,7 +11,7 @@ export default function AboutUsPreview() {
           <h1 className="text-3xl md:text-3xl font-bold text-blue-900 mb-2">About Us</h1>
           <p className="text-sm md:text-base text-gray-800 mb-2">
             At AMW Cooling & Heating, we take pride in providing top-quality HVAC services to our community.
-            With years of experience and a commitment to excellence, Josh and Angelica lead a team that delivers
+            With years of experience and a commitment to excellence, Josh and Anjelica lead a team that delivers
             exceptional comfort solutions for your home or business.
           </p>
           <p className="text-sm md:text-base text-gray-800 mb-2">
