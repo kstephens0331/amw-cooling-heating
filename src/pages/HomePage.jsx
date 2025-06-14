@@ -10,7 +10,13 @@ export default function HomePage() {
   return (
     <div className="bg-white text-gray-800 font-sans">
     <Helmet>
-  <link rel="preload" as="image" href="/images/DSC_2136-2.webp" />
+    <link
+    rel="preload"
+    as="image"
+    href="/images/DSC_2135.jpg"
+    fetchpriority="high"
+    type="image/jpg"
+  />
   <title>AMW Cooling & Heating LLC | HVAC Services in Conroe, The Woodlands, TX</title>
   <meta
     name="description"
