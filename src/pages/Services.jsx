@@ -3,8 +3,8 @@ import ManufacturerCarousel from '../components/ManufacturerCarousel';
 import Footer from '../components/Footer';
 import heating from '../assets/images/IMG_1163.webp';
 import cooling from '../assets/images/DSC_2035.webp';
-import ventilation from '../assets/images/DSC_1976.webp';
-import new_install from '../assets/images/DSC_1997.webp';
+import ventilation from '../assets/images/IMG_6338.webp';
+import new_install from '../assets/images/new_install.webp';
 import repairs_maintenance from '../assets/images/DSC_2058.webp';
 import air from '../assets/images/air-quality.webp'
 import emergency from '../assets/images/emergency.webp'
