@@ -93,7 +93,7 @@ export default function Contact() {
 
         {/* Calendly Embed */}
         <section className="mt-16 bg-gradient-to-br from-blue-50 to-white rounded-2xl shadow-xl p-8">
-  <h2 className="text-3xl font-bold text-center text-blue-900 mb-4">Book a Service with Josh & Anjelica</h2>
+  <h2 className="text-3xl font-bold text-center text-blue-900 mb-4">Book a Service with AMW Cooling & Heating</h2>
   <p className="text-center text-gray-700 mb-6 max-w-2xl mx-auto">
     Whether you're looking for a second opinion, urgent HVAC help, or a seasonal check-up, our booking calendar makes it simple.
     Choose your preferred time below and we’ll take care of the rest.
