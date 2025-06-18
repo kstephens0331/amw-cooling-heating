@@ -1,9 +1,11 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { lazy, Suspense } from 'react';
 import Navbar from './components/Navbar';
 import InstantContact from './components/InstantContact';
 import ChatBot from './components/ChatBot';
+import { pageview } from './utils/analytics';
 
 
 // Lazy-loaded pages
@@ -17,13 +19,23 @@ const Contact = lazy(() => import('./pages/Contact'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 const HeroLandingPage = lazy(() => import('./components/HeroLandingPage'));
 
+function ScrollAndTrack() {
+  const location = useLocation();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    pageview(location.pathname + location.search);
+  }, [location]);
+
+  return null;
+}
 
 function App() {
   return (
     <HelmetProvider>
     <div className="bg-white text-gray-800 font-sans">
       <Router>
+        <ScrollAndTrack />
         <Navbar />
         <Routes>
           <Route
