@@ -31,8 +31,8 @@ export default function HomePage() {
       "@context": "https://schema.org",
       "@type": "HVACBusiness",
       "name": "AMW Cooling & Heating LLC",
-      "image": "https://amw-cooling-heating.vercel.app/images/FullLogo_Transparent.webp",
-      "url": "https://amw-cooling-heating.vercel.app",
+      "image": "https://amwairconditioning.com/images/FullLogo_Transparent.webp",
+      "url": "https://amwairconditioning.com",
       "telephone": "+1-936-587-7612",
       "address": {
         "@type": "PostalAddress",
