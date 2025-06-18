@@ -6,7 +6,7 @@ export default function MobileHero() {
       {/* Background Image */}
 <img
   src={hero}
-  srcSet="/images/DSC_2135.jpg 1280w, /images/DSC_2135.jpg 1920w"
+  srcSet={`${hero} 1280w, ${hero} 1920w`}
   sizes="(max-width: 1024px) 100vw, 1280px"
   alt="AMW Cooling & Heating truck at sunset with phone number"
   width="1280"
