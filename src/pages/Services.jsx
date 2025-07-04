@@ -8,6 +8,9 @@ import new_install from '../assets/images/new_install.webp';
 import repairs_maintenance from '../assets/images/DSC_2058.webp';
 import air from '../assets/images/air-quality.webp'
 import emergency from '../assets/images/emergency.webp'
+import ReactCompareImage from 'react-compare-image';
+import newInstallBefore from '../assets/images/6392-old_unit.webp';
+import newInstallAfter from '../assets/images/6387-new_install.webp';
 
 <Helmet>
   <title>HVAC Services | AMW Cooling & Heating LLC</title>
@@ -102,9 +105,22 @@ export default function Services() {
           </div>
         </div>
 
-        {/* 4️⃣ New Installations - IMAGE LEFT */}
+
+      <section className="container mx-auto px-4 space-y-16 py-12">
+        {/* 4️⃣ New Installations - IMAGE LEFT with Compare Slider Styled to Match Others */}
         <div className="flex flex-col lg:flex-row-reverse items-center gap-10">
-          <div className="w-full lg:w-1/2"><div className='w-[260px] h-[260px] transform rotate-45 overflow-hidden rounded-xl shadow-md mx-auto'><img src={new_install} alt="New Install services" className='w-full h-full object-cover -rotate-45' loading="lazy"/></div>
+          <div className="w-full lg:w-1/2">
+            <div className='w-[260px] h-[260px] transform rotate-45 overflow-hidden rounded-xl shadow-lg border border-gray-200 bg-white mx-auto'>
+              <div className="w-full h-full -rotate-45 scale-[0.85]">
+                <ReactCompareImage
+                  leftImage={newInstallBefore}
+                  rightImage={newInstallAfter}
+                  sliderLineColor="black"
+                  sliderPositionPercentage={0.5}
+                  aspectRatio="1"
+                />
+              </div>
+            </div>
           </div>
           <div className="w-full lg:w-1/2 text-sm md:text-base text-gray-700">
             <h2 className="text-xl md:text-2xl font-semibold text-blue-900 mb-2">🆕 New Installations</h2>
@@ -117,6 +133,7 @@ export default function Services() {
             </ul>
           </div>
         </div>
+      </section>
 
         {/* 5️⃣ Repairs and Maintenance - IMAGE RIGHT */}
         <div className="flex flex-col lg:flex-row items-center gap-10">
