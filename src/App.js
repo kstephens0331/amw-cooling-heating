@@ -18,6 +18,7 @@ const TestimonialsPage = lazy(() => import('./pages/TestimonialsPage'));
 const Contact = lazy(() => import('./pages/Contact'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 const HeroLandingPage = lazy(() => import('./components/HeroLandingPage'));
+const ContactUsDuplicate = lazy(() => import('./pages/Contact-us'));
 
 function ScrollAndTrack() {
   const location = useLocation();
@@ -94,6 +95,14 @@ function App() {
       </Suspense>
     }
   />
+<Route
+  path="/contact-us"
+  element={
+    <Suspense fallback={<div>Loading Contact Page...</div>}>
+      <ContactUsDuplicate />
+    </Suspense>
+  }
+/>
   <Route
     path="*"
     element={
