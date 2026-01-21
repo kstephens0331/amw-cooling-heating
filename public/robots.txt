@@ -1,12 +1,12 @@
 # AMW Cooling & Heating LLC - Robots.txt
 # Website: https://amwairconditioning.com
-# Last updated: 2025-11-24
+# Last updated: 2026-01-20
 
-# Default rule - allow all legitimate bots
+# Default rule - allow all bots
 User-agent: *
 Allow: /
 
-# Allow search engine bots explicitly
+# Search Engine Bots
 User-agent: Googlebot
 Allow: /
 
@@ -25,37 +25,93 @@ Allow: /
 User-agent: YandexBot
 Allow: /
 
-# Allow AI search assistants (not training)
+# AI Platforms - All Allowed
 User-agent: ClaudeBot
 Allow: /
 
 User-agent: GPTBot
 Allow: /
 
-# Block AI training bots
+User-agent: ChatGPT-User
+Allow: /
+
 User-agent: Amazonbot
-Disallow: /
+Allow: /
+
+User-agent: Applebot
+Allow: /
 
 User-agent: Applebot-Extended
-Disallow: /
+Allow: /
 
 User-agent: Bytespider
-Disallow: /
+Allow: /
 
 User-agent: CCBot
-Disallow: /
+Allow: /
 
 User-agent: Google-Extended
-Disallow: /
+Allow: /
 
 User-agent: meta-externalagent
-Disallow: /
+Allow: /
 
-# Block access to sensitive directories
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# SEO Tools - All Allowed
+User-agent: AhrefsBot
+Allow: /
+
+User-agent: SemrushBot
+Allow: /
+
+User-agent: MJ12bot
+Allow: /
+
+User-agent: DotBot
+Allow: /
+
+User-agent: rogerbot
+Allow: /
+
+User-agent: SeznamBot
+Allow: /
+
+User-agent: MojeekBot
+Allow: /
+
+User-agent: PetalBot
+Allow: /
+
+User-agent: BLEXBot
+Allow: /
+
+User-agent: DataForSeoBot
+Allow: /
+
+User-agent: SiteAuditBot
+Allow: /
+
+User-agent: Screaming Frog SEO Spider
+Allow: /
+
+# Block access to sensitive directories only
 User-agent: *
 Disallow: /admin/
 Disallow: /private/
-Disallow: /api/
 Disallow: /.git/
 Disallow: /node_modules/
 
