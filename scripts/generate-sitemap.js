@@ -10,7 +10,6 @@ const pages = [
   { url: '/about', priority: '0.8', changefreq: 'monthly' },
   { url: '/services', priority: '0.9', changefreq: 'monthly' },
   { url: '/contact', priority: '0.8', changefreq: 'monthly' },
-  { url: '/contact-us', priority: '0.8', changefreq: 'monthly' },
   { url: '/faqs', priority: '0.7', changefreq: 'monthly' },
   { url: '/financing', priority: '0.7', changefreq: 'monthly' },
   { url: '/testimonials', priority: '0.7', changefreq: 'monthly' },

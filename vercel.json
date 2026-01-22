@@ -48,7 +48,8 @@
   "redirects": [
     { "source": "/about-us", "destination": "/about", "permanent": true },
     { "source": "/about-us/", "destination": "/about", "permanent": true },
-    { "source": "/contact-us/", "destination": "/contact-us", "permanent": true },
+    { "source": "/contact-us", "destination": "/contact", "permanent": true },
+    { "source": "/contact-us/", "destination": "/contact", "permanent": true },
     { "source": "/services/", "destination": "/services", "permanent": true },
     { "source": "/testimonials/", "destination": "/testimonials", "permanent": true },
     { "source": "/faqs/", "destination": "/faqs", "permanent": true }
