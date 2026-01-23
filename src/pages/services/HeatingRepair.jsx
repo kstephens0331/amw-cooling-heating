@@ -13,7 +13,7 @@ const HeatingRepair = () => {
       <SEO
         title="Heating Repair Conroe TX | Furnace Repair | AMW Cooling"
         description="Expert heating and furnace repair in Conroe, TX. Licensed technicians, same-day service. Call (936) 331-1339 for reliable heating system repair."
-        canonical="https://www.amwairconditioning.com/services/heating-repair"
+        canonical="https://amwairconditioning.com/services/heating-repair"
         keywords="heating repair Conroe, furnace repair Conroe TX, heater repair, heating service Conroe"
       />
 

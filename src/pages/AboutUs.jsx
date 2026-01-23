@@ -15,7 +15,7 @@ export default function AboutUs() {
       <SEO
         title="About AMW Cooling & Heating | Veteran-Owned HVAC Conroe TX"
         description="Learn about AMW Cooling & Heating, a veteran-owned HVAC company serving Conroe, TX. Meet our team and discover our commitment to quality service."
-        canonical="https://www.amwairconditioning.com/about"
+        canonical="https://amwairconditioning.com/about"
         keywords="about AMW, veteran owned HVAC Conroe, HVAC company Conroe, AMW team"
       />
 

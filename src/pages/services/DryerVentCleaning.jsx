@@ -13,7 +13,7 @@ const DryerVentCleaning = () => {
       <SEO
         title="Dryer Vent Cleaning Conroe TX | Fire Prevention Service | AMW"
         description="Professional dryer vent cleaning in Conroe, TX. Prevent fires, improve efficiency, reduce drying time. 15,000+ fires prevented annually. Call (936) 331-1339!"
-        canonical="https://www.amwairconditioning.com/services/dryer-vent-cleaning"
+        canonical="https://amwairconditioning.com/services/dryer-vent-cleaning"
         keywords="dryer vent cleaning Conroe, dryer vent service Conroe TX, lint removal, dryer fire prevention, dryer vent repair Conroe"
       />
 

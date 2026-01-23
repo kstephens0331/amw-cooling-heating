@@ -13,7 +13,7 @@ const IndoorAirQuality = () => {
       <SEO
         title="Indoor Air Quality Conroe TX | Air Purification & Filtration | AMW"
         description="Improve indoor air quality in Conroe, TX with HEPA filtration, UV purification, dehumidifiers. Remove allergens, mold, bacteria. Call (936) 331-1339!"
-        canonical="https://www.amwairconditioning.com/services/indoor-air-quality"
+        canonical="https://amwairconditioning.com/services/indoor-air-quality"
         keywords="indoor air quality Conroe, air purification Conroe TX, HEPA filter installation, UV air purifier, whole home dehumidifier, air quality testing Conroe"
       />
 

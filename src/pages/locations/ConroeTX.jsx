@@ -13,7 +13,7 @@ const ConroeTX = () => {
       <SEO
         title="HVAC Services Conroe TX | AC Repair & Heating | AMW Cooling"
         description="Professional HVAC services in Conroe, TX. AC repair, heating installation, maintenance. Veteran-owned. Call (936) 331-1339 for same-day service."
-        canonical="https://www.amwairconditioning.com/locations/conroe-tx"
+        canonical="https://amwairconditioning.com/locations/conroe-tx"
         keywords="HVAC Conroe TX, AC repair Conroe, heating Conroe, air conditioning Conroe Texas"
       />
 

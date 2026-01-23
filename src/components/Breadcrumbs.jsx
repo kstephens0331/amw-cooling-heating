@@ -22,7 +22,7 @@ export default function Breadcrumbs({ items, light = false }) {
       '@type': 'ListItem',
       position: index + 1,
       name: item.label,
-      ...(item.path && { item: `https://www.amwairconditioning.com${item.path}` })
+      ...(item.path && { item: `https://amwairconditioning.com${item.path}` })
     }))
   };
 

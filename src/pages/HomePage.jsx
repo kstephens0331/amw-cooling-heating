@@ -14,7 +14,7 @@ export default function HomePage() {
     <SEO
       title="AMW Cooling & Heating | HVAC Services Conroe TX | Veteran-Owned"
       description="Expert HVAC, AC repair & heating services in Conroe, TX. Veteran-owned, licensed & insured. 100% satisfaction guaranteed. Call (936) 331-1339 for same-day service!"
-      canonical="https://www.amwairconditioning.com"
+      canonical="https://amwairconditioning.com"
       keywords="HVAC Conroe TX, AC repair Conroe, heating Conroe, air conditioning Conroe, HVAC services The Woodlands, Montgomery County HVAC"
     />
     <Helmet>

@@ -14,7 +14,7 @@ const SmartThermostats = () => {
       <SEO
         title="Smart Thermostat Installation Conroe TX | Nest, Ecobee, Honeywell | AMW"
         description="Professional smart thermostat installation in Conroe, TX. Save 10-23% on energy costs with Nest, Ecobee, Honeywell. Wi-Fi setup included. Call (936) 331-1339!"
-        canonical="https://www.amwairconditioning.com/services/smart-thermostats"
+        canonical="https://amwairconditioning.com/services/smart-thermostats"
         keywords="smart thermostat installation Conroe, Nest thermostat Conroe TX, Ecobee installation, Honeywell WiFi thermostat, programmable thermostat Conroe"
       />
 

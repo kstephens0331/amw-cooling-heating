@@ -176,7 +176,7 @@ export default function BlogPost() {
             <meta name="twitter:image" content={meta.image} />
           </>
         )}
-        <link rel="canonical" href={`https://www.amwairconditioning.com/blog/${slug}`} />
+        <link rel="canonical" href={`https://amwairconditioning.com/blog/${slug}`} />
 
         {/* BlogPosting JSON-LD */}
         <script type="application/ld+json">
@@ -184,7 +184,7 @@ export default function BlogPost() {
             '@context': 'https://schema.org',
             '@type': 'BlogPosting',
             headline: title,
-            image: meta?.image ? [`https://www.amwairconditioning.com${meta.image}`] : undefined,
+            image: meta?.image ? [`https://amwairconditioning.com${meta.image}`] : undefined,
             datePublished: meta?.date,
             dateModified: meta?.date,
             author: { '@type': 'Organization', name: 'AMW Cooling & Heating LLC' },
@@ -193,11 +193,11 @@ export default function BlogPost() {
               name: 'AMW Cooling & Heating LLC',
               logo: {
                 '@type': 'ImageObject',
-                url: 'https://www.amwairconditioning.com/favicon.ico'
+                url: 'https://amwairconditioning.com/favicon.ico'
               }
             },
             description: desc,
-            mainEntityOfPage: `https://www.amwairconditioning.com/blog/${slug}`,
+            mainEntityOfPage: `https://amwairconditioning.com/blog/${slug}`,
           })}
         </script>
       </Helmet>

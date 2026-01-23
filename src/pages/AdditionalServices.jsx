@@ -17,7 +17,7 @@ export default function AdditionalServices() {
       <SEO
         title="Additional HVAC Services Conroe TX | Duct Cleaning, Thermostats & More | AMW"
         description="Complete HVAC solutions in Conroe, TX: duct cleaning & sealing, smart thermostat installation, indoor air quality, insulation, dryer vent cleaning. Call (936) 331-1339 today!"
-        canonical="https://www.amwairconditioning.com/additional-services"
+        canonical="https://amwairconditioning.com/additional-services"
         keywords="duct cleaning Conroe, smart thermostat installation, indoor air quality Conroe TX, dryer vent cleaning, HVAC insulation, air purification Conroe, ductwork sealing"
       />
 

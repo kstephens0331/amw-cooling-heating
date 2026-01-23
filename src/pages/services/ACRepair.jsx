@@ -13,7 +13,7 @@ const ACRepair = () => {
       <SEO
         title="AC Repair Conroe TX | Emergency Service | AMW Cooling"
         description="Fast, professional AC repair in Conroe, TX. Licensed technicians, same-day service available. Call (936) 331-1339 for expert air conditioning repair."
-        canonical="https://www.amwairconditioning.com/services/ac-repair"
+        canonical="https://amwairconditioning.com/services/ac-repair"
         keywords="AC repair Conroe, air conditioning repair Conroe TX, emergency AC repair, AC service Conroe"
       />
 
