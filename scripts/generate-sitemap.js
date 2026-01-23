@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const baseUrl = 'https://amwairconditioning.com';
+const baseUrl = 'https://www.amwairconditioning.com';
 const today = new Date().toISOString().split('T')[0];
 
 // All existing and new routes

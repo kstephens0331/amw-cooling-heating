@@ -12,7 +12,7 @@ export const ServiceSchema = ({ service, city = "Conroe" }) => {
       "name": "AMW Cooling & Heating, LLC",
       "telephone": "+19363311339",
       "email": "admin@amwairconditioning.com",
-      "url": "https://amwairconditioning.com"
+      "url": "https://www.amwairconditioning.com"
     },
     "areaServed": {
       "@type": "City",
@@ -47,7 +47,7 @@ export const BreadcrumbSchema = ({ items }) => {
       "@type": "ListItem",
       "position": index + 1,
       "name": item.name,
-      "item": `https://amwairconditioning.com${item.path}`
+      "item": `https://www.amwairconditioning.com${item.path}`
     }))
   };
 
