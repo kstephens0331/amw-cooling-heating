@@ -28,6 +28,45 @@ export default function HomePage() {
       <link rel="dns-prefetch" href="https://a.tile.openstreetmap.org" />
       <link rel="dns-prefetch" href="https://b.tile.openstreetmap.org" />
       <link rel="dns-prefetch" href="https://c.tile.openstreetmap.org" />
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "HVACBusiness",
+          "name": "AMW Cooling & Heating, LLC",
+          "image": "https://amwairconditioning.com/assets/images/amwlogo.png",
+          "url": "https://amwairconditioning.com",
+          "telephone": "+1-936-331-1339",
+          "email": "admin@amwairconditioning.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2346 Strong Horse Dr",
+            "addressLocality": "Conroe",
+            "addressRegion": "TX",
+            "postalCode": "77301",
+            "addressCountry": "US"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 30.3484,
+            "longitude": -95.4781
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "08:00",
+              "closes": "17:00"
+            }
+          ],
+          "priceRange": "$$",
+          "areaServed": ["Conroe", "The Woodlands", "Spring", "Montgomery", "Willis"],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "54"
+          }
+        })}
+      </script>
     </Helmet>
 
       <main>
