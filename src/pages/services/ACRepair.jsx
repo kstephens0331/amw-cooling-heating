@@ -179,6 +179,17 @@ const ACRepair = () => {
               with honest, reliable HVAC service.
             </p>
 
+            <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
+              Related Services
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6">
+              <Link to="/services/heating-repair" className="bg-gray-50 p-3 rounded hover:bg-blue-50 transition text-blue-600 font-medium text-center">Heating Repair</Link>
+              <Link to="/services/hvac-maintenance" className="bg-gray-50 p-3 rounded hover:bg-blue-50 transition text-blue-600 font-medium text-center">HVAC Maintenance</Link>
+              <Link to="/services/indoor-air-quality" className="bg-gray-50 p-3 rounded hover:bg-blue-50 transition text-blue-600 font-medium text-center">Indoor Air Quality</Link>
+              <Link to="/services/smart-thermostats" className="bg-gray-50 p-3 rounded hover:bg-blue-50 transition text-blue-600 font-medium text-center">Smart Thermostats</Link>
+              <Link to="/services/dryer-vent-cleaning" className="bg-gray-50 p-3 rounded hover:bg-blue-50 transition text-blue-600 font-medium text-center">Dryer Vent Cleaning</Link>
+            </div>
+
           </article>
           </div>
         </section>
