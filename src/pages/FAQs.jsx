@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import { FaPhone, FaCalendarCheck, FaChevronDown, FaChevronRight, FaQuestionCircle, FaTools, FaWrench, FaCog, FaCreditCard } from 'react-icons/fa';
 import FinancingCTA from '../components/FinancingCTA';
+import ManufacturerCarousel from '../components/ManufacturerCarousel';
+import MapSection from '../components/MapSection';
 import Footer from '../components/Footer';
 
-<Helmet>
-  <title>FAQs | AMW Cooling & Heating LLC</title>
-  <meta
-    name="description"
-    content="Get answers to frequently asked questions about our HVAC services, maintenance plans, emergency repairs, pricing, and scheduling options."
-  />
-  <meta
-    name="keywords"
-    content="HVAC FAQ, air conditioning help, common HVAC questions, AMW Cooling & Heating support, HVAC maintenance info"
-  />
-</Helmet>
+const categoryIcons = {
+  'General HVAC': FaQuestionCircle,
+  'Installations': FaTools,
+  'Repairs': FaWrench,
+  'Maintenance': FaCog,
+  'Financing': FaCreditCard,
+};
 
 const faqs = [
   {
@@ -430,17 +430,11 @@ const faqs = [
   },
 ];
 export default function FAQs() {
-  const [activeCategory, setActiveCategory] = useState(null);
+  const [activeCategory, setActiveCategory] = useState(0);
   const [activeQuestion, setActiveQuestion] = useState(null);
 
-  const toggleCategory = (idx) => {
-    setActiveCategory(activeCategory === idx ? null : idx);
-    setActiveQuestion(null);
-  };
-
-  const toggleQuestion = (categoryIdx, questionIdx) => {
-    const key = `${categoryIdx}-${questionIdx}`;
-    setActiveQuestion(activeQuestion === key ? null : key);
+  const toggleQuestion = (questionIdx) => {
+    setActiveQuestion(activeQuestion === questionIdx ? null : questionIdx);
   };
 
   return (
@@ -450,57 +444,146 @@ export default function FAQs() {
         <meta name="description" content="Find detailed answers to common HVAC questions to prepare for a productive service call with AMW Cooling & Heating LLC. Serving Conroe, TX and surrounding areas!" />
       </Helmet>
 
-      <section className="py-12 bg-gradient-to-br from-blue-50 to-white">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold text-blue-900 mb-4">Frequently Asked Questions</h1>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            We’ve expanded our answers to help you get the most out of your service call and understand your options.
+      {/* Patriotic Stripe */}
+      <div className="h-1.5 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
+
+      {/* Hero Section */}
+      <section className="bg-blue-900 py-12 md:py-16">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Frequently Asked Questions
+          </h1>
+          <p className="text-lg text-blue-100 max-w-2xl mx-auto mb-8">
+            Find answers to common questions about our HVAC services, maintenance plans, and financing options.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="tel:+19363311339"
+              className="inline-flex items-center gap-2 bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600 transition font-semibold"
+            >
+              <FaPhone className="w-4 h-4" />
+              (936) 331-1339
+            </a>
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 bg-white text-blue-900 px-6 py-3 rounded-lg hover:bg-blue-50 transition font-semibold"
+            >
+              <FaCalendarCheck className="w-4 h-4" />
+              Schedule Service
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Bottom Stripe */}
+      <div className="h-1 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
+
+      {/* FAQ Content */}
+      <section className="py-12 bg-blue-900">
+        {/* Red Header Bar */}
+        <div className="bg-red-500 py-3 mb-10">
+          <p className="text-center text-white text-sm font-medium tracking-widest uppercase">
+            Find Answers to Common Questions
+          </p>
+        </div>
+
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-black text-white mb-3 tracking-wide">BROWSE BY CATEGORY</h2>
+          </div>
+
+          {/* Category Tabs */}
+          <div className="flex flex-wrap justify-center gap-3 mb-8">
+            {faqs.map((category, idx) => {
+              const Icon = categoryIcons[category.category] || FaQuestionCircle;
+              return (
+                <button
+                  key={idx}
+                  onClick={() => {
+                    setActiveCategory(idx);
+                    setActiveQuestion(null);
+                  }}
+                  className={`inline-flex items-center gap-2 px-5 py-3 rounded-lg text-sm font-bold transition shadow-lg ${
+                    activeCategory === idx
+                      ? 'bg-red-500 text-white'
+                      : 'bg-white text-blue-900 hover:bg-blue-50'
+                  }`}
+                >
+                  <Icon className="w-4 h-4" />
+                  {category.category}
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Questions List */}
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden border-l-4 border-blue-600">
+            <div className="divide-y divide-gray-100">
+              {faqs[activeCategory]?.questions.map((q, questionIdx) => {
+                const isActive = activeQuestion === questionIdx;
+                return (
+                  <div key={questionIdx}>
+                    <button
+                      onClick={() => toggleQuestion(questionIdx)}
+                      className="w-full text-left px-6 py-4 flex justify-between items-center hover:bg-gray-50 transition"
+                    >
+                      <span className="font-medium text-blue-900 pr-4">{q.question}</span>
+                      <FaChevronDown
+                        className={`w-4 h-4 text-gray-400 flex-shrink-0 transition-transform ${
+                          isActive ? 'rotate-180' : ''
+                        }`}
+                      />
+                    </button>
+                    {isActive && (
+                      <div className="px-6 pb-5 text-gray-600 leading-relaxed border-l-2 border-blue-500 ml-6 mr-6 mb-4">
+                        {q.answer}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Question Count */}
+          <p className="text-center text-sm text-blue-200 mt-6">
+            Showing {faqs[activeCategory]?.questions.length} questions in {faqs[activeCategory]?.category}
           </p>
         </div>
       </section>
 
-      <section className="py-8">
-        <div className="container mx-auto px-4 max-w-3xl space-y-4">
-          {faqs.map((category, categoryIdx) => (
-            <div key={categoryIdx} className="border border-gray-300 rounded shadow-sm">
-              <button
-                onClick={() => toggleCategory(categoryIdx)}
-                className="w-full text-left px-4 py-3 flex justify-between items-center bg-white hover:bg-blue-50 transition font-semibold"
+      {/* CTA Section */}
+      <section className="relative overflow-hidden">
+        <div className="h-1.5 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
+        <div className="bg-blue-900 py-12 md:py-16">
+          <div className="max-w-4xl mx-auto px-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-black text-white mb-3 tracking-wide">STILL HAVE QUESTIONS?</h2>
+            <p className="text-lg text-blue-200 max-w-xl mx-auto mb-8">
+              Our team is ready to help. Contact us for personalized answers to your HVAC questions.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href="tel:+19363311339"
+                className="inline-flex items-center justify-center gap-2 bg-red-500 text-white px-8 py-4 rounded-lg hover:bg-red-600 transition font-bold text-lg"
               >
-                <span>{category.category}</span>
-                <span>{activeCategory === categoryIdx ? '−' : '+'}</span>
-              </button>
-
-              {activeCategory === categoryIdx && (
-                <div className="space-y-2 px-4 py-2">
-                  {category.questions.map((q, questionIdx) => {
-                    const key = `${categoryIdx}-${questionIdx}`;
-                    const isActive = activeQuestion === key;
-                    return (
-                      <div key={questionIdx} className="border border-gray-200 rounded">
-                        <button
-                          onClick={() => toggleQuestion(categoryIdx, questionIdx)}
-                          className="w-full text-left px-4 py-2 flex justify-between items-center bg-gray-50 hover:bg-blue-50 transition"
-                        >
-                          <span>{q.question}</span>
-                          <span>{isActive ? '−' : '+'}</span>
-                        </button>
-                        {isActive && (
-                          <div className="px-4 py-2 bg-gray-100 text-sm text-gray-700">
-                            {q.answer}
-                          </div>
-                        )}
-                      </div>
-                    );
-                  })}
-                </div>
-              )}
+                <FaPhone className="w-5 h-5" />
+                (936) 331-1339
+              </a>
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center gap-2 bg-white text-blue-900 px-8 py-4 rounded-lg hover:bg-blue-50 transition font-bold text-lg"
+              >
+                <FaCalendarCheck className="w-5 h-5" />
+                Contact Us
+              </Link>
             </div>
-          ))}
+          </div>
         </div>
       </section>
 
       <FinancingCTA />
+      <MapSection />
+      <ManufacturerCarousel />
       <Footer />
     </main>
   );

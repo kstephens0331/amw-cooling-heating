@@ -1,11 +1,4 @@
-import WhyChoose from '../assets/images/DSC_1930.webp';
-
-const stats = [
-  { number: '8+', label: 'Years of Experience' },
-  { number: '100+', label: 'Happy Customers' },
-  { number: '24/7', label: 'Emergency Services' },
-  { number: '100%', label: 'Customer Satisfaction' },
-];
+import WhyChoose from '../assets/images/DSC_1887.webp';
 
 const features = [
   {
@@ -34,29 +27,7 @@ export default function QuickStats() {
   return (
     <section className="py-12 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl md:text-3xl font-semibold text-center text-blue-900 mb-4 animate-fade-in-up">
-          Our Impact in Numbers
-        </h2>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center mb-12 animate-fade-in-up-delay">
-          {stats.map((item, idx) => (
-            <div key={idx} className="flex flex-col items-center">
-              <div className="text-4xl md:text-5xl font-bold text-blue-900 mb-2">{item.number}</div>
-              <div className="text-sm md:text-base text-gray-700">{item.label}</div>
-            </div>
-          ))}
-        </div>
-
-        {/* Divider / Visual break */}
-        <div className="my-12 border-t border-gray-300 w-1/4 mx-auto"></div>
-
-        {/* Intro text */}
-        <p className="text-center text-gray-800 mb-8">
-          Our dedication to customer comfort extends beyond the numbers.
-        </p>
-
-        {/* Why Choose Us */}
-        <h2 className="text-2xl md:text-4xl font-semibold text-center text-blue-900 mb-4">
+        <h2 className="text-3xl md:text-4xl font-semibold text-center text-blue-900 mb-6">
           Why Choose Us
         </h2>
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 mb-12 min-h-[650px]">
@@ -79,12 +50,12 @@ export default function QuickStats() {
                 key={idx}
                 className="bg-white rounded-xl shadow-md p-4 flex items-start space-x-4"
               >
-                <div className="text-2xl">{item.icon}</div>
+                <div className="text-3xl">{item.icon}</div>
                 <div>
-                  <h3 className="text-lg md:text-xl font-semibold text-blue-900 mb-1">
+                  <h3 className="text-xl md:text-2xl font-semibold text-blue-900 mb-1">
                     {item.title}
                   </h3>
-                  <p className="text-sm md:text-base text-gray-700 leading-snug">
+                  <p className="text-base md:text-lg text-gray-700 leading-snug">
                     {item.description}
                   </p>
                 </div>

@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 
 const SEO = ({
   title = "AMW Cooling & Heating | HVAC Services Conroe TX",
-  description = "Expert HVAC, AC repair & heating services in Conroe, TX. Veteran-owned, licensed & insured. 24/7 emergency service.",
+  description = "Expert HVAC, AC repair & heating services in Conroe, TX. Veteran-owned, licensed & insured. 100% satisfaction guaranteed.",
   canonical = "https://amwairconditioning.com",
   keywords = "HVAC Conroe, AC repair Conroe, heating repair Conroe, air conditioning Conroe TX",
   image = "https://amwairconditioning.com/assets/images/DSC_2135-1920.webp"

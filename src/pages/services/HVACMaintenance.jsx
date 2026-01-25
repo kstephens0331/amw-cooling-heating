@@ -2,6 +2,9 @@ import React from 'react';
 import SEO from '../../components/SEO';
 import { ServiceSchema, BreadcrumbSchema } from '../../components/StructuredData';
 import { Link } from 'react-router-dom';
+import { FaPhone, FaCalendarCheck, FaShieldAlt, FaCheckCircle, FaCog } from 'react-icons/fa';
+import ManufacturerCarousel from '../../components/ManufacturerCarousel';
+import MapSection from '../../components/MapSection';
 import Footer from '../../components/Footer';
 
 const HVACMaintenance = () => {
@@ -30,45 +33,63 @@ const HVACMaintenance = () => {
         ]}
       />
 
-      <main className="bg-gray-50 text-gray-800 font-sans">
-        <section className="bg-gradient-to-br from-green-50 to-white py-12">
-          <div className="container mx-auto text-center px-4">
-            <h1 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
-              HVAC Maintenance Services in Conroe, TX
+      <main className="bg-white text-gray-800 font-sans">
+        {/* Patriotic Stripe */}
+        <div className="h-1.5 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
+
+        {/* Hero Section */}
+        <section className="bg-blue-900 py-12 md:py-16">
+          <div className="max-w-4xl mx-auto px-4 text-center">
+            {/* Service Badge */}
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
+              <FaCog className="text-blue-300 w-4 h-4" />
+              <span className="text-white text-sm font-medium">Preventive Maintenance</span>
+            </div>
+
+            <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              HVAC Maintenance Services
             </h1>
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-6">
-              Keep your system running efficiently with professional preventive maintenance
+            <p className="text-lg text-blue-100 max-w-2xl mx-auto mb-8">
+              Keep your system running efficiently with professional preventive maintenance. Extend equipment life and avoid costly breakdowns.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
                 href="tel:+19363311339"
-                className="inline-block px-6 py-3 bg-orange-500 text-white rounded shadow hover:bg-orange-600 transition"
+                className="inline-flex items-center gap-2 bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600 transition font-semibold"
               >
-                📞 Call (936) 331-1339
+                <FaPhone className="w-4 h-4" />
+                (936) 331-1339
               </a>
               <Link
-                to="/financing"
-                className="inline-block px-6 py-3 bg-green-600 text-white rounded shadow hover:bg-green-700 transition"
+                to="/contact"
+                className="inline-flex items-center gap-2 bg-white text-blue-900 px-6 py-3 rounded-lg hover:bg-blue-50 transition font-semibold"
               >
+                <FaCalendarCheck className="w-4 h-4" />
                 View Maintenance Plans
               </Link>
             </div>
           </div>
         </section>
 
-        <section className="container mx-auto px-4 py-12 max-w-4xl">
-          <article className="bg-white p-8 rounded-xl shadow-lg">
-            <h2 className="text-2xl font-semibold text-blue-900 mb-4">
+        {/* Bottom Stripe */}
+        <div className="h-1 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
+
+        {/* Main Content */}
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4">
+          <article className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-blue-600">
+            <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-4 border-l-4 border-red-500 pl-4">
               Professional HVAC Maintenance in Conroe
             </h2>
-            <p className="text-gray-700 mb-6 leading-relaxed">
+            <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
               Regular HVAC maintenance is the key to system longevity, energy efficiency, and
               avoiding costly breakdowns. AMW Cooling & Heating provides comprehensive maintenance
               services for both heating and cooling systems throughout Conroe, The Woodlands,
               and Montgomery County.
             </p>
 
-            <h3 className="text-xl font-semibold text-blue-900 mb-3">
+            <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
               Benefits of Regular HVAC Maintenance
             </h3>
             <ul className="list-disc list-inside space-y-2 mb-6 text-gray-700">
@@ -81,11 +102,11 @@ const HVACMaintenance = () => {
               <li><strong>Safety assurance</strong> - Prevent carbon monoxide and other hazards</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-blue-900 mb-3">
+            <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-red-500 pl-3">
               What's Included in Our Maintenance Service
             </h3>
             <div className="grid md:grid-cols-2 gap-6 mb-6">
-              <div>
+              <div className="bg-gray-50 p-4 rounded-lg">
                 <h4 className="font-semibold text-blue-800 mb-2">Cooling System Maintenance:</h4>
                 <ul className="list-disc list-inside space-y-1 text-gray-700">
                   <li>Clean or replace air filters</li>
@@ -98,7 +119,7 @@ const HVACMaintenance = () => {
                   <li>Measure airflow</li>
                 </ul>
               </div>
-              <div>
+              <div className="bg-gray-50 p-4 rounded-lg">
                 <h4 className="font-semibold text-blue-800 mb-2">Heating System Maintenance:</h4>
                 <ul className="list-disc list-inside space-y-1 text-gray-700">
                   <li>Inspect heat exchanger</li>
@@ -113,7 +134,7 @@ const HVACMaintenance = () => {
               </div>
             </div>
 
-            <h3 className="text-xl font-semibold text-blue-900 mb-3">
+            <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
               Recommended Maintenance Schedule
             </h3>
             <p className="text-gray-700 mb-4">
@@ -126,7 +147,7 @@ const HVACMaintenance = () => {
               <li><strong>Annually:</strong> Complete system inspection and maintenance</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-blue-900 mb-3">
+            <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-red-500 pl-3">
               Maintenance Plans Available
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed">
@@ -135,32 +156,54 @@ const HVACMaintenance = () => {
               their HVAC system is professionally maintained year-round.
             </p>
 
-            <div className="bg-green-50 p-6 rounded-lg mt-8">
-              <h2 className="text-2xl font-semibold text-blue-900 mb-3">
+            <div className="flex flex-wrap items-center gap-4 py-4 border-y border-gray-200 text-sm text-gray-600">
+              <span className="flex items-center gap-2"><FaShieldAlt className="text-blue-600 w-4 h-4" /> Veteran-Owned</span>
+              <span className="flex items-center gap-2"><FaCheckCircle className="text-green-500 w-4 h-4" /> Licensed & Insured</span>
+              <span className="flex items-center gap-2"><FaCheckCircle className="text-green-500 w-4 h-4" /> Priority Scheduling</span>
+              <span className="flex items-center gap-2"><FaCheckCircle className="text-green-500 w-4 h-4" /> Financing Available</span>
+            </div>
+
+          </article>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="relative overflow-hidden">
+          <div className="h-1.5 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
+          <div className="bg-blue-900 py-12 md:py-16">
+            <div className="max-w-4xl mx-auto px-4 text-center">
+              <div className="inline-flex items-center gap-2 bg-red-500 rounded-full px-4 py-2 mb-6">
+                <FaShieldAlt className="text-white w-4 h-4" />
+                <span className="text-white text-sm font-semibold">Veteran-Owned & Operated</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
                 Schedule Your Maintenance Today
               </h2>
-              <p className="text-gray-700 mb-4">
-                Don't wait for a breakdown! Protect your investment with professional HVAC
-                maintenance from AMW Cooling & Heating.
+              <p className="text-lg text-blue-200 max-w-xl mx-auto mb-8">
+                Don't wait for a breakdown. Protect your investment with professional HVAC maintenance from AMW Cooling & Heating.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
                   href="tel:+19363311339"
-                  className="inline-block px-6 py-3 bg-orange-500 text-white rounded shadow hover:bg-orange-600 transition text-center"
+                  className="inline-flex items-center justify-center gap-2 bg-red-500 text-white px-8 py-4 rounded-lg hover:bg-red-600 transition font-bold text-lg"
                 >
-                  Call (936) 331-1339
+                  <FaPhone className="w-5 h-5" />
+                  (936) 331-1339
                 </a>
                 <Link
-                  to="/financing"
-                  className="inline-block px-6 py-3 bg-green-600 text-white rounded shadow hover:bg-green-700 transition text-center"
+                  to="/contact"
+                  className="inline-flex items-center justify-center gap-2 bg-white text-blue-900 px-8 py-4 rounded-lg hover:bg-blue-50 transition font-bold text-lg"
                 >
+                  <FaCalendarCheck className="w-5 h-5" />
                   View Plans & Pricing
                 </Link>
               </div>
             </div>
-          </article>
+          </div>
         </section>
 
+        <MapSection />
+        <ManufacturerCarousel />
         <Footer />
       </main>
     </>

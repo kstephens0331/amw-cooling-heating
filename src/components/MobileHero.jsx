@@ -1,59 +1,83 @@
 import { Link } from 'react-router-dom';
-import hero800 from '../assets/images/DSC_2135-800.webp';
-import hero400 from '../assets/images/DSC_2135-400.webp';
+import { FaPhone, FaCalendarCheck, FaStar, FaShieldAlt } from 'react-icons/fa';
+import heroImage from '../assets/images/josh-with-client.jpg';
 
 export default function MobileHero() {
   return (
-    <section className="relative h-[50vh] w-full overflow-hidden">
-      {/* Background Image */}
-      <img
-        srcSet={`${hero400} 400w, ${hero800} 800w`}
-        sizes="100vw"
-        src={hero800}
-        alt="AMW Cooling & Heating HVAC service truck in Conroe TX - veteran-owned AC repair and heating company - call (936) 331-1339"
-        width="800"
-        height="428"
-        className="absolute inset-0 w-full h-full object-cover object-bottom"
-        loading="eager"
-        decoding="async"
-        fetchPriority="high"
-      />
+    <section className="relative min-h-[520px] flex items-end">
+      {/* Full Background Image */}
+      <div className="absolute inset-0">
+        <img
+          src={heroImage}
+          alt="Josh from AMW Cooling & Heating with satisfied customer"
+          className="w-full h-full object-cover object-top"
+          loading="eager"
+        />
+        {/* Gradient Overlay - darker at bottom for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-t from-blue-900/95 via-blue-900/50 to-transparent"></div>
+      </div>
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/25 z-10" />
+      {/* Content - positioned at bottom */}
+      <div className="relative w-full px-5 pb-6 pt-32">
+        {/* Veteran Badge */}
+        <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-3 py-1.5 mb-4">
+          <FaShieldAlt className="text-red-400 w-3 h-3" />
+          <span className="text-white text-xs font-medium">Veteran-Owned</span>
+        </div>
 
-      {/* CTA Wrapper */}
-      <div className="absolute top-0 left-0 w-full px-4 pt-4 z-20 flex justify-between items-start">
-        {/* Left CTA */}
-        <div className="text-black max-w-[48%]">
-          <h1 className="text-sm font-bold leading-tight mb-1">Your Trusted HVAC Experts</h1>
-          <p className="text-xs mb-2 leading-snug">
-            Reliable installations, repairs, and maintenance to keep your home comfortable year-round.
-          </p>
+        {/* Headline */}
+        <h1 className="text-2xl font-bold text-white mb-3 leading-tight">
+          Your Trusted HVAC
+          <span className="text-blue-300"> Experts in Texas</span>
+        </h1>
+
+        {/* Subheadline */}
+        <p className="text-sm text-blue-100 mb-5">
+          Reliable heating & cooling for Conroe, The Woodlands & surrounding areas.
+        </p>
+
+        {/* CTA Buttons */}
+        <div className="flex gap-3 mb-5">
+          <a
+            href="tel:+19363311339"
+            className="flex-1 flex items-center justify-center gap-2 px-4 py-3.5 bg-red-500 text-white rounded-lg font-bold text-sm"
+          >
+            <FaPhone className="w-4 h-4" />
+            Call Now
+          </a>
           <Link
             to="/contact"
-            className="inline-block px-3 py-2 bg-blue-600 text-white rounded shadow hover:bg-blue-700 transition text-xs font-semibold"
+            className="flex-1 flex items-center justify-center gap-2 px-4 py-3.5 bg-white text-blue-900 rounded-lg font-bold text-sm"
           >
-            Schedule Your Consultation
+            <FaCalendarCheck className="w-4 h-4" />
+            Schedule
           </Link>
         </div>
 
-        {/* Right CTA */}
-        <div className="text-black max-w-[48%] text-right">
-          <h2 className="text-sm font-bold mb-1">Enjoyed Our Service?</h2>
-          <p className="text-xs mb-2 leading-snug">
-            Help others find us — leave a Google review!
-          </p>
-          <a
-            href="https://g.page/r/CS99Sm7SPdvPEBM/review"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-3 py-2 bg-blue-600 text-white rounded shadow hover:bg-blue-700 transition text-xs font-semibold"
-          >
-            Leave a Google Review
-          </a>
+        {/* Trust Row */}
+        <div className="flex items-center justify-between">
+          {/* Rating */}
+          <div className="flex items-center gap-1.5">
+            <div className="flex text-yellow-400">
+              <FaStar className="w-3 h-3" />
+              <FaStar className="w-3 h-3" />
+              <FaStar className="w-3 h-3" />
+              <FaStar className="w-3 h-3" />
+              <FaStar className="w-3 h-3" />
+            </div>
+            <span className="text-white text-xs font-semibold">5.0</span>
+            <span className="text-blue-200 text-xs">54 Google Reviews</span>
+          </div>
+
+          {/* Badge */}
+          <span className="text-xs text-blue-100">
+            <span className="text-green-400">✓</span> Licensed & Insured
+          </span>
         </div>
       </div>
+
+      {/* Color accent stripe at bottom */}
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
     </section>
   );
 }

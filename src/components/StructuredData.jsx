@@ -7,26 +7,31 @@ export const ServiceSchema = ({ service, city = "Conroe" }) => {
     "@context": "https://schema.org",
     "@type": "Service",
     "serviceType": service.name,
+    "name": service.name,
     "provider": {
       "@type": "HVACBusiness",
       "name": "AMW Cooling & Heating, LLC",
-      "telephone": "+19363311339",
+      "telephone": "+1-936-331-1339",
       "email": "admin@amwairconditioning.com",
-      "url": "https://amwairconditioning.com"
+      "url": "https://amwairconditioning.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2346 Strong Horse Dr",
+        "addressLocality": "Conroe",
+        "addressRegion": "TX",
+        "postalCode": "77301",
+        "addressCountry": "US"
+      }
     },
     "areaServed": {
       "@type": "City",
       "name": city,
-      "containedIn": {
+      "containedInPlace": {
         "@type": "State",
         "name": "Texas"
       }
     },
-    "description": service.description,
-    "offers": {
-      "@type": "Offer",
-      "availability": "https://schema.org/InStock"
-    }
+    "description": service.description
   };
 
   return (

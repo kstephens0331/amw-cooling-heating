@@ -41,7 +41,7 @@ export default function ManufacturerCarousel() {
   return (
     <section className="py-8 bg-white">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-2xl font-semibold text-blue-900 mb-4">Trusted HVAC Partners</h2>
+        <h2 className="text-2xl font-semibold text-blue-900 mb-4">Trusted Partners</h2>
         <p className="text-gray-600 mb-6">
           Proudly working with the top manufacturers and certifications in home and commercial AC, heating, ventilation, and air quality solutions.
         </p>

@@ -86,7 +86,7 @@ We know the HVAC challenges unique to Montgomery County homes and customize our 
 
 ## Why Choose AMW Cooling & Heating?
 
-- Veteran- and woman-owned business  
+- Veteran-owned business  
 - Licensed, insured, and trusted locally  
 - Transparent pricing and no hidden fees  
 - 24/7 emergency service available  
@@ -99,7 +99,7 @@ We know the HVAC challenges unique to Montgomery County homes and customize our 
 Cold fronts arrive fast in North Houston, and dryer vent fires can strike unexpectedly. Protect your comfort, safety, and wallet this season with our fall special.
 
  **Schedule your maintenance plan today and claim your FREE dryer vent inspection and cleaning.**  
-Call **(936) 331-1339** or schedule online at **[your website link]**.
+Call **(936) 331-1339** or [schedule online](/contact).
 
 ---
 

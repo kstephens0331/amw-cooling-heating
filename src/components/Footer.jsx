@@ -1,42 +1,54 @@
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaYelp } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
+import nateLogo from '../assets/images/nate.webp';
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-600 text-white py-10">
-      <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="bg-blue-600 text-white py-6 pb-24 md:pb-6">
+      <div className="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
 
         {/* Column 1: Company Info */}
-        <div>
-          <h3 className="font-bold text-lg mb-2">AMW Cooling & Heating</h3>
+        <div className="col-span-2 md:col-span-1">
+          <h4 className="font-bold text-lg mb-2">AMW Cooling & Heating LLC</h4>
           <p className="text-sm">2346 Strong Horse Dr</p>
           <p className="text-sm">Conroe, TX 77301</p>
-          <p className="text-sm">Phone: (936) 331-1339</p>
-          <p className="text-sm">Email: admin@amwairconditioning.com</p>
+          <p className="text-sm whitespace-nowrap">Phone: (936) 331-1339</p>
+          <p className="text-xs whitespace-nowrap">admin@amwairconditioning.com</p>
           <p className="text-sm mt-2">License #: TACLB133920E</p>
         </div>
 
-        {/* Column 2: Navigation */}
-        <nav className="flex flex-wrap flex-col md:items-center text-sm space-y-2">
-          {[
-            ['/', 'Home'],
-            ['/about', 'About Us'],
-            ['/services', 'Services'],
-            ['/faqs', 'FAQs'],
-            ['/financing', 'Financing'],
-            ['/testimonials', 'Testimonials'],
-            ['/contact', 'Contact'],
-          ].map(([to, label], idx) => (
-            <Link key={idx} to={to} className="hover:text-orange-400 transition">
-              {label}
-            </Link>
-          ))}
-        </nav>
+        {/* Column 2: Pages */}
+        <div className="text-sm">
+          <h4 className="font-bold text-base mb-2">Pages</h4>
+          <nav className="flex flex-col space-y-0.5">
+            <Link to="/" className="hover:text-orange-400 transition">Home</Link>
+            <Link to="/about" className="hover:text-orange-400 transition">About Us</Link>
+            <Link to="/faqs" className="hover:text-orange-400 transition">FAQs</Link>
+            <Link to="/financing" className="hover:text-orange-400 transition">Financing</Link>
+            <Link to="/testimonials" className="hover:text-orange-400 transition">Testimonials</Link>
+            <Link to="/contact" className="hover:text-orange-400 transition">Contact</Link>
+            <Link to="/blog" className="hover:text-orange-400 transition">HVAC Blog</Link>
+          </nav>
+        </div>
 
-        {/* Column 3: Social Icons + Hours + BBB */}
-        <div className="flex flex-col items-start md:items-end space-y-3">
-          <div className="flex gap-4 text-xl">
+        {/* Column 3: Services */}
+        <div className="text-sm">
+          <h4 className="font-bold text-base mb-2">Services</h4>
+          <nav className="flex flex-col space-y-0.5">
+            <Link to="/services" className="hover:text-orange-400 transition">All Services</Link>
+            <Link to="/services/ac-repair" className="hover:text-orange-400 transition">AC Repair</Link>
+            <Link to="/services/heating-repair" className="hover:text-orange-400 transition">Heating Repair</Link>
+            <Link to="/services/hvac-maintenance" className="hover:text-orange-400 transition">Maintenance</Link>
+            <Link to="/services/indoor-air-quality" className="hover:text-orange-400 transition">Air Quality</Link>
+            <Link to="/services/smart-thermostats" className="hover:text-orange-400 transition">Thermostats</Link>
+            <Link to="/services/dryer-vent-cleaning" className="hover:text-orange-400 transition">Dryer Vents</Link>
+          </nav>
+        </div>
+
+        {/* Column 4: Social Icons + Hours + BBB */}
+        <div className="col-span-2 md:col-span-1 flex flex-col items-start md:items-end space-y-2">
+          <div className="flex gap-3 text-lg">
             <a href="https://www.facebook.com/people/AMW-Cooling-Heating-LLC/61569862892114/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
               <FaFacebook />
             </a>
@@ -51,36 +63,45 @@ const Footer = () => {
             </a>
           </div>
 
-          <div className="text-xs text-white leading-snug">
-            <p><strong>Business Hours:</strong> Mon–Fri 8am–5pm</p>
-            <p><strong>After Hours:</strong> Mon–Fri 5pm–9pm</p>
-            <p><strong>Emergency Services:</strong> Sat–Sun</p>
+          <div className="text-xs text-white leading-snug md:text-right">
+            <p><strong>Hours:</strong> Mon–Fri 8am–5pm</p>
+            <p><strong>After Hours:</strong> 5pm–9pm</p>
+            <p><strong>Emergency:</strong> Sat–Sun</p>
           </div>
 
-          {/* BBB Seal */}
-          <a
-            href="https://www.bbb.org/us/tx/conroe/profile/heating-and-air-conditioning/amw-cooling-heating-llc-0915-90075524/#sealclick"
-            target="_blank"
-            rel="nofollow noopener noreferrer"
-            className="mt-2 inline-block"
-            aria-label="AMW Cooling & Heating LLC BBB Business Review"
-          >
+          {/* Certification Badges */}
+          <div className="flex items-center gap-2 mt-1">
+            {/* NATE Certified */}
             <img
-              src="https://seal-houston.bbb.org/seals/blue-seal-160-90-bbb-90075524.png"
-              alt="AMW Cooling & Heating LLC BBB Business Review"
+              src={nateLogo}
+              alt="NATE Certified HVAC Technicians"
               loading="lazy"
-              width={160}
-              height={90}
-              style={{ border: 0 }}
-              className="h-auto w-40 md:w-44"
+              className="h-14 w-auto"
             />
-          </a>
+            {/* BBB Seal */}
+            <a
+              href="https://www.bbb.org/us/tx/conroe/profile/heating-and-air-conditioning/amw-cooling-heating-llc-0915-90075524/#sealclick"
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+              aria-label="AMW Cooling & Heating LLC BBB Business Review"
+            >
+              <img
+                src="https://seal-houston.bbb.org/seals/blue-seal-160-90-bbb-90075524.png"
+                alt="AMW Cooling & Heating LLC BBB Business Review"
+                loading="lazy"
+                width={160}
+                height={90}
+                style={{ border: 0 }}
+                className="h-auto w-28"
+              />
+            </a>
+          </div>
         </div>
 
       </div>
 
       {/* Footer Bottom */}
-      <div className="mt-8 text-center text-xs px-4">
+      <div className="mt-8 text-center text-sm px-4">
         &copy; {new Date().getFullYear()} AMW Cooling & Heating LLC. All Rights Reserved. Built by{' '}
         <a
           href="https://stephenscode.dev"

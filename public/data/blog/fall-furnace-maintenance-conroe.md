@@ -93,7 +93,7 @@ Wherever you are in Montgomery County, our team ensures your system is tailored 
 
 ## Why Choose AMW Cooling & Heating?
 
-- Veteran- and woman-owned family business  
+- Veteran-owned family business  
 - Licensed, insured, and trusted in North Houston  
 - Transparent pricing—no hidden fees  
 - Emergency service available 24/7  

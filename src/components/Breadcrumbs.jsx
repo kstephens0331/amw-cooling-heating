@@ -11,7 +11,7 @@ import { FaChevronRight } from 'react-icons/fa';
  *   {label: 'Article Title', path: null} // null path = current page
  * ]} />
  */
-export default function Breadcrumbs({ items }) {
+export default function Breadcrumbs({ items, light = false }) {
   if (!items || items.length === 0) return null;
 
   // Generate JSON-LD structured data for breadcrumbs
@@ -35,7 +35,7 @@ export default function Breadcrumbs({ items }) {
 
       {/* Visual breadcrumb navigation */}
       <nav aria-label="Breadcrumb" className="mb-4">
-        <ol className="flex items-center flex-wrap gap-2 text-sm text-gray-600">
+        <ol className={`flex items-center flex-wrap gap-2 text-sm ${light ? 'text-blue-200' : 'text-gray-600'}`}>
           {items.map((item, index) => {
             const isLast = index === items.length - 1;
 
@@ -44,18 +44,18 @@ export default function Breadcrumbs({ items }) {
                 {!isLast && item.path ? (
                   <Link
                     to={item.path}
-                    className="hover:text-blue-600 transition"
+                    className={`transition ${light ? 'hover:text-white' : 'hover:text-blue-600'}`}
                   >
                     {item.label}
                   </Link>
                 ) : (
-                  <span className="text-gray-800 font-medium" aria-current="page">
+                  <span className={`font-medium ${light ? 'text-white' : 'text-gray-800'}`} aria-current="page">
                     {item.label}
                   </span>
                 )}
 
                 {!isLast && (
-                  <FaChevronRight className="text-gray-400 text-xs" aria-hidden="true" />
+                  <FaChevronRight className={`text-xs ${light ? 'text-blue-300' : 'text-gray-400'}`} aria-hidden="true" />
                 )}
               </li>
             );

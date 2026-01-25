@@ -2,6 +2,9 @@ import React from 'react';
 import SEO from '../../components/SEO';
 import { ServiceSchema, BreadcrumbSchema } from '../../components/StructuredData';
 import { Link } from 'react-router-dom';
+import { FaPhone, FaCalendarCheck, FaShieldAlt, FaCheckCircle, FaExclamationTriangle } from 'react-icons/fa';
+import ManufacturerCarousel from '../../components/ManufacturerCarousel';
+import MapSection from '../../components/MapSection';
 import Footer from '../../components/Footer';
 
 const DryerVentCleaning = () => {
@@ -30,37 +33,53 @@ const DryerVentCleaning = () => {
         ]}
       />
 
-      <main className="bg-gray-50 text-gray-800 font-sans">
+      <main className="bg-white text-gray-800 font-sans">
+        {/* Patriotic Stripe */}
+        <div className="h-1.5 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
+
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-orange-50 to-white py-12">
-          <div className="container mx-auto text-center px-4">
-            <h1 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
-              Professional Dryer Vent Cleaning in Conroe, TX
+        <section className="bg-blue-900 py-12 md:py-16">
+          <div className="max-w-4xl mx-auto px-4 text-center">
+            {/* Service Badge */}
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
+              <FaExclamationTriangle className="text-orange-400 w-4 h-4" />
+              <span className="text-white text-sm font-medium">Fire Prevention Service</span>
+            </div>
+
+            <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Professional Dryer Vent Cleaning
             </h1>
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-6">
-              Protect your family and save energy with expert dryer vent cleaning
+            <p className="text-lg text-blue-100 max-w-2xl mx-auto mb-8">
+              Protect your family and save energy with expert dryer vent cleaning. Prevent fires, reduce drying time, and lower energy bills.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
                 href="tel:+19363311339"
-                className="inline-block px-6 py-3 bg-orange-500 text-white rounded shadow hover:bg-orange-600 transition"
+                className="inline-flex items-center gap-2 bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600 transition font-semibold"
               >
-                📞 Call (936) 331-1339
+                <FaPhone className="w-4 h-4" />
+                (936) 331-1339
               </a>
               <Link
                 to="/contact"
-                className="inline-block px-6 py-3 bg-blue-600 text-white rounded shadow hover:bg-blue-700 transition"
+                className="inline-flex items-center gap-2 bg-white text-blue-900 px-6 py-3 rounded-lg hover:bg-blue-50 transition font-semibold"
               >
-                📧 Schedule Service
+                <FaCalendarCheck className="w-4 h-4" />
+                Schedule Service
               </Link>
             </div>
           </div>
         </section>
 
+        {/* Bottom Stripe */}
+        <div className="h-1 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
+
         {/* Main Content */}
-        <section className="container mx-auto px-4 py-12 max-w-4xl">
-          <article className="bg-white p-8 rounded-xl shadow-lg">
-            <h2 className="text-2xl font-semibold text-blue-900 mb-4">
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4">
+          <article className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-blue-600">
+            <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-4 border-l-4 border-red-500 pl-4">
               Expert Dryer Vent Cleaning Services
             </h2>
             <p className="text-gray-700 mb-6 leading-relaxed">
@@ -71,8 +90,11 @@ const DryerVentCleaning = () => {
               provides thorough professional dryer vent cleaning to protect your Conroe home and family.
             </p>
 
-            <div className="bg-red-50 border-l-4 border-red-500 p-4 mb-6">
-              <h3 className="font-semibold text-red-900 mb-2">🔥 FIRE SAFETY ALERT</h3>
+            <div className="bg-red-50 border-l-4 border-red-500 p-4 mb-6 rounded-r-lg">
+              <h3 className="font-semibold text-red-900 mb-2 flex items-center gap-2">
+                <FaExclamationTriangle className="text-red-500" />
+                FIRE SAFETY ALERT
+              </h3>
               <p className="text-red-800 text-sm">
                 The National Fire Protection Association reports that failure to clean dryer vents is the
                 leading cause of dryer fires. Lint is highly flammable and accumulates quickly in vent systems.
@@ -80,7 +102,7 @@ const DryerVentCleaning = () => {
               </p>
             </div>
 
-            <h3 className="text-xl font-semibold text-blue-900 mb-3">
+            <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
               Signs Your Dryer Vent Needs Cleaning
             </h3>
             <ul className="list-disc list-inside space-y-2 mb-6 text-gray-700">
@@ -95,23 +117,20 @@ const DryerVentCleaning = () => {
               <li><strong>One Year Since Last Cleaning</strong> - NFPA recommends annual professional cleaning</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-blue-900 mb-3">
+            <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
               Our Professional Dryer Vent Cleaning Process
             </h3>
             <ul className="list-disc list-inside space-y-2 mb-6 text-gray-700">
               <li><strong>Complete Inspection</strong> - Examine entire vent system from dryer to exterior</li>
               <li><strong>Disconnect & Access</strong> - Safely disconnect dryer and access full vent line</li>
-              <li><strong>Specialized Equipment</strong> - High-powered vacuum with rotary brush system</li>
-              <li><strong>Full-Length Cleaning</strong> - Remove ALL lint from entire vent length, not just near the dryer</li>
-              <li><strong>Exterior Vent Cleaning</strong> - Clean and verify proper function of exterior vent hood</li>
+              <li><strong>Full-Length Cleaning</strong> - Remove all lint from entire vent length, not just near the dryer</li>
               <li><strong>Behind-Dryer Cleaning</strong> - Remove lint accumulation behind and around dryer</li>
-              <li><strong>Dryer Lint Trap Cleaning</strong> - Deep clean mesh filter screen</li>
               <li><strong>Connection Inspection</strong> - Check for damage, disconnections, or improper installation</li>
               <li><strong>Airflow Testing</strong> - Verify proper exhaust airflow after cleaning</li>
               <li><strong>Reconnection & Testing</strong> - Properly reconnect dryer and run test cycle</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-blue-900 mb-3">
+            <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
               Benefits of Professional Dryer Vent Cleaning
             </h3>
             <ul className="list-disc list-inside space-y-2 mb-6 text-gray-700">
@@ -123,10 +142,9 @@ const DryerVentCleaning = () => {
               <li><strong>Prevent Moisture Damage</strong> - Proper venting prevents humidity problems in laundry area</li>
               <li><strong>Eliminate Odors</strong> - Remove musty smells from trapped moisture</li>
               <li><strong>Reduced Wear on Clothes</strong> - Proper drying is gentler on fabrics</li>
-              <li><strong>Carbon Monoxide Safety</strong> - (Gas dryers) Ensure proper exhaust of combustion gases</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-blue-900 mb-3">
+            <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
               How Often Should You Clean Your Dryer Vent?
             </h3>
             <p className="text-gray-700 mb-4 leading-relaxed">
@@ -142,34 +160,24 @@ const DryerVentCleaning = () => {
               <li>Notice any warning signs listed above</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-blue-900 mb-3">
+            <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
               Common Dryer Vent Problems We Address
             </h3>
             <ul className="list-disc list-inside space-y-2 mb-6 text-gray-700">
               <li><strong>Lint Blockages</strong> - Complete or partial obstructions preventing proper airflow</li>
               <li><strong>Damaged Vent Lines</strong> - Crushed, torn, or disconnected vent sections</li>
-              <li><strong>Improper Installation</strong> - Wrong materials, excessive length, too many bends</li>
               <li><strong>Missing or Damaged Exterior Vent</strong> - Broken vent hood allowing pest entry</li>
-              <li><strong>Flexible Plastic/Foil Vents</strong> - Unsafe materials that should be replaced</li>
-              <li><strong>Vent Too Long</strong> - Exceeding manufacturer recommendations for vent length</li>
               <li><strong>Bird Nests or Pest Blockages</strong> - Animals nesting in exterior vent opening</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-blue-900 mb-3">
-              Why Choose AMW for Dryer Vent Cleaning?
-            </h3>
-            <ul className="list-disc list-inside space-y-2 mb-6 text-gray-700">
-              <li>Experienced HVAC technicians with specialized dryer vent equipment</li>
-              <li>Complete cleaning of entire vent system, not just near the dryer</li>
-              <li>Comprehensive inspection and safety check</li>
-              <li>Transparent pricing with no hidden fees</li>
-              <li>Same-day and next-day appointments available</li>
-              <li>Service all residential and light commercial dryer vents</li>
-              <li>Veteran-owned and locally operated in Conroe</li>
-              <li>100% satisfaction guaranteed</li>
-            </ul>
+            <div className="flex flex-wrap items-center gap-4 mb-6 py-4 border-y border-gray-200 text-sm text-gray-600">
+              <span className="flex items-center gap-2"><FaShieldAlt className="text-blue-600 w-4 h-4" /> Veteran-Owned</span>
+              <span className="flex items-center gap-2"><FaCheckCircle className="text-green-500 w-4 h-4" /> Licensed & Insured</span>
+              <span className="flex items-center gap-2"><FaCheckCircle className="text-green-500 w-4 h-4" /> Same-Day Service</span>
+              <span className="flex items-center gap-2"><FaCheckCircle className="text-green-500 w-4 h-4" /> Complete System Cleaning</span>
+            </div>
 
-            <h3 className="text-xl font-semibold text-blue-900 mb-3">
+            <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
               Dryer Maintenance Tips Between Cleanings
             </h3>
             <ul className="list-disc list-inside space-y-2 mb-6 text-gray-700">
@@ -182,32 +190,47 @@ const DryerVentCleaning = () => {
               <li>Schedule professional cleaning annually or when warning signs appear</li>
             </ul>
 
-            <div className="bg-orange-50 p-6 rounded-lg mt-8">
-              <h2 className="text-2xl font-semibold text-blue-900 mb-3">
+          </article>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="relative overflow-hidden">
+          <div className="h-1.5 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
+          <div className="bg-blue-900 py-12 md:py-16">
+            <div className="max-w-4xl mx-auto px-4 text-center">
+              <div className="inline-flex items-center gap-2 bg-red-500 rounded-full px-4 py-2 mb-6">
+                <FaShieldAlt className="text-white w-4 h-4" />
+                <span className="text-white text-sm font-semibold">Veteran-Owned & Operated</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
                 Schedule Your Dryer Vent Cleaning Today
               </h2>
-              <p className="text-gray-700 mb-4">
-                Don't wait for a fire or breakdown. Protect your Conroe home and family with professional
-                dryer vent cleaning from AMW Cooling & Heating.
+              <p className="text-lg text-blue-200 max-w-xl mx-auto mb-8">
+                Don't wait for a fire or breakdown. Protect your Conroe home and family with professional dryer vent cleaning from AMW Cooling & Heating.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
                   href="tel:+19363311339"
-                  className="inline-block px-6 py-3 bg-orange-500 text-white rounded shadow hover:bg-orange-600 transition text-center"
+                  className="inline-flex items-center justify-center gap-2 bg-red-500 text-white px-8 py-4 rounded-lg hover:bg-red-600 transition font-bold text-lg"
                 >
-                  Call (936) 331-1339
+                  <FaPhone className="w-5 h-5" />
+                  (936) 331-1339
                 </a>
                 <Link
                   to="/contact"
-                  className="inline-block px-6 py-3 bg-blue-600 text-white rounded shadow hover:bg-blue-700 transition text-center"
+                  className="inline-flex items-center justify-center gap-2 bg-white text-blue-900 px-8 py-4 rounded-lg hover:bg-blue-50 transition font-bold text-lg"
                 >
+                  <FaCalendarCheck className="w-5 h-5" />
                   Schedule Service Online
                 </Link>
               </div>
             </div>
-          </article>
+          </div>
         </section>
 
+        <MapSection />
+        <ManufacturerCarousel />
         <Footer />
       </main>
     </>

@@ -2,6 +2,9 @@ import React from 'react';
 import SEO from '../../components/SEO';
 import { ServiceSchema, BreadcrumbSchema } from '../../components/StructuredData';
 import { Link } from 'react-router-dom';
+import { FaPhone, FaCalendarCheck, FaShieldAlt, FaCheckCircle, FaWind } from 'react-icons/fa';
+import ManufacturerCarousel from '../../components/ManufacturerCarousel';
+import MapSection from '../../components/MapSection';
 import Footer from '../../components/Footer';
 
 const IndoorAirQuality = () => {
@@ -30,37 +33,53 @@ const IndoorAirQuality = () => {
         ]}
       />
 
-      <main className="bg-gray-50 text-gray-800 font-sans">
+      <main className="bg-white text-gray-800 font-sans">
+        {/* Patriotic Stripe */}
+        <div className="h-1.5 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
+
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-green-50 to-white py-12">
-          <div className="container mx-auto text-center px-4">
-            <h1 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
-              Indoor Air Quality Solutions in Conroe, TX
+        <section className="bg-blue-900 py-12 md:py-16">
+          <div className="max-w-4xl mx-auto px-4 text-center">
+            {/* Service Badge */}
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
+              <FaWind className="text-blue-300 w-4 h-4" />
+              <span className="text-white text-sm font-medium">Air Quality Experts</span>
+            </div>
+
+            <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Indoor Air Quality Solutions
             </h1>
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-6">
-              Breathe cleaner, healthier air with professional air quality solutions
+            <p className="text-lg text-blue-100 max-w-2xl mx-auto mb-8">
+              Breathe cleaner, healthier air with professional air quality solutions. HEPA filtration, UV purification, and humidity control.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
                 href="tel:+19363311339"
-                className="inline-block px-6 py-3 bg-orange-500 text-white rounded shadow hover:bg-orange-600 transition"
+                className="inline-flex items-center gap-2 bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600 transition font-semibold"
               >
-                📞 Call (936) 331-1339
+                <FaPhone className="w-4 h-4" />
+                (936) 331-1339
               </a>
               <Link
                 to="/contact"
-                className="inline-block px-6 py-3 bg-blue-600 text-white rounded shadow hover:bg-blue-700 transition"
+                className="inline-flex items-center gap-2 bg-white text-blue-900 px-6 py-3 rounded-lg hover:bg-blue-50 transition font-semibold"
               >
-                📧 Get a Quote
+                <FaCalendarCheck className="w-4 h-4" />
+                Get a Quote
               </Link>
             </div>
           </div>
         </section>
 
+        {/* Bottom Stripe */}
+        <div className="h-1 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
+
         {/* Main Content */}
-        <section className="container mx-auto px-4 py-12 max-w-4xl">
-          <article className="bg-white p-8 rounded-xl shadow-lg">
-            <h2 className="text-2xl font-semibold text-blue-900 mb-4">
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4">
+          <article className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-blue-600">
+            <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-4 border-l-4 border-red-500 pl-4">
               Professional Indoor Air Quality Solutions
             </h2>
             <p className="text-gray-700 mb-6 leading-relaxed">
@@ -70,7 +89,7 @@ const IndoorAirQuality = () => {
               provides comprehensive solutions to ensure you breathe clean, comfortable air year-round.
             </p>
 
-            <h3 className="text-xl font-semibold text-blue-900 mb-3">
+            <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
               Why Indoor Air Quality Matters in Conroe
             </h3>
             <p className="text-gray-700 mb-4 leading-relaxed">
@@ -81,7 +100,7 @@ const IndoorAirQuality = () => {
               respiratory conditions are especially vulnerable.
             </p>
 
-            <h3 className="text-xl font-semibold text-blue-900 mb-3">
+            <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
               Signs You Need Indoor Air Quality Solutions
             </h3>
             <ul className="list-disc list-inside space-y-2 mb-6 text-gray-700">
@@ -95,63 +114,71 @@ const IndoorAirQuality = () => {
               <li>New construction or recent renovation</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-blue-900 mb-3">
+            <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
               Our Indoor Air Quality Solutions
             </h3>
 
-            <h4 className="font-semibold text-blue-800 mb-2 mt-4">Advanced Air Filtration Systems</h4>
-            <p className="text-gray-700 mb-3">
-              Standard HVAC filters only capture large particles. Our advanced filtration systems remove microscopic
-              contaminants for dramatically cleaner air:
-            </p>
-            <ul className="list-disc list-inside space-y-2 mb-4 text-gray-700">
-              <li><strong>HEPA Filtration</strong> - Captures 99.97% of particles as small as 0.3 microns including pollen, dust mites, pet dander, and mold spores</li>
-              <li><strong>High-MERV Filters</strong> - MERV 11-16 rated filters for superior particle capture without restricting airflow</li>
-              <li><strong>Media Air Cleaners</strong> - Whole-home filtration with large surface area for maximum efficiency</li>
-              <li><strong>Electronic Air Cleaners</strong> - Use electrical charge to capture particles too small for standard filters</li>
-              <li><strong>Carbon Filters</strong> - Remove odors, VOCs (volatile organic compounds), and chemical fumes</li>
-            </ul>
+            <div className="bg-gray-50 p-4 rounded-lg mb-4">
+              <h4 className="font-semibold text-blue-800 mb-2">Advanced Air Filtration Systems</h4>
+              <p className="text-gray-700 mb-3">
+                Standard HVAC filters only capture large particles. Our advanced filtration systems remove microscopic
+                contaminants for dramatically cleaner air:
+              </p>
+              <ul className="list-disc list-inside space-y-2 text-gray-700">
+                <li><strong>HEPA Filtration</strong> - Captures 99.97% of particles as small as 0.3 microns including pollen, dust mites, pet dander, and mold spores</li>
+                <li><strong>High-MERV Filters</strong> - MERV 11-16 rated filters for superior particle capture without restricting airflow</li>
+                <li><strong>Media Air Cleaners</strong> - Whole-home filtration with large surface area for maximum efficiency</li>
+                <li><strong>Electronic Air Cleaners</strong> - Use electrical charge to capture particles too small for standard filters</li>
+                <li><strong>Carbon Filters</strong> - Remove odors, VOCs (volatile organic compounds), and chemical fumes</li>
+              </ul>
+            </div>
 
-            <h4 className="font-semibold text-blue-800 mb-2 mt-4">UV Air Purification Systems</h4>
-            <p className="text-gray-700 mb-3">
-              Germicidal UV lights installed in your HVAC system destroy biological contaminants at the DNA level:
-            </p>
-            <ul className="list-disc list-inside space-y-2 mb-4 text-gray-700">
-              <li><strong>Bacteria & Virus Elimination</strong> - UV-C light neutralizes airborne pathogens before they circulate</li>
-              <li><strong>Mold Prevention</strong> - Prevents mold growth on evaporator coils in Conroe's humid climate</li>
-              <li><strong>24/7 Protection</strong> - Continuous purification whenever your HVAC system operates</li>
-              <li><strong>Chemical-Free</strong> - No ozone or chemical byproducts, safe for all family members</li>
-              <li><strong>Reduced Maintenance</strong> - Keeps coils cleaner, improving system efficiency</li>
-            </ul>
+            <div className="bg-gray-50 p-4 rounded-lg mb-4">
+              <h4 className="font-semibold text-blue-800 mb-2">UV Air Purification Systems</h4>
+              <p className="text-gray-700 mb-3">
+                Germicidal UV lights installed in your HVAC system destroy biological contaminants at the DNA level:
+              </p>
+              <ul className="list-disc list-inside space-y-2 text-gray-700">
+                <li><strong>Bacteria & Virus Elimination</strong> - UV-C light neutralizes airborne pathogens before they circulate</li>
+                <li><strong>Mold Prevention</strong> - Prevents mold growth on evaporator coils in Conroe's humid climate</li>
+                <li><strong>Continuous Protection</strong> - Purification whenever your HVAC system operates</li>
+                <li><strong>Chemical-Free</strong> - No ozone or chemical byproducts, safe for all family members</li>
+                <li><strong>Reduced Maintenance</strong> - Keeps coils cleaner, improving system efficiency</li>
+              </ul>
+            </div>
 
-            <h4 className="font-semibold text-blue-800 mb-2 mt-4">Whole-Home Dehumidification</h4>
-            <p className="text-gray-700 mb-3">
-              Conroe's humidity often exceeds comfortable levels even with AC running. Excess moisture promotes
-              mold growth, dust mites, and discomfort:
-            </p>
-            <ul className="list-disc list-inside space-y-2 mb-4 text-gray-700">
-              <li><strong>Precise Humidity Control</strong> - Maintain ideal 30-50% humidity levels automatically</li>
-              <li><strong>Mold & Mildew Prevention</strong> - Eliminate conditions that allow biological growth</li>
-              <li><strong>Improved Comfort</strong> - Lower humidity makes your home feel cooler at higher temperatures</li>
-              <li><strong>Energy Savings</strong> - More comfortable at 76°F with low humidity vs. 72°F with high humidity</li>
-              <li><strong>Protects Your Home</strong> - Prevents wood damage, paint peeling, and musty odors</li>
-              <li><strong>Allergen Reduction</strong> - Dust mites can't survive in properly controlled humidity</li>
-            </ul>
+            <div className="bg-gray-50 p-4 rounded-lg mb-4">
+              <h4 className="font-semibold text-blue-800 mb-2">Whole-Home Dehumidification</h4>
+              <p className="text-gray-700 mb-3">
+                Conroe's humidity often exceeds comfortable levels even with AC running. Excess moisture promotes
+                mold growth, dust mites, and discomfort:
+              </p>
+              <ul className="list-disc list-inside space-y-2 text-gray-700">
+                <li><strong>Precise Humidity Control</strong> - Maintain ideal 30-50% humidity levels automatically</li>
+                <li><strong>Mold & Mildew Prevention</strong> - Eliminate conditions that allow biological growth</li>
+                <li><strong>Improved Comfort</strong> - Lower humidity makes your home feel cooler at higher temperatures</li>
+                <li><strong>Energy Savings</strong> - More comfortable at 76 degrees F with low humidity vs. 72 degrees F with high humidity</li>
+                <li><strong>Protects Your Home</strong> - Prevents wood damage, paint peeling, and musty odors</li>
+                <li><strong>Allergen Reduction</strong> - Dust mites can't survive in properly controlled humidity</li>
+              </ul>
+            </div>
 
-            <h4 className="font-semibold text-blue-800 mb-2 mt-4">Ventilation & Fresh Air Systems</h4>
-            <p className="text-gray-700 mb-3">
-              Modern homes are sealed tight for energy efficiency, but this traps contaminants inside. Fresh air
-              ventilation solves this problem:
-            </p>
-            <ul className="list-disc list-inside space-y-2 mb-4 text-gray-700">
-              <li><strong>Energy Recovery Ventilators (ERV)</strong> - Bring in fresh outdoor air while recovering heating/cooling energy</li>
-              <li><strong>Heat Recovery Ventilators (HRV)</strong> - Exchange stale indoor air for fresh outdoor air efficiently</li>
-              <li><strong>Balanced Ventilation</strong> - Controlled air exchange prevents negative pressure issues</li>
-              <li><strong>VOC Removal</strong> - Eliminate off-gassing from furniture, carpets, and building materials</li>
-              <li><strong>Continuous Fresh Air</strong> - Maintain healthy air quality without wasting energy</li>
-            </ul>
+            <div className="bg-gray-50 p-4 rounded-lg mb-6">
+              <h4 className="font-semibold text-blue-800 mb-2">Ventilation & Fresh Air Systems</h4>
+              <p className="text-gray-700 mb-3">
+                Modern homes are sealed tight for energy efficiency, but this traps contaminants inside. Fresh air
+                ventilation solves this problem:
+              </p>
+              <ul className="list-disc list-inside space-y-2 text-gray-700">
+                <li><strong>Energy Recovery Ventilators (ERV)</strong> - Bring in fresh outdoor air while recovering heating/cooling energy</li>
+                <li><strong>Heat Recovery Ventilators (HRV)</strong> - Exchange stale indoor air for fresh outdoor air efficiently</li>
+                <li><strong>Balanced Ventilation</strong> - Controlled air exchange prevents negative pressure issues</li>
+                <li><strong>VOC Removal</strong> - Eliminate off-gassing from furniture, carpets, and building materials</li>
+                <li><strong>Continuous Fresh Air</strong> - Maintain healthy air quality without wasting energy</li>
+              </ul>
+            </div>
 
-            <h3 className="text-xl font-semibold text-blue-900 mb-3">
+            <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
               Benefits of Improved Indoor Air Quality
             </h3>
             <ul className="list-disc list-inside space-y-2 mb-6 text-gray-700">
@@ -165,7 +192,7 @@ const IndoorAirQuality = () => {
               <li><strong>Higher Home Value</strong> - Air quality systems are attractive to buyers</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-blue-900 mb-3">
+            <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
               Custom Solutions for Your Home
             </h3>
             <p className="text-gray-700 mb-4 leading-relaxed">
@@ -175,46 +202,54 @@ const IndoorAirQuality = () => {
               air quality equipment into existing setups or integrate it into new installations.
             </p>
 
-            <h3 className="text-xl font-semibold text-blue-900 mb-3">
-              Why Choose AMW for Air Quality Solutions?
-            </h3>
-            <ul className="list-disc list-inside space-y-2 mb-6 text-gray-700">
-              <li>Expert assessment of your home's specific air quality needs</li>
-              <li>Installation of all major air quality brands and systems</li>
-              <li>Licensed, insured HVAC technicians</li>
-              <li>Custom solutions tailored to Conroe's climate</li>
-              <li>Transparent pricing with free estimates</li>
-              <li>Ongoing maintenance and filter replacement services</li>
-              <li>100% satisfaction guarantee</li>
-              <li>Veteran-owned and locally operated</li>
-            </ul>
+            <div className="flex flex-wrap items-center gap-4 py-4 border-y border-gray-200 text-sm text-gray-600">
+              <span className="flex items-center gap-2"><FaShieldAlt className="text-blue-600 w-4 h-4" /> Veteran-Owned</span>
+              <span className="flex items-center gap-2"><FaCheckCircle className="text-green-500 w-4 h-4" /> Licensed & Insured</span>
+              <span className="flex items-center gap-2"><FaCheckCircle className="text-green-500 w-4 h-4" /> Free Estimates</span>
+              <span className="flex items-center gap-2"><FaCheckCircle className="text-green-500 w-4 h-4" /> Custom Solutions</span>
+            </div>
 
-            <div className="bg-green-50 p-6 rounded-lg mt-8">
-              <h2 className="text-2xl font-semibold text-blue-900 mb-3">
+          </article>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="relative overflow-hidden">
+          <div className="h-1.5 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
+          <div className="bg-blue-900 py-12 md:py-16">
+            <div className="max-w-4xl mx-auto px-4 text-center">
+              <div className="inline-flex items-center gap-2 bg-red-500 rounded-full px-4 py-2 mb-6">
+                <FaShieldAlt className="text-white w-4 h-4" />
+                <span className="text-white text-sm font-semibold">Veteran-Owned & Operated</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
                 Ready to Breathe Cleaner Air?
               </h2>
-              <p className="text-gray-700 mb-4">
-                Don't let poor air quality affect your family's health and comfort. Contact AMW Cooling & Heating
-                for professional indoor air quality solutions in Conroe, TX.
+              <p className="text-lg text-blue-200 max-w-xl mx-auto mb-8">
+                Don't let poor air quality affect your family's health and comfort. Contact AMW Cooling & Heating for professional indoor air quality solutions in Conroe, TX.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
                   href="tel:+19363311339"
-                  className="inline-block px-6 py-3 bg-orange-500 text-white rounded shadow hover:bg-orange-600 transition text-center"
+                  className="inline-flex items-center justify-center gap-2 bg-red-500 text-white px-8 py-4 rounded-lg hover:bg-red-600 transition font-bold text-lg"
                 >
-                  Call (936) 331-1339
+                  <FaPhone className="w-5 h-5" />
+                  (936) 331-1339
                 </a>
                 <Link
                   to="/contact"
-                  className="inline-block px-6 py-3 bg-blue-600 text-white rounded shadow hover:bg-blue-700 transition text-center"
+                  className="inline-flex items-center justify-center gap-2 bg-white text-blue-900 px-8 py-4 rounded-lg hover:bg-blue-50 transition font-bold text-lg"
                 >
+                  <FaCalendarCheck className="w-5 h-5" />
                   Schedule Consultation
                 </Link>
               </div>
             </div>
-          </article>
+          </div>
         </section>
 
+        <MapSection />
+        <ManufacturerCarousel />
         <Footer />
       </main>
     </>
