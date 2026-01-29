@@ -59,11 +59,17 @@ export default function HomePage() {
             }
           ],
           "priceRange": "$$",
-          "areaServed": ["Conroe", "The Woodlands", "Spring", "Montgomery", "Willis"],
+          "areaServed": [
+            {"@type": "City", "name": "Conroe", "containedInPlace": {"@type": "State", "name": "Texas"}},
+            {"@type": "City", "name": "The Woodlands", "containedInPlace": {"@type": "State", "name": "Texas"}},
+            {"@type": "City", "name": "Spring", "containedInPlace": {"@type": "State", "name": "Texas"}},
+            {"@type": "City", "name": "Montgomery", "containedInPlace": {"@type": "State", "name": "Texas"}},
+            {"@type": "City", "name": "Willis", "containedInPlace": {"@type": "State", "name": "Texas"}}
+          ],
           "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "reviewCount": "54"
+            "ratingValue": 5.0,
+            "reviewCount": 54
           }
         })}
       </script>
