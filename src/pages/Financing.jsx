@@ -95,7 +95,7 @@ export default function Financing() {
               Synchrony offers competitive rates and flexible terms for HVAC installations and major repairs. Enjoy low monthly payments, online account management, and peace of mind.
             </p>
             <a
-              href="https://www.mysynchrony.com/"
+              href="https://www.synchrony.com/mmc/M9235023900"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block mt-2 px-5 py-3 bg-blue-600 text-white rounded shadow hover:bg-blue-700 transition text-base font-semibold"
