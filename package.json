@@ -26,8 +26,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "postbuild": "echo 'Build complete - react-snap disabled for Vercel'",
-    "build:snap": "react-scripts build && react-snap",
+    "postbuild": "react-snap || echo 'react-snap skipped'",
     "generate:sitemap": "node scripts/generate-sitemap.js",
     "prebuild": "npm run generate:sitemap",
     "test": "react-scripts test",
@@ -40,14 +39,34 @@
       "removeComments": false
     },
     "skipThirdPartyRequests": true,
+    "include": [
+      "/",
+      "/about",
+      "/services",
+      "/contact",
+      "/faqs",
+      "/financing",
+      "/testimonials",
+      "/blog",
+      "/services/ac-repair",
+      "/services/heating-repair",
+      "/services/hvac-maintenance",
+      "/services/indoor-air-quality",
+      "/services/smart-thermostats",
+      "/services/dryer-vent-cleaning",
+      "/locations/conroe-tx",
+      "/blog/winter-maintenance-tips-conroe",
+      "/blog/winter-hvac-preparation-conroe",
+      "/blog/dryer-vent-cleaning-safety-conroe",
+      "/blog/prep-ac-conroe-summer",
+      "/blog/fall-furnace-maintenance-conroe",
+      "/blog/hvac-maintenance-dryer-vent-special",
+      "/blog/hvac-maintenance-costs-conroe"
+    ],
     "puppeteerArgs": [
       "--no-sandbox",
       "--disable-setuid-sandbox",
       "--disable-dev-shm-usage",
-      "--disable-accelerated-2d-canvas",
-      "--no-first-run",
-      "--no-zygote",
-      "--single-process",
       "--disable-gpu"
     ]
   },
@@ -71,6 +90,7 @@
   },
   "devDependencies": {
     "@tailwindcss/line-clamp": "^0.4.4",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^5.0.1",
+    "react-snap": "^1.23.0"
   }
 }
