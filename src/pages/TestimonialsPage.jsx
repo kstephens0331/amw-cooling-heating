@@ -1,16 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from 'next/link';
 import { FaQuoteLeft, FaStar, FaPhone, FaCalendarCheck, FaShieldAlt } from "react-icons/fa";
-import { Helmet } from "react-helmet-async";
+import Head from 'next/head';
 import TrustIndexWidget from "../components/TrustIndexWidget";
 import ManufacturerCarousel from "../components/ManufacturerCarousel";
-import MapSection from "../components/MapSection";
+import MapSection from "../components/MapSectionWrapper";
 import Footer from "../components/Footer";
 
 export default function TestimonialsPage() {
   return (
     <div className="bg-white text-gray-800 font-sans">
-      <Helmet>
+      <Head>
         <title>Customer Testimonials | AMW Cooling & Heating LLC</title>
         <meta
           name="description"
@@ -20,7 +20,7 @@ export default function TestimonialsPage() {
           name="keywords"
           content="HVAC reviews, customer testimonials, AMW Cooling feedback, Conroe HVAC trusted, The Woodlands heating and cooling"
         />
-      </Helmet>
+      </Head>
 
       {/* Patriotic Stripe */}
       <div className="h-1.5 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
@@ -56,7 +56,7 @@ export default function TestimonialsPage() {
               (936) 331-1339
             </a>
             <Link
-              to="/contact"
+              href="/contact"
               className="inline-flex items-center gap-2 bg-white text-blue-900 px-6 py-3 rounded-lg hover:bg-blue-50 transition font-semibold"
             >
               <FaCalendarCheck className="w-4 h-4" />
@@ -195,7 +195,7 @@ export default function TestimonialsPage() {
                 (936) 331-1339
               </a>
               <Link
-                to="/contact"
+                href="/contact"
                 className="inline-flex items-center justify-center gap-2 bg-white text-blue-900 px-8 py-4 rounded-lg hover:bg-blue-50 transition font-bold text-lg"
               >
                 <FaCalendarCheck className="w-5 h-5" />

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { FaSnowflake, FaFire, FaWind } from 'react-icons/fa';
 
 const services = [
@@ -71,7 +71,7 @@ export default function ServicesSection() {
               </ul>
 
               <Link
-                to={service.link}
+                href={service.link}
                 className="text-blue-900 text-sm font-semibold hover:text-red-500 transition"
               >
                 Learn More →
@@ -82,7 +82,7 @@ export default function ServicesSection() {
 
         <div className="text-center">
           <Link
-            to="/services"
+            href="/services"
             className="inline-block bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-8 rounded-lg transition"
           >
             View All Services

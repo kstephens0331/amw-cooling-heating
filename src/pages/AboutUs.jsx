@@ -1,12 +1,12 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { FaShieldAlt, FaPhone, FaCalendarCheck } from 'react-icons/fa';
 import SEO from '../components/SEO';
-import nateLogo from '../assets/images/nate.webp';
-import Anjelica from '../assets/images/DSC_2077.webp'
-import Josh from '../assets/images/DSC_2157.webp'
-import aboutHero from '../assets/images/DSC_1887.webp';
+const nateLogo = '/assets/images/nate.webp';
+const Anjelica = '/assets/images/DSC_2077.webp';
+const Josh = '/assets/images/DSC_2157.webp';
+const aboutHero = '/assets/images/DSC_1887.webp';
 import ManufacturerCarousel from '../components/ManufacturerCarousel';
-import MapSection from '../components/MapSection';
+import MapSection from '../components/MapSectionWrapper';
 import Footer from '../components/Footer';
 
 export default function AboutUs() {
@@ -55,7 +55,7 @@ export default function AboutUs() {
                     (936) 331-1339
                   </a>
                   <Link
-                    to="/contact"
+                    href="/contact"
                     className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-blue-900 rounded-lg hover:bg-blue-50 transition font-bold"
                   >
                     <FaCalendarCheck className="w-4 h-4" />
@@ -185,7 +185,7 @@ export default function AboutUs() {
                 (936) 331-1339
               </a>
               <Link
-                to="/contact"
+                href="/contact"
                 className="inline-flex items-center justify-center gap-2 bg-white text-blue-900 px-8 py-4 rounded-lg hover:bg-blue-50 transition font-bold text-lg"
               >
                 <FaCalendarCheck className="w-5 h-5" />

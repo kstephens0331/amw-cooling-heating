@@ -1,11 +1,12 @@
 import { useEffect, useState, useMemo } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import Head from 'next/head';
 import ReactMarkdown from 'react-markdown';
 import { event } from '../utils/analytics';
 import Breadcrumbs from '../components/Breadcrumbs';
 import ManufacturerCarousel from '../components/ManufacturerCarousel';
-import MapSection from '../components/MapSection';
+import MapSection from '../components/MapSectionWrapper';
 import Footer from '../components/Footer';
 
 // Generate slug from heading text
@@ -63,7 +64,8 @@ function HeadingRenderer({ level, children }) {
 }
 
 export default function BlogPost() {
-  const { slug } = useParams();
+  const router = useRouter();
+  const { slug } = router.query;
   const [md, setMd] = useState('');
   const [meta, setMeta] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -141,7 +143,7 @@ export default function BlogPost() {
       <main className="container mx-auto px-4 py-16">
         <h1 className="text-2xl font-bold mb-2">Post not found</h1>
         <p className="text-gray-600 mb-6">This article may have moved or been removed.</p>
-        <Link to="/blog" className="text-blue-600">Back to Blog</Link>
+        <Link href="/blog" className="text-blue-600">Back to Blog</Link>
       </main>
     );
   }
@@ -161,7 +163,7 @@ export default function BlogPost() {
 
   return (
     <main className="bg-gray-50 text-gray-800 font-sans min-h-screen">
-      <Helmet>
+      <Head>
         <title>{title} | AMW Cooling & Heating LLC</title>
         <meta name="description" content={desc} />
         {meta?.image && (
@@ -177,10 +179,8 @@ export default function BlogPost() {
           </>
         )}
         <link rel="canonical" href={`https://amwairconditioning.com/blog/${slug}`} />
-
-        {/* BlogPosting JSON-LD */}
-        <script type="application/ld+json">
-          {JSON.stringify({
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'BlogPosting',
             headline: title,
@@ -198,9 +198,9 @@ export default function BlogPost() {
             },
             description: desc,
             mainEntityOfPage: `https://amwairconditioning.com/blog/${slug}`,
-          })}
-        </script>
-      </Helmet>
+          })
+        }} />
+      </Head>
 
       {/* Compact Header with Color Stripe */}
       <div className="h-1 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
@@ -208,7 +208,7 @@ export default function BlogPost() {
       <section className="bg-white border-b">
         <div className="container mx-auto px-4 py-6 max-w-5xl">
           <div className="flex items-center justify-between mb-4">
-            <Link to="/blog" className="inline-flex items-center text-sm text-blue-600 hover:text-blue-800 font-medium">
+            <Link href="/blog" className="inline-flex items-center text-sm text-blue-600 hover:text-blue-800 font-medium">
               <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
@@ -367,7 +367,7 @@ export default function BlogPost() {
                     Call (936) 331-1339
                   </a>
                   <Link
-                    to="/contact"
+                    href="/contact"
                     className="block w-full bg-blue-600 text-white text-center py-2.5 rounded-lg font-semibold hover:bg-blue-700 transition text-sm"
                   >
                     Schedule Online
@@ -392,7 +392,7 @@ export default function BlogPost() {
               {relatedPosts.map((post) => (
                 <Link
                   key={post.slug}
-                  to={`/blog/${post.slug}`}
+                  href={`/blog/${post.slug}`}
                   className="bg-white rounded-lg border border-gray-100 hover:border-blue-200 hover:shadow-md transition overflow-hidden group"
                 >
                   {post.image && (
@@ -436,7 +436,7 @@ export default function BlogPost() {
                 (936) 331-1339
               </a>
               <Link
-                to="/contact"
+                href="/contact"
                 onClick={() => event('contact_click', { slug })}
                 className="inline-flex items-center gap-2 bg-white text-blue-900 px-6 py-3 rounded-lg font-bold hover:bg-blue-50 transition"
               >

@@ -1,15 +1,15 @@
 import React from 'react';
 import SEO from '../components/SEO';
 import { BreadcrumbSchema } from '../components/StructuredData';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { FaPhone, FaCalendarCheck, FaShieldAlt } from 'react-icons/fa';
-import MapSection from '../components/MapSection';
+import MapSection from '../components/MapSectionWrapper';
 import ManufacturerCarousel from '../components/ManufacturerCarousel';
 import Footer from '../components/Footer';
-import airQuality from '../assets/images/air-quality.webp';
-import ventilation from '../assets/images/IMG_6338.webp';
-import maintenance from '../assets/images/DSC_2058.webp';
-import hvacSystem from '../assets/images/DSC_2035.webp';
+const airQuality = '/assets/images/air-quality.webp';
+const ventilation = '/assets/images/IMG_6338.webp';
+const maintenance = '/assets/images/DSC_2058.webp';
+const hvacSystem = '/assets/images/DSC_2035.webp';
 
 export default function AdditionalServices() {
   return (
@@ -50,7 +50,7 @@ export default function AdditionalServices() {
               (936) 331-1339
             </a>
             <Link
-              to="/contact"
+              href="/contact"
               className="inline-flex items-center gap-2 bg-white text-blue-900 px-6 py-3 rounded-lg hover:bg-blue-50 transition font-semibold"
             >
               <FaCalendarCheck className="w-4 h-4" />
@@ -97,7 +97,7 @@ export default function AdditionalServices() {
             </div>
           </div>
           <div className="w-full lg:w-1/2 text-base md:text-lg text-gray-700">
-            <Link to="/services/smart-thermostats" className="hover:text-blue-700 transition">
+            <Link href="/services/smart-thermostats" className="hover:text-blue-700 transition">
               <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-4 cursor-pointer">
                 Smart Thermostat Installation
               </h2>
@@ -113,7 +113,7 @@ export default function AdditionalServices() {
               <li className="flex items-start gap-2"><span className="text-blue-600 font-bold">—</span><span><strong className="text-blue-900">Learning Algorithms</strong> – Auto-adapts to your schedule</span></li>
               <li className="flex items-start gap-2"><span className="text-blue-600 font-bold">—</span><span><strong className="text-blue-900">Voice Control</strong> – Works with Alexa, Google, Siri</span></li>
             </ul>
-            <Link to="/services/smart-thermostats" className="inline-block mt-3 text-red-500 hover:text-red-600 font-semibold">
+            <Link href="/services/smart-thermostats" className="inline-block mt-3 text-red-500 hover:text-red-600 font-semibold">
               Learn More →
             </Link>
           </div>
@@ -127,7 +127,7 @@ export default function AdditionalServices() {
             </div>
           </div>
           <div className="w-full lg:w-1/2 text-base md:text-lg text-gray-700">
-            <Link to="/services/indoor-air-quality" className="hover:text-blue-700 transition">
+            <Link href="/services/indoor-air-quality" className="hover:text-blue-700 transition">
               <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-3 border-l-4 border-red-500 pl-4 cursor-pointer">
                 Indoor Air Quality Solutions
               </h2>
@@ -143,7 +143,7 @@ export default function AdditionalServices() {
               <li className="flex items-start gap-2"><span className="text-red-500 font-bold">—</span><span><strong className="text-blue-900">UV Air Purification</strong> – Eliminates bacteria and viruses</span></li>
               <li className="flex items-start gap-2"><span className="text-red-500 font-bold">—</span><span><strong className="text-blue-900">Allergen Reduction</strong> – Solutions for pollen and dust</span></li>
             </ul>
-            <Link to="/services/indoor-air-quality" className="inline-block mt-3 text-red-500 hover:text-red-600 font-semibold">
+            <Link href="/services/indoor-air-quality" className="inline-block mt-3 text-red-500 hover:text-red-600 font-semibold">
               Learn More →
             </Link>
           </div>
@@ -182,7 +182,7 @@ export default function AdditionalServices() {
             </div>
           </div>
           <div className="w-full lg:w-1/2 text-base md:text-lg text-gray-700">
-            <Link to="/services/dryer-vent-cleaning" className="hover:text-blue-700 transition">
+            <Link href="/services/dryer-vent-cleaning" className="hover:text-blue-700 transition">
               <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-3 border-l-4 border-red-500 pl-4 cursor-pointer">
                 Professional Dryer Vent Cleaning
               </h2>
@@ -197,7 +197,7 @@ export default function AdditionalServices() {
               <li className="flex items-start gap-2"><span className="text-red-500 font-bold">—</span><span><strong className="text-blue-900">Faster Drying</strong> – Clothes dry in one normal cycle</span></li>
               <li className="flex items-start gap-2"><span className="text-red-500 font-bold">—</span><span><strong className="text-blue-900">Extended Appliance Life</strong> – Prevent overheating damage</span></li>
             </ul>
-            <Link to="/services/dryer-vent-cleaning" className="inline-block mt-3 text-red-500 hover:text-red-600 font-semibold">
+            <Link href="/services/dryer-vent-cleaning" className="inline-block mt-3 text-red-500 hover:text-red-600 font-semibold">
               Learn More →
             </Link>
           </div>
@@ -228,7 +228,7 @@ export default function AdditionalServices() {
                 (936) 331-1339
               </a>
               <Link
-                to="/contact"
+                href="/contact"
                 className="inline-flex items-center justify-center gap-2 bg-white text-blue-900 px-8 py-4 rounded-lg hover:bg-blue-50 transition font-bold text-lg"
               >
                 <FaCalendarCheck className="w-5 h-5" />

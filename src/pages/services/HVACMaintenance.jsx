@@ -1,10 +1,10 @@
 import React from 'react';
 import SEO from '../../components/SEO';
 import { ServiceSchema, BreadcrumbSchema } from '../../components/StructuredData';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { FaPhone, FaCalendarCheck, FaShieldAlt, FaCheckCircle, FaCog } from 'react-icons/fa';
 import ManufacturerCarousel from '../../components/ManufacturerCarousel';
-import MapSection from '../../components/MapSection';
+import MapSection from '../../components/MapSectionWrapper';
 import Footer from '../../components/Footer';
 
 const HVACMaintenance = () => {
@@ -62,7 +62,7 @@ const HVACMaintenance = () => {
                 (936) 331-1339
               </a>
               <Link
-                to="/contact"
+                href="/contact"
                 className="inline-flex items-center gap-2 bg-white text-blue-900 px-6 py-3 rounded-lg hover:bg-blue-50 transition font-semibold"
               >
                 <FaCalendarCheck className="w-4 h-4" />
@@ -167,11 +167,11 @@ const HVACMaintenance = () => {
               Related Services
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6">
-              <Link to="/services/ac-repair" className="bg-gray-50 p-3 rounded hover:bg-blue-50 transition text-blue-600 font-medium text-center">AC Repair</Link>
-              <Link to="/services/heating-repair" className="bg-gray-50 p-3 rounded hover:bg-blue-50 transition text-blue-600 font-medium text-center">Heating Repair</Link>
-              <Link to="/services/indoor-air-quality" className="bg-gray-50 p-3 rounded hover:bg-blue-50 transition text-blue-600 font-medium text-center">Indoor Air Quality</Link>
-              <Link to="/services/smart-thermostats" className="bg-gray-50 p-3 rounded hover:bg-blue-50 transition text-blue-600 font-medium text-center">Smart Thermostats</Link>
-              <Link to="/services/dryer-vent-cleaning" className="bg-gray-50 p-3 rounded hover:bg-blue-50 transition text-blue-600 font-medium text-center">Dryer Vent Cleaning</Link>
+              <Link href="/services/ac-repair" className="bg-gray-50 p-3 rounded hover:bg-blue-50 transition text-blue-600 font-medium text-center">AC Repair</Link>
+              <Link href="/services/heating-repair" className="bg-gray-50 p-3 rounded hover:bg-blue-50 transition text-blue-600 font-medium text-center">Heating Repair</Link>
+              <Link href="/services/indoor-air-quality" className="bg-gray-50 p-3 rounded hover:bg-blue-50 transition text-blue-600 font-medium text-center">Indoor Air Quality</Link>
+              <Link href="/services/smart-thermostats" className="bg-gray-50 p-3 rounded hover:bg-blue-50 transition text-blue-600 font-medium text-center">Smart Thermostats</Link>
+              <Link href="/services/dryer-vent-cleaning" className="bg-gray-50 p-3 rounded hover:bg-blue-50 transition text-blue-600 font-medium text-center">Dryer Vent Cleaning</Link>
             </div>
 
           </article>
@@ -202,7 +202,7 @@ const HVACMaintenance = () => {
                   (936) 331-1339
                 </a>
                 <Link
-                  to="/contact"
+                  href="/contact"
                   className="inline-flex items-center justify-center gap-2 bg-white text-blue-900 px-8 py-4 rounded-lg hover:bg-blue-50 transition font-bold text-lg"
                 >
                   <FaCalendarCheck className="w-5 h-5" />

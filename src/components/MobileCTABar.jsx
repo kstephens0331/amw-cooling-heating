@@ -1,5 +1,5 @@
 import { FaPhone, FaCalendarAlt } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export default function MobileCTABar() {
   return (
@@ -21,7 +21,7 @@ export default function MobileCTABar() {
 
           {/* Schedule Button */}
           <Link
-            to="/contact"
+            href="/contact"
             className="flex-1 flex items-center justify-center gap-2 py-4 bg-orange-500 text-white font-bold text-base active:bg-orange-600 transition"
           >
             <FaCalendarAlt className="w-5 h-5" />

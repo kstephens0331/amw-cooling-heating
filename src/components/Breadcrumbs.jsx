@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { FaChevronRight } from 'react-icons/fa';
 
 /**
@@ -43,7 +43,7 @@ export default function Breadcrumbs({ items, light = false }) {
               <li key={index} className="flex items-center gap-2">
                 {!isLast && item.path ? (
                   <Link
-                    to={item.path}
+                    href={item.path}
                     className={`transition ${light ? 'hover:text-white' : 'hover:text-blue-600'}`}
                   >
                     {item.label}

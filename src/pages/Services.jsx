@@ -1,25 +1,25 @@
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import Head from 'next/head';
+import Link from 'next/link';
 import { FaPhone, FaCalendarCheck, FaShieldAlt } from 'react-icons/fa';
 import ManufacturerCarousel from '../components/ManufacturerCarousel';
-import MapSection from '../components/MapSection';
+import MapSection from '../components/MapSectionWrapper';
 import Footer from '../components/Footer';
-import heating from '../assets/images/IMG_1163.webp';
-import cooling from '../assets/images/DSC_2035.webp';
-import ventilation from '../assets/images/IMG_6338.webp';
-import repairs_maintenance from '../assets/images/DSC_2058.webp';
-import air from '../assets/images/air-quality.webp';
-import dryerVent from '../assets/images/duct_cleaning.webp';
-import emergency from '../assets/images/emergency.webp'
-import thermostatImg from '../assets/images/thermostat.webp'
+const heating = '/assets/images/IMG_1163.webp';
+const cooling = '/assets/images/DSC_2035.webp';
+const ventilation = '/assets/images/IMG_6338.webp';
+const repairs_maintenance = '/assets/images/DSC_2058.webp';
+const air = '/assets/images/air-quality.webp';
+const dryerVent = '/assets/images/duct_cleaning.webp';
+const emergency = '/assets/images/emergency.webp';
+const thermostatImg = '/assets/images/thermostat.webp';
 import ReactCompareImage from 'react-compare-image';
-import newInstallBefore from '../assets/images/6392-old_unit.webp';
-import newInstallAfter from '../assets/images/6387-new_install.webp';
+const newInstallBefore = '/assets/images/6392-old_unit.webp';
+const newInstallAfter = '/assets/images/6387-new_install.webp';
 
 export default function Services() {
   return (
     <main className="bg-gray-50 text-gray-800 font-sans">
-      <Helmet>
+      <Head>
         <title>HVAC Services | AMW Cooling & Heating LLC</title>
         <meta
           name="description"
@@ -29,7 +29,7 @@ export default function Services() {
           name="keywords"
           content="HVAC services, AC installation, heater repair, air conditioning Conroe TX, The Woodlands HVAC, AMW Cooling"
         />
-      </Helmet>
+      </Head>
 
       {/* Patriotic Stripe */}
       <div className="h-1.5 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
@@ -50,7 +50,7 @@ export default function Services() {
               (936) 331-1339
             </a>
             <Link
-              to="/contact"
+              href="/contact"
               className="inline-flex items-center gap-2 bg-white text-blue-900 px-6 py-3 rounded-lg hover:bg-blue-50 transition font-semibold"
             >
               <FaCalendarCheck className="w-4 h-4" />
@@ -170,13 +170,13 @@ export default function Services() {
 
         {/* 6 Indoor Air Quality */}
         <div className="flex flex-col lg:flex-row-reverse items-center gap-10">
-          <Link to="/services/indoor-air-quality" className="w-full lg:w-1/2 hover:opacity-80 transition">
+          <Link href="/services/indoor-air-quality" className="w-full lg:w-1/2 hover:opacity-80 transition">
             <div className='w-[260px] h-[260px] transform rotate-45 overflow-hidden rounded-xl shadow-lg border-4 border-blue-900 mx-auto cursor-pointer'>
               <img src={air} alt="Indoor air quality services" className='w-full h-full object-cover -rotate-45' loading="lazy"/>
             </div>
           </Link>
           <div className="w-full lg:w-1/2 text-base md:text-lg text-gray-700">
-            <Link to="/services/indoor-air-quality" className="hover:text-blue-700 transition">
+            <Link href="/services/indoor-air-quality" className="hover:text-blue-700 transition">
               <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-4 cursor-pointer">Indoor Air Quality Solutions</h2>
             </Link>
             <ul className="space-y-2">
@@ -186,7 +186,7 @@ export default function Services() {
               <li className="flex items-start gap-2"><span className="text-blue-600 font-bold">—</span><span><strong className="text-blue-900">Ventilation Systems</strong> – Fresh air exchange with energy recovery.</span></li>
               <li className="flex items-start gap-2"><span className="text-blue-600 font-bold">—</span><span><strong className="text-blue-900">Allergen Reduction</strong> – Solutions for pollen, dust, and pet dander.</span></li>
             </ul>
-            <Link to="/services/indoor-air-quality" className="inline-block mt-3 text-red-500 hover:text-red-600 font-semibold">
+            <Link href="/services/indoor-air-quality" className="inline-block mt-3 text-red-500 hover:text-red-600 font-semibold">
               Learn More →
             </Link>
           </div>
@@ -194,13 +194,13 @@ export default function Services() {
 
         {/* 7 Smart Thermostats */}
         <div className="flex flex-col lg:flex-row items-center gap-10">
-          <Link to="/services/smart-thermostats" className="w-full lg:w-1/2 hover:opacity-80 transition">
+          <Link href="/services/smart-thermostats" className="w-full lg:w-1/2 hover:opacity-80 transition">
             <div className='w-[260px] h-[260px] transform rotate-45 overflow-hidden rounded-xl shadow-lg border-4 border-red-500 mx-auto cursor-pointer'>
               <img src={thermostatImg} alt="Smart thermostat installation" className='w-full h-full object-cover -rotate-45' loading="lazy"/>
             </div>
           </Link>
           <div className="w-full lg:w-1/2 text-base md:text-lg text-gray-700">
-            <Link to="/services/smart-thermostats" className="hover:text-blue-700 transition">
+            <Link href="/services/smart-thermostats" className="hover:text-blue-700 transition">
               <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-3 border-l-4 border-red-500 pl-4 cursor-pointer">Smart Thermostat Installation</h2>
             </Link>
             <ul className="space-y-2">
@@ -210,7 +210,7 @@ export default function Services() {
               <li className="flex items-start gap-2"><span className="text-red-500 font-bold">—</span><span><strong className="text-blue-900">Remote Control</strong> – Adjust temperature from anywhere.</span></li>
               <li className="flex items-start gap-2"><span className="text-red-500 font-bold">—</span><span><strong className="text-blue-900">Voice Integration</strong> – Works with Alexa, Google, and Siri.</span></li>
             </ul>
-            <Link to="/services/smart-thermostats" className="inline-block mt-3 text-red-500 hover:text-red-600 font-semibold">
+            <Link href="/services/smart-thermostats" className="inline-block mt-3 text-red-500 hover:text-red-600 font-semibold">
               Learn More →
             </Link>
           </div>
@@ -218,13 +218,13 @@ export default function Services() {
 
         {/* 8 Dryer Vent Cleaning */}
         <div className="flex flex-col lg:flex-row-reverse items-center gap-10">
-          <Link to="/services/dryer-vent-cleaning" className="w-full lg:w-1/2 hover:opacity-80 transition">
+          <Link href="/services/dryer-vent-cleaning" className="w-full lg:w-1/2 hover:opacity-80 transition">
             <div className='w-[260px] h-[260px] transform rotate-45 overflow-hidden rounded-xl shadow-lg border-4 border-blue-900 mx-auto cursor-pointer'>
               <img src={dryerVent} alt="Dryer vent cleaning services" className='w-full h-full object-cover -rotate-45' loading="lazy"/>
             </div>
           </Link>
           <div className="w-full lg:w-1/2 text-base md:text-lg text-gray-700">
-            <Link to="/services/dryer-vent-cleaning" className="hover:text-blue-700 transition">
+            <Link href="/services/dryer-vent-cleaning" className="hover:text-blue-700 transition">
               <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-4 cursor-pointer">Professional Dryer Vent Cleaning</h2>
             </Link>
             <ul className="space-y-2">
@@ -234,7 +234,7 @@ export default function Services() {
               <li className="flex items-start gap-2"><span className="text-blue-600 font-bold">—</span><span><strong className="text-blue-900">Complete Cleaning</strong> – Full vent system, not just lint trap.</span></li>
               <li className="flex items-start gap-2"><span className="text-blue-600 font-bold">—</span><span><strong className="text-blue-900">Safety Inspection</strong> – Check for damage and proper installation.</span></li>
             </ul>
-            <Link to="/services/dryer-vent-cleaning" className="inline-block mt-3 text-red-500 hover:text-red-600 font-semibold">
+            <Link href="/services/dryer-vent-cleaning" className="inline-block mt-3 text-red-500 hover:text-red-600 font-semibold">
               Learn More →
             </Link>
           </div>
@@ -285,7 +285,7 @@ export default function Services() {
                 (936) 331-1339
               </a>
               <Link
-                to="/contact"
+                href="/contact"
                 className="inline-flex items-center justify-center gap-2 bg-white text-blue-900 px-8 py-4 rounded-lg hover:bg-blue-50 transition font-bold text-lg"
               >
                 <FaCalendarCheck className="w-5 h-5" />

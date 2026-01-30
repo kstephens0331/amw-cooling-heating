@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { FaPhone, FaCalendarCheck, FaStar, FaShieldAlt } from 'react-icons/fa';
-import heroImage from '../assets/images/josh-with-client.jpg';
+const heroImage = '/assets/images/josh-with-client.jpg';
 
 export default function MobileHero() {
   return (
@@ -46,7 +46,7 @@ export default function MobileHero() {
             Call Now
           </a>
           <Link
-            to="/contact"
+            href="/contact"
             className="flex-1 flex items-center justify-center gap-2 px-4 py-3.5 bg-white text-blue-900 rounded-lg font-bold text-sm"
           >
             <FaCalendarCheck className="w-4 h-4" />

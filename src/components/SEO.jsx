@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
 
 const SEO = ({
   title = "AMW Cooling & Heating | HVAC Services Conroe TX",
@@ -9,7 +9,7 @@ const SEO = ({
   image = "https://amwairconditioning.com/assets/images/DSC_2135-1920.webp"
 }) => {
   return (
-    <Helmet>
+    <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
@@ -30,7 +30,7 @@ const SEO = ({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       <meta name="twitter:image:alt" content="AMW Cooling & Heating HVAC service truck in Conroe TX - veteran-owned AC repair and heating company" />
-    </Helmet>
+    </Head>
   );
 };
 

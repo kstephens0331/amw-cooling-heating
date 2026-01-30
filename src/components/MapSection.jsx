@@ -1,20 +1,41 @@
-import { MapContainer, TileLayer, Polygon, Marker, Popup } from 'react-leaflet';
-import { FaMapMarkerAlt, FaPhoneAlt, FaCheckCircle, FaShieldAlt, FaClock, FaStar } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
-import L from 'leaflet';
-import 'leaflet/dist/leaflet.css';
-
-// Custom marker icon
-const customIcon = new L.Icon({
-  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
-  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
-  shadowSize: [41, 41]
-});
+import { useState, useEffect } from 'react';
+import { FaMapMarkerAlt, FaPhoneAlt, FaCheckCircle, FaShieldAlt, FaStar } from 'react-icons/fa';
+import Link from 'next/link';
 
 const MapSection = () => {
+  const [isClient, setIsClient] = useState(false);
+  const [LeafletComponents, setLeafletComponents] = useState(null);
+
+  useEffect(() => {
+    setIsClient(true);
+    // Dynamically import leaflet on client side only
+    const loadLeaflet = async () => {
+      // Import CSS by adding link tag
+      if (!document.querySelector('link[href*="leaflet.css"]')) {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+        document.head.appendChild(link);
+      }
+
+      const [reactLeaflet, L] = await Promise.all([
+        import('react-leaflet'),
+        import('leaflet')
+      ]);
+
+      const customIcon = new L.default.Icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+      });
+      setLeafletComponents({ ...reactLeaflet, customIcon });
+    };
+
+    loadLeaflet();
+  }, []);
   const serviceAreaCoords = [
     [30.58, -95.5],
     [30.5, -95.35],
@@ -83,39 +104,45 @@ const MapSection = () => {
                 <FaShieldAlt className="text-white/60 w-4 h-4" />
               </div>
               <div className="h-[400px] md:h-[450px]">
-                <MapContainer
-                  center={[30.3258133, -95.4718028]}
-                  zoom={9}
-                  className="w-full h-full"
-                  scrollWheelZoom={false}
-                >
-                  <TileLayer
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                    attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                  />
-                  <Polygon
-                    positions={serviceAreaCoords}
-                    pathOptions={{
-                      color: '#1e40af',
-                      weight: 2,
-                      fillColor: '#3b82f6',
-                      fillOpacity: 0.15,
-                      dashArray: '6, 6',
-                    }}
-                  />
-                  {cities.map((city) => (
-                    <Marker key={city.name} position={city.coords} icon={customIcon}>
-                      <Popup>
-                        <div className="text-center">
-                          <strong className="text-blue-900">{city.name}</strong>
-                          {city.label && <span className="ml-1 bg-red-500 text-white text-xs px-2 py-0.5 rounded">{city.label}</span>}
-                          <br />
-                          <a href="tel:+19363311339" className="text-blue-600 text-sm">Call: (936) 331-1339</a>
-                        </div>
-                      </Popup>
-                    </Marker>
-                  ))}
-                </MapContainer>
+                {isClient && LeafletComponents ? (
+                  <LeafletComponents.MapContainer
+                    center={[30.3258133, -95.4718028]}
+                    zoom={9}
+                    className="w-full h-full"
+                    scrollWheelZoom={false}
+                  >
+                    <LeafletComponents.TileLayer
+                      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                      attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                    />
+                    <LeafletComponents.Polygon
+                      positions={serviceAreaCoords}
+                      pathOptions={{
+                        color: '#1e40af',
+                        weight: 2,
+                        fillColor: '#3b82f6',
+                        fillOpacity: 0.15,
+                        dashArray: '6, 6',
+                      }}
+                    />
+                    {cities.map((city) => (
+                      <LeafletComponents.Marker key={city.name} position={city.coords} icon={LeafletComponents.customIcon}>
+                        <LeafletComponents.Popup>
+                          <div className="text-center">
+                            <strong className="text-blue-900">{city.name}</strong>
+                            {city.label && <span className="ml-1 bg-red-500 text-white text-xs px-2 py-0.5 rounded">{city.label}</span>}
+                            <br />
+                            <a href="tel:+19363311339" className="text-blue-600 text-sm">Call: (936) 331-1339</a>
+                          </div>
+                        </LeafletComponents.Popup>
+                      </LeafletComponents.Marker>
+                    ))}
+                  </LeafletComponents.MapContainer>
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center bg-gray-100">
+                    <p className="text-gray-500">Loading map...</p>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -162,7 +189,7 @@ const MapSection = () => {
                       (936) 331-1339
                     </a>
                     <Link
-                      to="/contact"
+                      href="/contact"
                       className="flex-1 inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-5 py-3 rounded-lg hover:bg-blue-700 transition font-semibold text-sm"
                     >
                       Schedule Online

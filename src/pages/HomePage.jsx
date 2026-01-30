@@ -1,12 +1,12 @@
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
 import SEO from '../components/SEO';
 import Footer from '../components/Footer';
 import HeroLandingPage from '../components/HeroLandingPage';
 import ServicesSection from '../components/ServicesSection';
 import WhyChooseAMW from '../components/WhyChooseAMW';
 import TrustIndexWidget from '../components/TrustIndexWidget';
-import React, { Suspense, lazy } from "react";
-const MapSection = lazy(() => import("../components/MapSection"));
+import MapSection from '../components/MapSectionWrapper';
+import React from "react";
 
 export default function HomePage() {
   return (
@@ -17,19 +17,18 @@ export default function HomePage() {
       canonical="https://amwairconditioning.com"
       keywords="HVAC Conroe TX, AC repair Conroe, heating Conroe, air conditioning Conroe, HVAC services The Woodlands, Montgomery County HVAC"
     />
-    <Helmet>
+    <Head>
       <link
         rel="preload"
         as="image"
         href="/images/DSC_2135.jpg"
-        fetchpriority="high"
+        fetchPriority="high"
         type="image/jpg"
       />
       <link rel="dns-prefetch" href="https://a.tile.openstreetmap.org" />
       <link rel="dns-prefetch" href="https://b.tile.openstreetmap.org" />
       <link rel="dns-prefetch" href="https://c.tile.openstreetmap.org" />
-      <script type="application/ld+json">
-        {JSON.stringify({
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "HVACBusiness",
           "name": "AMW Cooling & Heating, LLC",
@@ -71,9 +70,8 @@ export default function HomePage() {
             "ratingValue": 5.0,
             "reviewCount": 54
           }
-        })}
-      </script>
-    </Helmet>
+        })}} />
+    </Head>
 
       <main>
         <HeroLandingPage />
@@ -107,9 +105,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <Suspense fallback={<div className="text-center py-12">Loading map...</div>}>
         <MapSection />
-        </Suspense>
 <Footer />
       </main>
     </div>

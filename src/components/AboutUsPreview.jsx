@@ -1,6 +1,5 @@
-
-import { Link } from 'react-router-dom';
-import aboutus from '../assets/images/DSC_1887.webp';
+import Link from 'next/link';
+const aboutus = '/assets/images/DSC_1887.webp';
 
 export default function AboutUsPreview() {
   return (
@@ -19,7 +18,7 @@ export default function AboutUsPreview() {
             Whether you need repairs, maintenance, or a brand-new installation, we’re here to help.
           </p>
           <Link
-            to="/about"
+            href="/about"
             className="inline-block mt-2 px-4 py-2 bg-blue-600 text-white rounded shadow hover:bg-blue-700 transition text-xs md:text-sm" aria-label="Learn more about AMW Cooling & Heating's team and mission"
           >
             About AMW Cooling & Heating

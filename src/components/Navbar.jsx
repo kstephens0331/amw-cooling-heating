@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { FaFacebook, FaInstagram, FaYelp, FaBars, FaTimes } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
-import logo from '../assets/images/amwlogo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,9 +12,9 @@ const Navbar = () => {
   return (
     <header className="bg-white shadow-md sticky top-0 z-50 w-full">
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-        <Link to="/" className="flex items-center space-x-3">
+        <Link href="/" className="flex items-center space-x-3">
           <img
-            src={logo}
+            src="/assets/images/amwlogo.png"
             alt="AMW Cooling & Heating - veteran-owned HVAC company in Conroe TX"
             className="h-14 md:h-16 w-auto object-contain"
           />
@@ -41,25 +40,25 @@ const Navbar = () => {
             {/* Column 1: Main Pages */}
             <div>
               <div className="font-semibold text-gray-500 text-xs uppercase mb-1">Pages</div>
-              <Link to="/" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Home</Link>
-              <Link to="/about" className="block py-1 hover:text-orange-600" onClick={closeMenu}>About Us</Link>
-              <Link to="/faqs" className="block py-1 hover:text-orange-600" onClick={closeMenu}>FAQs</Link>
-              <Link to="/financing" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Financing</Link>
-              <Link to="/testimonials" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Testimonials</Link>
-              <Link to="/contact" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Contact</Link>
-              <Link to="/blog" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Blog</Link>
+              <Link href="/" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Home</Link>
+              <Link href="/about" className="block py-1 hover:text-orange-600" onClick={closeMenu}>About Us</Link>
+              <Link href="/faqs" className="block py-1 hover:text-orange-600" onClick={closeMenu}>FAQs</Link>
+              <Link href="/financing" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Financing</Link>
+              <Link href="/testimonials" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Testimonials</Link>
+              <Link href="/contact" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Contact</Link>
+              <Link href="/blog" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Blog</Link>
             </div>
 
             {/* Column 2: Services */}
             <div>
               <div className="font-semibold text-gray-500 text-xs uppercase mb-1">Services</div>
-              <Link to="/services" className="block py-1 hover:text-orange-600" onClick={closeMenu}>All Services</Link>
-              <Link to="/services/ac-repair" className="block py-1 hover:text-orange-600" onClick={closeMenu}>AC Repair</Link>
-              <Link to="/services/heating-repair" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Heating Repair</Link>
-              <Link to="/services/hvac-maintenance" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Maintenance</Link>
-              <Link to="/services/indoor-air-quality" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Air Quality</Link>
-              <Link to="/services/smart-thermostats" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Thermostats</Link>
-              <Link to="/services/dryer-vent-cleaning" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Dryer Vents</Link>
+              <Link href="/services" className="block py-1 hover:text-orange-600" onClick={closeMenu}>All Services</Link>
+              <Link href="/services/ac-repair" className="block py-1 hover:text-orange-600" onClick={closeMenu}>AC Repair</Link>
+              <Link href="/services/heating-repair" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Heating Repair</Link>
+              <Link href="/services/hvac-maintenance" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Maintenance</Link>
+              <Link href="/services/indoor-air-quality" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Air Quality</Link>
+              <Link href="/services/smart-thermostats" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Thermostats</Link>
+              <Link href="/services/dryer-vent-cleaning" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Dryer Vents</Link>
             </div>
 
             {/* Column 3: Contact & Social (visible on md+) */}

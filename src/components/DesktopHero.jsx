@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { FaPhone, FaCalendarCheck, FaStar, FaShieldAlt } from 'react-icons/fa';
-import heroImage from '../assets/images/josh-with-client.jpg';
+const heroImage = '/assets/images/josh-with-client.jpg';
 
 export default function HeroSection() {
   return (
@@ -63,7 +63,7 @@ export default function HeroSection() {
               (936) 331-1339
             </a>
             <Link
-              to="/contact"
+              href="/contact"
               className="inline-flex items-center justify-center gap-2 lg:gap-3 px-6 lg:px-8 py-3 lg:py-4 bg-white text-blue-900 rounded-lg shadow-lg hover:bg-blue-50 transition font-bold text-base lg:text-lg"
             >
               <FaCalendarCheck className="w-4 h-4 lg:w-5 lg:h-5" />

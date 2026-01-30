@@ -1,7 +1,6 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { FaFacebook, FaInstagram, FaYelp } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
-import nateLogo from '../assets/images/nate.webp';
 
 const Footer = () => {
   return (
@@ -22,13 +21,13 @@ const Footer = () => {
         <div className="text-sm">
           <h4 className="font-bold text-base mb-2">Pages</h4>
           <nav className="flex flex-col space-y-0.5">
-            <Link to="/" className="hover:text-orange-400 transition">Home</Link>
-            <Link to="/about" className="hover:text-orange-400 transition">About Us</Link>
-            <Link to="/faqs" className="hover:text-orange-400 transition">FAQs</Link>
-            <Link to="/financing" className="hover:text-orange-400 transition">Financing</Link>
-            <Link to="/testimonials" className="hover:text-orange-400 transition">Testimonials</Link>
-            <Link to="/contact" className="hover:text-orange-400 transition">Contact</Link>
-            <Link to="/blog" className="hover:text-orange-400 transition">HVAC Blog</Link>
+            <Link href="/" className="hover:text-orange-400 transition">Home</Link>
+            <Link href="/about" className="hover:text-orange-400 transition">About Us</Link>
+            <Link href="/faqs" className="hover:text-orange-400 transition">FAQs</Link>
+            <Link href="/financing" className="hover:text-orange-400 transition">Financing</Link>
+            <Link href="/testimonials" className="hover:text-orange-400 transition">Testimonials</Link>
+            <Link href="/contact" className="hover:text-orange-400 transition">Contact</Link>
+            <Link href="/blog" className="hover:text-orange-400 transition">HVAC Blog</Link>
           </nav>
         </div>
 
@@ -36,13 +35,13 @@ const Footer = () => {
         <div className="text-sm">
           <h4 className="font-bold text-base mb-2">Services</h4>
           <nav className="flex flex-col space-y-0.5">
-            <Link to="/services" className="hover:text-orange-400 transition">All Services</Link>
-            <Link to="/services/ac-repair" className="hover:text-orange-400 transition">AC Repair</Link>
-            <Link to="/services/heating-repair" className="hover:text-orange-400 transition">Heating Repair</Link>
-            <Link to="/services/hvac-maintenance" className="hover:text-orange-400 transition">Maintenance</Link>
-            <Link to="/services/indoor-air-quality" className="hover:text-orange-400 transition">Air Quality</Link>
-            <Link to="/services/smart-thermostats" className="hover:text-orange-400 transition">Thermostats</Link>
-            <Link to="/services/dryer-vent-cleaning" className="hover:text-orange-400 transition">Dryer Vents</Link>
+            <Link href="/services" className="hover:text-orange-400 transition">All Services</Link>
+            <Link href="/services/ac-repair" className="hover:text-orange-400 transition">AC Repair</Link>
+            <Link href="/services/heating-repair" className="hover:text-orange-400 transition">Heating Repair</Link>
+            <Link href="/services/hvac-maintenance" className="hover:text-orange-400 transition">Maintenance</Link>
+            <Link href="/services/indoor-air-quality" className="hover:text-orange-400 transition">Air Quality</Link>
+            <Link href="/services/smart-thermostats" className="hover:text-orange-400 transition">Thermostats</Link>
+            <Link href="/services/dryer-vent-cleaning" className="hover:text-orange-400 transition">Dryer Vents</Link>
           </nav>
         </div>
 
@@ -73,7 +72,7 @@ const Footer = () => {
           <div className="flex items-center gap-2 mt-1">
             {/* NATE Certified */}
             <img
-              src={nateLogo}
+              src="/assets/images/nate.webp"
               alt="NATE Certified HVAC Technicians"
               loading="lazy"
               className="h-14 w-auto"

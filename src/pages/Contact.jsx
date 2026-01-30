@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import Head from 'next/head';
+import Link from 'next/link';
 import { FaPhone, FaCalendarCheck, FaEnvelope, FaMapMarkerAlt, FaShieldAlt } from 'react-icons/fa';
-import logo from '../assets/images/amwlogo.png';
+const logo = '/assets/images/amwlogo.png';
 import ManufacturerCarousel from '../components/ManufacturerCarousel';
-import MapSection from '../components/MapSection';
+import MapSection from '../components/MapSectionWrapper';
 import Footer from '../components/Footer';
 
 export default function Contact() {
@@ -30,7 +30,7 @@ export default function Contact() {
 
   return (
     <div className="bg-white text-gray-800 font-sans min-h-screen">
-      <Helmet>
+      <Head>
         <title>Contact Us | AMW Cooling & Heating LLC</title>
         <meta
           name="description"
@@ -40,7 +40,7 @@ export default function Contact() {
           name="keywords"
           content="contact AMW Cooling, HVAC phone number, HVAC appointment Conroe, heating cooling service request, schedule HVAC service"
         />
-      </Helmet>
+      </Head>
 
       {/* Patriotic Stripe */}
       <div className="h-1.5 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
@@ -257,7 +257,7 @@ export default function Contact() {
                 (936) 331-1339
               </a>
               <Link
-                to="/services"
+                href="/services"
                 className="inline-flex items-center justify-center gap-2 bg-white text-blue-900 px-8 py-4 rounded-lg hover:bg-blue-50 transition font-bold text-lg"
               >
                 <FaCalendarCheck className="w-5 h-5" />

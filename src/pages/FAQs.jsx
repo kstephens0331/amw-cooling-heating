@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import Link from 'next/link';
+import Head from 'next/head';
 import { FaPhone, FaCalendarCheck, FaChevronDown, FaChevronRight, FaQuestionCircle, FaTools, FaWrench, FaCog, FaCreditCard } from 'react-icons/fa';
 import FinancingCTA from '../components/FinancingCTA';
 import ManufacturerCarousel from '../components/ManufacturerCarousel';
-import MapSection from '../components/MapSection';
+import MapSection from '../components/MapSectionWrapper';
 import Footer from '../components/Footer';
 
 const categoryIcons = {
@@ -439,10 +439,10 @@ export default function FAQs() {
 
   return (
     <main className="bg-white text-gray-800">
-      <Helmet>
+      <Head>
         <title>FAQs | AMW Cooling & Heating LLC</title>
         <meta name="description" content="Find detailed answers to common HVAC questions to prepare for a productive service call with AMW Cooling & Heating LLC. Serving Conroe, TX and surrounding areas!" />
-      </Helmet>
+      </Head>
 
       {/* Patriotic Stripe */}
       <div className="h-1.5 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
@@ -465,7 +465,7 @@ export default function FAQs() {
               (936) 331-1339
             </a>
             <Link
-              to="/contact"
+              href="/contact"
               className="inline-flex items-center gap-2 bg-white text-blue-900 px-6 py-3 rounded-lg hover:bg-blue-50 transition font-semibold"
             >
               <FaCalendarCheck className="w-4 h-4" />
@@ -570,7 +570,7 @@ export default function FAQs() {
                 (936) 331-1339
               </a>
               <Link
-                to="/contact"
+                href="/contact"
                 className="inline-flex items-center justify-center gap-2 bg-white text-blue-900 px-8 py-4 rounded-lg hover:bg-blue-50 transition font-bold text-lg"
               >
                 <FaCalendarCheck className="w-5 h-5" />

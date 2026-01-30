@@ -1,10 +1,10 @@
 import { useEffect, useMemo, useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import Head from 'next/head';
+import Link from 'next/link';
 import { event } from '../utils/analytics';
 import Breadcrumbs from '../components/Breadcrumbs';
 import ManufacturerCarousel from '../components/ManufacturerCarousel';
-import MapSection from '../components/MapSection';
+import MapSection from '../components/MapSectionWrapper';
 import Footer from '../components/Footer';
 
 export default function Blog() {
@@ -93,13 +93,13 @@ export default function Blog() {
 
   return (
     <main className="bg-gray-50 text-gray-800 font-sans min-h-screen">
-      <Helmet>
+      <Head>
         <title>HVAC Blog | AMW Cooling & Heating LLC</title>
         <meta
           name="description"
           content="Expert HVAC tips, maintenance guides, and industry insights for Conroe, The Woodlands, Spring, and Montgomery County homeowners."
         />
-      </Helmet>
+      </Head>
 
       {/* Patriotic Stripe */}
       <div className="h-1.5 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
@@ -271,7 +271,7 @@ export default function Blog() {
             {/* Featured Post (First Post) */}
             {featuredPost && (
               <Link
-                to={`/blog/${featuredPost.slug}`}
+                href={`/blog/${featuredPost.slug}`}
                 onClick={() => event('blog_featured_click', { slug: featuredPost.slug })}
                 className="block bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden group"
               >
@@ -336,7 +336,7 @@ export default function Blog() {
                 {remainingPosts.map((p) => (
                   <Link
                     key={p.slug}
-                    to={`/blog/${p.slug}`}
+                    href={`/blog/${p.slug}`}
                     onClick={() => event('blog_read_more', { slug: p.slug })}
                     className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all overflow-hidden group flex flex-col"
                   >
@@ -433,7 +433,7 @@ export default function Blog() {
                 (936) 331-1339
               </a>
               <Link
-                to="/contact"
+                href="/contact"
                 className="inline-flex items-center justify-center gap-2 bg-white text-blue-900 px-8 py-4 rounded-lg hover:bg-blue-50 transition font-bold text-lg"
               >
                 Schedule Service
