@@ -1,7 +1,25 @@
 import dynamic from 'next/dynamic';
+import Head from 'next/head';
 
 const ACRepair = dynamic(() => import('../../src/pages/services/ACRepair'), { ssr: false });
 
 export default function ACRepairPage() {
-  return <ACRepair />;
+  return (
+    <>
+      <Head>
+        <title>AC Repair Conroe TX | Emergency Service | AMW Cooling</title>
+        <meta name="description" content="Fast, professional AC repair in Conroe, TX. Licensed technicians, same-day service available. Call (936) 331-1339 for expert air conditioning repair." />
+        <link rel="canonical" href="https://amwairconditioning.com/services/ac-repair" />
+        <meta name="keywords" content="AC repair Conroe, air conditioning repair Conroe TX, emergency AC repair, AC service Conroe" />
+        <meta property="og:title" content="AC Repair Conroe TX | Emergency Service | AMW Cooling" />
+        <meta property="og:description" content="Fast, professional AC repair in Conroe, TX. Licensed technicians, same-day service available. Call (936) 331-1339 for expert air conditioning repair." />
+        <meta property="og:url" content="https://amwairconditioning.com/services/ac-repair" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="AC Repair Conroe TX | Emergency Service | AMW Cooling" />
+        <meta name="twitter:description" content="Fast, professional AC repair in Conroe, TX. Licensed technicians, same-day service available." />
+      </Head>
+      <ACRepair />
+    </>
+  );
 }
