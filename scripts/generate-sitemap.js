@@ -4,6 +4,10 @@ const path = require('path');
 const baseUrl = 'https://amwairconditioning.com';
 const today = new Date().toISOString().split('T')[0];
 
+// Read blog posts from index.json
+const blogIndexPath = path.join(__dirname, '../public/data/blog/index.json');
+const blogPosts = JSON.parse(fs.readFileSync(blogIndexPath, 'utf8'));
+
 // All existing and new routes
 const pages = [
   { url: '', priority: '1.0', changefreq: 'weekly' }, // homepage
@@ -26,21 +30,20 @@ const pages = [
   // Location pages
   { url: '/locations/conroe-tx', priority: '0.8', changefreq: 'monthly' },
 
-  // Blog posts
-  { url: '/blog/winter-maintenance-tips-conroe', priority: '0.6', changefreq: 'monthly' },
-  { url: '/blog/winter-hvac-preparation-conroe', priority: '0.6', changefreq: 'monthly' },
-  { url: '/blog/dryer-vent-cleaning-safety-conroe', priority: '0.6', changefreq: 'monthly' },
-  { url: '/blog/prep-ac-conroe-summer', priority: '0.6', changefreq: 'monthly' },
-  { url: '/blog/fall-furnace-maintenance-conroe', priority: '0.6', changefreq: 'monthly' },
-  { url: '/blog/hvac-maintenance-dryer-vent-special', priority: '0.6', changefreq: 'monthly' },
-  { url: '/blog/hvac-maintenance-costs-conroe', priority: '0.6', changefreq: 'monthly' },
+  // Blog posts - dynamically loaded from index.json
+  ...blogPosts.map(post => ({
+    url: `/blog/${post.slug}`,
+    priority: '0.6',
+    changefreq: 'monthly',
+    lastmod: post.date
+  })),
 ];
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${pages.map(page => `  <url>
     <loc>${baseUrl}${page.url}</loc>
-    <lastmod>${today}</lastmod>
+    <lastmod>${page.lastmod || today}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
   </url>`).join('\n')}
