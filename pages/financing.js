@@ -19,6 +19,7 @@ export default function FinancingPage() {
         <meta name="twitter:title" content="Financing Options | AMW Cooling & Heating LLC" />
         <meta name="twitter:description" content="Explore HVAC financing options with Synchrony and FTL." />
       </Head>
+      <h1 className="sr-only">HVAC Financing Options</h1>
       <Financing />
     </>
   );

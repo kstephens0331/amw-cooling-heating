@@ -19,6 +19,7 @@ export default function BlogPage() {
         <meta name="twitter:title" content="HVAC Blog | AMW Cooling & Heating LLC" />
         <meta name="twitter:description" content="HVAC tips, maintenance guides, and energy-saving advice." />
       </Head>
+      <h1 className="sr-only">HVAC Blog - Tips & Guides from AMW Cooling & Heating</h1>
       <Blog />
     </>
   );

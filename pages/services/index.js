@@ -19,6 +19,7 @@ export default function ServicesPage() {
         <meta name="twitter:title" content="HVAC Services | AMW Cooling & Heating LLC" />
         <meta name="twitter:description" content="Complete HVAC services in Conroe, TX. AC repair, heating repair, maintenance, installation." />
       </Head>
+      <h1 className="sr-only">HVAC Services - AMW Cooling & Heating Conroe TX</h1>
       <Services />
     </>
   );

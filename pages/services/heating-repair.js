@@ -19,6 +19,7 @@ export default function HeatingRepairPage() {
         <meta name="twitter:title" content="Heating Repair Conroe TX | Furnace Repair | AMW Cooling" />
         <meta name="twitter:description" content="Expert heating and furnace repair in Conroe, TX. Licensed technicians, same-day service." />
       </Head>
+      <h1 className="sr-only">Heating & Furnace Repair Conroe TX</h1>
       <HeatingRepair />
     </>
   );

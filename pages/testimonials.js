@@ -19,6 +19,7 @@ export default function Testimonials() {
         <meta name="twitter:title" content="Customer Testimonials | AMW Cooling & Heating LLC" />
         <meta name="twitter:description" content="Read what our customers have to say about AMW Cooling & Heating." />
       </Head>
+      <h1 className="sr-only">Customer Testimonials - AMW Cooling & Heating</h1>
       <TestimonialsPage />
     </>
   );

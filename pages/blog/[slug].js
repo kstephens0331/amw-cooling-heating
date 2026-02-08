@@ -56,6 +56,7 @@ export default function BlogPostPage({ slug, meta }) {
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={image} />
       </Head>
+      <h1 className="sr-only">{title}</h1>
       <BlogPost />
     </>
   );

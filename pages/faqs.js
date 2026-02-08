@@ -19,6 +19,7 @@ export default function FAQsPage() {
         <meta name="twitter:title" content="FAQs | AMW Cooling & Heating LLC" />
         <meta name="twitter:description" content="Find detailed answers to common HVAC questions." />
       </Head>
+      <h1 className="sr-only">Frequently Asked HVAC Questions</h1>
       <FAQs />
     </>
   );

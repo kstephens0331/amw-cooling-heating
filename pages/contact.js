@@ -19,6 +19,7 @@ export default function ContactPage() {
         <meta name="twitter:title" content="Contact Us | AMW Cooling & Heating LLC" />
         <meta name="twitter:description" content="Contact AMW Cooling & Heating for HVAC services in Conroe, TX." />
       </Head>
+      <h1 className="sr-only">Contact AMW Cooling & Heating LLC</h1>
       <Contact />
     </>
   );
