@@ -94,6 +94,20 @@ const Footer = () => {
                 className="h-auto w-28"
               />
             </a>
+            {/* Veteran Owned Business Badge */}
+            <a
+              href="https://www.veteranownedbusiness.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Proud Veteran Owned Business Member"
+            >
+              <img
+                src="https://www.veteranownedbusiness.com/images/banner_links/VOB-Banner-Trade-Show-Border.jpg"
+                alt="Proud Veteran Owned Business Member!"
+                loading="lazy"
+                className="h-14 w-auto"
+              />
+            </a>
           </div>
         </div>
 
