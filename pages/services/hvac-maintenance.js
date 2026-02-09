@@ -19,7 +19,7 @@ export default function HVACMaintenancePage() {
         <meta name="twitter:title" content="HVAC Maintenance Conroe TX | AC & Heating Tune-Ups | AMW" />
         <meta name="twitter:description" content="Professional HVAC maintenance in Conroe, TX. Seasonal tune-ups for AC and heating systems." />
       </Head>
-      <h1 className="sr-only">HVAC Maintenance Conroe TX - AC & Heating Tune-Ups</h1>
+      <h1 style={{position:'absolute',width:'1px',height:'1px',padding:0,margin:'-1px',overflow:'hidden',clip:'rect(0,0,0,0)',whiteSpace:'nowrap',borderWidth:0}}>HVAC Maintenance Conroe TX - AC & Heating Tune-Ups</h1>
       <HVACMaintenance />
     </>
   );

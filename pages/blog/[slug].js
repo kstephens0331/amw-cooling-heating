@@ -56,7 +56,7 @@ export default function BlogPostPage({ slug, meta }) {
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={image} />
       </Head>
-      <h1 className="sr-only">{title}</h1>
+      <h1 style={{position:'absolute',width:'1px',height:'1px',padding:0,margin:'-1px',overflow:'hidden',clip:'rect(0,0,0,0)',whiteSpace:'nowrap',borderWidth:0}}>{title}</h1>
       <BlogPost />
     </>
   );

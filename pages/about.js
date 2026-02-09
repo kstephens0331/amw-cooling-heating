@@ -19,7 +19,7 @@ export default function About() {
         <meta name="twitter:title" content="About AMW Cooling & Heating | Veteran-Owned HVAC Conroe TX" />
         <meta name="twitter:description" content="Learn about AMW Cooling & Heating, a veteran-owned HVAC company serving Conroe, TX." />
       </Head>
-      <h1 className="sr-only">About AMW Cooling & Heating - Veteran-Owned HVAC Conroe TX</h1>
+      <h1 style={{position:'absolute',width:'1px',height:'1px',padding:0,margin:'-1px',overflow:'hidden',clip:'rect(0,0,0,0)',whiteSpace:'nowrap',borderWidth:0}}>About AMW Cooling & Heating - Veteran-Owned HVAC Conroe TX</h1>
       <AboutUs />
     </>
   );

@@ -19,7 +19,7 @@ export default function ConroeTXPage() {
         <meta name="twitter:title" content="HVAC Services Conroe TX | AC Repair & Heating | AMW Cooling" />
         <meta name="twitter:description" content="Professional HVAC services in Conroe, TX. Veteran-owned." />
       </Head>
-      <h1 className="sr-only">HVAC Services Conroe TX - AC Repair & Heating</h1>
+      <h1 style={{position:'absolute',width:'1px',height:'1px',padding:0,margin:'-1px',overflow:'hidden',clip:'rect(0,0,0,0)',whiteSpace:'nowrap',borderWidth:0}}>HVAC Services Conroe TX - AC Repair & Heating</h1>
       <ConroeTX />
     </>
   );

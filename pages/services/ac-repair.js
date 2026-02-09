@@ -19,7 +19,7 @@ export default function ACRepairPage() {
         <meta name="twitter:title" content="AC Repair Conroe TX | Emergency Service | AMW Cooling" />
         <meta name="twitter:description" content="Fast, professional AC repair in Conroe, TX. Licensed technicians, same-day service available." />
       </Head>
-      <h1 className="sr-only">AC Repair Conroe TX - Emergency Air Conditioning Service</h1>
+      <h1 style={{position:'absolute',width:'1px',height:'1px',padding:0,margin:'-1px',overflow:'hidden',clip:'rect(0,0,0,0)',whiteSpace:'nowrap',borderWidth:0}}>AC Repair Conroe TX - Emergency Air Conditioning Service</h1>
       <ACRepair />
     </>
   );
