@@ -180,7 +180,7 @@ npm run generate:sitemap    # Creates public/sitemap.xml
 **AMW Cooling & Heating LLC**
 - **Phone:** (936) 331-1339
 - **Email:** admin@amwairconditioning.com
-- **Website:** https://www.amwairconditioning.com
+- **Website:** https://amwairconditioning.com
 - **Service Area:** Conroe, The Woodlands, Spring, Montgomery County, TX
 
 **For Development Issues:**
