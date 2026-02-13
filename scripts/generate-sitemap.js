@@ -30,6 +30,12 @@ const pages = [
 
   // Location pages
   { url: '/locations/conroe-tx', priority: '0.8', changefreq: 'monthly' },
+  { url: '/locations/the-woodlands-tx', priority: '0.8', changefreq: 'monthly' },
+  { url: '/locations/spring-tx', priority: '0.8', changefreq: 'monthly' },
+  { url: '/locations/montgomery-tx', priority: '0.8', changefreq: 'monthly' },
+  { url: '/locations/willis-tx', priority: '0.8', changefreq: 'monthly' },
+  { url: '/locations/magnolia-tx', priority: '0.8', changefreq: 'monthly' },
+  { url: '/locations/tomball-tx', priority: '0.8', changefreq: 'monthly' },
 
   // Blog posts - dynamically loaded from index.json
   ...blogPosts.map(post => ({

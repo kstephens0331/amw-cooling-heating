@@ -36,7 +36,7 @@ const Navbar = () => {
       {/* Compact Dropdown Menu */}
       {isOpen && (
         <div className="absolute right-0 top-full w-full md:w-auto md:right-4 bg-white shadow-lg border border-gray-200 rounded-b-lg md:rounded-lg z-50">
-          <div className="p-4 grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-1 text-sm">
+          <div className="p-4 grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-1 text-sm">
             {/* Column 1: Main Pages */}
             <div>
               <div className="font-semibold text-gray-500 text-xs uppercase mb-1">Pages</div>
@@ -62,7 +62,19 @@ const Navbar = () => {
               <Link href="/services/dryer-vent-cleaning" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Dryer Vents</Link>
             </div>
 
-            {/* Column 3: Contact & Social (visible on md+) */}
+            {/* Column 3: Locations */}
+            <div className="col-span-2 md:col-span-1 mt-3 md:mt-0 pt-3 md:pt-0 border-t md:border-t-0 border-gray-100">
+              <div className="font-semibold text-gray-500 text-xs uppercase mb-1">Locations</div>
+              <Link href="/locations/conroe-tx" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Conroe</Link>
+              <Link href="/locations/the-woodlands-tx" className="block py-1 hover:text-orange-600" onClick={closeMenu}>The Woodlands</Link>
+              <Link href="/locations/spring-tx" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Spring</Link>
+              <Link href="/locations/montgomery-tx" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Montgomery</Link>
+              <Link href="/locations/willis-tx" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Willis</Link>
+              <Link href="/locations/magnolia-tx" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Magnolia</Link>
+              <Link href="/locations/tomball-tx" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Tomball</Link>
+            </div>
+
+            {/* Column 4: Contact & Social (visible on md+) */}
             <div className="col-span-2 md:col-span-1 mt-3 md:mt-0 pt-3 md:pt-0 border-t md:border-t-0 border-gray-100">
               <div className="font-semibold text-gray-500 text-xs uppercase mb-1">Connect</div>
               <a href="tel:+19363311339" className="block py-1 text-blue-600 font-medium">(936) 331-1339</a>

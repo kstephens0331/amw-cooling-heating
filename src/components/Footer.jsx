@@ -5,7 +5,7 @@ import { FcGoogle } from 'react-icons/fc';
 const Footer = () => {
   return (
     <footer className="bg-blue-600 text-white py-6 pb-24 md:pb-6">
-      <div className="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+      <div className="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
 
         {/* Column 1: Company Info */}
         <div className="col-span-2 md:col-span-1">
@@ -46,7 +46,21 @@ const Footer = () => {
           </nav>
         </div>
 
-        {/* Column 4: Social Icons + Hours + BBB */}
+        {/* Column 4: Locations */}
+        <div className="text-sm">
+          <h4 className="font-bold text-base mb-2">Locations</h4>
+          <nav className="flex flex-col space-y-0.5">
+            <Link href="/locations/conroe-tx" className="hover:text-orange-400 transition">Conroe</Link>
+            <Link href="/locations/the-woodlands-tx" className="hover:text-orange-400 transition">The Woodlands</Link>
+            <Link href="/locations/spring-tx" className="hover:text-orange-400 transition">Spring</Link>
+            <Link href="/locations/montgomery-tx" className="hover:text-orange-400 transition">Montgomery</Link>
+            <Link href="/locations/willis-tx" className="hover:text-orange-400 transition">Willis</Link>
+            <Link href="/locations/magnolia-tx" className="hover:text-orange-400 transition">Magnolia</Link>
+            <Link href="/locations/tomball-tx" className="hover:text-orange-400 transition">Tomball</Link>
+          </nav>
+        </div>
+
+        {/* Column 5: Social Icons + Hours + BBB */}
         <div className="col-span-2 md:col-span-1 flex flex-col items-start md:items-end space-y-2">
           <div className="flex gap-3 text-lg">
             <a href="https://www.facebook.com/people/AMW-Cooling-Heating-LLC/61569862892114/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">

@@ -1,6 +1,6 @@
 import React from 'react';
 import SEO from '../../components/SEO';
-import { BreadcrumbSchema } from '../../components/StructuredData';
+import { BreadcrumbSchema , LocalBusinessSchema} from '../../components/StructuredData';
 import Link from 'next/link';
 import { FaPhone, FaCalendarCheck, FaShieldAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import MapSection from '../../components/MapSectionWrapper';
@@ -17,6 +17,7 @@ const ConroeTX = () => {
         keywords="HVAC Conroe TX, AC repair Conroe, heating Conroe, air conditioning Conroe Texas"
       />
 
+      <LocalBusinessSchema />
       <BreadcrumbSchema
         items={[
           { name: "Home", path: "/" },
