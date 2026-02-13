@@ -2,7 +2,7 @@ import React from 'react';
 import SEO from '../../components/SEO';
 import { BreadcrumbSchema, LocalBusinessSchema } from '../../components/StructuredData';
 import Link from 'next/link';
-import { FaPhone, FaCalendarCheck, FaShieldAlt, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaPhone, FaCalendarCheck, FaShieldAlt, FaMapMarkerAlt, FaSnowflake, FaFire, FaWrench, FaTools, FaLeaf, FaThermometerHalf, FaFan } from 'react-icons/fa';
 import MapSection from '../../components/MapSectionWrapper';
 import ManufacturerCarousel from '../../components/ManufacturerCarousel';
 import Footer from '../../components/Footer';
@@ -26,7 +26,7 @@ const MagnoliaTX = () => {
         ]}
       />
 
-      <main className="bg-gray-50 text-gray-800 font-sans">
+      <main className="bg-white text-gray-800 font-sans">
         {/* Patriotic Stripe */}
         <div className="h-1.5 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
 
@@ -67,49 +67,133 @@ const MagnoliaTX = () => {
         {/* Bottom Stripe */}
         <div className="h-1 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
 
-        <section className="container mx-auto px-4 py-12 max-w-4xl">
-          <article className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-blue-600">
-            <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-4 border-l-4 border-red-500 pl-4">
+        
+        {/* Intro Section */}
+        <section className="py-12 bg-white">
+          <div className="max-w-4xl mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6">
               Your Local Magnolia HVAC Contractor
             </h2>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
               AMW Cooling & Heating extends our trusted HVAC services to Magnolia, Texas—a rapidly growing community along the FM 1488 corridor in western Montgomery County. Magnolia has evolved from a quiet rural town into a thriving suburban community, with master-planned neighborhoods like Woodforest, Mostyn Manor, and the Reserve at Grogan's Mill joining the area's established ranch properties and acreage homes. Our veteran-owned team understands the diverse HVAC needs that come with Magnolia's mix of property types.
             </p>
-
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
               Magnolia's location at the intersection of FM 1488 and FM 1774 puts it within easy reach of our Conroe headquarters. Many Magnolia homes sit on larger lots or acreage, which can mean longer ductwork runs, larger cooling loads, and unique installation challenges compared to subdivision homes. Our technicians are experienced with both traditional subdivision HVAC systems and the larger, more complex setups found on rural Magnolia properties.
             </p>
+          </div>
+        </section>
 
-            <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
-              HVAC Services We Provide in Magnolia
+        {/* Services Grid Section */}
+        <section className="py-12 bg-blue-900">
+          <div className="max-w-5xl mx-auto px-4">
+            <p className="text-center text-gray-400 text-sm tracking-widest uppercase mb-2">
+              Full-Service HVAC
+            </p>
+            <h3 className="text-2xl md:text-3xl font-black text-center text-white mb-8 tracking-wide italic">
+              HVAC SERVICES IN MAGNOLIA
             </h3>
-            <ul className="space-y-2 mb-6 text-gray-700 text-base md:text-lg">
-              <li className="flex items-start gap-2"><span className="text-red-500 font-bold">—</span><span><Link href="/services/ac-repair" className="text-blue-600 hover:underline font-semibold">Air Conditioning Repair</Link> – Fast diagnosis and repair of all AC issues</span></li>
-              <li className="flex items-start gap-2"><span className="text-red-500 font-bold">—</span><span><Link href="/services/ac-installation" className="text-blue-600 hover:underline font-semibold">AC Installation</Link> – Professional installation of new AC systems</span></li>
-              <li className="flex items-start gap-2"><span className="text-red-500 font-bold">—</span><span><Link href="/services/heating-repair" className="text-blue-600 hover:underline font-semibold">Heating Repair</Link> – Expert furnace and heat pump repairs</span></li>
-              <li className="flex items-start gap-2"><span className="text-red-500 font-bold">—</span><span><Link href="/services/hvac-maintenance" className="text-blue-600 hover:underline font-semibold">HVAC Maintenance</Link> – Preventive maintenance to keep systems efficient</span></li>
-              <li className="flex items-start gap-2"><span className="text-red-500 font-bold">—</span><span><Link href="/services/indoor-air-quality" className="text-blue-600 hover:underline font-semibold">Indoor Air Quality</Link> – Air purification and filtration solutions</span></li>
-              <li className="flex items-start gap-2"><span className="text-red-500 font-bold">—</span><span><Link href="/services/smart-thermostats" className="text-blue-600 hover:underline font-semibold">Smart Thermostats</Link> – Wi-Fi thermostat installation and setup</span></li>
-              <li className="flex items-start gap-2"><span className="text-red-500 font-bold">—</span><span><Link href="/services/dryer-vent-cleaning" className="text-blue-600 hover:underline font-semibold">Dryer Vent Cleaning</Link> – Fire prevention and efficiency</span></li>
-            </ul>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+              <Link href="/services/ac-repair" className="bg-white rounded-xl p-5 text-center hover:shadow-lg transition-shadow group">
+                <div className="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-red-500 transition-colors">
+                  <FaSnowflake className="w-5 h-5 text-white" />
+                </div>
+                <span className="font-bold text-blue-900 text-sm">AC Repair</span>
+              </Link>
+              <Link href="/services/ac-installation" className="bg-white rounded-xl p-5 text-center hover:shadow-lg transition-shadow group">
+                <div className="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-red-500 transition-colors">
+                  <FaTools className="w-5 h-5 text-white" />
+                </div>
+                <span className="font-bold text-blue-900 text-sm">AC Installation</span>
+              </Link>
+              <Link href="/services/heating-repair" className="bg-white rounded-xl p-5 text-center hover:shadow-lg transition-shadow group">
+                <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-900 transition-colors">
+                  <FaFire className="w-5 h-5 text-white" />
+                </div>
+                <span className="font-bold text-blue-900 text-sm">Heating Repair</span>
+              </Link>
+              <Link href="/services/hvac-maintenance" className="bg-white rounded-xl p-5 text-center hover:shadow-lg transition-shadow group">
+                <div className="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-red-500 transition-colors">
+                  <FaWrench className="w-5 h-5 text-white" />
+                </div>
+                <span className="font-bold text-blue-900 text-sm">Maintenance</span>
+              </Link>
+              <Link href="/services/indoor-air-quality" className="bg-white rounded-xl p-5 text-center hover:shadow-lg transition-shadow group">
+                <div className="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-red-500 transition-colors">
+                  <FaLeaf className="w-5 h-5 text-white" />
+                </div>
+                <span className="font-bold text-blue-900 text-sm">Air Quality</span>
+              </Link>
+              <Link href="/services/smart-thermostats" className="bg-white rounded-xl p-5 text-center hover:shadow-lg transition-shadow group">
+                <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-900 transition-colors">
+                  <FaThermometerHalf className="w-5 h-5 text-white" />
+                </div>
+                <span className="font-bold text-blue-900 text-sm">Thermostats</span>
+              </Link>
+              <Link href="/services/dryer-vent-cleaning" className="bg-white rounded-xl p-5 text-center hover:shadow-lg transition-shadow group">
+                <div className="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-red-500 transition-colors">
+                  <FaFan className="w-5 h-5 text-white" />
+                </div>
+                <span className="font-bold text-blue-900 text-sm">Dryer Vents</span>
+              </Link>
+              <Link href="/services" className="bg-white rounded-xl p-5 text-center hover:shadow-lg transition-shadow group">
+                <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-900 transition-colors">
+                  <FaShieldAlt className="w-5 h-5 text-white" />
+                </div>
+                <span className="font-bold text-blue-900 text-sm">All Services</span>
+              </Link>
+            </div>
+          </div>
+        </section>
 
-            <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-red-500 pl-3">
-              Why Magnolia Residents Choose AMW
+        {/* Why Choose Section */}
+        <div className="h-1 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4">
+            <div className="bg-red-500 py-3 mb-8 -mx-4">
+              <p className="text-center text-white text-base font-medium tracking-widest uppercase">
+                Fast, Honest, and Reliable
+              </p>
+            </div>
+            <h3 className="text-2xl md:text-3xl font-black text-center text-blue-900 mb-8 tracking-wide">
+              WHY MAGNOLIA RESIDENTS CHOOSE AMW
             </h3>
-            <p className="text-gray-700 mb-4 text-base md:text-lg">
+            <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg text-center max-w-3xl mx-auto">
               Magnolia residents value hard work, honesty, and community—values that mirror our own military-instilled principles. We provide straightforward assessments, fair pricing, and reliable service that Magnolia families can count on season after season.
             </p>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
+              <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
+                <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
+                <span className="text-gray-700 text-base font-medium">Veteran-owned and operated</span>
+              </div>
+              <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
+                <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
+                <span className="text-gray-700 text-base font-medium">Licensed, insured & bonded</span>
+              </div>
+              <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
+                <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
+                <span className="text-gray-700 text-base font-medium">Same-day & emergency service</span>
+              </div>
+              <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
+                <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
+                <span className="text-gray-700 text-base font-medium">Upfront, transparent pricing</span>
+              </div>
+              <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
+                <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
+                <span className="text-gray-700 text-base font-medium"><Link href="/financing" className="text-blue-600 hover:underline">Financing options</Link> available</span>
+              </div>
+              <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
+                <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
+                <span className="text-gray-700 text-base font-medium">5.0-star Google rating</span>
+              </div>
+            </div>
+          </div>
+        </section>
 
-            <ul className="space-y-2 mb-6 text-gray-700 text-base md:text-lg">
-              <li className="flex items-start gap-2"><span className="text-green-500 font-bold">✓</span><span>Veteran-owned and operated</span></li>
-              <li className="flex items-start gap-2"><span className="text-green-500 font-bold">✓</span><span>Licensed (TACLB133920E), insured, and bonded</span></li>
-              <li className="flex items-start gap-2"><span className="text-green-500 font-bold">✓</span><span>Same-day and emergency service available</span></li>
-              <li className="flex items-start gap-2"><span className="text-green-500 font-bold">✓</span><span>Upfront, transparent pricing—no hidden fees</span></li>
-              <li className="flex items-start gap-2"><span className="text-green-500 font-bold">✓</span><span><Link href="/financing" className="text-blue-600 hover:underline">Financing options</Link> available</span></li>
-              <li className="flex items-start gap-2"><span className="text-green-500 font-bold">✓</span><span>5.0-star Google rating with 54 reviews</span></li>
-            </ul>
-
-            <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
+        {/* Neighborhoods Section */}
+        <section className="py-12 bg-white">
+          <div className="max-w-4xl mx-auto px-4">
+            <h3 className="text-2xl font-bold text-blue-900 mb-4 flex items-center gap-2">
+              <span className="w-8 h-1 bg-red-500 rounded"></span>
               Serving Magnolia Neighborhoods
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
@@ -117,8 +201,10 @@ const MagnoliaTX = () => {
               Woodforest, Mostyn Manor, FM 1488 corridor, FM 1774 corridor, Decker Prairie area, Dobbin area, and all Magnolia-area communities. No matter where you are in the Magnolia area, AMW
               Cooling & Heating is ready to help.
             </p>
+            
 
-            <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-red-500 pl-3">
+            <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
+              <span className="w-8 h-1 bg-blue-600 rounded"></span>
               Nearby Areas We Serve
             </h3>
             <div className="flex flex-wrap gap-3 mb-6">
@@ -126,9 +212,9 @@ const MagnoliaTX = () => {
               <Link href="/locations/tomball-tx" className="bg-blue-50 text-blue-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-100 transition">Tomball, TX</Link>
               <Link href="/locations/conroe-tx" className="bg-blue-50 text-blue-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-100 transition">Conroe, TX</Link>
             </div>
-
-          </article>
+          </div>
         </section>
+
 
         {/* CTA Section */}
         <section className="relative overflow-hidden">
