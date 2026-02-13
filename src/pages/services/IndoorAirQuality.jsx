@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import SEO from '../../components/SEO';
 import { ServiceSchema, BreadcrumbSchema, LocalBusinessSchema, FAQSchema } from '../../components/StructuredData';
 import Link from 'next/link';
-import { FaPhone, FaCalendarCheck, FaShieldAlt, FaCheckCircle, FaWind, FaChevronDown } from 'react-icons/fa';
+import { FaPhone, FaCalendarCheck, FaShieldAlt, FaCheckCircle, FaWind, FaChevronDown, FaLeaf, FaExclamationTriangle, FaSnowflake, FaFan } from 'react-icons/fa';
 import ManufacturerCarousel from '../../components/ManufacturerCarousel';
 import MapSection from '../../components/MapSectionWrapper';
 import Footer from '../../components/Footer';
@@ -88,178 +88,308 @@ const IndoorAirQuality = () => {
         {/* Bottom Stripe */}
         <div className="h-1 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
 
-        {/* Main Content */}
-        <section className="py-12 bg-gray-50">
+        {/* Intro Section */}
+        <section className="py-12 bg-white">
           <div className="max-w-4xl mx-auto px-4">
-          <article className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-blue-600">
-            <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-4 border-l-4 border-red-500 pl-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6">
               Professional Indoor Air Quality Solutions
             </h2>
-            <p className="text-gray-700 mb-6 leading-relaxed">
+            <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
               The EPA states that indoor air can be 2-5 times more polluted than outdoor air. In Conroe's humid
               climate with high pollen counts, seasonal allergens, and occasional air quality issues from nearby
               Houston, maintaining healthy indoor air is critical for your family's wellbeing. AMW Cooling & Heating
               provides comprehensive solutions to ensure you breathe clean, comfortable air year-round.
             </p>
-
-            <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
-              Why Indoor Air Quality Matters in Conroe
-            </h3>
-            <p className="text-gray-700 mb-4 leading-relaxed">
+            <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
               Montgomery County faces unique air quality challenges: oak pollen in spring, ragweed in fall,
               high humidity that promotes mold growth, and proximity to Houston's urban air quality issues.
               Poor indoor air quality can trigger allergies, worsen asthma, cause respiratory irritation,
-              and lead to fatigue and headaches. Children, elderly family members, and those with existing
-              respiratory conditions are especially vulnerable.
+              and lead to fatigue and headaches.
             </p>
+          </div>
+        </section>
 
-            <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
-              Signs You Need Indoor Air Quality Solutions
+        {/* Warning Signs Section */}
+        <section className="py-12 bg-blue-900">
+          <div className="max-w-5xl mx-auto px-4">
+            <p className="text-center text-gray-400 text-sm tracking-widest uppercase mb-2">
+              Know the Signs
+            </p>
+            <h3 className="text-2xl md:text-3xl font-black text-center text-white mb-8 tracking-wide italic">
+              SIGNS YOU NEED AIR QUALITY SOLUTIONS
             </h3>
-            <ul className="list-disc list-inside space-y-2 mb-6 text-gray-700">
-              <li>Family members experiencing increased allergy or asthma symptoms</li>
-              <li>Frequent respiratory infections, colds, or sinus problems</li>
-              <li>Musty or stale odors in your home</li>
-              <li>Excessive dust accumulation shortly after cleaning—<Link href="/services/hvac-maintenance">regular HVAC maintenance</Link> helps reduce this</li>
-              <li>Condensation on windows or visible mold growth</li>
-              <li>Home feels humid or stuffy despite running AC</li>
-              <li>Pet dander affecting family members</li>
-              <li>New construction or recent renovation</li>
-            </ul>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+              <div className="bg-white rounded-xl p-5 text-center">
+                <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <FaExclamationTriangle className="w-5 h-5 text-white" />
+                </div>
+                <span className="font-bold text-blue-900 text-sm">Allergy & Asthma Flare-Ups</span>
+              </div>
+              <div className="bg-white rounded-xl p-5 text-center">
+                <div className="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <FaWind className="w-5 h-5 text-white" />
+                </div>
+                <span className="font-bold text-blue-900 text-sm">Musty or Stale Odors</span>
+              </div>
+              <div className="bg-white rounded-xl p-5 text-center">
+                <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <FaSnowflake className="w-5 h-5 text-white" />
+                </div>
+                <span className="font-bold text-blue-900 text-sm">Window Condensation</span>
+              </div>
+              <div className="bg-white rounded-xl p-5 text-center">
+                <div className="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <FaLeaf className="w-5 h-5 text-white" />
+                </div>
+                <span className="font-bold text-blue-900 text-sm">Excessive Dust Buildup</span>
+              </div>
+              <div className="bg-white rounded-xl p-5 text-center">
+                <div className="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <FaExclamationTriangle className="w-5 h-5 text-white" />
+                </div>
+                <span className="font-bold text-blue-900 text-sm">Frequent Illness</span>
+              </div>
+              <div className="bg-white rounded-xl p-5 text-center">
+                <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <FaWind className="w-5 h-5 text-white" />
+                </div>
+                <span className="font-bold text-blue-900 text-sm">Humid or Stuffy Home</span>
+              </div>
+              <div className="bg-white rounded-xl p-5 text-center">
+                <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <FaLeaf className="w-5 h-5 text-white" />
+                </div>
+                <span className="font-bold text-blue-900 text-sm">Pet Dander Issues</span>
+              </div>
+              <div className="bg-white rounded-xl p-5 text-center">
+                <div className="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <FaExclamationTriangle className="w-5 h-5 text-white" />
+                </div>
+                <span className="font-bold text-blue-900 text-sm">New Construction</span>
+              </div>
+            </div>
+          </div>
+        </section>
 
-            <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
+        {/* Solutions Section */}
+        <div className="h-1 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
+        <section className="py-12 bg-white">
+          <div className="max-w-4xl mx-auto px-4">
+            <h3 className="text-2xl font-bold text-blue-900 mb-6 flex items-center gap-2">
+              <span className="w-8 h-1 bg-red-500 rounded"></span>
               Our Indoor Air Quality Solutions
             </h3>
 
-            <div className="bg-gray-50 p-4 rounded-lg mb-4">
-              <h4 className="font-semibold text-blue-800 mb-2">Advanced Air Filtration Systems</h4>
-              <p className="text-gray-700 mb-3">
-                Standard HVAC filters only capture large particles. Our advanced filtration systems remove microscopic
-                contaminants for dramatically cleaner air:
-              </p>
-              <ul className="list-disc list-inside space-y-2 text-gray-700">
-                <li><strong>HEPA Filtration</strong> - Captures 99.97% of particles as small as 0.3 microns including pollen, dust mites, pet dander, and mold spores</li>
-                <li><strong>High-MERV Filters</strong> - MERV 11-16 rated filters for superior particle capture without restricting airflow</li>
-                <li><strong>Media Air Cleaners</strong> - Whole-home filtration with large surface area for maximum efficiency</li>
-                <li><strong>Electronic Air Cleaners</strong> - Use electrical charge to capture particles too small for standard filters</li>
-                <li><strong>Carbon Filters</strong> - Remove odors, VOCs (volatile organic compounds), and chemical fumes</li>
-              </ul>
-            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-blue-50 p-6 rounded-xl">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-blue-900 rounded-full flex items-center justify-center">
+                    <FaWind className="w-5 h-5 text-white" />
+                  </div>
+                  <h4 className="font-bold text-blue-900 text-lg">Air Filtration Systems</h4>
+                </div>
+                <ul className="space-y-2 text-gray-700 text-sm">
+                  <li className="flex items-start gap-2"><FaCheckCircle className="text-green-500 w-3 h-3 mt-1 flex-shrink-0" /> HEPA Filtration — 99.97% particle capture</li>
+                  <li className="flex items-start gap-2"><FaCheckCircle className="text-green-500 w-3 h-3 mt-1 flex-shrink-0" /> High-MERV Filters (MERV 11-16)</li>
+                  <li className="flex items-start gap-2"><FaCheckCircle className="text-green-500 w-3 h-3 mt-1 flex-shrink-0" /> Media & Electronic Air Cleaners</li>
+                  <li className="flex items-start gap-2"><FaCheckCircle className="text-green-500 w-3 h-3 mt-1 flex-shrink-0" /> Carbon Filters for odors & VOCs</li>
+                </ul>
+              </div>
 
-            <div className="bg-gray-50 p-4 rounded-lg mb-4">
-              <h4 className="font-semibold text-blue-800 mb-2">UV Air Purification Systems</h4>
-              <p className="text-gray-700 mb-3">
-                Germicidal UV lights installed in your HVAC system destroy biological contaminants at the DNA level:
-              </p>
-              <ul className="list-disc list-inside space-y-2 text-gray-700">
-                <li><strong>Bacteria & Virus Elimination</strong> - UV-C light neutralizes airborne pathogens before they circulate</li>
-                <li><strong>Mold Prevention</strong> - Prevents mold growth on evaporator coils in Conroe's humid climate</li>
-                <li><strong>Continuous Protection</strong> - Purification whenever your HVAC system operates</li>
-                <li><strong>Chemical-Free</strong> - No ozone or chemical byproducts, safe for all family members</li>
-                <li><strong>Reduced Maintenance</strong> - Keeps coils cleaner, improving system efficiency</li>
-              </ul>
-            </div>
+              <div className="bg-red-50 p-6 rounded-xl">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center">
+                    <FaShieldAlt className="w-5 h-5 text-white" />
+                  </div>
+                  <h4 className="font-bold text-blue-900 text-lg">UV Air Purification</h4>
+                </div>
+                <ul className="space-y-2 text-gray-700 text-sm">
+                  <li className="flex items-start gap-2"><FaCheckCircle className="text-green-500 w-3 h-3 mt-1 flex-shrink-0" /> Bacteria & virus elimination</li>
+                  <li className="flex items-start gap-2"><FaCheckCircle className="text-green-500 w-3 h-3 mt-1 flex-shrink-0" /> Mold prevention on coils</li>
+                  <li className="flex items-start gap-2"><FaCheckCircle className="text-green-500 w-3 h-3 mt-1 flex-shrink-0" /> Chemical-free, continuous protection</li>
+                  <li className="flex items-start gap-2"><FaCheckCircle className="text-green-500 w-3 h-3 mt-1 flex-shrink-0" /> Reduced HVAC maintenance needs</li>
+                </ul>
+              </div>
 
-            <div className="bg-gray-50 p-4 rounded-lg mb-4">
-              <h4 className="font-semibold text-blue-800 mb-2">Whole-Home Dehumidification</h4>
-              <p className="text-gray-700 mb-3">
-                Conroe's humidity often exceeds comfortable levels even with AC running. Excess moisture promotes
-                mold growth, dust mites, and discomfort:
-              </p>
-              <ul className="list-disc list-inside space-y-2 text-gray-700">
-                <li><strong>Precise Humidity Control</strong> - Maintain ideal 30-50% humidity levels automatically</li>
-                <li><strong>Mold & Mildew Prevention</strong> - Eliminate conditions that allow biological growth</li>
-                <li><strong>Improved Comfort</strong> - Lower humidity makes your home feel cooler at higher temperatures</li>
-                <li><strong>Energy Savings</strong> - More comfortable at 76 degrees F with low humidity vs. 72 degrees F with high humidity</li>
-                <li><strong>Protects Your Home</strong> - Prevents wood damage, paint peeling, and musty odors</li>
-                <li><strong>Allergen Reduction</strong> - Dust mites can't survive in properly controlled humidity</li>
-              </ul>
-            </div>
+              <div className="bg-red-50 p-6 rounded-xl">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center">
+                    <FaSnowflake className="w-5 h-5 text-white" />
+                  </div>
+                  <h4 className="font-bold text-blue-900 text-lg">Whole-Home Dehumidification</h4>
+                </div>
+                <ul className="space-y-2 text-gray-700 text-sm">
+                  <li className="flex items-start gap-2"><FaCheckCircle className="text-green-500 w-3 h-3 mt-1 flex-shrink-0" /> Precise 30-50% humidity control</li>
+                  <li className="flex items-start gap-2"><FaCheckCircle className="text-green-500 w-3 h-3 mt-1 flex-shrink-0" /> Mold & mildew prevention</li>
+                  <li className="flex items-start gap-2"><FaCheckCircle className="text-green-500 w-3 h-3 mt-1 flex-shrink-0" /> Energy savings & improved comfort</li>
+                  <li className="flex items-start gap-2"><FaCheckCircle className="text-green-500 w-3 h-3 mt-1 flex-shrink-0" /> Protects wood & home finishes</li>
+                </ul>
+              </div>
 
-            <div className="bg-gray-50 p-4 rounded-lg mb-6">
-              <h4 className="font-semibold text-blue-800 mb-2">Ventilation & Fresh Air Systems</h4>
-              <p className="text-gray-700 mb-3">
-                Modern homes are sealed tight for energy efficiency, but this traps contaminants inside. Fresh air
-                ventilation solves this problem:
-              </p>
-              <ul className="list-disc list-inside space-y-2 text-gray-700">
-                <li><strong>Energy Recovery Ventilators (ERV)</strong> - Bring in fresh outdoor air while recovering heating/cooling energy</li>
-                <li><strong>Heat Recovery Ventilators (HRV)</strong> - Exchange stale indoor air for fresh outdoor air efficiently</li>
-                <li><strong>Balanced Ventilation</strong> - Controlled air exchange prevents negative pressure issues</li>
-                <li><strong>VOC Removal</strong> - Eliminate off-gassing from furniture, carpets, and building materials</li>
-                <li><strong>Continuous Fresh Air</strong> - Maintain healthy air quality without wasting energy</li>
-              </ul>
+              <div className="bg-blue-50 p-6 rounded-xl">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-blue-900 rounded-full flex items-center justify-center">
+                    <FaFan className="w-5 h-5 text-white" />
+                  </div>
+                  <h4 className="font-bold text-blue-900 text-lg">Ventilation & Fresh Air</h4>
+                </div>
+                <ul className="space-y-2 text-gray-700 text-sm">
+                  <li className="flex items-start gap-2"><FaCheckCircle className="text-green-500 w-3 h-3 mt-1 flex-shrink-0" /> Energy Recovery Ventilators (ERV)</li>
+                  <li className="flex items-start gap-2"><FaCheckCircle className="text-green-500 w-3 h-3 mt-1 flex-shrink-0" /> Heat Recovery Ventilators (HRV)</li>
+                  <li className="flex items-start gap-2"><FaCheckCircle className="text-green-500 w-3 h-3 mt-1 flex-shrink-0" /> VOC removal from new materials</li>
+                  <li className="flex items-start gap-2"><FaCheckCircle className="text-green-500 w-3 h-3 mt-1 flex-shrink-0" /> Continuous fresh air without energy waste</li>
+                </ul>
+              </div>
             </div>
+          </div>
+        </section>
 
-            <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
-              Benefits of Improved Indoor Air Quality
+        {/* Benefits Section */}
+        <section className="py-12 bg-blue-900">
+          <div className="max-w-5xl mx-auto px-4">
+            <p className="text-center text-gray-400 text-sm tracking-widest uppercase mb-2">
+              Breathe Easier
+            </p>
+            <h3 className="text-2xl md:text-3xl font-black text-center text-white mb-8 tracking-wide italic">
+              BENEFITS OF IMPROVED AIR QUALITY
             </h3>
-            <ul className="list-disc list-inside space-y-2 mb-6 text-gray-700">
-              <li><strong>Healthier Family</strong> - Reduce allergy and asthma symptoms, fewer respiratory infections</li>
-              <li><strong>Better Sleep</strong> - Cleaner air and proper humidity improve sleep quality</li>
-              <li><strong>Odor Elimination</strong> - Remove pet, cooking, and musty odors</li>
-              <li><strong>Mold Prevention</strong> - Critical in Conroe's humid climate</li>
-              <li><strong>Cleaner Home</strong> - Less dust means less cleaning</li>
-              <li><strong>Protected HVAC System</strong> - Cleaner air means less strain on equipment</li>
-              <li><strong>Improved Comfort</strong> - Humidity control makes your home feel more comfortable</li>
-              <li><strong>Higher Home Value</strong> - Air quality systems are attractive to buyers</li>
-            </ul>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+              <div className="bg-white rounded-xl p-5 text-center">
+                <span className="font-bold text-blue-900 text-sm">Healthier Family</span>
+                <p className="text-gray-600 text-xs mt-1">Fewer allergies & respiratory infections</p>
+              </div>
+              <div className="bg-white rounded-xl p-5 text-center">
+                <span className="font-bold text-blue-900 text-sm">Better Sleep</span>
+                <p className="text-gray-600 text-xs mt-1">Cleaner air improves sleep quality</p>
+              </div>
+              <div className="bg-white rounded-xl p-5 text-center">
+                <span className="font-bold text-blue-900 text-sm">Odor Elimination</span>
+                <p className="text-gray-600 text-xs mt-1">Remove pet, cooking, & musty odors</p>
+              </div>
+              <div className="bg-white rounded-xl p-5 text-center">
+                <span className="font-bold text-blue-900 text-sm">Mold Prevention</span>
+                <p className="text-gray-600 text-xs mt-1">Critical in Conroe's humid climate</p>
+              </div>
+              <div className="bg-white rounded-xl p-5 text-center">
+                <span className="font-bold text-blue-900 text-sm">Cleaner Home</span>
+                <p className="text-gray-600 text-xs mt-1">Less dust means less cleaning</p>
+              </div>
+              <div className="bg-white rounded-xl p-5 text-center">
+                <span className="font-bold text-blue-900 text-sm">Protected HVAC</span>
+                <p className="text-gray-600 text-xs mt-1">Less strain on your equipment</p>
+              </div>
+              <div className="bg-white rounded-xl p-5 text-center">
+                <span className="font-bold text-blue-900 text-sm">Improved Comfort</span>
+                <p className="text-gray-600 text-xs mt-1">Humidity control for better comfort</p>
+              </div>
+              <div className="bg-white rounded-xl p-5 text-center">
+                <span className="font-bold text-blue-900 text-sm">Higher Home Value</span>
+                <p className="text-gray-600 text-xs mt-1">Air quality systems attract buyers</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-            <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
+        {/* Custom Solutions + Why Choose */}
+        <div className="h-1 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
+        <section className="py-12 bg-white">
+          <div className="max-w-4xl mx-auto px-4">
+            <h3 className="text-2xl font-bold text-blue-900 mb-4 flex items-center gap-2">
+              <span className="w-8 h-1 bg-red-500 rounded"></span>
               Custom Solutions for Your Home
             </h3>
-            <p className="text-gray-700 mb-4 leading-relaxed">
+            <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
               Every home has unique air quality needs. During your consultation, our technicians assess your
               specific concerns—whether it's allergies, humidity, odors, or general air quality—and recommend
               the most effective combination of solutions. We work with all major HVAC systems and can retrofit
               air quality equipment into existing setups or integrate it into new installations.
+              <Link href="/services/hvac-maintenance" className="text-blue-600 hover:underline ml-1">Regular HVAC maintenance</Link> also helps improve air quality.
             </p>
+          </div>
+        </section>
 
-            <div className="flex flex-wrap items-center gap-4 py-4 border-y border-gray-200 text-sm text-gray-600">
-              <span className="flex items-center gap-2"><FaShieldAlt className="text-blue-600 w-4 h-4" /> Veteran-Owned</span>
-              <span className="flex items-center gap-2"><FaCheckCircle className="text-green-500 w-4 h-4" /> Licensed & Insured</span>
-              <span className="flex items-center gap-2"><FaCheckCircle className="text-green-500 w-4 h-4" /> Free Estimates</span>
-              <span className="flex items-center gap-2"><FaCheckCircle className="text-green-500 w-4 h-4" /> Custom Solutions</span>
+        {/* Why Choose Section */}
+        <div className="h-1 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4">
+            <div className="bg-red-500 py-3 mb-8 -mx-4">
+              <p className="text-center text-white text-base font-medium tracking-widest uppercase">
+                Fast, Honest, and Reliable
+              </p>
             </div>
-            {/* FAQ Section */}
-            <div className="mt-10 mb-8">
-              <h3 className="text-xl font-bold text-blue-900 mb-4 border-l-4 border-red-500 pl-3">
-                Frequently Asked Questions
-              </h3>
-              <div className="space-y-2">
-                {serviceFaqs.map((faq, idx) => (
-                  <div key={idx} className="border border-gray-200 rounded-lg overflow-hidden">
-                    <button
-                      onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                      className="w-full text-left px-4 py-3 flex justify-between items-center hover:bg-gray-50 transition"
-                    >
-                      <span className="font-medium text-blue-900 pr-4">{faq.question}</span>
-                      <FaChevronDown className={`w-4 h-4 text-gray-400 flex-shrink-0 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`} />
-                    </button>
-                    {openFaq === idx && (
-                      <div className="px-4 pb-4 text-gray-600 leading-relaxed">
-                        {faq.answer}
-                      </div>
-                    )}
-                  </div>
-                ))}
+            <h3 className="text-2xl md:text-3xl font-black text-center text-blue-900 mb-8 tracking-wide">
+              WHY CHOOSE AMW FOR AIR QUALITY
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
+              <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
+                <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
+                <span className="text-gray-700 text-base font-medium">Veteran-owned and operated</span>
+              </div>
+              <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
+                <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
+                <span className="text-gray-700 text-base font-medium">Licensed, insured & bonded</span>
+              </div>
+              <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
+                <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
+                <span className="text-gray-700 text-base font-medium">Free estimates & consultations</span>
+              </div>
+              <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
+                <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
+                <span className="text-gray-700 text-base font-medium">Custom solutions for every home</span>
+              </div>
+              <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
+                <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
+                <span className="text-gray-700 text-base font-medium"><Link href="/financing" className="text-blue-600 hover:underline">Financing options</Link> available</span>
+              </div>
+              <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
+                <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
+                <span className="text-gray-700 text-base font-medium">5.0-star Google rating</span>
               </div>
             </div>
+          </div>
+        </section>
 
+        {/* FAQ Section */}
+        <section className="py-12 bg-white">
+          <div className="max-w-4xl mx-auto px-4">
+            <h3 className="text-2xl md:text-3xl font-bold text-center text-blue-900 mb-8">
+              Frequently Asked Questions
+            </h3>
+            <div className="space-y-2">
+              {serviceFaqs.map((faq, idx) => (
+                <div key={idx} className="border border-gray-200 rounded-lg overflow-hidden bg-white">
+                  <button
+                    onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                    className="w-full text-left px-4 py-3 flex justify-between items-center hover:bg-gray-50 transition"
+                  >
+                    <span className="font-medium text-blue-900 pr-4">{faq.question}</span>
+                    <FaChevronDown className={`w-4 h-4 text-gray-400 flex-shrink-0 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`} />
+                  </button>
+                  {openFaq === idx && (
+                    <div className="px-4 pb-4 text-gray-600 leading-relaxed">
+                      {faq.answer}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-
-            <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
+        {/* Related Services */}
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4">
+            <h3 className="text-2xl font-bold text-blue-900 mb-6 flex items-center gap-2">
+              <span className="w-8 h-1 bg-blue-600 rounded"></span>
               Related Services
             </h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6">
-              <Link href="/services/ac-repair" className="bg-gray-50 p-3 rounded hover:bg-blue-50 transition text-blue-600 font-medium text-center">AC Repair</Link>
-              <Link href="/services/heating-repair" className="bg-gray-50 p-3 rounded hover:bg-blue-50 transition text-blue-600 font-medium text-center">Heating Repair</Link>
-              <Link href="/services/hvac-maintenance" className="bg-gray-50 p-3 rounded hover:bg-blue-50 transition text-blue-600 font-medium text-center">HVAC Maintenance</Link>
-              <Link href="/services/smart-thermostats" className="bg-gray-50 p-3 rounded hover:bg-blue-50 transition text-blue-600 font-medium text-center">Smart Thermostats</Link>
-              <Link href="/services/dryer-vent-cleaning" className="bg-gray-50 p-3 rounded hover:bg-blue-50 transition text-blue-600 font-medium text-center">Dryer Vent Cleaning</Link>
+            <div className="flex flex-wrap gap-3 mb-6">
+              <Link href="/services/ac-repair" className="bg-blue-50 text-blue-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-100 transition">AC Repair</Link>
+              <Link href="/services/heating-repair" className="bg-blue-50 text-blue-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-100 transition">Heating Repair</Link>
+              <Link href="/services/hvac-maintenance" className="bg-blue-50 text-blue-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-100 transition">HVAC Maintenance</Link>
+              <Link href="/services/smart-thermostats" className="bg-blue-50 text-blue-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-100 transition">Smart Thermostats</Link>
+              <Link href="/services/dryer-vent-cleaning" className="bg-blue-50 text-blue-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-100 transition">Dryer Vent Cleaning</Link>
             </div>
-
-          </article>
           </div>
         </section>
 

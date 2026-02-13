@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import SEO from '../../components/SEO';
 import { ServiceSchema, BreadcrumbSchema, LocalBusinessSchema, FAQSchema } from '../../components/StructuredData';
 import Link from 'next/link';
-import { FaPhone, FaCalendarCheck, FaShieldAlt, FaCheckCircle, FaFire, FaChevronDown } from 'react-icons/fa';
+import { FaPhone, FaCalendarCheck, FaShieldAlt, FaCheckCircle, FaFire, FaChevronDown, FaExclamationTriangle, FaWrench, FaTools, FaThermometerHalf } from 'react-icons/fa';
 import ManufacturerCarousel from '../../components/ManufacturerCarousel';
 import MapSection from '../../components/MapSectionWrapper';
 import Footer from '../../components/Footer';
@@ -89,98 +89,206 @@ const HeatingRepair = () => {
         {/* Bottom Stripe */}
         <div className="h-1 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
 
-        {/* Main Content */}
-        <section className="py-12 bg-gray-50">
+        {/* Intro Section */}
+        <section className="py-12 bg-white">
           <div className="max-w-4xl mx-auto px-4">
-          <article className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-blue-600">
-            <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-4 border-l-4 border-red-500 pl-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6">
               Expert Heating & Furnace Repair in Conroe
             </h2>
-            <p className="text-gray-700 mb-6 leading-relaxed">
+            <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
               When your heating system fails during a cold snap, you need fast, reliable service.
               AMW Cooling & Heating provides expert heating and furnace repair throughout Conroe,
               The Woodlands, and Montgomery County. Our licensed technicians diagnose and repair
               all types of heating systems quickly and efficiently.
             </p>
+          </div>
+        </section>
 
-            <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
-              Common Heating Problems We Repair
+        {/* Common Heating Problems Section */}
+        <section className="py-12 bg-blue-900">
+          <div className="max-w-5xl mx-auto px-4">
+            <p className="text-center text-gray-400 text-sm tracking-widest uppercase mb-2">
+              Diagnostic Experts
+            </p>
+            <h3 className="text-2xl md:text-3xl font-black text-center text-white mb-8 tracking-wide italic">
+              COMMON HEATING PROBLEMS WE REPAIR
             </h3>
-            <ul className="list-disc list-inside space-y-2 mb-6 text-gray-700">
-              <li><strong>Furnace won't turn on</strong> - Thermostat issues, pilot light problems, or electrical failures</li>
-              <li><strong>No heat or insufficient heat</strong> - Burner issues, heat exchanger problems, or airflow restrictions</li>
-              <li><strong>Strange noises</strong> - Blower motor issues, belt problems, or loose components</li>
-              <li><strong>Frequent cycling</strong> - Thermostat problems, clogged filters, or airflow issues</li>
-              <li><strong>High energy bills</strong> - Inefficient operation or aging equipment</li>
-              <li><strong>Yellow pilot light</strong> - Possible carbon monoxide risk requiring immediate attention</li>
-            </ul>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+              <div className="bg-white rounded-xl p-5 text-center">
+                <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <FaFire className="w-5 h-5 text-white" />
+                </div>
+                <span className="font-bold text-blue-900 text-sm">Furnace Won't Turn On</span>
+                <p className="text-gray-600 text-xs mt-1">Thermostat issues, pilot light problems, or electrical failures</p>
+              </div>
+              <div className="bg-white rounded-xl p-5 text-center">
+                <div className="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <FaThermometerHalf className="w-5 h-5 text-white" />
+                </div>
+                <span className="font-bold text-blue-900 text-sm">No Heat or Insufficient Heat</span>
+                <p className="text-gray-600 text-xs mt-1">Burner issues, heat exchanger problems, or airflow restrictions</p>
+              </div>
+              <div className="bg-white rounded-xl p-5 text-center">
+                <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <FaTools className="w-5 h-5 text-white" />
+                </div>
+                <span className="font-bold text-blue-900 text-sm">Strange Noises</span>
+                <p className="text-gray-600 text-xs mt-1">Blower motor issues, belt problems, or loose components</p>
+              </div>
+              <div className="bg-white rounded-xl p-5 text-center">
+                <div className="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <FaWrench className="w-5 h-5 text-white" />
+                </div>
+                <span className="font-bold text-blue-900 text-sm">Frequent Cycling</span>
+                <p className="text-gray-600 text-xs mt-1">Thermostat problems, clogged filters, or airflow issues</p>
+              </div>
+              <div className="bg-white rounded-xl p-5 text-center">
+                <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <FaExclamationTriangle className="w-5 h-5 text-white" />
+                </div>
+                <span className="font-bold text-blue-900 text-sm">High Energy Bills</span>
+                <p className="text-gray-600 text-xs mt-1">Inefficient operation or aging equipment</p>
+              </div>
+              <div className="bg-white rounded-xl p-5 text-center">
+                <div className="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <FaExclamationTriangle className="w-5 h-5 text-white" />
+                </div>
+                <span className="font-bold text-blue-900 text-sm">Yellow Pilot Light</span>
+                <p className="text-gray-600 text-xs mt-1">Possible carbon monoxide risk requiring immediate attention</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-            <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
+        {/* Emergency + Systems Section */}
+        <div className="h-1 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
+        <section className="py-12 bg-white">
+          <div className="max-w-4xl mx-auto px-4">
+            <h3 className="text-2xl font-bold text-blue-900 mb-4 flex items-center gap-2">
+              <span className="w-8 h-1 bg-red-500 rounded"></span>
               Emergency Heating Repair
             </h3>
-            <p className="text-gray-700 mb-6 leading-relaxed">
+            <p className="text-gray-700 mb-8 leading-relaxed text-base md:text-lg">
               Heating emergencies can't wait. We provide prompt emergency heating repair services
-              to keep your family warm and safe. Prevent emergencies with <Link href="/services/hvac-maintenance">regular HVAC maintenance</Link>. Call <a href="tel:+19363311339" className="text-blue-600 hover:underline">(936) 331-1339</a> for
+              to keep your family warm and safe. Prevent emergencies with <Link href="/services/hvac-maintenance" className="text-blue-600 hover:underline">regular HVAC maintenance</Link>. Call <a href="tel:+19363311339" className="text-blue-600 hover:underline">(936) 331-1339</a> for
               immediate assistance.
             </p>
 
-            <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
+            <h3 className="text-2xl font-bold text-blue-900 mb-4 flex items-center gap-2">
+              <span className="w-8 h-1 bg-blue-600 rounded"></span>
               Types of Heating Systems We Service
             </h3>
-            <ul className="list-disc list-inside space-y-2 mb-6 text-gray-700">
-              <li>Gas furnaces</li>
-              <li>Electric air handlers</li>
-              <li>Heat pumps</li>
-              <li>Ductless mini-split systems</li>
-              <li>All major brands and models</li>
-              <li>Pair your heating system with a <Link href="/services/smart-thermostats">smart thermostat</Link> for maximum efficiency</li>
-            </ul>
-
-            <div className="flex flex-wrap items-center gap-4 mb-6 py-4 border-y border-gray-200 text-sm text-gray-600">
-              <span className="flex items-center gap-2"><FaShieldAlt className="text-blue-600 w-4 h-4" /> Veteran-Owned</span>
-              <span className="flex items-center gap-2"><FaCheckCircle className="text-green-500 w-4 h-4" /> Licensed & Insured</span>
-              <span className="flex items-center gap-2"><FaCheckCircle className="text-green-500 w-4 h-4" /> Same-Day Service</span>
-              <span className="flex items-center gap-2"><FaCheckCircle className="text-green-500 w-4 h-4" /> Financing Available</span>
-            </div>
-            {/* FAQ Section */}
-            <div className="mt-10 mb-8">
-              <h3 className="text-xl font-bold text-blue-900 mb-4 border-l-4 border-red-500 pl-3">
-                Frequently Asked Questions
-              </h3>
-              <div className="space-y-2">
-                {serviceFaqs.map((faq, idx) => (
-                  <div key={idx} className="border border-gray-200 rounded-lg overflow-hidden">
-                    <button
-                      onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                      className="w-full text-left px-4 py-3 flex justify-between items-center hover:bg-gray-50 transition"
-                    >
-                      <span className="font-medium text-blue-900 pr-4">{faq.question}</span>
-                      <FaChevronDown className={`w-4 h-4 text-gray-400 flex-shrink-0 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`} />
-                    </button>
-                    {openFaq === idx && (
-                      <div className="px-4 pb-4 text-gray-600 leading-relaxed">
-                        {faq.answer}
-                      </div>
-                    )}
-                  </div>
-                ))}
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+              <div className="bg-gray-50 rounded-lg p-4 flex items-center gap-3">
+                <FaCheckCircle className="text-green-500 w-4 h-4 flex-shrink-0" />
+                <span className="text-gray-700 font-medium">Gas furnaces</span>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-4 flex items-center gap-3">
+                <FaCheckCircle className="text-green-500 w-4 h-4 flex-shrink-0" />
+                <span className="text-gray-700 font-medium">Electric air handlers</span>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-4 flex items-center gap-3">
+                <FaCheckCircle className="text-green-500 w-4 h-4 flex-shrink-0" />
+                <span className="text-gray-700 font-medium">Heat pumps</span>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-4 flex items-center gap-3">
+                <FaCheckCircle className="text-green-500 w-4 h-4 flex-shrink-0" />
+                <span className="text-gray-700 font-medium">Ductless mini-splits</span>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-4 flex items-center gap-3">
+                <FaCheckCircle className="text-green-500 w-4 h-4 flex-shrink-0" />
+                <span className="text-gray-700 font-medium">All major brands</span>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-4 flex items-center gap-3">
+                <FaCheckCircle className="text-green-500 w-4 h-4 flex-shrink-0" />
+                <span className="text-gray-700 font-medium"><Link href="/services/smart-thermostats" className="text-blue-600 hover:underline">Smart thermostats</Link></span>
               </div>
             </div>
+          </div>
+        </section>
 
+        {/* Why Choose Section */}
+        <div className="h-1 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4">
+            <div className="bg-red-500 py-3 mb-8 -mx-4">
+              <p className="text-center text-white text-base font-medium tracking-widest uppercase">
+                Fast, Honest, and Reliable
+              </p>
+            </div>
+            <h3 className="text-2xl md:text-3xl font-black text-center text-blue-900 mb-8 tracking-wide">
+              WHY CHOOSE AMW FOR HEATING REPAIR
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
+              <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
+                <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
+                <span className="text-gray-700 text-base font-medium">Veteran-owned and operated</span>
+              </div>
+              <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
+                <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
+                <span className="text-gray-700 text-base font-medium">Licensed, insured & bonded</span>
+              </div>
+              <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
+                <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
+                <span className="text-gray-700 text-base font-medium">Same-day & emergency service</span>
+              </div>
+              <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
+                <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
+                <span className="text-gray-700 text-base font-medium">Upfront, transparent pricing</span>
+              </div>
+              <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
+                <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
+                <span className="text-gray-700 text-base font-medium"><Link href="/financing" className="text-blue-600 hover:underline">Financing options</Link> available</span>
+              </div>
+              <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
+                <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
+                <span className="text-gray-700 text-base font-medium">5.0-star Google rating</span>
+              </div>
+            </div>
+          </div>
+        </section>
 
+        {/* FAQ Section */}
+        <section className="py-12 bg-white">
+          <div className="max-w-4xl mx-auto px-4">
+            <h3 className="text-2xl md:text-3xl font-bold text-center text-blue-900 mb-8">
+              Frequently Asked Questions
+            </h3>
+            <div className="space-y-2">
+              {serviceFaqs.map((faq, idx) => (
+                <div key={idx} className="border border-gray-200 rounded-lg overflow-hidden bg-white">
+                  <button
+                    onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                    className="w-full text-left px-4 py-3 flex justify-between items-center hover:bg-gray-50 transition"
+                  >
+                    <span className="font-medium text-blue-900 pr-4">{faq.question}</span>
+                    <FaChevronDown className={`w-4 h-4 text-gray-400 flex-shrink-0 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`} />
+                  </button>
+                  {openFaq === idx && (
+                    <div className="px-4 pb-4 text-gray-600 leading-relaxed">
+                      {faq.answer}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-            <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
+        {/* Related Services Section */}
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4">
+            <h3 className="text-2xl font-bold text-blue-900 mb-6 flex items-center gap-2">
+              <span className="w-8 h-1 bg-blue-600 rounded"></span>
               Related Services
             </h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6">
-              <Link href="/services/ac-repair" className="bg-gray-50 p-3 rounded hover:bg-blue-50 transition text-blue-600 font-medium text-center">AC Repair</Link>
-              <Link href="/services/hvac-maintenance" className="bg-gray-50 p-3 rounded hover:bg-blue-50 transition text-blue-600 font-medium text-center">HVAC Maintenance</Link>
-              <Link href="/services/indoor-air-quality" className="bg-gray-50 p-3 rounded hover:bg-blue-50 transition text-blue-600 font-medium text-center">Indoor Air Quality</Link>
-              <Link href="/services/smart-thermostats" className="bg-gray-50 p-3 rounded hover:bg-blue-50 transition text-blue-600 font-medium text-center">Smart Thermostats</Link>
-              <Link href="/services/dryer-vent-cleaning" className="bg-gray-50 p-3 rounded hover:bg-blue-50 transition text-blue-600 font-medium text-center">Dryer Vent Cleaning</Link>
+            <div className="flex flex-wrap gap-3 mb-6">
+              <Link href="/services/ac-repair" className="bg-blue-50 text-blue-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-100 transition">AC Repair</Link>
+              <Link href="/services/hvac-maintenance" className="bg-blue-50 text-blue-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-100 transition">HVAC Maintenance</Link>
+              <Link href="/services/indoor-air-quality" className="bg-blue-50 text-blue-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-100 transition">Indoor Air Quality</Link>
+              <Link href="/services/smart-thermostats" className="bg-blue-50 text-blue-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-100 transition">Smart Thermostats</Link>
+              <Link href="/services/dryer-vent-cleaning" className="bg-blue-50 text-blue-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-100 transition">Dryer Vent Cleaning</Link>
             </div>
-
-          </article>
           </div>
         </section>
 

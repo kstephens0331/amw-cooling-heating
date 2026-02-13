@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import SEO from '../../components/SEO';
 import { ServiceSchema, BreadcrumbSchema, LocalBusinessSchema, FAQSchema } from '../../components/StructuredData';
 import Link from 'next/link';
-import { FaPhone, FaCalendarCheck, FaShieldAlt, FaCheckCircle, FaSnowflake, FaChevronDown } from 'react-icons/fa';
+import { FaPhone, FaCalendarCheck, FaShieldAlt, FaCheckCircle, FaSnowflake, FaChevronDown, FaTools, FaExclamationTriangle, FaWrench, FaMapMarkerAlt } from 'react-icons/fa';
 import ManufacturerCarousel from '../../components/ManufacturerCarousel';
 import MapSection from '../../components/MapSectionWrapper';
 import Footer from '../../components/Footer';
@@ -89,92 +89,254 @@ const ACRepair = () => {
         {/* Bottom Stripe */}
         <div className="h-1 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
 
-        {/* Main Content */}
-        <section className="py-12 bg-gray-50">
+        {/* Intro Section */}
+        <section className="py-12 bg-white">
           <div className="max-w-4xl mx-auto px-4">
-          <article className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-blue-600">
-            <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-4 border-l-4 border-red-500 pl-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6">
               Expert Air Conditioning Repair in Conroe
             </h2>
-            <p className="text-gray-700 mb-6 leading-relaxed">
+            <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
               When your AC stops working in the Texas heat, you need immediate help.
               AMW Cooling & Heating provides fast, professional air conditioning repair
               throughout Conroe, The Woodlands, Montgomery, and surrounding areas. Our
               licensed technicians diagnose and fix AC problems quickly, getting your
               home comfortable again.
             </p>
-
-            <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
-              Common AC Problems We Fix
-            </h3>
-            <ul className="list-disc list-inside space-y-2 mb-6 text-gray-700">
-              <li><strong>AC not cooling</strong> - Refrigerant leaks, compressor issues, or thermostat problems</li>
-              <li><strong>AC won't turn on</strong> - Electrical issues, capacitor failure, or circuit breaker trips</li>
-              <li><strong>Strange noises</strong> - Fan motor problems, loose parts, or debris in unit</li>
-              <li><strong>Frozen coils</strong> - Airflow restrictions or refrigerant issues</li>
-              <li><strong>Water leaks</strong> - Clogged drain lines or damaged drain pans</li>
-              <li><strong>High energy bills</strong> - Inefficient operation or system age</li>
-            </ul>
-
-            <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
-              Our AC Repair Process
-            </h3>
-            <ol className="list-decimal list-inside space-y-2 mb-6 text-gray-700">
-              <li><strong>Thorough Inspection:</strong> We diagnose the exact problem with your AC system</li>
-              <li><strong>Upfront Pricing:</strong> You'll know the cost before we start any work</li>
-              <li><strong>Expert Repair:</strong> Our licensed technicians fix it right the first time</li>
-              <li><strong>System Testing:</strong> We verify everything works properly before we leave</li>
-              <li><strong>Preventive Advice:</strong> We recommend <Link href="/services/hvac-maintenance">regular maintenance</Link> to prevent future problems</li>
-            </ol>
-
-            <div className="flex flex-wrap items-center gap-4 mb-6 py-4 border-y border-gray-200 text-sm text-gray-600">
-              <span className="flex items-center gap-2"><FaShieldAlt className="text-blue-600 w-4 h-4" /> Veteran-Owned</span>
-              <span className="flex items-center gap-2"><FaCheckCircle className="text-green-500 w-4 h-4" /> Licensed & Insured</span>
-              <span className="flex items-center gap-2"><FaCheckCircle className="text-green-500 w-4 h-4" /> Same-Day Service</span>
-              <span className="flex items-center gap-2"><FaCheckCircle className="text-green-500 w-4 h-4" /> Financing Available</span>
-            </div>
-
-            <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
-              When to Call for AC Repair in Conroe
-            </h3>
-            <p className="text-gray-700 mb-4 leading-relaxed">
+            <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
               In Conroe's hot, humid climate, your air conditioner works overtime from April through October.
               Recognizing the signs of AC trouble early can save you money and prevent a complete breakdown
-              during the worst heat of summer. Here are the warning signs that mean it's time to call AMW:
+              during the worst heat of summer.
             </p>
-            <ul className="list-disc list-inside space-y-2 mb-6 text-gray-700 ml-4">
-              <li><strong>Weak airflow:</strong> If some rooms aren't cooling properly, you may have ductwork issues or a failing blower motor</li>
-              <li><strong>Warm air from vents:</strong> This often indicates low refrigerant levels or compressor problems</li>
-              <li><strong>Unusual smells:</strong> Burning odors could mean electrical issues, while musty smells suggest mold—consider our <Link href="/services/indoor-air-quality">indoor air quality solutions</Link></li>
-              <li><strong>Frequent cycling:</strong> If your AC turns on and off constantly, it's working too hard and wasting energy</li>
-              <li><strong>Rising energy bills:</strong> A sudden spike in electricity costs often means your AC is losing efficiency</li>
-              <li><strong>Age over 10 years:</strong> Older systems need more frequent repairs and may be nearing replacement</li>
-            </ul>
+          </div>
+        </section>
 
-            <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
-              AC Brands We Service in Conroe
+        {/* Common AC Problems Section */}
+        <section className="py-12 bg-blue-900">
+          <div className="max-w-5xl mx-auto px-4">
+            <p className="text-center text-gray-400 text-sm tracking-widest uppercase mb-2">
+              Diagnostic Experts
+            </p>
+            <h3 className="text-2xl md:text-3xl font-black text-center text-white mb-8 tracking-wide italic">
+              COMMON AC PROBLEMS WE FIX
             </h3>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              Our technicians are trained and experienced in repairing all major HVAC brands. Whether you have
-              a residential split system or a commercial package unit, we have the expertise and parts to get
-              your AC running again. We commonly service:
-            </p>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6 text-gray-700">
-              <div className="bg-gray-50 p-3 rounded">• Carrier</div>
-              <div className="bg-gray-50 p-3 rounded">• Trane</div>
-              <div className="bg-gray-50 p-3 rounded">• Lennox</div>
-              <div className="bg-gray-50 p-3 rounded">• Goodman</div>
-              <div className="bg-gray-50 p-3 rounded">• Rheem</div>
-              <div className="bg-gray-50 p-3 rounded">• York</div>
-              <div className="bg-gray-50 p-3 rounded">• American Standard</div>
-              <div className="bg-gray-50 p-3 rounded">• Bryant</div>
-              <div className="bg-gray-50 p-3 rounded">• Ruud</div>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+              <div className="bg-white rounded-xl p-5 text-center">
+                <div className="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <FaSnowflake className="w-5 h-5 text-white" />
+                </div>
+                <span className="font-bold text-blue-900 text-sm">AC Not Cooling</span>
+                <p className="text-gray-600 text-xs mt-1">Refrigerant leaks, compressor issues, or thermostat problems</p>
+              </div>
+              <div className="bg-white rounded-xl p-5 text-center">
+                <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <FaExclamationTriangle className="w-5 h-5 text-white" />
+                </div>
+                <span className="font-bold text-blue-900 text-sm">AC Won't Turn On</span>
+                <p className="text-gray-600 text-xs mt-1">Electrical issues, capacitor failure, or breaker trips</p>
+              </div>
+              <div className="bg-white rounded-xl p-5 text-center">
+                <div className="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <FaTools className="w-5 h-5 text-white" />
+                </div>
+                <span className="font-bold text-blue-900 text-sm">Strange Noises</span>
+                <p className="text-gray-600 text-xs mt-1">Fan motor problems, loose parts, or debris in unit</p>
+              </div>
+              <div className="bg-white rounded-xl p-5 text-center">
+                <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <FaSnowflake className="w-5 h-5 text-white" />
+                </div>
+                <span className="font-bold text-blue-900 text-sm">Frozen Coils</span>
+                <p className="text-gray-600 text-xs mt-1">Airflow restrictions or refrigerant issues</p>
+              </div>
+              <div className="bg-white rounded-xl p-5 text-center">
+                <div className="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <FaWrench className="w-5 h-5 text-white" />
+                </div>
+                <span className="font-bold text-blue-900 text-sm">Water Leaks</span>
+                <p className="text-gray-600 text-xs mt-1">Clogged drain lines or damaged drain pans</p>
+              </div>
+              <div className="bg-white rounded-xl p-5 text-center">
+                <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <FaExclamationTriangle className="w-5 h-5 text-white" />
+                </div>
+                <span className="font-bold text-blue-900 text-sm">High Energy Bills</span>
+                <p className="text-gray-600 text-xs mt-1">Inefficient operation or system age</p>
+              </div>
             </div>
+          </div>
+        </section>
 
-            <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
+        {/* Repair Process Section */}
+        <div className="h-1 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
+        <section className="py-12 bg-white">
+          <div className="max-w-4xl mx-auto px-4">
+            <h3 className="text-2xl font-bold text-blue-900 mb-6 flex items-center gap-2">
+              <span className="w-8 h-1 bg-red-500 rounded"></span>
+              Our AC Repair Process
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+              <div className="bg-gray-50 rounded-lg p-4 text-center">
+                <div className="text-2xl font-black text-blue-900 mb-2">1</div>
+                <span className="font-bold text-blue-900 text-sm">Thorough Inspection</span>
+                <p className="text-gray-600 text-xs mt-1">We diagnose the exact problem with your AC system</p>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-4 text-center">
+                <div className="text-2xl font-black text-blue-900 mb-2">2</div>
+                <span className="font-bold text-blue-900 text-sm">Upfront Pricing</span>
+                <p className="text-gray-600 text-xs mt-1">You'll know the cost before we start any work</p>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-4 text-center">
+                <div className="text-2xl font-black text-blue-900 mb-2">3</div>
+                <span className="font-bold text-blue-900 text-sm">Expert Repair</span>
+                <p className="text-gray-600 text-xs mt-1">Licensed technicians fix it right the first time</p>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-4 text-center">
+                <div className="text-2xl font-black text-blue-900 mb-2">4</div>
+                <span className="font-bold text-blue-900 text-sm">System Testing</span>
+                <p className="text-gray-600 text-xs mt-1">We verify everything works properly before we leave</p>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-4 text-center">
+                <div className="text-2xl font-black text-blue-900 mb-2">5</div>
+                <span className="font-bold text-blue-900 text-sm">Preventive Advice</span>
+                <p className="text-gray-600 text-xs mt-1">We recommend <Link href="/services/hvac-maintenance" className="text-blue-600 hover:underline">maintenance</Link> to prevent future issues</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose Section */}
+        <div className="h-1 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4">
+            <div className="bg-red-500 py-3 mb-8 -mx-4">
+              <p className="text-center text-white text-base font-medium tracking-widest uppercase">
+                Fast, Honest, and Reliable
+              </p>
+            </div>
+            <h3 className="text-2xl md:text-3xl font-black text-center text-blue-900 mb-8 tracking-wide">
+              WHY CHOOSE AMW FOR AC REPAIR
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
+              <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
+                <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
+                <span className="text-gray-700 text-base font-medium">Veteran-owned and operated</span>
+              </div>
+              <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
+                <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
+                <span className="text-gray-700 text-base font-medium">Licensed, insured & bonded</span>
+              </div>
+              <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
+                <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
+                <span className="text-gray-700 text-base font-medium">Same-day & emergency service</span>
+              </div>
+              <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
+                <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
+                <span className="text-gray-700 text-base font-medium">Upfront, transparent pricing</span>
+              </div>
+              <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
+                <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
+                <span className="text-gray-700 text-base font-medium"><Link href="/financing" className="text-blue-600 hover:underline">Financing options</Link> available</span>
+              </div>
+              <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
+                <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
+                <span className="text-gray-700 text-base font-medium">5.0-star Google rating</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Warning Signs Section */}
+        <section className="py-12 bg-white">
+          <div className="max-w-4xl mx-auto px-4">
+            <h3 className="text-2xl font-bold text-blue-900 mb-4 flex items-center gap-2">
+              <span className="w-8 h-1 bg-red-500 rounded"></span>
+              When to Call for AC Repair in Conroe
+            </h3>
+            <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
+              Here are the warning signs that mean it's time to call AMW:
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="bg-gray-50 rounded-lg p-4 flex items-start gap-3">
+                <FaExclamationTriangle className="text-red-500 w-4 h-4 mt-1 flex-shrink-0" />
+                <div>
+                  <span className="font-bold text-blue-900">Weak airflow</span>
+                  <p className="text-gray-600 text-sm mt-1">Some rooms aren't cooling properly—ductwork issues or a failing blower motor</p>
+                </div>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-4 flex items-start gap-3">
+                <FaExclamationTriangle className="text-red-500 w-4 h-4 mt-1 flex-shrink-0" />
+                <div>
+                  <span className="font-bold text-blue-900">Warm air from vents</span>
+                  <p className="text-gray-600 text-sm mt-1">Often indicates low refrigerant levels or compressor problems</p>
+                </div>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-4 flex items-start gap-3">
+                <FaExclamationTriangle className="text-red-500 w-4 h-4 mt-1 flex-shrink-0" />
+                <div>
+                  <span className="font-bold text-blue-900">Unusual smells</span>
+                  <p className="text-gray-600 text-sm mt-1">Burning odors could mean electrical issues—consider our <Link href="/services/indoor-air-quality" className="text-blue-600 hover:underline">indoor air quality solutions</Link></p>
+                </div>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-4 flex items-start gap-3">
+                <FaExclamationTriangle className="text-red-500 w-4 h-4 mt-1 flex-shrink-0" />
+                <div>
+                  <span className="font-bold text-blue-900">Frequent cycling</span>
+                  <p className="text-gray-600 text-sm mt-1">AC turns on and off constantly—working too hard and wasting energy</p>
+                </div>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-4 flex items-start gap-3">
+                <FaExclamationTriangle className="text-red-500 w-4 h-4 mt-1 flex-shrink-0" />
+                <div>
+                  <span className="font-bold text-blue-900">Rising energy bills</span>
+                  <p className="text-gray-600 text-sm mt-1">A sudden spike in electricity costs often means your AC is losing efficiency</p>
+                </div>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-4 flex items-start gap-3">
+                <FaExclamationTriangle className="text-red-500 w-4 h-4 mt-1 flex-shrink-0" />
+                <div>
+                  <span className="font-bold text-blue-900">Age over 10 years</span>
+                  <p className="text-gray-600 text-sm mt-1">Older systems need more frequent repairs and may be nearing replacement</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* AC Brands Section */}
+        <section className="py-12 bg-blue-900">
+          <div className="max-w-5xl mx-auto px-4">
+            <p className="text-center text-gray-400 text-sm tracking-widest uppercase mb-2">
+              All Major Brands
+            </p>
+            <h3 className="text-2xl md:text-3xl font-black text-center text-white mb-4 tracking-wide italic">
+              AC BRANDS WE SERVICE
+            </h3>
+            <p className="text-blue-100 text-center max-w-2xl mx-auto mb-8">
+              Our technicians are trained and experienced in repairing all major HVAC brands—residential split systems and commercial package units alike.
+            </p>
+            <div className="grid grid-cols-3 md:grid-cols-3 gap-3 max-w-3xl mx-auto">
+              <div className="bg-white/10 border border-white/20 rounded-lg p-3 text-center text-white font-medium">Carrier</div>
+              <div className="bg-white/10 border border-white/20 rounded-lg p-3 text-center text-white font-medium">Trane</div>
+              <div className="bg-white/10 border border-white/20 rounded-lg p-3 text-center text-white font-medium">Lennox</div>
+              <div className="bg-white/10 border border-white/20 rounded-lg p-3 text-center text-white font-medium">Goodman</div>
+              <div className="bg-white/10 border border-white/20 rounded-lg p-3 text-center text-white font-medium">Rheem</div>
+              <div className="bg-white/10 border border-white/20 rounded-lg p-3 text-center text-white font-medium">York</div>
+              <div className="bg-white/10 border border-white/20 rounded-lg p-3 text-center text-white font-medium">American Standard</div>
+              <div className="bg-white/10 border border-white/20 rounded-lg p-3 text-center text-white font-medium">Bryant</div>
+              <div className="bg-white/10 border border-white/20 rounded-lg p-3 text-center text-white font-medium">Ruud</div>
+            </div>
+          </div>
+        </section>
+
+        {/* Preventive Maintenance + Service Area Section */}
+        <div className="h-1 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
+        <section className="py-12 bg-white">
+          <div className="max-w-4xl mx-auto px-4">
+            <h3 className="text-2xl font-bold text-blue-900 mb-4 flex items-center gap-2">
+              <span className="w-8 h-1 bg-red-500 rounded"></span>
               Preventive Maintenance Saves Money
             </h3>
-            <p className="text-gray-700 mb-6 leading-relaxed">
+            <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
               The best AC repair is the one you never need. Regular maintenance can prevent up to 95% of AC
               breakdowns and extend your system's lifespan by years. We recommend scheduling a tune-up in early
               spring before the cooling season starts. Our maintenance service includes cleaning coils, checking
@@ -182,55 +344,60 @@ const ACRepair = () => {
               maintenance plans that include priority service and discounts on repairs.
             </p>
 
-            <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
+            <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
+              <span className="w-8 h-1 bg-blue-600 rounded"></span>
               Serving Conroe and All of Montgomery County
             </h3>
-            <p className="text-gray-700 mb-6 leading-relaxed">
+            <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
               As a local, veteran-owned business, we understand the unique climate challenges in Montgomery County.
               We provide fast, professional AC repair services throughout Conroe, The Woodlands, Montgomery, Willis,
               Cut and Shoot, Splendora, New Caney, Porter, and surrounding communities. Our technicians know the area
-              well and can typically reach you within an hour for emergency calls. We're proud to serve our neighbors
-              with honest, reliable HVAC service.
+              well and can typically reach you within an hour for emergency calls.
             </p>
-            {/* FAQ Section */}
-            <div className="mt-10 mb-8">
-              <h3 className="text-xl font-bold text-blue-900 mb-4 border-l-4 border-red-500 pl-3">
-                Frequently Asked Questions
-              </h3>
-              <div className="space-y-2">
-                {serviceFaqs.map((faq, idx) => (
-                  <div key={idx} className="border border-gray-200 rounded-lg overflow-hidden">
-                    <button
-                      onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                      className="w-full text-left px-4 py-3 flex justify-between items-center hover:bg-gray-50 transition"
-                    >
-                      <span className="font-medium text-blue-900 pr-4">{faq.question}</span>
-                      <FaChevronDown className={`w-4 h-4 text-gray-400 flex-shrink-0 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`} />
-                    </button>
-                    {openFaq === idx && (
-                      <div className="px-4 pb-4 text-gray-600 leading-relaxed">
-                        {faq.answer}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4">
+            <h3 className="text-2xl md:text-3xl font-bold text-center text-blue-900 mb-8">
+              Frequently Asked Questions
+            </h3>
+            <div className="space-y-2">
+              {serviceFaqs.map((faq, idx) => (
+                <div key={idx} className="border border-gray-200 rounded-lg overflow-hidden bg-white">
+                  <button
+                    onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                    className="w-full text-left px-4 py-3 flex justify-between items-center hover:bg-gray-50 transition"
+                  >
+                    <span className="font-medium text-blue-900 pr-4">{faq.question}</span>
+                    <FaChevronDown className={`w-4 h-4 text-gray-400 flex-shrink-0 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`} />
+                  </button>
+                  {openFaq === idx && (
+                    <div className="px-4 pb-4 text-gray-600 leading-relaxed">
+                      {faq.answer}
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
+          </div>
+        </section>
 
-
-
-            <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
+        {/* Related Services Section */}
+        <section className="py-12 bg-white">
+          <div className="max-w-4xl mx-auto px-4">
+            <h3 className="text-2xl font-bold text-blue-900 mb-6 flex items-center gap-2">
+              <span className="w-8 h-1 bg-blue-600 rounded"></span>
               Related Services
             </h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6">
-              <Link href="/services/heating-repair" className="bg-gray-50 p-3 rounded hover:bg-blue-50 transition text-blue-600 font-medium text-center">Heating Repair</Link>
-              <Link href="/services/hvac-maintenance" className="bg-gray-50 p-3 rounded hover:bg-blue-50 transition text-blue-600 font-medium text-center">HVAC Maintenance</Link>
-              <Link href="/services/indoor-air-quality" className="bg-gray-50 p-3 rounded hover:bg-blue-50 transition text-blue-600 font-medium text-center">Indoor Air Quality</Link>
-              <Link href="/services/smart-thermostats" className="bg-gray-50 p-3 rounded hover:bg-blue-50 transition text-blue-600 font-medium text-center">Smart Thermostats</Link>
-              <Link href="/services/dryer-vent-cleaning" className="bg-gray-50 p-3 rounded hover:bg-blue-50 transition text-blue-600 font-medium text-center">Dryer Vent Cleaning</Link>
+            <div className="flex flex-wrap gap-3 mb-6">
+              <Link href="/services/heating-repair" className="bg-blue-50 text-blue-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-100 transition">Heating Repair</Link>
+              <Link href="/services/hvac-maintenance" className="bg-blue-50 text-blue-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-100 transition">HVAC Maintenance</Link>
+              <Link href="/services/indoor-air-quality" className="bg-blue-50 text-blue-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-100 transition">Indoor Air Quality</Link>
+              <Link href="/services/smart-thermostats" className="bg-blue-50 text-blue-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-100 transition">Smart Thermostats</Link>
+              <Link href="/services/dryer-vent-cleaning" className="bg-blue-50 text-blue-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-100 transition">Dryer Vent Cleaning</Link>
             </div>
-
-          </article>
           </div>
         </section>
 
