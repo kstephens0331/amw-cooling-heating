@@ -2,40 +2,23 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
-import AmericanStandard from '../assets/images/american-standard-heating-air-conditioning-seeklogo.webp';
-import Bryant from '../assets/images/bryant-heating-cooling-systems-logo-png_seeklogo-304441.webp';
-import Carrier from '../assets/images/CARR_BIG.webp';
-import Copeland from '../assets/images/copeland-seeklogo.webp';
-import Danfoss from '../assets/images/danfoss-1-logo-black-and-white.webp';
-import EMR from '../assets/images/EMR_BIG.webp';
-import Goodman from '../assets/images/goodman-ac-logo.webp';
-import Honeywell from '../assets/images/HON_BIG.webp';
-import Johnstone from '../assets/images/johnstone-supply-logo.svg';
-import LII from '../assets/images/LII_BIG.webp';
-import Rheem from '../assets/images/rheem-logo-png_seeklogo-321920.webp';
-import Sporlan from '../assets/images/sporlan-logo-png-transparent.webp';
-import WR from '../assets/images/wr-logo-png_seeklogo-154035.webp';
-import York from '../assets/images/york-logo-png_seeklogo-155309.webp';
-import Ruud from '../assets/images/Ruud.webp';
-
-
 export default function ManufacturerCarousel() {
   const manufacturers = [
-{ name: 'American Standard', src: AmericanStandard },
-    { name: 'Bryant', src: Bryant },
-    { name: 'Carrier', src: Carrier },
-    { name: 'Copeland', src: Copeland },
-    { name: 'Danfoss', src: Danfoss },
-    { name: 'EMR', src: EMR },
-    { name: 'Goodman', src: Goodman },
-    { name: 'Honeywell', src: Honeywell },
-    { name: 'Johnstone Supply', src: Johnstone },
-    { name: 'LII', src: LII },
-    { name: 'Rheem', src: Rheem },
-    { name: 'Sporlan', src: Sporlan },
-    { name: 'WR', src: WR },
-    { name: 'York', src: York },
-    { name: 'Ruud', src: Ruud },
+    { name: 'American Standard', src: '/assets/images/american-standard-heating-air-conditioning-seeklogo.webp' },
+    { name: 'Bryant', src: '/assets/images/bryant-heating-cooling-systems-logo-png_seeklogo-304441.webp' },
+    { name: 'Carrier', src: '/assets/images/CARR_BIG.webp' },
+    { name: 'Copeland', src: '/assets/images/copeland-seeklogo.webp' },
+    { name: 'Danfoss', src: '/assets/images/danfoss-1-logo-black-and-white.webp' },
+    { name: 'Emerson', src: '/assets/images/EMR_BIG.webp' },
+    { name: 'Goodman', src: '/assets/images/goodman-ac-logo.webp' },
+    { name: 'Honeywell', src: '/assets/images/HON_BIG.webp' },
+    { name: 'Johnstone Supply', src: '/assets/images/johnstone-supply-logo.svg' },
+    { name: 'Lennox', src: '/assets/images/LII_BIG.webp' },
+    { name: 'Rheem', src: '/assets/images/rheem-logo-png_seeklogo-321920.webp' },
+    { name: 'Sporlan', src: '/assets/images/sporlan-logo-png-transparent.webp' },
+    { name: 'White-Rodgers', src: '/assets/images/wr-logo-png_seeklogo-154035.webp' },
+    { name: 'York', src: '/assets/images/york-logo-png_seeklogo-155309.webp' },
+    { name: 'Ruud', src: '/assets/images/Ruud.webp' },
   ];
 
   return (
@@ -64,6 +47,7 @@ export default function ManufacturerCarousel() {
                 src={item.src}
                 alt={`${item.name} logo`}
                 className="h-24 object-contain"
+                loading="lazy"
               />
             </SwiperSlide>
           ))}
