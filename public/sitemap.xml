@@ -2,93 +2,201 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://amwairconditioning.com</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://amwairconditioning.com/about</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amwairconditioning.com/services</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://amwairconditioning.com/contact</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amwairconditioning.com/faqs</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://amwairconditioning.com/financing</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://amwairconditioning.com/testimonials</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://amwairconditioning.com/blog</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://amwairconditioning.com/services/ac-repair</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://amwairconditioning.com/services/heating-repair</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://amwairconditioning.com/services/hvac-maintenance</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://amwairconditioning.com/services/indoor-air-quality</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://amwairconditioning.com/services/smart-thermostats</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://amwairconditioning.com/services/dryer-vent-cleaning</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://amwairconditioning.com/services/ac-installation</loc>
+    <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://amwairconditioning.com/locations/conroe-tx</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://amwairconditioning.com/locations/the-woodlands-tx</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://amwairconditioning.com/locations/spring-tx</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://amwairconditioning.com/locations/montgomery-tx</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://amwairconditioning.com/locations/willis-tx</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://amwairconditioning.com/locations/magnolia-tx</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://amwairconditioning.com/locations/tomball-tx</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://amwairconditioning.com/blog/dryer-vent-fire-prevention</loc>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://amwairconditioning.com/blog/improve-indoor-air-quality-home</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://amwairconditioning.com/blog/get-hvac-ready-texas-summer</loc>
+    <lastmod>2026-02-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://amwairconditioning.com/blog/benefits-hvac-maintenance-plan</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://amwairconditioning.com/blog/cost-replace-ac-unit-conroe-tx</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://amwairconditioning.com/blog/ac-blowing-warm-air-what-to-do</loc>
+    <lastmod>2026-02-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://amwairconditioning.com/blog/hvac-maintenance-checklist-homeowners</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://amwairconditioning.com/blog/how-long-ac-unit-last-texas</loc>
+    <lastmod>2026-02-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://amwairconditioning.com/blog/best-thermostat-settings-summer-texas</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://amwairconditioning.com/blog/signs-ac-needs-repair</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://amwairconditioning.com/blog/how-often-service-ac-texas</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://amwairconditioning.com/blog/hvac-sizing-guide-conroe</loc>
@@ -145,14 +253,8 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://amwairconditioning.com/blog/prep-ac-conroe-summer</loc>
-    <lastmod>2025-09-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://amwairconditioning.com/blog/fall-furnace-maintenance-conroe</loc>
-    <lastmod>2025-09-14</lastmod>
+    <loc>https://amwairconditioning.com/blog/hvac-maintenance-costs-conroe</loc>
+    <lastmod>2025-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -163,8 +265,14 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://amwairconditioning.com/blog/hvac-maintenance-costs-conroe</loc>
-    <lastmod>2025-10-12</lastmod>
+    <loc>https://amwairconditioning.com/blog/fall-furnace-maintenance-conroe</loc>
+    <lastmod>2025-09-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://amwairconditioning.com/blog/prep-ac-conroe-summer</loc>
+    <lastmod>2025-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
