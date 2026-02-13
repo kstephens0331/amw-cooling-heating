@@ -37,6 +37,7 @@ const Footer = () => {
           <nav className="flex flex-col space-y-0.5">
             <Link href="/services" className="hover:text-orange-400 transition">All Services</Link>
             <Link href="/services/ac-repair" className="hover:text-orange-400 transition">AC Repair</Link>
+            <Link href="/services/ac-installation" className="hover:text-orange-400 transition">AC Installation</Link>
             <Link href="/services/heating-repair" className="hover:text-orange-400 transition">Heating Repair</Link>
             <Link href="/services/hvac-maintenance" className="hover:text-orange-400 transition">Maintenance</Link>
             <Link href="/services/indoor-air-quality" className="hover:text-orange-400 transition">Air Quality</Link>

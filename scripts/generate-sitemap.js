@@ -26,6 +26,7 @@ const pages = [
   { url: '/services/indoor-air-quality', priority: '0.9', changefreq: 'monthly' },
   { url: '/services/smart-thermostats', priority: '0.9', changefreq: 'monthly' },
   { url: '/services/dryer-vent-cleaning', priority: '0.9', changefreq: 'monthly' },
+  { url: '/services/ac-installation', priority: '0.9', changefreq: 'monthly' },
 
   // Location pages
   { url: '/locations/conroe-tx', priority: '0.8', changefreq: 'monthly' },

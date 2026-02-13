@@ -54,6 +54,7 @@ const Navbar = () => {
               <div className="font-semibold text-gray-500 text-xs uppercase mb-1">Services</div>
               <Link href="/services" className="block py-1 hover:text-orange-600" onClick={closeMenu}>All Services</Link>
               <Link href="/services/ac-repair" className="block py-1 hover:text-orange-600" onClick={closeMenu}>AC Repair</Link>
+              <Link href="/services/ac-installation" className="block py-1 hover:text-orange-600" onClick={closeMenu}>AC Installation</Link>
               <Link href="/services/heating-repair" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Heating Repair</Link>
               <Link href="/services/hvac-maintenance" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Maintenance</Link>
               <Link href="/services/indoor-air-quality" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Air Quality</Link>
