@@ -112,8 +112,11 @@ export default function AboutUs() {
                 <span className="w-8 h-1 bg-red-500 rounded"></span>
                 Our Story
               </h3>
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4">
                 AMW Cooling & Heating LLC was founded with a clear mission: to provide reliable, high-quality HVAC services across Texas, with a strong focus on the needs of residential and light commercial customers. As a family- and veteran-owned business with over eight years of experience, Joshua and Anjelica are dedicated to ensuring that every home and business they serve enjoys year-round comfort and efficiency.
+              </p>
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                Based in Conroe, TX, we proudly serve homeowners and businesses throughout Montgomery County—including The Woodlands, Spring, Montgomery, Willis, Magnolia, and Tomball. Our military background instilled a commitment to showing up on time, doing the job right the first time, and treating every customer with the respect they deserve.
               </p>
             </div>
           </div>
@@ -160,10 +163,22 @@ export default function AboutUs() {
                 <span className="w-8 h-1 bg-red-500 rounded"></span>
                 Expertise and Credentials
               </h3>
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                Our reputation as a trusted HVAC provider is built on a solid foundation of experience, industry certifications, and a relentless commitment to quality.
-                When you choose AMW Cooling & Heating LLC, you're choosing a family-owned business dedicated to providing efficient, effective solutions that prioritize your comfort, safety, and satisfaction.
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4">
+                Our reputation as a trusted HVAC provider is built on a solid foundation of experience, industry certifications, and a relentless commitment to quality. Josh holds NATE (North American Technician Excellence) certification—the industry's most recognized standard—along with EPA 608 Universal certification for refrigerant handling. AMW Cooling & Heating is licensed by the Texas Department of Licensing and Regulation (TDLR) under license number TACLB133920E.
               </p>
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4">
+                When you choose AMW Cooling & Heating LLC, you're choosing a family-owned business dedicated to providing efficient, effective solutions that prioritize your comfort, safety, and satisfaction. We service and install all major HVAC brands including Carrier, Trane, Lennox, Goodman, Rheem, and more.
+              </p>
+              <h3 className="text-2xl font-bold text-blue-900 mb-4 flex items-center gap-2">
+                <span className="w-8 h-1 bg-red-500 rounded"></span>
+                Our Values
+              </h3>
+              <ul className="list-disc list-inside space-y-2 text-base md:text-lg text-gray-700">
+                <li><strong>Integrity:</strong> Honest assessments and upfront pricing—we never recommend unnecessary work</li>
+                <li><strong>Excellence:</strong> Every job is completed to the highest standard, backed by our satisfaction guarantee</li>
+                <li><strong>Service:</strong> We treat every customer like family, with same-day and emergency service available</li>
+                <li><strong>Community:</strong> As Conroe residents ourselves, we're invested in keeping our neighbors comfortable</li>
+              </ul>
             </div>
           </div>
         </div>

@@ -7,6 +7,7 @@ import ServicesSection from '../components/ServicesSection';
 import WhyChooseAMW from '../components/WhyChooseAMW';
 import TrustIndexWidget from '../components/TrustIndexWidget';
 import MapSection from '../components/MapSectionWrapper';
+import Link from 'next/link';
 import React from "react";
 
 export default function HomePage() {
@@ -34,6 +35,42 @@ export default function HomePage() {
 
       <main>
         <HeroLandingPage />
+
+        {/* Welcome / Intro Section */}
+        <section className="py-12 bg-white">
+          <div className="max-w-4xl mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6 text-center">
+              Your Trusted HVAC Company in Conroe, TX
+            </h2>
+            <div className="text-gray-700 leading-relaxed space-y-4 text-base md:text-lg">
+              <p>
+                Welcome to <strong>AMW Cooling & Heating LLC</strong>, a veteran-owned and family-operated HVAC company
+                proudly serving Conroe, The Woodlands, Spring, Montgomery, Willis, Magnolia, Tomball, and all of
+                Montgomery County. Founded by Josh and Anjelica—both military veterans—our company is built on the
+                values of integrity, discipline, and dedication to excellence that guided our service to this country.
+              </p>
+              <p>
+                We provide a full range of heating, ventilation, and air conditioning services for residential and
+                light commercial customers. Whether you need <Link href="/services/ac-repair" className="text-blue-600 hover:underline">emergency AC repair</Link>,
+                a <Link href="/services/ac-installation" className="text-blue-600 hover:underline">new AC installation</Link>,
+                {' '}<Link href="/services/heating-repair" className="text-blue-600 hover:underline">furnace repair</Link>,
+                {' '}<Link href="/services/hvac-maintenance" className="text-blue-600 hover:underline">preventive maintenance</Link>,
+                {' '}<Link href="/services/indoor-air-quality" className="text-blue-600 hover:underline">indoor air quality solutions</Link>,
+                {' '}<Link href="/services/smart-thermostats" className="text-blue-600 hover:underline">smart thermostat installation</Link>,
+                or <Link href="/services/dryer-vent-cleaning" className="text-blue-600 hover:underline">dryer vent cleaning</Link>—our
+                NATE-certified technicians deliver honest, reliable service every time.
+              </p>
+              <p>
+                We're licensed (TACLB133920E), insured, and committed to 100% customer satisfaction. With a perfect
+                5.0-star rating across 54 Google reviews, our neighbors trust us to keep their homes comfortable
+                year-round. We offer same-day and after-hours emergency service, upfront pricing with no hidden fees,
+                and <Link href="/financing" className="text-blue-600 hover:underline">flexible financing options</Link> to
+                fit every budget. Call <a href="tel:+19363311339" className="text-blue-600 font-semibold hover:underline">(936) 331-1339</a> today
+                to experience the AMW difference.
+              </p>
+            </div>
+          </div>
+        </section>
 
         <ServicesSection />
 
