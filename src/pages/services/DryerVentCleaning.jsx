@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SEO from '../../components/SEO';
-import { ServiceSchema, BreadcrumbSchema } from '../../components/StructuredData';
+import { ServiceSchema, BreadcrumbSchema, LocalBusinessSchema, FAQSchema } from '../../components/StructuredData';
 import Link from 'next/link';
-import { FaPhone, FaCalendarCheck, FaShieldAlt, FaCheckCircle, FaExclamationTriangle } from 'react-icons/fa';
+import { FaPhone, FaCalendarCheck, FaShieldAlt, FaCheckCircle, FaExclamationTriangle, FaChevronDown } from 'react-icons/fa';
 import ManufacturerCarousel from '../../components/ManufacturerCarousel';
 import MapSection from '../../components/MapSectionWrapper';
 import Footer from '../../components/Footer';
 
+const serviceFaqs = [
+  { question: "How often should I clean my dryer vent?", answer: "The U.S. Fire Administration recommends cleaning your dryer vent at least once a year. If you have a large family, do frequent laundry loads, or notice your dryer taking longer to dry clothes, you may need cleaning every 6 months. Annual cleaning prevents lint buildup that causes house fires." },
+  { question: "How much does dryer vent cleaning cost in Conroe?", answer: "Professional dryer vent cleaning in Conroe typically costs between $100 and $200 depending on the length and complexity of your vent system. This small investment can prevent thousands of dollars in fire damage and reduce your energy bills by improving dryer efficiency." },
+  { question: "Can I clean my dryer vent myself?", answer: "While you can clean the lint trap and a short section of vent yourself, professional cleaning is recommended for thorough results. We use specialized rotary brush systems and high-powered vacuums to remove all lint buildup throughout the entire vent run, including hard-to-reach sections inside walls." },
+  { question: "What are the signs of a clogged dryer vent?", answer: "Warning signs include: clothes taking longer than one cycle to dry, the dryer or laundry room feeling excessively hot, a burning smell during drying, lint visible around the outside vent opening, the vent hood flap not opening properly, and higher-than-normal energy bills. Don't ignore these signs—clogged vents are a fire hazard." },
+  { question: "How does dryer vent cleaning prevent fires?", answer: "Lint is highly flammable. When it accumulates in your dryer vent, the restricted airflow causes the dryer to overheat, creating the perfect conditions for a fire. According to FEMA, failure to clean dryer vents is the leading cause of home dryer fires. Professional cleaning removes this fire risk and keeps your family safe." }
+];
+
 const DryerVentCleaning = () => {
+  const [openFaq, setOpenFaq] = useState(null);
+
   return (
     <>
       <SEO
@@ -17,6 +27,8 @@ const DryerVentCleaning = () => {
         keywords="dryer vent cleaning Conroe, dryer vent service Conroe TX, lint removal, dryer fire prevention, dryer vent repair Conroe"
       />
 
+      <LocalBusinessSchema />
+      <FAQSchema faqs={serviceFaqs} />
       <ServiceSchema
         service={{
           name: "Dryer Vent Cleaning",
@@ -86,7 +98,7 @@ const DryerVentCleaning = () => {
               Clogged dryer vents are a leading cause of house fires in the United States, responsible for over
               15,000 fires, 15 deaths, and 400+ injuries annually according to the U.S. Fire Administration.
               Beyond this serious safety hazard, restricted airflow forces your dryer to work harder, dramatically
-              increasing energy costs, reducing appliance lifespan, and extending drying times. AMW Cooling & Heating
+              increasing energy costs, reducing appliance lifespan, and extending drying times. Just like <Link href="/services/hvac-maintenance">HVAC maintenance</Link> keeps your cooling system efficient, dryer vent cleaning ensures your appliances perform safely. AMW Cooling & Heating
               provides thorough professional dryer vent cleaning to protect your Conroe home and family.
             </p>
 
@@ -189,6 +201,32 @@ const DryerVentCleaning = () => {
               <li>Keep area around dryer clean and clear</li>
               <li>Schedule professional cleaning annually or when warning signs appear</li>
             </ul>
+            {/* FAQ Section */}
+            <div className="mt-10 mb-8">
+              <h3 className="text-xl font-bold text-blue-900 mb-4 border-l-4 border-red-500 pl-3">
+                Frequently Asked Questions
+              </h3>
+              <div className="space-y-2">
+                {serviceFaqs.map((faq, idx) => (
+                  <div key={idx} className="border border-gray-200 rounded-lg overflow-hidden">
+                    <button
+                      onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                      className="w-full text-left px-4 py-3 flex justify-between items-center hover:bg-gray-50 transition"
+                    >
+                      <span className="font-medium text-blue-900 pr-4">{faq.question}</span>
+                      <FaChevronDown className={`w-4 h-4 text-gray-400 flex-shrink-0 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`} />
+                    </button>
+                    {openFaq === idx && (
+                      <div className="px-4 pb-4 text-gray-600 leading-relaxed">
+                        {faq.answer}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+
 
             <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
               Related Services

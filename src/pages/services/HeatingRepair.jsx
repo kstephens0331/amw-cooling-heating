@@ -1,13 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SEO from '../../components/SEO';
-import { ServiceSchema, BreadcrumbSchema } from '../../components/StructuredData';
+import { ServiceSchema, BreadcrumbSchema, LocalBusinessSchema, FAQSchema } from '../../components/StructuredData';
 import Link from 'next/link';
-import { FaPhone, FaCalendarCheck, FaShieldAlt, FaCheckCircle, FaFire } from 'react-icons/fa';
+import { FaPhone, FaCalendarCheck, FaShieldAlt, FaCheckCircle, FaFire, FaChevronDown } from 'react-icons/fa';
 import ManufacturerCarousel from '../../components/ManufacturerCarousel';
 import MapSection from '../../components/MapSectionWrapper';
 import Footer from '../../components/Footer';
 
+const serviceFaqs = [
+  { question: "How much does heating repair cost in Conroe, TX?", answer: "Heating repairs in Conroe typically range from $150 to $500 for common issues like ignitor replacement, thermocouple repair, or blower motor fixes. More complex repairs involving heat exchangers may cost more. We always provide a clear estimate before starting work." },
+  { question: "Why is my furnace blowing cold air?", answer: "A furnace blowing cold air could indicate a dirty air filter restricting airflow, a malfunctioning thermostat, a pilot light or ignition problem, or a faulty flame sensor. In some cases, the heat exchanger may be cracked. Our technicians can quickly diagnose and resolve the issue." },
+  { question: "Do you offer emergency heating repair?", answer: "Yes! We provide after-hours emergency heating repair from 5 PM to 9 PM, seven days a week. When temperatures drop in Conroe, you need heat fast. Call (936) 331-1339 for prompt emergency heating service." },
+  { question: "What heating brands do you service?", answer: "We repair and service all major heating brands including Carrier, Trane, Lennox, Goodman, Rheem, York, and more. Our experienced technicians handle furnaces, heat pumps, and ductless mini-split systems." },
+  { question: "How often should I replace my furnace filter?", answer: "Standard 1-inch filters should be replaced every 1-3 months, especially during heavy use seasons. Thicker 4-inch or 5-inch media filters can last 6-12 months. A dirty filter restricts airflow, reduces efficiency, and can cause your system to overheat." },
+  { question: "What are signs my heater needs repair?", answer: "Warning signs include: strange noises (banging, rattling, or screeching), uneven heating throughout your home, a yellow or flickering pilot light, frequent cycling, rising energy bills, or a carbon monoxide detector alarm. Don't ignore these signs—call us right away." },
+  { question: "Do you repair heat pumps?", answer: "Absolutely! We service and repair all types of heat pumps, including air-source and ductless mini-split systems. Heat pumps are popular in Texas because they provide both heating and cooling, and our technicians are trained to handle any heat pump issue." }
+];
+
 const HeatingRepair = () => {
+  const [openFaq, setOpenFaq] = useState(null);
+
   return (
     <>
       <SEO
@@ -17,6 +29,8 @@ const HeatingRepair = () => {
         keywords="heating repair Conroe, furnace repair Conroe TX, heater repair, heating service Conroe"
       />
 
+      <LocalBusinessSchema />
+      <FAQSchema faqs={serviceFaqs} />
       <ServiceSchema
         service={{
           name: "Heating Repair",
@@ -106,7 +120,7 @@ const HeatingRepair = () => {
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed">
               Heating emergencies can't wait. We provide prompt emergency heating repair services
-              to keep your family warm and safe. Call <a href="tel:+19363311339" className="text-blue-600 hover:underline">(936) 331-1339</a> for
+              to keep your family warm and safe. Prevent emergencies with <Link href="/services/hvac-maintenance">regular HVAC maintenance</Link>. Call <a href="tel:+19363311339" className="text-blue-600 hover:underline">(936) 331-1339</a> for
               immediate assistance.
             </p>
 
@@ -119,6 +133,7 @@ const HeatingRepair = () => {
               <li>Heat pumps</li>
               <li>Ductless mini-split systems</li>
               <li>All major brands and models</li>
+              <li>Pair your heating system with a <Link href="/services/smart-thermostats">smart thermostat</Link> for maximum efficiency</li>
             </ul>
 
             <div className="flex flex-wrap items-center gap-4 mb-6 py-4 border-y border-gray-200 text-sm text-gray-600">
@@ -127,6 +142,32 @@ const HeatingRepair = () => {
               <span className="flex items-center gap-2"><FaCheckCircle className="text-green-500 w-4 h-4" /> Same-Day Service</span>
               <span className="flex items-center gap-2"><FaCheckCircle className="text-green-500 w-4 h-4" /> Financing Available</span>
             </div>
+            {/* FAQ Section */}
+            <div className="mt-10 mb-8">
+              <h3 className="text-xl font-bold text-blue-900 mb-4 border-l-4 border-red-500 pl-3">
+                Frequently Asked Questions
+              </h3>
+              <div className="space-y-2">
+                {serviceFaqs.map((faq, idx) => (
+                  <div key={idx} className="border border-gray-200 rounded-lg overflow-hidden">
+                    <button
+                      onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                      className="w-full text-left px-4 py-3 flex justify-between items-center hover:bg-gray-50 transition"
+                    >
+                      <span className="font-medium text-blue-900 pr-4">{faq.question}</span>
+                      <FaChevronDown className={`w-4 h-4 text-gray-400 flex-shrink-0 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`} />
+                    </button>
+                    {openFaq === idx && (
+                      <div className="px-4 pb-4 text-gray-600 leading-relaxed">
+                        {faq.answer}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+
 
             <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
               Related Services

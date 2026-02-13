@@ -1,14 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SEO from '../../components/SEO';
-import { ServiceSchema, BreadcrumbSchema } from '../../components/StructuredData';
+import { ServiceSchema, BreadcrumbSchema, LocalBusinessSchema, FAQSchema } from '../../components/StructuredData';
 import Link from 'next/link';
-import { FaPhone, FaCalendarCheck, FaShieldAlt, FaCheckCircle, FaMobileAlt } from 'react-icons/fa';
+import { FaPhone, FaCalendarCheck, FaShieldAlt, FaCheckCircle, FaMobileAlt, FaChevronDown } from 'react-icons/fa';
 import ManufacturerCarousel from '../../components/ManufacturerCarousel';
 import MapSection from '../../components/MapSectionWrapper';
 import Footer from '../../components/Footer';
 const thermostatImg = '/assets/images/thermostat.webp';
 
+const serviceFaqs = [
+  { question: "What smart thermostat brands do you install?", answer: "We install all major smart thermostat brands including Nest, Ecobee, Honeywell Home, Emerson Sensi, and more. Each brand offers unique features, and we'll help you choose the best one based on your HVAC system, lifestyle, and budget." },
+  { question: "Will a smart thermostat work with my current HVAC system?", answer: "Most smart thermostats are compatible with standard HVAC systems, including central AC, furnaces, heat pumps, and some multi-stage systems. However, compatibility depends on your wiring and system type. We'll verify compatibility during a free consultation before installation." },
+  { question: "How much does smart thermostat installation cost in Conroe?", answer: "Professional smart thermostat installation in Conroe typically costs $150 to $350 including the thermostat and labor. While some homeowners attempt DIY installation, professional installation ensures proper wiring, calibration, and integration with your HVAC system." },
+  { question: "How much can I save with a smart thermostat?", answer: "Most homeowners save 10-23% on heating and cooling bills after installing a smart thermostat. In Texas, where AC can account for 50%+ of energy costs during summer, that translates to $100-$300+ in annual savings. The thermostat typically pays for itself within the first year." },
+  { question: "Should I install a smart thermostat myself or hire a professional?", answer: "While some smart thermostats advertise DIY installation, we recommend professional installation. Incorrect wiring can damage your thermostat or HVAC system, void warranties, or even create fire hazards. Our technicians ensure proper installation, wiring, Wi-Fi setup, and system calibration—giving you peace of mind." }
+];
+
 const SmartThermostats = () => {
+  const [openFaq, setOpenFaq] = useState(null);
+
   return (
     <>
       <SEO
@@ -18,6 +28,8 @@ const SmartThermostats = () => {
         keywords="smart thermostat installation Conroe, Nest thermostat Conroe TX, Ecobee installation, Honeywell WiFi thermostat, programmable thermostat Conroe"
       />
 
+      <LocalBusinessSchema />
+      <FAQSchema faqs={serviceFaqs} />
       <ServiceSchema
         service={{
           name: "Smart Thermostat Installation",
@@ -110,7 +122,7 @@ const SmartThermostats = () => {
               Traditional thermostats waste energy by maintaining the same temperature whether you're home or
               away. Smart thermostats adapt to your schedule, learning when to cool or heat your home and when
               to conserve energy. Studies show Texas homeowners save an average of 10-23% on heating and cooling
-              costs—that's $130-$230 annually for the typical Conroe household.
+              costs—that's $130-$230 annually for the typical Conroe household. Pair a smart thermostat with <Link href="/services/hvac-maintenance">regular HVAC maintenance</Link> for maximum energy savings.
             </p>
 
             <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
@@ -212,6 +224,32 @@ const SmartThermostats = () => {
               <span className="flex items-center gap-2"><FaCheckCircle className="text-green-500 w-4 h-4" /> All Major Brands</span>
               <span className="flex items-center gap-2"><FaCheckCircle className="text-green-500 w-4 h-4" /> Complete Setup Included</span>
             </div>
+            {/* FAQ Section */}
+            <div className="mt-10 mb-8">
+              <h3 className="text-xl font-bold text-blue-900 mb-4 border-l-4 border-red-500 pl-3">
+                Frequently Asked Questions
+              </h3>
+              <div className="space-y-2">
+                {serviceFaqs.map((faq, idx) => (
+                  <div key={idx} className="border border-gray-200 rounded-lg overflow-hidden">
+                    <button
+                      onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                      className="w-full text-left px-4 py-3 flex justify-between items-center hover:bg-gray-50 transition"
+                    >
+                      <span className="font-medium text-blue-900 pr-4">{faq.question}</span>
+                      <FaChevronDown className={`w-4 h-4 text-gray-400 flex-shrink-0 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`} />
+                    </button>
+                    {openFaq === idx && (
+                      <div className="px-4 pb-4 text-gray-600 leading-relaxed">
+                        {faq.answer}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+
 
             <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
               Related Services

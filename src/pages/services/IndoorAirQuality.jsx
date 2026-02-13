@@ -1,13 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SEO from '../../components/SEO';
-import { ServiceSchema, BreadcrumbSchema } from '../../components/StructuredData';
+import { ServiceSchema, BreadcrumbSchema, LocalBusinessSchema, FAQSchema } from '../../components/StructuredData';
 import Link from 'next/link';
-import { FaPhone, FaCalendarCheck, FaShieldAlt, FaCheckCircle, FaWind } from 'react-icons/fa';
+import { FaPhone, FaCalendarCheck, FaShieldAlt, FaCheckCircle, FaWind, FaChevronDown } from 'react-icons/fa';
 import ManufacturerCarousel from '../../components/ManufacturerCarousel';
 import MapSection from '../../components/MapSectionWrapper';
 import Footer from '../../components/Footer';
 
+const serviceFaqs = [
+  { question: "What indoor air quality products do you install?", answer: "We install a full range of IAQ products including whole-home air purifiers, UV germicidal lights, HEPA filtration systems, whole-home dehumidifiers and humidifiers, fresh air ventilation systems, and advanced air filtration media. We'll recommend the best solution based on your home's specific needs." },
+  { question: "How much do whole-home air purifiers cost?", answer: "Whole-home air purifier installation in Conroe typically ranges from $500 to $2,000 depending on the type and model. UV light systems are on the lower end, while advanced HEPA and electronic air cleaners cost more. We provide upfront pricing and can discuss financing options." },
+  { question: "What are the health benefits of better indoor air quality?", answer: "Improved indoor air quality reduces allergy and asthma symptoms, decreases respiratory infections, removes harmful VOCs and chemicals, reduces dust and pet dander, eliminates mold spores and bacteria, and helps everyone breathe easier—especially children, seniors, and those with respiratory conditions." },
+  { question: "What are signs of poor indoor air quality?", answer: "Common signs include: frequent allergy or asthma flare-ups, persistent dust buildup despite cleaning, musty or stale odors, excessive humidity or condensation on windows, family members getting sick more often, and visible mold growth. If you notice any of these, contact us for an air quality assessment." },
+  { question: "How does humidity affect indoor comfort?", answer: "Texas humidity can wreak havoc on indoor comfort. High humidity (above 60%) makes your home feel warmer, promotes mold and mildew growth, and forces your AC to work harder. Low humidity (below 30%) causes dry skin, static electricity, and cracked wood. A whole-home dehumidifier or humidifier keeps levels in the ideal 40-60% range." },
+  { question: "Can regular HVAC maintenance improve indoor air quality?", answer: "Absolutely! Regular maintenance includes replacing air filters, cleaning coils, and checking ductwork—all of which directly improve indoor air quality. Dirty systems circulate dust, allergens, and even mold throughout your home. Our maintenance plans keep your air clean and your system running efficiently." }
+];
+
 const IndoorAirQuality = () => {
+  const [openFaq, setOpenFaq] = useState(null);
+
   return (
     <>
       <SEO
@@ -17,6 +28,8 @@ const IndoorAirQuality = () => {
         keywords="indoor air quality Conroe, air purification Conroe TX, HEPA filter installation, UV air purifier, whole home dehumidifier, air quality testing Conroe"
       />
 
+      <LocalBusinessSchema />
+      <FAQSchema faqs={serviceFaqs} />
       <ServiceSchema
         service={{
           name: "Indoor Air Quality Solutions",
@@ -107,7 +120,7 @@ const IndoorAirQuality = () => {
               <li>Family members experiencing increased allergy or asthma symptoms</li>
               <li>Frequent respiratory infections, colds, or sinus problems</li>
               <li>Musty or stale odors in your home</li>
-              <li>Excessive dust accumulation shortly after cleaning</li>
+              <li>Excessive dust accumulation shortly after cleaning—<Link href="/services/hvac-maintenance">regular HVAC maintenance</Link> helps reduce this</li>
               <li>Condensation on windows or visible mold growth</li>
               <li>Home feels humid or stuffy despite running AC</li>
               <li>Pet dander affecting family members</li>
@@ -208,6 +221,32 @@ const IndoorAirQuality = () => {
               <span className="flex items-center gap-2"><FaCheckCircle className="text-green-500 w-4 h-4" /> Free Estimates</span>
               <span className="flex items-center gap-2"><FaCheckCircle className="text-green-500 w-4 h-4" /> Custom Solutions</span>
             </div>
+            {/* FAQ Section */}
+            <div className="mt-10 mb-8">
+              <h3 className="text-xl font-bold text-blue-900 mb-4 border-l-4 border-red-500 pl-3">
+                Frequently Asked Questions
+              </h3>
+              <div className="space-y-2">
+                {serviceFaqs.map((faq, idx) => (
+                  <div key={idx} className="border border-gray-200 rounded-lg overflow-hidden">
+                    <button
+                      onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                      className="w-full text-left px-4 py-3 flex justify-between items-center hover:bg-gray-50 transition"
+                    >
+                      <span className="font-medium text-blue-900 pr-4">{faq.question}</span>
+                      <FaChevronDown className={`w-4 h-4 text-gray-400 flex-shrink-0 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`} />
+                    </button>
+                    {openFaq === idx && (
+                      <div className="px-4 pb-4 text-gray-600 leading-relaxed">
+                        {faq.answer}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+
 
             <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
               Related Services

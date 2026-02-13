@@ -1,13 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SEO from '../../components/SEO';
-import { ServiceSchema, BreadcrumbSchema } from '../../components/StructuredData';
+import { ServiceSchema, BreadcrumbSchema, LocalBusinessSchema, FAQSchema } from '../../components/StructuredData';
 import Link from 'next/link';
-import { FaPhone, FaCalendarCheck, FaShieldAlt, FaCheckCircle, FaSnowflake } from 'react-icons/fa';
+import { FaPhone, FaCalendarCheck, FaShieldAlt, FaCheckCircle, FaSnowflake, FaChevronDown } from 'react-icons/fa';
 import ManufacturerCarousel from '../../components/ManufacturerCarousel';
 import MapSection from '../../components/MapSectionWrapper';
 import Footer from '../../components/Footer';
 
+const serviceFaqs = [
+  { question: "How much does AC repair cost in Conroe, TX?", answer: "Most AC repairs in Conroe range from $150 to $600 depending on the issue. Simple fixes like capacitor replacements or refrigerant recharges are on the lower end, while compressor or evaporator coil repairs cost more. AMW Cooling & Heating provides upfront pricing before any work begins—no hidden fees." },
+  { question: "Why is my AC blowing warm air?", answer: "Warm air from your AC can be caused by low refrigerant, a dirty air filter, a frozen evaporator coil, or a faulty compressor. Sometimes it's as simple as a tripped breaker or incorrect thermostat setting. Our technicians diagnose the root cause and fix it right the first time." },
+  { question: "Do you offer emergency AC repair in Conroe?", answer: "Yes! We offer after-hours emergency AC repair from 5 PM to 9 PM, seven days a week. In the Texas heat, we know a broken AC can't wait. Call (936) 331-1339 for fast, reliable emergency service." },
+  { question: "What AC brands do you service?", answer: "We service all major AC brands including Carrier, Trane, Lennox, Goodman, Rheem, York, Daikin, and more. Our NATE-certified technicians are trained to diagnose and repair any make or model." },
+  { question: "Should I repair or replace my AC unit?", answer: "As a general rule, if your AC is over 10-15 years old and the repair cost exceeds 50% of a new system's price, replacement is often the better investment. We'll give you an honest assessment and help you weigh the options—never pushing unnecessary replacements." },
+  { question: "Do you offer financing for AC repairs?", answer: "Yes! We partner with Synchrony and FTL Finance to offer flexible payment plans for AC repairs and installations. Whether your credit is perfect or needs a second chance, we have options to keep you comfortable without breaking the bank." },
+  { question: "What are warning signs I need AC repair?", answer: "Watch for these signs: unusual noises (grinding, squealing, banging), weak airflow, warm air from vents, frequent cycling on and off, ice on the refrigerant line, higher-than-normal energy bills, or strange odors. If you notice any of these, call us before a small problem becomes a major breakdown." }
+];
+
 const ACRepair = () => {
+  const [openFaq, setOpenFaq] = useState(null);
+
   return (
     <>
       <SEO
@@ -17,6 +29,8 @@ const ACRepair = () => {
         keywords="AC repair Conroe, air conditioning repair Conroe TX, emergency AC repair, AC service Conroe"
       />
 
+      <LocalBusinessSchema />
+      <FAQSchema faqs={serviceFaqs} />
       <ServiceSchema
         service={{
           name: "Air Conditioning Repair",
@@ -110,7 +124,7 @@ const ACRepair = () => {
               <li><strong>Upfront Pricing:</strong> You'll know the cost before we start any work</li>
               <li><strong>Expert Repair:</strong> Our licensed technicians fix it right the first time</li>
               <li><strong>System Testing:</strong> We verify everything works properly before we leave</li>
-              <li><strong>Preventive Advice:</strong> We provide tips to prevent future problems</li>
+              <li><strong>Preventive Advice:</strong> We recommend <Link href="/services/hvac-maintenance">regular maintenance</Link> to prevent future problems</li>
             </ol>
 
             <div className="flex flex-wrap items-center gap-4 mb-6 py-4 border-y border-gray-200 text-sm text-gray-600">
@@ -131,7 +145,7 @@ const ACRepair = () => {
             <ul className="list-disc list-inside space-y-2 mb-6 text-gray-700 ml-4">
               <li><strong>Weak airflow:</strong> If some rooms aren't cooling properly, you may have ductwork issues or a failing blower motor</li>
               <li><strong>Warm air from vents:</strong> This often indicates low refrigerant levels or compressor problems</li>
-              <li><strong>Unusual smells:</strong> Burning odors could mean electrical issues, while musty smells suggest mold in the system</li>
+              <li><strong>Unusual smells:</strong> Burning odors could mean electrical issues, while musty smells suggest mold—consider our <Link href="/services/indoor-air-quality">indoor air quality solutions</Link></li>
               <li><strong>Frequent cycling:</strong> If your AC turns on and off constantly, it's working too hard and wasting energy</li>
               <li><strong>Rising energy bills:</strong> A sudden spike in electricity costs often means your AC is losing efficiency</li>
               <li><strong>Age over 10 years:</strong> Older systems need more frequent repairs and may be nearing replacement</li>
@@ -178,6 +192,32 @@ const ACRepair = () => {
               well and can typically reach you within an hour for emergency calls. We're proud to serve our neighbors
               with honest, reliable HVAC service.
             </p>
+            {/* FAQ Section */}
+            <div className="mt-10 mb-8">
+              <h3 className="text-xl font-bold text-blue-900 mb-4 border-l-4 border-red-500 pl-3">
+                Frequently Asked Questions
+              </h3>
+              <div className="space-y-2">
+                {serviceFaqs.map((faq, idx) => (
+                  <div key={idx} className="border border-gray-200 rounded-lg overflow-hidden">
+                    <button
+                      onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                      className="w-full text-left px-4 py-3 flex justify-between items-center hover:bg-gray-50 transition"
+                    >
+                      <span className="font-medium text-blue-900 pr-4">{faq.question}</span>
+                      <FaChevronDown className={`w-4 h-4 text-gray-400 flex-shrink-0 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`} />
+                    </button>
+                    {openFaq === idx && (
+                      <div className="px-4 pb-4 text-gray-600 leading-relaxed">
+                        {faq.answer}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+
 
             <h3 className="text-xl font-bold text-blue-900 mb-3 border-l-4 border-blue-600 pl-3">
               Related Services
