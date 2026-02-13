@@ -196,7 +196,7 @@ npm run generate:sitemap    # Creates public/sitemap.xml
 
 ## 🏆 Credits
 
-Built with ❤️ by StephensCode for AMW Cooling & Heating LLC, a proud veteran-owned business serving North Houston.
+Built by StephensCode for AMW Cooling & Heating LLC, a proud veteran-owned business serving North Houston.
 
 ---
 
