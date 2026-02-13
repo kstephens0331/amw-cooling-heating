@@ -1,106 +1,335 @@
 [
-{
-  "slug": "hvac-sizing-guide-conroe",
-  "title": "The Complete HVAC Sizing Guide for Conroe Homes: Getting the Right System for Your Square Footage",
-  "date": "2025-12-01",
-  "excerpt": "Learn why HVAC sizing matters for Conroe homes. Understand BTUs, tons, and the factors that affect your heating and cooling needs. Avoid the costly mistakes of oversized or undersized systems.",
-  "image": "/blog/hvac-sizing-guide-conroe.webp",
-  "tags": ["HVAC sizing", "AC installation", "Conroe", "home comfort", "energy efficiency"]
-},
-{
-  "slug": "heat-pump-vs-furnace-conroe",
-  "title": "Heat Pump vs. Furnace: Which Heating System is Right for Your Conroe Home?",
-  "date": "2025-11-30",
-  "excerpt": "Compare heat pumps and furnaces for Conroe's climate. Learn the pros, cons, operating costs, and efficiency differences to make the right heating choice for your Texas home.",
-  "image": "/blog/heat-pump-vs-furnace-conroe.webp",
-  "tags": ["heat pump", "furnace", "heating", "Conroe", "energy savings"]
-},
-{
-  "slug": "hvac-warranty-guide-conroe",
-  "title": "Understanding HVAC Warranties: What Every Conroe Homeowner Needs to Know Before Buying",
-  "date": "2025-11-28",
-  "excerpt": "Don't get caught off guard by warranty fine print. Learn about parts warranties, labor coverage, what voids warranties, and how to protect your HVAC investment in Conroe.",
-  "image": "/blog/hvac-warranty-guide-conroe.webp",
-  "tags": ["HVAC warranty", "equipment protection", "Conroe", "home investment", "maintenance"]
-},
-{
-  "slug": "emergency-hvac-service-conroe",
-  "title": "When to Call for Emergency HVAC Service in Conroe: Recognizing the Warning Signs",
-  "date": "2025-11-24",
-  "excerpt": "Learn when HVAC issues require immediate emergency service vs. next-day repairs. Recognize critical warning signs like gas leaks, carbon monoxide, and system failures that threaten your family's safety and comfort in Conroe.",
-  "image": "/blog/emergency-hvac-service-conroe.webp?v=1",
-  "tags": ["emergency service", "HVAC repair", "Conroe", "24/7 service", "safety"]
-},
-{
-  "slug": "smart-thermostats-conroe",
-  "title": "Smart Thermostats for Conroe Homes: Complete Guide to WiFi Thermostats, Energy Savings & Installation",
-  "date": "2025-11-22",
-  "excerpt": "Discover how smart thermostats can save Conroe homeowners $180+ annually on energy bills. Compare top models (Nest, Ecobee, Honeywell), learn about WiFi features, and get expert installation advice from AMW.",
-  "image": "/blog/smart-thermostats-conroe.webp?v=1",
-  "tags": ["smart thermostats", "WiFi thermostats", "energy savings", "Conroe", "technology"]
-},
-{
-  "slug": "indoor-air-quality-conroe",
-  "title": "Indoor Air Quality Solutions for Conroe Homes: Breathe Easier with Professional IAQ Services",
-  "date": "2025-11-20",
-  "excerpt": "Combat allergies, humidity, and poor indoor air quality in your Conroe home. Learn about air purifiers, dehumidifiers, UV lights, and HVAC upgrades that dramatically improve your family's health and comfort.",
-  "image": "/blog/indoor-air-quality-conroe.webp?v=1",
-  "tags": ["indoor air quality", "IAQ", "air purifiers", "Conroe", "health"]
-},
-{
-  "slug": "winter-maintenance-tips-conroe",
-  "title": "Essential Winter Maintenance Tips to Keep Your Conroe Home Comfortable All Season Long",
-  "date": "2025-11-08",
-  "excerpt": "Keep your heating system running efficiently throughout winter with these essential ongoing maintenance tips. Learn monthly tasks, warning signs, and energy-saving strategies for Conroe homeowners.",
-  "image": "/blog/winter-maintenance-tips-conroe.webp?v=1",
-  "tags": ["winter maintenance", "heating", "Conroe", "energy savings", "HVAC care"]
-},
-{
-  "slug": "winter-hvac-preparation-conroe",
-  "title": "Complete Winter HVAC Preparation Guide for Conroe Homeowners: Stay Warm and Save Money",
-  "date": "2025-11-05",
-  "excerpt": "Prepare your Conroe home for winter with this comprehensive HVAC guide. Learn essential maintenance steps, energy-saving tips, and how to avoid costly emergency repairs during cold snaps.",
-  "image": "/blog/winter-hvac-preparation-conroe.webp?v=1",
-  "tags": ["winter preparation", "HVAC maintenance", "Conroe", "energy savings", "heating"]
-},
-{
-  "slug": "dryer-vent-cleaning-safety-conroe",
-  "title": "Why Dryer Vent Cleaning is Critical for Conroe Homes: Safety, Efficiency, and Peace of Mind",
-  "date": "2025-10-31",
-  "excerpt": "Discover why professional dryer vent cleaning is essential for Conroe homeowners. Learn about fire risks, energy waste, and how our fall special combines HVAC maintenance with FREE dryer vent service.",
-  "image": "/blog/dryer-vent-cleaning-safety-conroe.webp",
-  "tags": ["dryer vent", "safety", "Conroe", "maintenance", "fall special"]
-},
-{
-  "slug": "prep-ac-conroe-summer",
-  "title": "How to Prep Your AC Before Conroe Summers",
-  "date": "2025-09-07",
-  "excerpt": "Preparing your AC before Conroe's peak heat saves money, prevents breakdowns, and keeps humidity under control.",
-  "image": "/blog/prep-ac-conroe-summer.webp",
-  "tags": ["AC maintenance", "Conroe", "summer"]
-},
-{
-  "slug": "fall-furnace-maintenance-conroe",
-  "title": "Why Fall Furnace Maintenance is Essential for Conroe Homeowners",
-  "date": "2025-09-14",
-  "excerpt": "Prepare your home for chilly North Houston nights. Learn why fall furnace maintenance saves money, improves safety, and keeps your family comfortable.",
-  "image": "/blog/fall-furnace-maintenance-conroe.webp",
-  "tags": ["furnace maintenance", "Conroe", "fall", "heating", "safety"]
-},
-{
-  "slug": "hvac-maintenance-dryer-vent-special",
-  "title": "Fall HVAC Maintenance Special: Free Dryer Vent Cleaning with the Purchase of a Yearly Maintenance Plan",
-  "date": "2025-09-29",
-  "excerpt": "This fall, protect your home and save money. Purchase an HVAC maintenance plan and receive a FREE dryer vent inspection and cleaning — comfort, safety, and efficiency bundled together.",
-  "image": "/blog/hvac-maintenance-dryer-vent-special.webp",
-  "tags": ["HVAC maintenance", "dryer vent", "fall special", "Conroe", "promotion"]
-},
-{
-  "slug": "hvac-maintenance-costs-conroe",
-  "title": "The Hidden Costs of Neglect: What Skipping Maintenance Really Costs Conroe Homeowners",
-  "date": "2025-10-12",
-  "excerpt": "Skipping HVAC maintenance might save time now, but it costs Conroe homeowners hundreds later in energy waste, repairs, and safety risks.",
-  "image": "/blog/hvac-maintenance-costs-conroe.webp",
-  "tags": ["HVAC maintenance", "cost savings", "Conroe", "energy efficiency", "repairs"]
-}
+  {
+    "slug": "dryer-vent-fire-prevention",
+    "title": "Dryer Vent Cleaning: Prevent Fires and Save Money",
+    "date": "2026-02-12",
+    "excerpt": "Learn why dryer vent cleaning is essential for fire prevention and energy savings. Conroe homeowners should know these warning signs and cleaning tips.",
+    "image": "/assets/images/amwlogo.png",
+    "tags": [
+      "dryer vent",
+      "fire prevention",
+      "Conroe",
+      "safety",
+      "energy savings"
+    ]
+  },
+  {
+    "slug": "improve-indoor-air-quality-home",
+    "title": "How to Improve Indoor Air Quality in Your Conroe Home",
+    "date": "2026-02-11",
+    "excerpt": "Learn practical ways to improve indoor air quality in your Conroe home. From air purifiers to HVAC maintenance, discover solutions for allergies, humidity, and cleaner air.",
+    "image": "/assets/images/amwlogo.png",
+    "tags": [
+      "indoor air quality",
+      "Conroe",
+      "health",
+      "air purifiers",
+      "HVAC"
+    ]
+  },
+  {
+    "slug": "get-hvac-ready-texas-summer",
+    "title": "Is Your HVAC Ready for Texas Summer? A Pre-Season Checklist",
+    "date": "2026-02-10",
+    "excerpt": "Get your HVAC system ready for the brutal Texas summer with this pre-season checklist. Conroe homeowners can prevent breakdowns and save on cooling costs with these simple steps.",
+    "image": "/assets/images/amwlogo.png",
+    "tags": [
+      "summer prep",
+      "Texas",
+      "Conroe",
+      "HVAC checklist",
+      "AC maintenance"
+    ]
+  },
+  {
+    "slug": "benefits-hvac-maintenance-plan",
+    "title": "5 Benefits of an HVAC Maintenance Plan for Conroe Homeowners",
+    "date": "2026-02-09",
+    "excerpt": "Discover why an HVAC maintenance plan is the smartest investment for Conroe homeowners. From lower bills to fewer breakdowns, learn how maintenance plans save you money.",
+    "image": "/assets/images/amwlogo.png",
+    "tags": [
+      "maintenance plan",
+      "benefits",
+      "Conroe",
+      "savings",
+      "HVAC care"
+    ]
+  },
+  {
+    "slug": "cost-replace-ac-unit-conroe-tx",
+    "title": "How Much Does It Cost to Replace an AC in Conroe, TX?",
+    "date": "2026-02-08",
+    "excerpt": "Get a clear breakdown of AC replacement costs in Conroe, TX. Learn about system pricing, installation factors, SEER ratings, and financing options for your new air conditioner.",
+    "image": "/assets/images/amwlogo.png",
+    "tags": [
+      "AC cost",
+      "replacement",
+      "Conroe",
+      "SEER ratings",
+      "financing"
+    ]
+  },
+  {
+    "slug": "ac-blowing-warm-air-what-to-do",
+    "title": "AC Blowing Warm Air? Here's What to Do",
+    "date": "2026-02-07",
+    "excerpt": "Is your AC blowing warm air instead of cool? Learn the most common causes and troubleshooting steps before calling for professional AC repair in Conroe, TX.",
+    "image": "/assets/images/amwlogo.png",
+    "tags": [
+      "AC troubleshooting",
+      "warm air",
+      "Conroe",
+      "AC repair",
+      "DIY"
+    ]
+  },
+  {
+    "slug": "hvac-maintenance-checklist-homeowners",
+    "title": "HVAC Maintenance Checklist for Texas Homeowners",
+    "date": "2026-02-06",
+    "excerpt": "The complete HVAC maintenance checklist for Conroe homeowners. Monthly, seasonal, and annual tasks to keep your heating and cooling system running efficiently.",
+    "image": "/assets/images/amwlogo.png",
+    "tags": [
+      "maintenance checklist",
+      "HVAC care",
+      "Conroe",
+      "DIY",
+      "professional maintenance"
+    ]
+  },
+  {
+    "slug": "how-long-ac-unit-last-texas",
+    "title": "How Long Does an AC Unit Last in Texas?",
+    "date": "2026-02-05",
+    "excerpt": "Learn the average lifespan of AC systems in Texas and what factors affect how long your unit lasts. Plus, signs it's time for replacement and how to maximize your system's life.",
+    "image": "/assets/images/amwlogo.png",
+    "tags": [
+      "AC lifespan",
+      "replacement",
+      "Texas",
+      "Conroe",
+      "HVAC investment"
+    ]
+  },
+  {
+    "slug": "best-thermostat-settings-summer-texas",
+    "title": "Best Thermostat Settings for Summer in Texas",
+    "date": "2026-02-04",
+    "excerpt": "Find the optimal thermostat settings for Texas summers. Save money on energy bills while staying comfortable in Conroe's heat with these expert HVAC tips.",
+    "image": "/assets/images/amwlogo.png",
+    "tags": [
+      "thermostat settings",
+      "summer",
+      "Texas",
+      "energy savings",
+      "comfort"
+    ]
+  },
+  {
+    "slug": "signs-ac-needs-repair",
+    "title": "7 Signs Your AC Needs Repair Before It's Too Late",
+    "date": "2026-02-03",
+    "excerpt": "Don't ignore these 7 warning signs that your AC needs professional repair. From strange noises to rising energy bills, learn when to call AMW Cooling & Heating in Conroe, TX.",
+    "image": "/assets/images/amwlogo.png",
+    "tags": [
+      "AC repair",
+      "warning signs",
+      "Conroe",
+      "HVAC tips"
+    ]
+  },
+  {
+    "slug": "how-often-service-ac-texas",
+    "title": "How Often Should You Service Your AC in Texas?",
+    "date": "2026-02-01",
+    "excerpt": "Learn how often Texas homeowners should schedule AC maintenance. Discover the ideal tune-up schedule for Conroe's hot, humid climate and why regular service prevents costly breakdowns.",
+    "image": "/assets/images/amwlogo.png",
+    "tags": [
+      "AC maintenance",
+      "Texas",
+      "Conroe",
+      "tune-ups",
+      "energy efficiency"
+    ]
+  },
+  {
+    "slug": "hvac-sizing-guide-conroe",
+    "title": "The Complete HVAC Sizing Guide for Conroe Homes: Getting the Right System for Your Square Footage",
+    "date": "2025-12-01",
+    "excerpt": "Learn why HVAC sizing matters for Conroe homes. Understand BTUs, tons, and the factors that affect your heating and cooling needs. Avoid the costly mistakes of oversized or undersized systems.",
+    "image": "/blog/hvac-sizing-guide-conroe.webp",
+    "tags": [
+      "HVAC sizing",
+      "AC installation",
+      "Conroe",
+      "home comfort",
+      "energy efficiency"
+    ]
+  },
+  {
+    "slug": "heat-pump-vs-furnace-conroe",
+    "title": "Heat Pump vs. Furnace: Which Heating System is Right for Your Conroe Home?",
+    "date": "2025-11-30",
+    "excerpt": "Compare heat pumps and furnaces for Conroe's climate. Learn the pros, cons, operating costs, and efficiency differences to make the right heating choice for your Texas home.",
+    "image": "/blog/heat-pump-vs-furnace-conroe.webp",
+    "tags": [
+      "heat pump",
+      "furnace",
+      "heating",
+      "Conroe",
+      "energy savings"
+    ]
+  },
+  {
+    "slug": "hvac-warranty-guide-conroe",
+    "title": "Understanding HVAC Warranties: What Every Conroe Homeowner Needs to Know Before Buying",
+    "date": "2025-11-28",
+    "excerpt": "Don't get caught off guard by warranty fine print. Learn about parts warranties, labor coverage, what voids warranties, and how to protect your HVAC investment in Conroe.",
+    "image": "/blog/hvac-warranty-guide-conroe.webp",
+    "tags": [
+      "HVAC warranty",
+      "equipment protection",
+      "Conroe",
+      "home investment",
+      "maintenance"
+    ]
+  },
+  {
+    "slug": "emergency-hvac-service-conroe",
+    "title": "When to Call for Emergency HVAC Service in Conroe: Recognizing the Warning Signs",
+    "date": "2025-11-24",
+    "excerpt": "Learn when HVAC issues require immediate emergency service vs. next-day repairs. Recognize critical warning signs like gas leaks, carbon monoxide, and system failures that threaten your family's safety and comfort in Conroe.",
+    "image": "/blog/emergency-hvac-service-conroe.webp?v=1",
+    "tags": [
+      "emergency service",
+      "HVAC repair",
+      "Conroe",
+      "24/7 service",
+      "safety"
+    ]
+  },
+  {
+    "slug": "smart-thermostats-conroe",
+    "title": "Smart Thermostats for Conroe Homes: Complete Guide to WiFi Thermostats, Energy Savings & Installation",
+    "date": "2025-11-22",
+    "excerpt": "Discover how smart thermostats can save Conroe homeowners $180+ annually on energy bills. Compare top models (Nest, Ecobee, Honeywell), learn about WiFi features, and get expert installation advice from AMW.",
+    "image": "/blog/smart-thermostats-conroe.webp?v=1",
+    "tags": [
+      "smart thermostats",
+      "WiFi thermostats",
+      "energy savings",
+      "Conroe",
+      "technology"
+    ]
+  },
+  {
+    "slug": "indoor-air-quality-conroe",
+    "title": "Indoor Air Quality Solutions for Conroe Homes: Breathe Easier with Professional IAQ Services",
+    "date": "2025-11-20",
+    "excerpt": "Combat allergies, humidity, and poor indoor air quality in your Conroe home. Learn about air purifiers, dehumidifiers, UV lights, and HVAC upgrades that dramatically improve your family's health and comfort.",
+    "image": "/blog/indoor-air-quality-conroe.webp?v=1",
+    "tags": [
+      "indoor air quality",
+      "IAQ",
+      "air purifiers",
+      "Conroe",
+      "health"
+    ]
+  },
+  {
+    "slug": "winter-maintenance-tips-conroe",
+    "title": "Essential Winter Maintenance Tips to Keep Your Conroe Home Comfortable All Season Long",
+    "date": "2025-11-08",
+    "excerpt": "Keep your heating system running efficiently throughout winter with these essential ongoing maintenance tips. Learn monthly tasks, warning signs, and energy-saving strategies for Conroe homeowners.",
+    "image": "/blog/winter-maintenance-tips-conroe.webp?v=1",
+    "tags": [
+      "winter maintenance",
+      "heating",
+      "Conroe",
+      "energy savings",
+      "HVAC care"
+    ]
+  },
+  {
+    "slug": "winter-hvac-preparation-conroe",
+    "title": "Complete Winter HVAC Preparation Guide for Conroe Homeowners: Stay Warm and Save Money",
+    "date": "2025-11-05",
+    "excerpt": "Prepare your Conroe home for winter with this comprehensive HVAC guide. Learn essential maintenance steps, energy-saving tips, and how to avoid costly emergency repairs during cold snaps.",
+    "image": "/blog/winter-hvac-preparation-conroe.webp?v=1",
+    "tags": [
+      "winter preparation",
+      "HVAC maintenance",
+      "Conroe",
+      "energy savings",
+      "heating"
+    ]
+  },
+  {
+    "slug": "dryer-vent-cleaning-safety-conroe",
+    "title": "Why Dryer Vent Cleaning is Critical for Conroe Homes: Safety, Efficiency, and Peace of Mind",
+    "date": "2025-10-31",
+    "excerpt": "Discover why professional dryer vent cleaning is essential for Conroe homeowners. Learn about fire risks, energy waste, and how our fall special combines HVAC maintenance with FREE dryer vent service.",
+    "image": "/blog/dryer-vent-cleaning-safety-conroe.webp",
+    "tags": [
+      "dryer vent",
+      "safety",
+      "Conroe",
+      "maintenance",
+      "fall special"
+    ]
+  },
+  {
+    "slug": "hvac-maintenance-costs-conroe",
+    "title": "The Hidden Costs of Neglect: What Skipping Maintenance Really Costs Conroe Homeowners",
+    "date": "2025-10-12",
+    "excerpt": "Skipping HVAC maintenance might save time now, but it costs Conroe homeowners hundreds later in energy waste, repairs, and safety risks.",
+    "image": "/blog/hvac-maintenance-costs-conroe.webp",
+    "tags": [
+      "HVAC maintenance",
+      "cost savings",
+      "Conroe",
+      "energy efficiency",
+      "repairs"
+    ]
+  },
+  {
+    "slug": "hvac-maintenance-dryer-vent-special",
+    "title": "Fall HVAC Maintenance Special: Free Dryer Vent Cleaning with the Purchase of a Yearly Maintenance Plan",
+    "date": "2025-09-29",
+    "excerpt": "This fall, protect your home and save money. Purchase an HVAC maintenance plan and receive a FREE dryer vent inspection and cleaning — comfort, safety, and efficiency bundled together.",
+    "image": "/blog/hvac-maintenance-dryer-vent-special.webp",
+    "tags": [
+      "HVAC maintenance",
+      "dryer vent",
+      "fall special",
+      "Conroe",
+      "promotion"
+    ]
+  },
+  {
+    "slug": "fall-furnace-maintenance-conroe",
+    "title": "Why Fall Furnace Maintenance is Essential for Conroe Homeowners",
+    "date": "2025-09-14",
+    "excerpt": "Prepare your home for chilly North Houston nights. Learn why fall furnace maintenance saves money, improves safety, and keeps your family comfortable.",
+    "image": "/blog/fall-furnace-maintenance-conroe.webp",
+    "tags": [
+      "furnace maintenance",
+      "Conroe",
+      "fall",
+      "heating",
+      "safety"
+    ]
+  },
+  {
+    "slug": "prep-ac-conroe-summer",
+    "title": "How to Prep Your AC Before Conroe Summers",
+    "date": "2025-09-07",
+    "excerpt": "Preparing your AC before Conroe's peak heat saves money, prevents breakdowns, and keeps humidity under control.",
+    "image": "/blog/prep-ac-conroe-summer.webp",
+    "tags": [
+      "AC maintenance",
+      "Conroe",
+      "summer"
+    ]
+  }
 ]
