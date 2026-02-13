@@ -7,11 +7,11 @@ export default function FAQsPage() {
   return (
     <>
       <Head>
-        <title>FAQs | AMW Cooling & Heating LLC</title>
+        <title>HVAC FAQs | AMW Cooling & Heating | Conroe TX</title>
         <meta name="description" content="Find detailed answers to common HVAC questions to prepare for a productive service call with AMW Cooling & Heating LLC. Serving Conroe, TX and surrounding areas!" />
         <link rel="canonical" href="https://amwairconditioning.com/faqs" />
         <meta name="keywords" content="HVAC FAQ, AC questions, heating questions, AMW FAQ, HVAC help Conroe" />
-        <meta property="og:title" content="FAQs | AMW Cooling & Heating LLC" />
+        <meta property="og:title" content="HVAC FAQs | AMW Cooling & Heating | Conroe TX" />
         <meta property="og:description" content="Find detailed answers to common HVAC questions. Serving Conroe, TX and surrounding areas!" />
         <meta property="og:url" content="https://amwairconditioning.com/faqs" />
         <meta property="og:type" content="website" />

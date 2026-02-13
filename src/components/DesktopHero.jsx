@@ -44,8 +44,8 @@ export default function HeroSection() {
 
           {/* Headline */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
-            Your Trusted HVAC
-            <span className="block">Experts in Texas</span>
+            Veteran-Owned HVAC
+            <span className="block">Contractor in Conroe, TX</span>
           </h1>
 
           {/* Subheadline */}

@@ -27,8 +27,8 @@ export default function MobileHero() {
 
         {/* Headline */}
         <h1 className="text-2xl font-bold text-white mb-3 leading-tight">
-          Your Trusted HVAC
-          <span className="text-blue-300"> Experts in Texas</span>
+          Veteran-Owned HVAC
+          <span className="text-blue-300"> Contractor in Conroe, TX</span>
         </h1>
 
         {/* Subheadline */}

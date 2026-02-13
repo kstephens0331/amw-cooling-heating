@@ -19,7 +19,7 @@ export default function DryerVentCleaningPage() {
         <meta name="twitter:title" content="Dryer Vent Cleaning Conroe TX | Fire Prevention Service | AMW" />
         <meta name="twitter:description" content="Professional dryer vent cleaning in Conroe, TX. Prevent fires, improve efficiency." />
       </Head>
-      <h1 style={{position:'absolute',width:'1px',height:'1px',padding:0,margin:'-1px',overflow:'hidden',clip:'rect(0,0,0,0)',whiteSpace:'nowrap',borderWidth:0}}>Dryer Vent Cleaning Conroe TX</h1>
+      <h1 style={{position:'absolute',width:'1px',height:'1px',padding:0,margin:'-1px',overflow:'hidden',clip:'rect(0,0,0,0)',whiteSpace:'nowrap',borderWidth:0}}>Dryer Vent Cleaning in Conroe, TX</h1>
       <DryerVentCleaning />
     </>
   );

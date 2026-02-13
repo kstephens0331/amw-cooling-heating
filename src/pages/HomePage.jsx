@@ -52,9 +52,9 @@ export default function HomePage() {
           "openingHoursSpecification": [
             {
               "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
               "opens": "08:00",
-              "closes": "17:00"
+              "closes": "21:00"
             }
           ],
           "priceRange": "$$",
@@ -63,7 +63,9 @@ export default function HomePage() {
             {"@type": "City", "name": "The Woodlands", "containedInPlace": {"@type": "State", "name": "Texas"}},
             {"@type": "City", "name": "Spring", "containedInPlace": {"@type": "State", "name": "Texas"}},
             {"@type": "City", "name": "Montgomery", "containedInPlace": {"@type": "State", "name": "Texas"}},
-            {"@type": "City", "name": "Willis", "containedInPlace": {"@type": "State", "name": "Texas"}}
+            {"@type": "City", "name": "Willis", "containedInPlace": {"@type": "State", "name": "Texas"}},
+            {"@type": "City", "name": "Magnolia", "containedInPlace": {"@type": "State", "name": "Texas"}},
+            {"@type": "City", "name": "Tomball", "containedInPlace": {"@type": "State", "name": "Texas"}}
           ],
           "aggregateRating": {
             "@type": "AggregateRating",
