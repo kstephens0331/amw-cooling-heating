@@ -58,12 +58,12 @@ export default function ServicesSection() {
                 <div className={`w-10 h-10 rounded-full ${service.iconBg} flex items-center justify-center`}>
                   <service.icon className="w-5 h-5 text-white" />
                 </div>
-                <h3 className="text-lg font-bold text-blue-900">{service.title}</h3>
+                <h3 className="text-xl font-bold text-blue-900">{service.title}</h3>
               </div>
 
               <ul className="space-y-2 mb-4">
                 {service.items.map((item) => (
-                  <li key={item} className="text-gray-600 text-sm flex items-start gap-2">
+                  <li key={item} className="text-gray-600 text-base flex items-start gap-2">
                     <span className="text-gray-400">—</span>
                     {item}
                   </li>
@@ -72,7 +72,7 @@ export default function ServicesSection() {
 
               <Link
                 href={service.link}
-                className="text-blue-900 text-sm font-semibold hover:text-red-500 transition"
+                className="text-blue-900 text-base font-semibold hover:text-red-500 transition"
               >
                 Learn More →
               </Link>
@@ -83,7 +83,7 @@ export default function ServicesSection() {
         <div className="text-center">
           <Link
             href="/services"
-            className="inline-block bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-8 rounded-lg transition"
+            className="inline-block bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-8 rounded-lg transition text-lg"
           >
             View All Services
           </Link>

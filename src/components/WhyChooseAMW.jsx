@@ -33,7 +33,7 @@ export default function WhyChooseAMW() {
     <section className="py-12 bg-gray-100">
       {/* Red Header Bar */}
       <div className="bg-red-500 py-3 mb-8">
-        <p className="text-center text-white text-sm font-medium tracking-widest uppercase">
+        <p className="text-center text-white text-base font-medium tracking-widest uppercase">
           Fast, Honest, and Reliable
         </p>
       </div>
@@ -46,11 +46,11 @@ export default function WhyChooseAMW() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
           {features.map((feature) => (
             <div key={feature.title} className="text-center">
-              <div className={`w-14 h-14 ${feature.color} rounded-full flex items-center justify-center mx-auto mb-3`}>
-                <feature.icon className="w-6 h-6 text-white" />
+              <div className={`w-16 h-16 ${feature.color} rounded-full flex items-center justify-center mx-auto mb-3`}>
+                <feature.icon className="w-7 h-7 text-white" />
               </div>
-              <h3 className="font-bold text-blue-900 text-sm mb-1">{feature.title}</h3>
-              <p className="text-gray-600 text-xs leading-relaxed">{feature.description}</p>
+              <h3 className="font-bold text-blue-900 text-base mb-1">{feature.title}</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>

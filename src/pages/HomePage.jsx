@@ -36,8 +36,37 @@ export default function HomePage() {
       <main>
         <HeroLandingPage />
 
-        {/* Welcome / Intro Section */}
-        <section className="py-12 bg-white">
+        <ServicesSection />
+
+        <WhyChooseAMW />
+
+        {/* Google Reviews Section */}
+        <section className="bg-blue-900 py-12">
+          <div className="container mx-auto px-4">
+            <p className="text-center text-gray-400 text-sm tracking-widest uppercase mb-2">
+              Backed by Real Reviews
+            </p>
+            <h2 className="text-3xl md:text-4xl font-black text-center text-white mb-8 tracking-wide italic">
+              TRUSTED BY YOUR NEIGHBORS
+            </h2>
+            <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-2xl p-4">
+              <TrustIndexWidget height={400} />
+            </div>
+            <div className="text-center mt-8">
+              <a
+                href="https://g.page/r/CS99Sm7SPdvPEBM/review"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-white hover:bg-gray-100 text-blue-900 font-bold py-3 px-6 rounded-lg transition"
+              >
+                Leave Us a Review
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* About / SEO Content Section */}
+        <section className="py-12 bg-gradient-to-b from-gray-50 to-white">
           <div className="max-w-4xl mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6 text-center">
               Your Trusted HVAC Company in Conroe, TX
@@ -72,37 +101,8 @@ export default function HomePage() {
           </div>
         </section>
 
-        <ServicesSection />
-
-        <WhyChooseAMW />
-
-        {/* Google Reviews Section */}
-        <section className="bg-blue-900 py-12">
-          <div className="container mx-auto px-4">
-            <p className="text-center text-gray-400 text-sm tracking-widest uppercase mb-2">
-              Backed by Real Reviews
-            </p>
-            <h2 className="text-3xl md:text-4xl font-black text-center text-white mb-8 tracking-wide italic">
-              TRUSTED BY YOUR NEIGHBORS
-            </h2>
-            <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-2xl p-4">
-              <TrustIndexWidget height={400} />
-            </div>
-            <div className="text-center mt-8">
-              <a
-                href="https://g.page/r/CS99Sm7SPdvPEBM/review"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-white hover:bg-gray-100 text-blue-900 font-bold py-3 px-6 rounded-lg transition"
-              >
-                Leave Us a Review
-              </a>
-            </div>
-          </div>
-        </section>
-
         <MapSection />
-<Footer />
+        <Footer />
       </main>
     </div>
   );
