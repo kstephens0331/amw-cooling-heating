@@ -6,6 +6,7 @@ import FinancingCTA from '../components/FinancingCTA';
 import ManufacturerCarousel from '../components/ManufacturerCarousel';
 import MapSection from '../components/MapSectionWrapper';
 import Footer from '../components/Footer';
+import { FAQSchema, LocalBusinessSchema } from '../components/StructuredData';
 
 const categoryIcons = {
   'General HVAC': FaQuestionCircle,
@@ -429,6 +430,24 @@ const faqs = [
     ],
   },
 ];
+const schemaFaqs = [
+  { question: "What areas do you serve?", answer: "We proudly serve Conroe, Montgomery County, The Woodlands, Spring, Willis, Magnolia, Tomball, and surrounding areas. Our licensed team ensures top-notch service whether it's an installation, repair, or maintenance call." },
+  { question: "Are you licensed and insured?", answer: "Yes! AMW Cooling & Heating LLC is fully licensed (TACLB133920E) and insured for your safety and peace of mind. We meet the highest standards of professionalism and service." },
+  { question: "Do you offer emergency services?", answer: "Absolutely! We offer after hours emergency HVAC services between the hours of 5pm-9pm because we know comfort can't wait. Call us anytime at (936) 331-1339 for quick and reliable help." },
+  { question: "What brands do you work with?", answer: "We work with trusted HVAC brands like Carrier, Lennox, Trane, Goodman, and many more. Our team is trained to service and install a wide variety of systems." },
+  { question: "What types of HVAC systems do you install?", answer: "We install central air conditioning systems, heat pumps, ductless mini-splits, and more. Our experienced team will work with you to determine the best system for your needs and budget." },
+  { question: "Do you offer financing for installations?", answer: "Yes! We partner with Synchrony and FTL (Second Chance) to provide flexible financing options. Contact us and let us help you apply!" },
+  { question: "How long does an installation take?", answer: "Most installations take 1-2 days, depending on the size and type of system. We always aim to minimize disruption to your home or business." },
+  { question: "What are common HVAC repair issues?", answer: "Common HVAC problems include refrigerant leaks, clogged filters, electrical issues, and thermostat malfunctions. Our skilled team can quickly diagnose and fix these to restore your comfort." },
+  { question: "How quickly can you respond to repair calls?", answer: "We pride ourselves on fast response times, including same-day and emergency services. Call us now at (936) 331-1339 for immediate help." },
+  { question: "Why is regular maintenance important?", answer: "Regular maintenance helps keep your HVAC system running efficiently, extends its lifespan, and reduces the risk of costly breakdowns. It ensures you're comfortable year-round and saves you money in the long run." },
+  { question: "What's included in a maintenance visit?", answer: "Our maintenance visits include a full system inspection, cleaning, and adjustments. We'll check for potential problems and make sure everything's operating at peak efficiency." },
+  { question: "How often should I schedule maintenance?", answer: "We recommend having your HVAC system serviced at least once a year. For year-round comfort, consider scheduling tune-ups in spring for cooling and fall for heating." },
+  { question: "Can maintenance reduce my energy bills?", answer: "Absolutely! Regular maintenance keeps your system running efficiently, which can lower your monthly energy bills. It's an investment that pays for itself over time." },
+  { question: "Do you offer annual maintenance plans?", answer: "Yes! We offer affordable, customizable maintenance plans to fit your needs. These plans keep your system in top condition and help prevent future issues." },
+  { question: "How do I apply for financing?", answer: "Applying is easy—just contact us or call (936) 331-1339. We'll walk you through the process and help you find the best option for your budget." },
+];
+
 export default function FAQs() {
   const [activeCategory, setActiveCategory] = useState(0);
   const [activeQuestion, setActiveQuestion] = useState(null);
@@ -439,6 +458,8 @@ export default function FAQs() {
 
   return (
     <main className="bg-white text-gray-800">
+      <LocalBusinessSchema />
+      <FAQSchema faqs={schemaFaqs} />
       <Head>
         <title>FAQs | AMW Cooling & Heating LLC</title>
         <meta name="description" content="Find detailed answers to common HVAC questions to prepare for a productive service call with AMW Cooling & Heating LLC. Serving Conroe, TX and surrounding areas!" />

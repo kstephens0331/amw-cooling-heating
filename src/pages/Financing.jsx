@@ -4,10 +4,12 @@ import { FaCheckCircle, FaDollarSign, FaHandshake, FaPhone, FaCalendarCheck } fr
 import ManufacturerCarousel from '../components/ManufacturerCarousel';
 import MapSection from '../components/MapSectionWrapper';
 import Footer from '../components/Footer';
+import { LocalBusinessSchema } from '../components/StructuredData';
 
 export default function Financing() {
   return (
     <main className="bg-white text-gray-800">
+      <LocalBusinessSchema />
       <Head>
         <title>Financing Options | AMW Cooling & Heating LLC</title>
         <meta name="description" content="Explore HVAC financing options with Synchrony and FTL. Learn about benefits, the process, and how easy it is to get started with AMW Cooling & Heating." />

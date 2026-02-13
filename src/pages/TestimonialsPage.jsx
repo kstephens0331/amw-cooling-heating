@@ -6,10 +6,12 @@ import TrustIndexWidget from "../components/TrustIndexWidget";
 import ManufacturerCarousel from "../components/ManufacturerCarousel";
 import MapSection from "../components/MapSectionWrapper";
 import Footer from "../components/Footer";
+import { LocalBusinessSchema } from '../components/StructuredData';
 
 export default function TestimonialsPage() {
   return (
     <div className="bg-white text-gray-800 font-sans">
+      <LocalBusinessSchema />
       <Head>
         <title>Customer Testimonials | AMW Cooling & Heating LLC</title>
         <meta

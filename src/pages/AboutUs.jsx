@@ -8,10 +8,12 @@ const aboutHero = '/assets/images/DSC_1887.webp';
 import ManufacturerCarousel from '../components/ManufacturerCarousel';
 import MapSection from '../components/MapSectionWrapper';
 import Footer from '../components/Footer';
+import { LocalBusinessSchema } from '../components/StructuredData';
 
 export default function AboutUs() {
   return (
     <div className="bg-white text-gray-800 font-sans">
+      <LocalBusinessSchema />
       <SEO
         title="About AMW Cooling & Heating | Veteran-Owned HVAC Conroe TX"
         description="Learn about AMW Cooling & Heating, a veteran-owned HVAC company serving Conroe, TX. Meet our team and discover our commitment to quality service."

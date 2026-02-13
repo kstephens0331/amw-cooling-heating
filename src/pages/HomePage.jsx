@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import SEO from '../components/SEO';
 import Footer from '../components/Footer';
+import { LocalBusinessSchema } from '../components/StructuredData';
 import HeroLandingPage from '../components/HeroLandingPage';
 import ServicesSection from '../components/ServicesSection';
 import WhyChooseAMW from '../components/WhyChooseAMW';
@@ -17,6 +18,7 @@ export default function HomePage() {
       canonical="https://amwairconditioning.com"
       keywords="HVAC Conroe TX, AC repair Conroe, heating Conroe, air conditioning Conroe, HVAC services The Woodlands, Montgomery County HVAC"
     />
+    <LocalBusinessSchema />
     <Head>
       <link
         rel="preload"
@@ -28,51 +30,6 @@ export default function HomePage() {
       <link rel="dns-prefetch" href="https://a.tile.openstreetmap.org" />
       <link rel="dns-prefetch" href="https://b.tile.openstreetmap.org" />
       <link rel="dns-prefetch" href="https://c.tile.openstreetmap.org" />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "HVACBusiness",
-          "name": "AMW Cooling & Heating, LLC",
-          "image": "https://amwairconditioning.com/assets/images/amwlogo.png",
-          "url": "https://amwairconditioning.com",
-          "telephone": "+1-936-331-1339",
-          "email": "admin@amwairconditioning.com",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "2346 Strong Horse Dr",
-            "addressLocality": "Conroe",
-            "addressRegion": "TX",
-            "postalCode": "77301",
-            "addressCountry": "US"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 30.3484,
-            "longitude": -95.4781
-          },
-          "openingHoursSpecification": [
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-              "opens": "08:00",
-              "closes": "21:00"
-            }
-          ],
-          "priceRange": "$$",
-          "areaServed": [
-            {"@type": "City", "name": "Conroe", "containedInPlace": {"@type": "State", "name": "Texas"}},
-            {"@type": "City", "name": "The Woodlands", "containedInPlace": {"@type": "State", "name": "Texas"}},
-            {"@type": "City", "name": "Spring", "containedInPlace": {"@type": "State", "name": "Texas"}},
-            {"@type": "City", "name": "Montgomery", "containedInPlace": {"@type": "State", "name": "Texas"}},
-            {"@type": "City", "name": "Willis", "containedInPlace": {"@type": "State", "name": "Texas"}},
-            {"@type": "City", "name": "Magnolia", "containedInPlace": {"@type": "State", "name": "Texas"}},
-            {"@type": "City", "name": "Tomball", "containedInPlace": {"@type": "State", "name": "Texas"}}
-          ],
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": 5.0,
-            "reviewCount": 54
-          }
-        })}} />
     </Head>
 
       <main>
