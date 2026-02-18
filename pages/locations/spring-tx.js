@@ -1,7 +1,6 @@
-import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
-const SpringTX = dynamic(() => import('../../src/pages/locations/SpringTX'), { ssr: false });
+import SpringTX from '../../src/pages/locations/SpringTX';
 
 export default function SpringTXPage() {
   return (

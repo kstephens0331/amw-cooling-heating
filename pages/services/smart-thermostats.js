@@ -1,7 +1,6 @@
-import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
-const SmartThermostats = dynamic(() => import('../../src/pages/services/SmartThermostats'), { ssr: false });
+import SmartThermostats from '../../src/pages/services/SmartThermostats';
 
 export default function SmartThermostatsPage() {
   return (

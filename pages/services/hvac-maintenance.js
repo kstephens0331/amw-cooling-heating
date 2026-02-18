@@ -1,7 +1,6 @@
-import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
-const HVACMaintenance = dynamic(() => import('../../src/pages/services/HVACMaintenance'), { ssr: false });
+import HVACMaintenance from '../../src/pages/services/HVACMaintenance';
 
 export default function HVACMaintenancePage() {
   return (

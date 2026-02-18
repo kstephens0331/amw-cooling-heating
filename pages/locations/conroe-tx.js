@@ -1,7 +1,6 @@
-import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
-const ConroeTX = dynamic(() => import('../../src/pages/locations/ConroeTX'), { ssr: false });
+import ConroeTX from '../../src/pages/locations/ConroeTX';
 
 export default function ConroeTXPage() {
   return (

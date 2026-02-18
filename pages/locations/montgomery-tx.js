@@ -1,7 +1,6 @@
-import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
-const MontgomeryTX = dynamic(() => import('../../src/pages/locations/MontgomeryTX'), { ssr: false });
+import MontgomeryTX from '../../src/pages/locations/MontgomeryTX';
 
 export default function MontgomeryTXPage() {
   return (

@@ -1,7 +1,6 @@
-import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
-const Blog = dynamic(() => import('../../src/pages/Blog'), { ssr: false });
+import Blog from '../../src/pages/Blog';
 
 export default function BlogPage() {
   return (

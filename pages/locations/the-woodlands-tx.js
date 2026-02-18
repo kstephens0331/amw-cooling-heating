@@ -1,7 +1,6 @@
-import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
-const TheWoodlandsTX = dynamic(() => import('../../src/pages/locations/TheWoodlandsTX'), { ssr: false });
+import TheWoodlandsTX from '../../src/pages/locations/TheWoodlandsTX';
 
 export default function TheWoodlandsTXPage() {
   return (

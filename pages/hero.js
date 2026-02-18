@@ -1,6 +1,5 @@
-import dynamic from 'next/dynamic';
 
-const HeroLandingPage = dynamic(() => import('../src/components/HeroLandingPage'), { ssr: true });
+import HeroLandingPage from '../src/components/HeroLandingPage';
 
 export default function HeroPage() {
   return <HeroLandingPage />;

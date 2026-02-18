@@ -1,9 +1,8 @@
-import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import fs from 'fs';
 import path from 'path';
 
-const BlogPost = dynamic(() => import('../../src/pages/BlogPost'), { ssr: false });
+import BlogPost from '../../src/pages/BlogPost';
 
 export async function getStaticPaths() {
   const indexPath = path.join(process.cwd(), 'public', 'data', 'blog', 'index.json');

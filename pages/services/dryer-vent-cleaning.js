@@ -1,7 +1,6 @@
-import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
-const DryerVentCleaning = dynamic(() => import('../../src/pages/services/DryerVentCleaning'), { ssr: false });
+import DryerVentCleaning from '../../src/pages/services/DryerVentCleaning';
 
 export default function DryerVentCleaningPage() {
   return (

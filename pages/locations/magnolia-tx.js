@@ -1,7 +1,6 @@
-import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
-const MagnoliaTX = dynamic(() => import('../../src/pages/locations/MagnoliaTX'), { ssr: false });
+import MagnoliaTX from '../../src/pages/locations/MagnoliaTX';
 
 export default function MagnoliaTXPage() {
   return (

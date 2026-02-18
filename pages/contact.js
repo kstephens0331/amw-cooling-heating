@@ -1,7 +1,6 @@
-import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
-const Contact = dynamic(() => import('../src/pages/Contact'), { ssr: false });
+import Contact from '../src/pages/Contact';
 
 export default function ContactPage() {
   return (

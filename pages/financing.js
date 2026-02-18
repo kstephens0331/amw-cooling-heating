@@ -1,7 +1,6 @@
-import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
-const Financing = dynamic(() => import('../src/pages/Financing'), { ssr: false });
+import Financing from '../src/pages/Financing';
 
 export default function FinancingPage() {
   return (

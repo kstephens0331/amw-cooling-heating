@@ -1,7 +1,6 @@
-import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
-const TestimonialsPage = dynamic(() => import('../src/pages/TestimonialsPage'), { ssr: false });
+import TestimonialsPage from '../src/pages/TestimonialsPage';
 
 export default function Testimonials() {
   return (

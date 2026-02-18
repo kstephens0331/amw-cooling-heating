@@ -1,7 +1,6 @@
-import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
-const WillisTX = dynamic(() => import('../../src/pages/locations/WillisTX'), { ssr: false });
+import WillisTX from '../../src/pages/locations/WillisTX';
 
 export default function WillisTXPage() {
   return (

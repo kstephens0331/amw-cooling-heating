@@ -1,7 +1,6 @@
-import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
-const IndoorAirQuality = dynamic(() => import('../../src/pages/services/IndoorAirQuality'), { ssr: false });
+import IndoorAirQuality from '../../src/pages/services/IndoorAirQuality';
 
 export default function IndoorAirQualityPage() {
   return (

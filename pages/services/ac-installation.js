@@ -1,7 +1,6 @@
-import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
-const ACInstallation = dynamic(() => import('../../src/pages/services/ACInstallation'), { ssr: false });
+import ACInstallation from '../../src/pages/services/ACInstallation';
 
 export default function ACInstallationPage() {
   return (

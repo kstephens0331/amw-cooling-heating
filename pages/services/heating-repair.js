@@ -1,7 +1,6 @@
-import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
-const HeatingRepair = dynamic(() => import('../../src/pages/services/HeatingRepair'), { ssr: false });
+import HeatingRepair from '../../src/pages/services/HeatingRepair';
 
 export default function HeatingRepairPage() {
   return (

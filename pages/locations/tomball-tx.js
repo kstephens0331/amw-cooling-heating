@@ -1,7 +1,6 @@
-import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
-const TomballTX = dynamic(() => import('../../src/pages/locations/TomballTX'), { ssr: false });
+import TomballTX from '../../src/pages/locations/TomballTX';
 
 export default function TomballTXPage() {
   return (

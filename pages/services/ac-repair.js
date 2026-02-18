@@ -1,7 +1,6 @@
-import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
-const ACRepair = dynamic(() => import('../../src/pages/services/ACRepair'), { ssr: false });
+import ACRepair from '../../src/pages/services/ACRepair';
 
 export default function ACRepairPage() {
   return (
