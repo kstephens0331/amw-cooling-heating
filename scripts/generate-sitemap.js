@@ -17,6 +17,7 @@ const pages = [
   { url: '/faqs', priority: '0.7', changefreq: 'monthly' },
   { url: '/financing', priority: '0.7', changefreq: 'monthly' },
   { url: '/testimonials', priority: '0.7', changefreq: 'monthly' },
+  { url: '/local-partners', priority: '0.7', changefreq: 'monthly' },
   { url: '/blog', priority: '0.8', changefreq: 'weekly' },
 
   // Service pages
