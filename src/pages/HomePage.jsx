@@ -23,9 +23,11 @@ export default function HomePage() {
       <link
         rel="preload"
         as="image"
-        href="/images/DSC_2135.jpg"
+        href="/assets/images/DSC_2135-769.webp"
         fetchPriority="high"
-        type="image/jpg"
+        type="image/webp"
+        imageSrcSet="/assets/images/DSC_2135-400.webp 400w, /assets/images/DSC_2135-769.webp 769w, /assets/images/DSC_2135-800.webp 800w, /assets/images/DSC_2135-1920.webp 1920w"
+        imageSizes="100vw"
       />
       <link rel="dns-prefetch" href="https://a.tile.openstreetmap.org" />
       <link rel="dns-prefetch" href="https://b.tile.openstreetmap.org" />
