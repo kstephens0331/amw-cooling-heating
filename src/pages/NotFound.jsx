@@ -1,15 +1,9 @@
 import Link from 'next/link';
-import Head from 'next/head';
 import Footer from '../components/Footer';
 
 export default function NotFound() {
   return (
     <>
-      <Head>
-        <title>Page Not Found | AMW Cooling & Heating LLC</title>
-        <meta name="description" content="This page does not exist. Return home to expert HVAC service you can trust." />
-        <meta name="robots" content="noindex" />
-      </Head>
       <main className="min-h-screen bg-gradient-to-br from-blue-50 to-white flex flex-col items-center justify-center text-center px-4">
         {/* Logo or graphic */}
         <img

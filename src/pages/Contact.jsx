@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
 import { FaPhone, FaCalendarCheck, FaEnvelope, FaMapMarkerAlt, FaShieldAlt } from 'react-icons/fa';
 const logo = '/assets/images/amwlogo.png';
@@ -30,18 +29,6 @@ export default function Contact() {
 
   return (
     <div className="bg-white text-gray-800 font-sans min-h-screen">
-      <Head>
-        <title>Contact Us | AMW Cooling & Heating LLC</title>
-        <meta
-          name="description"
-          content="Get in touch with AMW Cooling & Heating for expert HVAC service in Conroe, TX. Call (936) 331-1339, email, or schedule online today."
-        />
-        <meta
-          name="keywords"
-          content="contact AMW Cooling, HVAC phone number, HVAC appointment Conroe, heating cooling service request, schedule HVAC service"
-        />
-      </Head>
-
       {/* Patriotic Stripe */}
       <div className="h-1.5 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
 

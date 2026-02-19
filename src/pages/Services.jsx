@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import { FaPhone, FaCalendarCheck, FaShieldAlt } from 'react-icons/fa';
 import ManufacturerCarousel from '../components/ManufacturerCarousel';
@@ -19,18 +18,6 @@ const newInstallAfter = '/assets/images/6387-new_install.webp';
 export default function Services() {
   return (
     <main className="bg-gray-50 text-gray-800 font-sans">
-      <Head>
-        <title>HVAC Services | AMW Cooling & Heating LLC</title>
-        <meta
-          name="description"
-          content="Explore our expert HVAC services, including installation, repair, and maintenance for residential and commercial clients across Conroe, The Woodlands, and beyond."
-        />
-        <meta
-          name="keywords"
-          content="HVAC services, AC installation, heater repair, air conditioning Conroe TX, The Woodlands HVAC, AMW Cooling"
-        />
-      </Head>
-
       {/* Patriotic Stripe */}
       <div className="h-1.5 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
 

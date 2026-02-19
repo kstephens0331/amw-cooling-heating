@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import { FaCheckCircle, FaDollarSign, FaHandshake, FaPhone, FaCalendarCheck } from 'react-icons/fa';
 import ManufacturerCarousel from '../components/ManufacturerCarousel';
@@ -10,10 +9,6 @@ export default function Financing() {
   return (
     <main className="bg-white text-gray-800">
       <LocalBusinessSchema />
-      <Head>
-        <title>Financing Options | AMW Cooling & Heating LLC</title>
-        <meta name="description" content="Explore HVAC financing options with Synchrony and FTL. Learn about benefits, the process, and how easy it is to get started with AMW Cooling & Heating." />
-      </Head>
 
       {/* Patriotic Stripe */}
       <div className="h-1.5 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>

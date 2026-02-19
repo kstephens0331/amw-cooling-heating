@@ -6,19 +6,19 @@ export default function ConroeTXPage() {
   return (
     <>
       <Head>
-        <title>HVAC Services Conroe TX | AC Repair & Heating | AMW Cooling & Heating</title>
-        <meta name="description" content="Professional HVAC services in Conroe, TX. AC repair, heating installation, maintenance. Veteran-owned. Call (936) 331-1339 for same-day service." />
+        <title>AC Repair & HVAC Conroe TX | AMW Cooling & Heating</title>
+        <meta name="description" content="Conroe's trusted HVAC company. AC repair, heating, installation & maintenance. Veteran-owned, serving Montgomery County. (936) 331-1339." />
         <link rel="canonical" href="https://amwairconditioning.com/locations/conroe-tx" />
-        <meta name="keywords" content="HVAC Conroe TX, AC repair Conroe, heating Conroe, air conditioning Conroe Texas" />
-        <meta property="og:title" content="HVAC Services Conroe TX | AC Repair & Heating | AMW Cooling & Heating" />
-        <meta property="og:description" content="Professional HVAC services in Conroe, TX. AC repair, heating installation, maintenance." />
+        <meta name="keywords" content="AC repair Conroe TX, HVAC company Conroe, heating repair Conroe, air conditioning Conroe, best HVAC Conroe, affordable AC repair Conroe TX" />
+        <meta property="og:title" content="AC Repair & HVAC Conroe TX | AMW Cooling & Heating" />
+        <meta property="og:description" content="Conroe's trusted HVAC company. AC repair, heating, installation & maintenance. Veteran-owned." />
         <meta property="og:url" content="https://amwairconditioning.com/locations/conroe-tx" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="HVAC Services Conroe TX | AC Repair & Heating | AMW Cooling" />
-        <meta name="twitter:description" content="Professional HVAC services in Conroe, TX. Veteran-owned." />
+        <meta name="twitter:title" content="AC Repair & HVAC Conroe TX | AMW Cooling & Heating" />
+        <meta name="twitter:description" content="Conroe's trusted HVAC company. AC repair, heating, installation & maintenance. Veteran-owned." />
       </Head>
-      <h1 style={{position:'absolute',width:'1px',height:'1px',padding:0,margin:'-1px',overflow:'hidden',clip:'rect(0,0,0,0)',whiteSpace:'nowrap',borderWidth:0}}>HVAC Services in Conroe, TX — AC Repair, Heating & Installation</h1>
+      <h1 style={{position:'absolute',width:'1px',height:'1px',padding:0,margin:'-1px',overflow:'hidden',clip:'rect(0,0,0,0)',whiteSpace:'nowrap',borderWidth:0}}>AC Repair & HVAC Services in Conroe, TX</h1>
       <ConroeTX />
     </>
   );

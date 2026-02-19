@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
 import { event } from '../utils/analytics';
 import Breadcrumbs from '../components/Breadcrumbs';
@@ -93,14 +92,6 @@ export default function Blog() {
 
   return (
     <main className="bg-gray-50 text-gray-800 font-sans min-h-screen">
-      <Head>
-        <title>HVAC Blog | AMW Cooling & Heating LLC</title>
-        <meta
-          name="description"
-          content="Expert HVAC tips, maintenance guides, and industry insights for Conroe, The Woodlands, Spring, and Montgomery County homeowners."
-        />
-      </Head>
-
       {/* Patriotic Stripe */}
       <div className="h-1.5 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
 

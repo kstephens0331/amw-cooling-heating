@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import Head from 'next/head';
 import { FaPhone, FaCalendarCheck, FaChevronDown, FaChevronRight, FaQuestionCircle, FaTools, FaWrench, FaCog, FaCreditCard } from 'react-icons/fa';
 import FinancingCTA from '../components/FinancingCTA';
 import ManufacturerCarousel from '../components/ManufacturerCarousel';
@@ -460,11 +459,6 @@ export default function FAQs() {
     <main className="bg-white text-gray-800">
       <LocalBusinessSchema />
       <FAQSchema faqs={schemaFaqs} />
-      <Head>
-        <title>FAQs | AMW Cooling & Heating LLC</title>
-        <meta name="description" content="Find detailed answers to common HVAC questions to prepare for a productive service call with AMW Cooling & Heating LLC. Serving Conroe, TX and surrounding areas!" />
-      </Head>
-
       {/* Patriotic Stripe */}
       <div className="h-1.5 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
 
