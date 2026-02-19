@@ -1,7 +1,6 @@
 import { useEffect, useState, useMemo } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import Head from 'next/head';
 import ReactMarkdown from 'react-markdown';
 import { event } from '../utils/analytics';
 import Breadcrumbs from '../components/Breadcrumbs';
@@ -163,44 +162,7 @@ export default function BlogPost() {
 
   return (
     <main className="bg-gray-50 text-gray-800 font-sans min-h-screen">
-      <Head>
-        <title>{title} | AMW Cooling & Heating LLC</title>
-        <meta name="description" content={desc} />
-        {meta?.image && (
-          <>
-            <meta property="og:type" content="article" />
-            <meta property="og:title" content={title} />
-            <meta property="og:description" content={desc} />
-            <meta property="og:image" content={meta.image} />
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:title" content={title} />
-            <meta name="twitter:description" content={desc} />
-            <meta name="twitter:image" content={meta.image} />
-          </>
-        )}
-        <link rel="canonical" href={`https://amwairconditioning.com/blog/${slug}`} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'BlogPosting',
-            headline: title,
-            image: meta?.image ? [`https://amwairconditioning.com${meta.image}`] : undefined,
-            datePublished: meta?.date,
-            dateModified: meta?.date,
-            author: { '@type': 'Organization', name: 'AMW Cooling & Heating LLC' },
-            publisher: {
-              '@type': 'Organization',
-              name: 'AMW Cooling & Heating LLC',
-              logo: {
-                '@type': 'ImageObject',
-                url: 'https://amwairconditioning.com/favicon.ico'
-              }
-            },
-            description: desc,
-            mainEntityOfPage: `https://amwairconditioning.com/blog/${slug}`,
-          })
-        }} />
-      </Head>
+      {/* Meta tags are handled by the page wrapper (pages/blog/[slug].js) */}
 
       {/* Compact Header with Color Stripe */}
       <div className="h-1 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>

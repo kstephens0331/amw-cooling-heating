@@ -54,6 +54,24 @@ export default function BlogPostPage({ slug, meta }) {
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={image} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BlogPosting',
+            headline: title,
+            image: image ? [image] : undefined,
+            datePublished: meta?.date,
+            dateModified: meta?.date,
+            author: { '@type': 'Organization', name: 'AMW Cooling & Heating LLC' },
+            publisher: {
+              '@type': 'Organization',
+              name: 'AMW Cooling & Heating LLC',
+              logo: { '@type': 'ImageObject', url: 'https://amwairconditioning.com/assets/images/amwlogo.png' }
+            },
+            description: description,
+            mainEntityOfPage: canonicalUrl,
+          })
+        }} />
       </Head>
       <h1 style={{position:'absolute',width:'1px',height:'1px',padding:0,margin:'-1px',overflow:'hidden',clip:'rect(0,0,0,0)',whiteSpace:'nowrap',borderWidth:0}}>{title}</h1>
       <BlogPost />
