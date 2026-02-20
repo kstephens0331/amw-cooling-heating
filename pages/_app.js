@@ -1,4 +1,5 @@
 import '../src/index.css';
+import Head from 'next/head';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import dynamic from 'next/dynamic';
@@ -32,6 +33,15 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <ErrorBoundary>
+      <Head>
+        <meta property="og:image" content="https://amwairconditioning.com/assets/images/DSC_2135-1920.webp" />
+        <meta property="og:image:width" content="1920" />
+        <meta property="og:image:height" content="1027" />
+        <meta property="og:image:alt" content="AMW Cooling & Heating HVAC service truck in Conroe TX" />
+        <meta property="og:site_name" content="AMW Cooling & Heating" />
+        <meta property="og:locale" content="en_US" />
+        <meta name="twitter:image" content="https://amwairconditioning.com/assets/images/DSC_2135-1920.webp" />
+      </Head>
       <div className="bg-white text-gray-800 font-sans">
         <Navbar />
         <IncentiveBanner />

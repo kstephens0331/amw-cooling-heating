@@ -1,5 +1,4 @@
 import React from 'react';
-import SEO from '../../components/SEO';
 import { BreadcrumbSchema, LocalBusinessSchema } from '../../components/StructuredData';
 import Link from 'next/link';
 import { FaPhone, FaCalendarCheck, FaShieldAlt, FaMapMarkerAlt, FaSnowflake, FaFire, FaWrench, FaTools, FaLeaf, FaThermometerHalf, FaFan } from 'react-icons/fa';
@@ -10,13 +9,6 @@ import Footer from '../../components/Footer';
 const MagnoliaTX = () => {
   return (
     <>
-      <SEO
-        title="HVAC Services Magnolia TX | AC Repair & Heating | AMW Cooling & Heating"
-        description="Professional HVAC services in Magnolia, TX. AC repair, heating, maintenance for rural & suburban properties. Veteran-owned. Call (936) 331-1339."
-        canonical="https://amwairconditioning.com/locations/magnolia-tx"
-        keywords="HVAC Magnolia TX, AC repair Magnolia, heating Magnolia TX, air conditioning Magnolia Texas"
-      />
-
       <LocalBusinessSchema />
       <BreadcrumbSchema
         items={[

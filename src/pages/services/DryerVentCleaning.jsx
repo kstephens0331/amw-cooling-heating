@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import SEO from '../../components/SEO';
 import { ServiceSchema, BreadcrumbSchema, LocalBusinessSchema, FAQSchema } from '../../components/StructuredData';
 import Link from 'next/link';
 import { FaPhone, FaCalendarCheck, FaShieldAlt, FaCheckCircle, FaExclamationTriangle, FaChevronDown, FaFan, FaFire, FaTools, FaWrench } from 'react-icons/fa';
@@ -20,13 +19,6 @@ const DryerVentCleaning = () => {
 
   return (
     <>
-      <SEO
-        title="Dryer Vent Cleaning Conroe TX | Fire Prevention Service | AMW"
-        description="Professional dryer vent cleaning in Conroe, TX. Prevent fires, improve efficiency, reduce drying time. 15,000+ fires prevented annually. Call (936) 331-1339!"
-        canonical="https://amwairconditioning.com/services/dryer-vent-cleaning"
-        keywords="dryer vent cleaning Conroe, dryer vent service Conroe TX, lint removal, dryer fire prevention, dryer vent repair Conroe"
-      />
-
       <LocalBusinessSchema />
       <FAQSchema faqs={serviceFaqs} />
       <ServiceSchema

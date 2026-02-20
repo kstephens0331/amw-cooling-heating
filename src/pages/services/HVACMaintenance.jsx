@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import SEO from '../../components/SEO';
 import { ServiceSchema, BreadcrumbSchema, LocalBusinessSchema, FAQSchema } from '../../components/StructuredData';
 import Link from 'next/link';
 import { FaPhone, FaCalendarCheck, FaShieldAlt, FaCheckCircle, FaCog, FaChevronDown, FaSnowflake, FaFire } from 'react-icons/fa';
@@ -21,13 +20,6 @@ const HVACMaintenance = () => {
 
   return (
     <>
-      <SEO
-        title="HVAC Maintenance Conroe TX | AC & Heating Tune-Ups | AMW"
-        description="Professional HVAC maintenance in Conroe, TX. Seasonal tune-ups for AC and heating systems. Call (936) 331-1339 for preventive maintenance plans."
-        canonical="https://amwairconditioning.com/services/hvac-maintenance"
-        keywords="HVAC maintenance Conroe, AC tune-up, furnace maintenance, preventive HVAC service Conroe TX"
-      />
-
       <LocalBusinessSchema />
       <FAQSchema faqs={serviceFaqs} />
       <ServiceSchema

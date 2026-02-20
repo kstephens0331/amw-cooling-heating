@@ -1,5 +1,4 @@
 import React from 'react';
-import SEO from '../../components/SEO';
 import { BreadcrumbSchema, LocalBusinessSchema } from '../../components/StructuredData';
 import Link from 'next/link';
 import { FaPhone, FaCalendarCheck, FaShieldAlt, FaMapMarkerAlt, FaSnowflake, FaFire, FaWrench, FaTools, FaLeaf, FaThermometerHalf, FaFan } from 'react-icons/fa';
@@ -10,13 +9,6 @@ import Footer from '../../components/Footer';
 const TomballTX = () => {
   return (
     <>
-      <SEO
-        title="HVAC Services Tomball TX | AC Repair & Heating | AMW Cooling & Heating"
-        description="Professional HVAC services in Tomball, TX. AC repair, heating installation, maintenance. Veteran-owned, serving 249 corridor & historic Tomball. Call (936) 331-1339."
-        canonical="https://amwairconditioning.com/locations/tomball-tx"
-        keywords="HVAC Tomball TX, AC repair Tomball, heating Tomball TX, air conditioning Tomball Texas"
-      />
-
       <LocalBusinessSchema />
       <BreadcrumbSchema
         items={[

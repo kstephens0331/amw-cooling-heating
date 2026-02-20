@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import SEO from '../../components/SEO';
 import { ServiceSchema, BreadcrumbSchema, LocalBusinessSchema, FAQSchema } from '../../components/StructuredData';
 import Link from 'next/link';
 import { FaPhone, FaCalendarCheck, FaShieldAlt, FaCheckCircle, FaFire, FaChevronDown, FaExclamationTriangle, FaWrench, FaTools, FaThermometerHalf } from 'react-icons/fa';
@@ -22,13 +21,6 @@ const HeatingRepair = () => {
 
   return (
     <>
-      <SEO
-        title="Heating Repair Conroe TX | Furnace Repair | AMW Cooling"
-        description="Expert heating and furnace repair in Conroe, TX. Licensed technicians, same-day service. Call (936) 331-1339 for reliable heating system repair."
-        canonical="https://amwairconditioning.com/services/heating-repair"
-        keywords="heating repair Conroe, furnace repair Conroe TX, heater repair, heating service Conroe"
-      />
-
       <LocalBusinessSchema />
       <FAQSchema faqs={serviceFaqs} />
       <ServiceSchema

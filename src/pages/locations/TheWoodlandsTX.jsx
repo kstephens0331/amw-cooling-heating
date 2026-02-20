@@ -1,5 +1,4 @@
 import React from 'react';
-import SEO from '../../components/SEO';
 import { BreadcrumbSchema, LocalBusinessSchema } from '../../components/StructuredData';
 import Link from 'next/link';
 import { FaPhone, FaCalendarCheck, FaShieldAlt, FaMapMarkerAlt, FaSnowflake, FaFire, FaWrench, FaTools, FaLeaf, FaThermometerHalf, FaFan } from 'react-icons/fa';
@@ -10,13 +9,6 @@ import Footer from '../../components/Footer';
 const TheWoodlandsTX = () => {
   return (
     <>
-      <SEO
-        title="HVAC Services The Woodlands TX | AC Repair & Heating | AMW Cooling & Heating"
-        description="Professional HVAC services in The Woodlands, TX. AC repair, heating installation, maintenance for master-planned communities. Veteran-owned. Call (936) 331-1339."
-        canonical="https://amwairconditioning.com/locations/the-woodlands-tx"
-        keywords="HVAC The Woodlands TX, AC repair The Woodlands, heating The Woodlands, air conditioning The Woodlands Texas"
-      />
-
       <LocalBusinessSchema />
       <BreadcrumbSchema
         items={[

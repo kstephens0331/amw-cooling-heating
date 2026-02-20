@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import SEO from '../../components/SEO';
 import { ServiceSchema, BreadcrumbSchema, LocalBusinessSchema, FAQSchema } from '../../components/StructuredData';
 import Link from 'next/link';
 import { FaPhone, FaCalendarCheck, FaShieldAlt, FaCheckCircle, FaWind, FaChevronDown, FaLeaf, FaExclamationTriangle, FaSnowflake, FaFan } from 'react-icons/fa';
@@ -21,13 +20,6 @@ const IndoorAirQuality = () => {
 
   return (
     <>
-      <SEO
-        title="Indoor Air Quality Conroe TX | Air Purification & Filtration | AMW"
-        description="Improve indoor air quality in Conroe, TX with HEPA filtration, UV purification, dehumidifiers. Remove allergens, mold, bacteria. Call (936) 331-1339!"
-        canonical="https://amwairconditioning.com/services/indoor-air-quality"
-        keywords="indoor air quality Conroe, air purification Conroe TX, HEPA filter installation, UV air purifier, whole home dehumidifier, air quality testing Conroe"
-      />
-
       <LocalBusinessSchema />
       <FAQSchema faqs={serviceFaqs} />
       <ServiceSchema

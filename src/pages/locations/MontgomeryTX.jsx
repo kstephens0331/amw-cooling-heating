@@ -1,5 +1,4 @@
 import React from 'react';
-import SEO from '../../components/SEO';
 import { BreadcrumbSchema, LocalBusinessSchema } from '../../components/StructuredData';
 import Link from 'next/link';
 import { FaPhone, FaCalendarCheck, FaShieldAlt, FaMapMarkerAlt, FaSnowflake, FaFire, FaWrench, FaTools, FaLeaf, FaThermometerHalf, FaFan } from 'react-icons/fa';
@@ -10,13 +9,6 @@ import Footer from '../../components/Footer';
 const MontgomeryTX = () => {
   return (
     <>
-      <SEO
-        title="HVAC Services Montgomery TX | AC Repair & Heating | AMW Cooling & Heating"
-        description="Professional HVAC services in Montgomery, TX. AC repair, heating, maintenance for lakefront & rural properties. Veteran-owned. Call (936) 331-1339."
-        canonical="https://amwairconditioning.com/locations/montgomery-tx"
-        keywords="HVAC Montgomery TX, AC repair Montgomery, heating Montgomery TX, air conditioning Montgomery Texas"
-      />
-
       <LocalBusinessSchema />
       <BreadcrumbSchema
         items={[

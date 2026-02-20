@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { FaShieldAlt, FaPhone, FaCalendarCheck } from 'react-icons/fa';
-import SEO from '../components/SEO';
 const nateLogo = '/assets/images/nate.webp';
 const Anjelica = '/assets/images/DSC_2077.webp';
 const Josh = '/assets/images/DSC_2157.webp';
@@ -14,12 +13,6 @@ export default function AboutUs() {
   return (
     <div className="bg-white text-gray-800 font-sans">
       <LocalBusinessSchema />
-      <SEO
-        title="About AMW Cooling & Heating | Veteran-Owned HVAC Conroe TX"
-        description="Learn about AMW Cooling & Heating, a veteran-owned HVAC company serving Conroe, TX. Meet our team and discover our commitment to quality service."
-        canonical="https://amwairconditioning.com/about"
-        keywords="about AMW, veteran owned HVAC Conroe, HVAC company Conroe, AMW team"
-      />
 
       {/* Page Content */}
       <main>

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import SEO from '../../components/SEO';
 import { ServiceSchema, BreadcrumbSchema, LocalBusinessSchema, FAQSchema } from '../../components/StructuredData';
 import Link from 'next/link';
 import { FaPhone, FaCalendarCheck, FaShieldAlt, FaCheckCircle, FaSnowflake, FaChevronDown, FaTools, FaExclamationTriangle, FaWrench, FaMapMarkerAlt } from 'react-icons/fa';
@@ -22,13 +21,6 @@ const ACRepair = () => {
 
   return (
     <>
-      <SEO
-        title="AC Repair Conroe TX | Emergency Service | AMW Cooling"
-        description="Fast, professional AC repair in Conroe, TX. Licensed technicians, same-day service available. Call (936) 331-1339 for expert air conditioning repair."
-        canonical="https://amwairconditioning.com/services/ac-repair"
-        keywords="AC repair Conroe, air conditioning repair Conroe TX, emergency AC repair, AC service Conroe"
-      />
-
       <LocalBusinessSchema />
       <FAQSchema faqs={serviceFaqs} />
       <ServiceSchema

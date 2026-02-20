@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import SEO from '../../components/SEO';
 import { ServiceSchema, BreadcrumbSchema, LocalBusinessSchema, FAQSchema } from '../../components/StructuredData';
 import Link from 'next/link';
 import { FaPhone, FaCalendarCheck, FaShieldAlt, FaCheckCircle, FaMobileAlt, FaChevronDown, FaWifi, FaThermometerHalf } from 'react-icons/fa';
@@ -21,13 +20,6 @@ const SmartThermostats = () => {
 
   return (
     <>
-      <SEO
-        title="Smart Thermostat Installation Conroe TX | Nest, Ecobee, Honeywell | AMW"
-        description="Professional smart thermostat installation in Conroe, TX. Save 10-23% on energy costs with Nest, Ecobee, Honeywell. Wi-Fi setup included. Call (936) 331-1339!"
-        canonical="https://amwairconditioning.com/services/smart-thermostats"
-        keywords="smart thermostat installation Conroe, Nest thermostat Conroe TX, Ecobee installation, Honeywell WiFi thermostat, programmable thermostat Conroe"
-      />
-
       <LocalBusinessSchema />
       <FAQSchema faqs={serviceFaqs} />
       <ServiceSchema

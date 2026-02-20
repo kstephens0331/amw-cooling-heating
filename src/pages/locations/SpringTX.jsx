@@ -1,5 +1,4 @@
 import React from 'react';
-import SEO from '../../components/SEO';
 import { BreadcrumbSchema, LocalBusinessSchema } from '../../components/StructuredData';
 import Link from 'next/link';
 import { FaPhone, FaCalendarCheck, FaShieldAlt, FaMapMarkerAlt, FaSnowflake, FaFire, FaWrench, FaTools, FaLeaf, FaThermometerHalf, FaFan } from 'react-icons/fa';
@@ -10,13 +9,6 @@ import Footer from '../../components/Footer';
 const SpringTX = () => {
   return (
     <>
-      <SEO
-        title="HVAC Services Spring TX | AC Repair & Heating | AMW Cooling & Heating"
-        description="Professional HVAC services in Spring, TX. AC repair, heating installation, maintenance. Veteran-owned, serving Old Town Spring & Champions area. Call (936) 331-1339."
-        canonical="https://amwairconditioning.com/locations/spring-tx"
-        keywords="HVAC Spring TX, AC repair Spring, heating Spring TX, air conditioning Spring Texas"
-      />
-
       <LocalBusinessSchema />
       <BreadcrumbSchema
         items={[

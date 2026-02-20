@@ -1,5 +1,4 @@
 import React from 'react';
-import SEO from '../../components/SEO';
 import { BreadcrumbSchema, LocalBusinessSchema } from '../../components/StructuredData';
 import Link from 'next/link';
 import { FaPhone, FaCalendarCheck, FaShieldAlt, FaMapMarkerAlt, FaSnowflake, FaFire, FaWrench, FaTools, FaLeaf, FaThermometerHalf, FaFan } from 'react-icons/fa';
@@ -10,13 +9,6 @@ import Footer from '../../components/Footer';
 const WillisTX = () => {
   return (
     <>
-      <SEO
-        title="HVAC Services Willis TX | AC Repair & Heating | AMW Cooling & Heating"
-        description="Professional HVAC services in Willis, TX. AC repair, heating installation, maintenance near Lake Conroe. Veteran-owned. Call (936) 331-1339."
-        canonical="https://amwairconditioning.com/locations/willis-tx"
-        keywords="HVAC Willis TX, AC repair Willis, heating Willis TX, air conditioning Willis Texas"
-      />
-
       <LocalBusinessSchema />
       <BreadcrumbSchema
         items={[

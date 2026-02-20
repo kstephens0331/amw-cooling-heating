@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import SEO from '../../components/SEO';
 import { ServiceSchema, BreadcrumbSchema, LocalBusinessSchema, FAQSchema } from '../../components/StructuredData';
 import Link from 'next/link';
 import { FaPhone, FaCalendarCheck, FaShieldAlt, FaCheckCircle, FaSnowflake, FaChevronDown, FaRulerCombined, FaAward, FaLeaf, FaCreditCard, FaClipboardCheck, FaTools } from 'react-icons/fa';
@@ -21,13 +20,6 @@ const ACInstallation = () => {
 
   return (
     <>
-      <SEO
-        title="AC Installation Conroe TX | New AC System | AMW Cooling & Heating"
-        description="Professional AC installation in Conroe, TX. Expert sizing, top brands, energy-efficient systems. Veteran-owned, financing available. Call (936) 331-1339."
-        canonical="https://amwairconditioning.com/services/ac-installation"
-        keywords="AC installation Conroe, new AC system Conroe TX, air conditioner installation, HVAC installation Conroe"
-      />
-
       <LocalBusinessSchema />
       <FAQSchema faqs={serviceFaqs} />
       <ServiceSchema
