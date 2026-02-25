@@ -14,6 +14,8 @@ export default function Document() {
         <link rel="dns-prefetch" href="https://c.tile.openstreetmap.org" />
         {/* Ahrefs Analytics */}
         <script src="https://analytics.ahrefs.com/analytics.js" data-key="oHf5q/BX6z0BwN6cy+VL8w" async></script>
+        {/* Google Analytics GA4 - Deferred loading for performance */}
+        <script src="/ga-loader.js" defer></script>
       </Head>
       <body>
         <Main />
