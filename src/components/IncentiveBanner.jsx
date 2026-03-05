@@ -1,90 +1,124 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { IoClose } from 'react-icons/io5';
 
-// 🔧 Set your Calendly/service booking link here
-const CALENDLY_URL = 'https://calendly.com/admin-amwairconditioning?embed_domain=www.amwairconditioning.com&embed_type=Inline'; // <-- replace
+const CALENDLY_URL = 'https://calendly.com/admin-amwairconditioning?embed_domain=www.amwairconditioning.com&embed_type=Inline';
 
-// Helper: within promo window (local time)
 const isActivePromoWindow = (now = new Date()) => {
-  const start = new Date(2025, 9, 1, 0, 0, 0);  // Oct 1, 2025
-  const end   = new Date(2026, 0, 1, 0, 0, 0);  // Jan 1, 2026 (exclusive)
+  const start = new Date(2026, 2, 1, 0, 0, 0);   // Mar 1, 2026
+  const end   = new Date(2026, 3, 1, 0, 0, 0);   // Apr 1, 2026 (exclusive)
   return now >= start && now < end;
 };
 
 const IncentiveBanner = () => {
-  const [dismissed, setDismissed] = useState(false);
+  const [dismissed, setDismissed] = useState(true); // start hidden to avoid flash
   const active = useMemo(() => isActivePromoWindow(), []);
 
   useEffect(() => {
-    const flag = window.localStorage.getItem('amw_promo_dec2025_dismissed');
-    if (flag === '1') setDismissed(true);
+    const flag = window.localStorage.getItem('amw_promo_mar2026_dismissed');
+    if (flag !== '1') setDismissed(false);
   }, []);
 
   const handleClose = () => {
     setDismissed(true);
-    window.localStorage.setItem('amw_promo_dec2025_dismissed', '1');
+    window.localStorage.setItem('amw_promo_mar2026_dismissed', '1');
   };
-
-  // Countdown to Jan 1, 2026
-  const [now, setNow] = useState(new Date());
-  useEffect(() => {
-    const id = setInterval(() => setNow(new Date()), 1000);
-    return () => clearInterval(id);
-  }, []);
-  const deadline = new Date(2026, 0, 1, 0, 0, 0);
-  const remainingMs = Math.max(0, deadline - now);
-  const days    = Math.floor(remainingMs / (1000 * 60 * 60 * 24));
-  const hours   = Math.floor((remainingMs / (1000 * 60 * 60)) % 24);
-  const minutes = Math.floor((remainingMs / (1000 * 60)) % 60);
 
   if (!active || dismissed) return null;
 
   return (
-    <div className="w-full bg-orange-800 text-white">
-      <div className="mx-auto max-w-screen-2xl px-4 py-3 flex items-center gap-3">
-        {/* Copy */}
-        <div className="flex-1">
-          <p className="text-sm md:text-base font-semibold">
-            🔥 December Special: <span className="underline decoration-white/70">Get a FREE Dryer Vent Inspection/Cleaning with the Purchase of a Yearly Maintenance Plan!</span>
-          </p>
-          <p className="text-[12px] md:text-sm text-white mb-1">
-            Book by Dec. 31 · Conroe, The Woodlands, Spring & nearby · Licensed & insured · Veteran-owned
-          </p>
-          <p className="text-[12px] md:text-sm text-yellow-100 font-medium">
-            ⭐ Veteran Discounts Available - Please Call
-          </p>
-        </div>
+    <div
+      style={{
+        position: 'fixed',
+        inset: 0,
+        zIndex: 9999,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: 'rgba(0,0,0,0.6)',
+      }}
+      onClick={handleClose}
+    >
+      <div
+        style={{
+          position: 'relative',
+          maxWidth: '788px',
+          width: '90vw',
+          maxHeight: '90vh',
+        }}
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Close button */}
+        <button
+          aria-label="Dismiss promotion"
+          onClick={handleClose}
+          style={{
+            position: 'absolute',
+            top: '-12px',
+            right: '-12px',
+            zIndex: 10,
+            backgroundColor: '#fff',
+            border: 'none',
+            borderRadius: '50%',
+            width: '36px',
+            height: '36px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            cursor: 'pointer',
+            boxShadow: '0 2px 8px rgba(0,0,0,0.3)',
+          }}
+        >
+          <IoClose size={22} color="#333" />
+        </button>
 
-        {/* Countdown */}
-        <div className="hidden md:flex items-center text-sm font-medium bg-orange-900 rounded-full px-3 py-1">
-          Ends in&nbsp;
-          <span className="font-bold">{days}d {hours}h {minutes}m</span>
-        </div>
+        {/* Promo image as clickable link */}
+        <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
+          <img
+            src="/assets/images/promo-march-2026.png"
+            alt="AMW Cooling & Heating March 2026 Promotion - Book Now"
+            style={{
+              width: '100%',
+              height: 'auto',
+              borderRadius: '12px',
+              display: 'block',
+            }}
+          />
+        </a>
 
-        {/* CTAs */}
-        <div className="flex items-center gap-2">
+        {/* CTA buttons below image */}
+        <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', marginTop: '12px' }}>
           <a
             href={CALENDLY_URL}
-            className="rounded-md bg-white text-orange-700 text-sm md:text-base font-semibold px-3 py-2 hover:bg-white/90 transition"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              backgroundColor: '#fff',
+              color: '#1e3a8a',
+              fontWeight: 700,
+              fontSize: '16px',
+              padding: '10px 24px',
+              borderRadius: '8px',
+              textDecoration: 'none',
+            }}
           >
             Book Online
           </a>
           <a
             href="tel:+19363311339"
-            className="rounded-md bg-orange-800 text-white text-sm md:text-base font-semibold px-3 py-2 hover:bg-orange-900 transition"
+            style={{
+              backgroundColor: '#1e3a8a',
+              color: '#fff',
+              fontWeight: 700,
+              fontSize: '16px',
+              padding: '10px 24px',
+              borderRadius: '8px',
+              textDecoration: 'none',
+              border: '2px solid #fff',
+            }}
           >
-            Call Now
+            Call (936) 331-1339
           </a>
         </div>
-
-        {/* Dismiss */}
-        <button
-          aria-label="Dismiss promotion"
-          onClick={handleClose}
-          className="ml-2 p-1 rounded-full hover:bg-white/10 transition"
-        >
-          <IoClose size={22} />
-        </button>
       </div>
     </div>
   );
