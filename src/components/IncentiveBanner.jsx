@@ -14,13 +14,13 @@ const IncentiveBanner = () => {
   const active = useMemo(() => isActivePromoWindow(), []);
 
   useEffect(() => {
-    const flag = window.localStorage.getItem('amw_promo_mar2026_dismissed');
+    const flag = window.sessionStorage.getItem('amw_promo_dismissed');
     if (flag !== '1') setDismissed(false);
   }, []);
 
   const handleClose = () => {
     setDismissed(true);
-    window.localStorage.setItem('amw_promo_mar2026_dismissed', '1');
+    window.sessionStorage.setItem('amw_promo_dismissed', '1');
   };
 
   if (!active || dismissed) return null;
