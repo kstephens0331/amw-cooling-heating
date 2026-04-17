@@ -1,4 +1,4 @@
-![AMW Cooling & Heating - Pre-season HVAC checklist](/assets/images/amwlogo.png)
+![AMW Cooling & Heating - Is Your HVAC Ready for Texas Summer? A Pre-Season Checklist](/images/blog/get-hvac-ready-texas-summer.webp)
 
 # Is Your HVAC Ready for Texas Summer? A Pre-Season Checklist
 

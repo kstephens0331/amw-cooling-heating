@@ -1,4 +1,4 @@
-![Technician inspecting HVAC system for signs of wear](/blog/hvac-maintenance-costs-conroe.webp)
+![AMW Cooling & Heating - The Hidden Costs of Neglect: What Skipping Maintenance Really Costs Conroe Homeowners](/images/blog/hvac-maintenance-costs-conroe.webp)
 
 # The Hidden Costs of Neglect: What Skipping Maintenance Really Costs Conroe Homeowners
 

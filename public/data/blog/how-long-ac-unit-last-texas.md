@@ -1,4 +1,4 @@
-![AMW Cooling & Heating - AC unit lifespan in Texas](/assets/images/amwlogo.png)
+![AMW Cooling & Heating - How Long Does an AC Unit Last in Texas?](/images/blog/how-long-ac-unit-last-texas.webp)
 
 # How Long Does an AC Unit Last in Texas?
 

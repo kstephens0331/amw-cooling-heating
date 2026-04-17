@@ -1,4 +1,4 @@
-![AMW Cooling & Heating - Thermostat settings for Texas summer](/assets/images/amwlogo.png)
+![AMW Cooling & Heating - Best Thermostat Settings for Summer in Texas](/images/blog/best-thermostat-settings-summer-texas.webp)
 
 # Best Thermostat Settings for Summer in Texas
 

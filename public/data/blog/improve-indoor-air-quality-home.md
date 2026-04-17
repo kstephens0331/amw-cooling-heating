@@ -1,4 +1,4 @@
-![AMW Cooling & Heating - Indoor air quality in Conroe](/assets/images/amwlogo.png)
+![AMW Cooling & Heating - How to Improve Indoor Air Quality in Your Conroe Home](/images/blog/improve-indoor-air-quality-home.webp)
 
 # How to Improve Indoor Air Quality in Your Conroe Home
 

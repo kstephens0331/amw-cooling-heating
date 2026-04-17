@@ -1,4 +1,4 @@
-![Technician cleaning dryer vent as part of HVAC maintenance special](/blog/hvac-maintenance-dryer-vent-special.webp)
+![AMW Cooling & Heating - Fall HVAC Maintenance Special: Free Dryer Vent Cleaning with Your Plan](/images/blog/hvac-maintenance-dryer-vent-special.webp)
 
 # Fall HVAC Maintenance Special: Free Dryer Vent Cleaning with Your Plan
 

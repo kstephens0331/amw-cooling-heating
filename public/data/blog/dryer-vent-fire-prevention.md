@@ -1,4 +1,4 @@
-![AMW Cooling & Heating - Dryer vent cleaning fire prevention](/assets/images/amwlogo.png)
+![AMW Cooling & Heating - Dryer Vent Cleaning: Prevent Fires and Save Money](/images/blog/dryer-vent-fire-prevention.webp)
 
 # Dryer Vent Cleaning: Prevent Fires and Save Money
 

@@ -1,4 +1,4 @@
-![AMW Cooling & Heating - AC replacement cost in Conroe TX](/assets/images/amwlogo.png)
+![AMW Cooling & Heating - How Much Does It Cost to Replace an AC in Conroe, TX?](/images/blog/cost-replace-ac-unit-conroe-tx.webp)
 
 # How Much Does It Cost to Replace an AC in Conroe, TX?
 

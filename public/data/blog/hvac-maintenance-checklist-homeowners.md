@@ -1,4 +1,4 @@
-![AMW Cooling & Heating - HVAC maintenance checklist](/assets/images/amwlogo.png)
+![AMW Cooling & Heating - HVAC Maintenance Checklist for Texas Homeowners](/images/blog/hvac-maintenance-checklist-homeowners.webp)
 
 # HVAC Maintenance Checklist for Texas Homeowners
 

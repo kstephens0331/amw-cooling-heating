@@ -1,3 +1,5 @@
+![AMW Cooling & Heating - Smart Thermostats for Conroe Homes: Save Money While Staying Comfortable](/images/blog/smart-thermostats-conroe.webp)
+
 # Smart Thermostats for Conroe Homes: Save Money While Staying Comfortable
 
 *Published November 24, 2025 — by AMW Cooling & Heating LLC*

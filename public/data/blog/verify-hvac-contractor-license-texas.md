@@ -1,4 +1,4 @@
-![AMW Cooling & Heating - Verify your HVAC contractor license in Texas](/assets/images/amwlogo.png)
+![AMW Cooling & Heating - How to Verify Your HVAC Contractor Is Licensed in Texas](/images/blog/verify-hvac-contractor-license-texas.webp)
 
 # How to Verify Your HVAC Contractor Is Licensed in Texas
 

@@ -1,4 +1,4 @@
-![AMW Cooling & Heating - AC blowing warm air troubleshooting](/assets/images/amwlogo.png)
+![AMW Cooling & Heating - AC Blowing Warm Air? Here's What to Do](/images/blog/ac-blowing-warm-air-what-to-do.webp)
 
 # AC Blowing Warm Air? Here's What to Do
 

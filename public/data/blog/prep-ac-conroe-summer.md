@@ -1,4 +1,4 @@
-![Air conditioner thermostat and filter prep in Conroe home](/blog/prep-ac-conroe-summer.webp) 
+![AMW Cooling & Heating - ](/images/blog/prep-ac-conroe-summer.webp)
 
  # How to Prep Your AC Before Conroe Summers 
 

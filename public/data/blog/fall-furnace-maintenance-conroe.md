@@ -1,3 +1,5 @@
+![AMW Cooling & Heating - Why Fall Furnace Maintenance is Essential for Conroe Homeowners](/images/blog/fall-furnace-maintenance-conroe.webp)
+
 # Why Fall Furnace Maintenance is Essential for Conroe Homeowners
 
 *Published September 14, 2025 — by AMW Cooling & Heating LLC*

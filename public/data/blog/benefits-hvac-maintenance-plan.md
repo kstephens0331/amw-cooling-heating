@@ -1,4 +1,4 @@
-![AMW Cooling & Heating - HVAC maintenance plan benefits](/assets/images/amwlogo.png)
+![AMW Cooling & Heating - 5 Benefits of an HVAC Maintenance Plan for Conroe Homeowners](/images/blog/benefits-hvac-maintenance-plan.webp)
 
 # 5 Benefits of an HVAC Maintenance Plan for Conroe Homeowners
 

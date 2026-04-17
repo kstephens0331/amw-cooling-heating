@@ -1,4 +1,4 @@
-![AMW Cooling & Heating - Signs your AC needs repair](/assets/images/amwlogo.png)
+![AMW Cooling & Heating - 7 Signs Your AC Needs Repair Before It's Too Late](/images/blog/signs-ac-needs-repair.webp)
 
 # 7 Signs Your AC Needs Repair Before It's Too Late
 

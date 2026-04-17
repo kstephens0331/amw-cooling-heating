@@ -1,4 +1,4 @@
-![AMW Cooling & Heating - AC maintenance in Texas](/assets/images/amwlogo.png)
+![AMW Cooling & Heating - How Often Should You Service Your AC in Texas?](/images/blog/how-often-service-ac-texas.webp)
 
 # How Often Should You Service Your AC in Texas?
 
