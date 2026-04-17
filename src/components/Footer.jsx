@@ -129,6 +129,11 @@ const Footer = () => {
 
       {/* Footer Bottom */}
       <div className="mt-8 text-center text-sm px-4">
+        <div className="flex items-center justify-center gap-4 mb-2">
+          <Link href="/privacy-policy" className="hover:text-orange-400 transition">Privacy Policy</Link>
+          <span>|</span>
+          <Link href="/terms-of-service" className="hover:text-orange-400 transition">Terms of Service</Link>
+        </div>
         &copy; {new Date().getFullYear()} AMW Cooling & Heating LLC. All Rights Reserved. Built by{' '}
         <a
           href="https://stephenscode.dev"

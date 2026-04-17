@@ -34,6 +34,10 @@ const IndoorAirQuality = lazy(() => import('./pages/services/IndoorAirQuality'))
 const SmartThermostats = lazy(() => import('./pages/services/SmartThermostats'));
 const DryerVentCleaning = lazy(() => import('./pages/services/DryerVentCleaning'));
 
+// Legal pages
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
+const TermsOfService = lazy(() => import('./pages/TermsOfService'));
+
 // Location pages
 const ConroeTX = lazy(() => import('./pages/locations/ConroeTX'));
 
@@ -179,6 +183,24 @@ function App() {
   element={
     <Suspense fallback={<LoadingSpinner />}>
       <DryerVentCleaning />
+    </Suspense>
+  }
+/>
+
+{/* Legal Routes */}
+<Route
+  path="/privacy-policy"
+  element={
+    <Suspense fallback={<LoadingSpinner />}>
+      <PrivacyPolicy />
+    </Suspense>
+  }
+/>
+<Route
+  path="/terms-of-service"
+  element={
+    <Suspense fallback={<LoadingSpinner />}>
+      <TermsOfService />
     </Suspense>
   }
 />
