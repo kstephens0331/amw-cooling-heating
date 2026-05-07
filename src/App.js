@@ -60,8 +60,8 @@ function App() {
         <div className="bg-white text-gray-800 font-sans">
           <Router>
             <ScrollAndTrack />
-            <Navbar />
             <IncentiveBanner />
+            <Navbar />
         <Routes>
           <Route
     path="/"
