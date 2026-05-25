@@ -34,6 +34,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <ErrorBoundary>
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:image" content="https://amwairconditioning.com/assets/images/DSC_2135-1920.webp" />
         <meta property="og:image:width" content="1920" />
         <meta property="og:image:height" content="1027" />
@@ -41,6 +42,7 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:site_name" content="AMW Cooling & Heating" />
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:image" content="https://amwairconditioning.com/assets/images/DSC_2135-1920.webp" />
+        <meta name="twitter:image:alt" content="AMW Cooling & Heating HVAC service truck in Conroe TX" />
       </Head>
       <div className="bg-white text-gray-800 font-sans">
         <Navbar />

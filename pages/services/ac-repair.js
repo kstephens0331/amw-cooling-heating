@@ -18,7 +18,6 @@ export default function ACRepairPage() {
         <meta name="twitter:title" content="AC Repair Conroe TX | Same-Day Service | AMW" />
         <meta name="twitter:description" content="Fast AC repair in Conroe, TX. Same-day & emergency service. Veteran-owned, licensed & insured." />
       </Head>
-      <h1 style={{position:'absolute',width:'1px',height:'1px',padding:0,margin:'-1px',overflow:'hidden',clip:'rect(0,0,0,0)',whiteSpace:'nowrap',borderWidth:0}}>AC Repair in Conroe, TX — Same-Day Emergency Service</h1>
       <ACRepair />
     </>
   );

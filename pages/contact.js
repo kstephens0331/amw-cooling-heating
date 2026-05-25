@@ -18,7 +18,6 @@ export default function ContactPage() {
         <meta name="twitter:title" content="Contact Us | HVAC Service Conroe TX | AMW" />
         <meta name="twitter:description" content="Schedule HVAC service in Conroe, TX. Same-day & emergency appointments. Free estimates." />
       </Head>
-      <h1 style={{position:'absolute',width:'1px',height:'1px',padding:0,margin:'-1px',overflow:'hidden',clip:'rect(0,0,0,0)',whiteSpace:'nowrap',borderWidth:0}}>Contact AMW Cooling & Heating LLC</h1>
       <Contact />
     </>
   );

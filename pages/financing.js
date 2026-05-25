@@ -18,7 +18,6 @@ export default function FinancingPage() {
         <meta name="twitter:title" content="HVAC Financing Conroe TX | AMW Cooling & Heating" />
         <meta name="twitter:description" content="Affordable HVAC financing in Conroe, TX. Flexible payment plans for AC installation & heating." />
       </Head>
-      <h1 style={{position:'absolute',width:'1px',height:'1px',padding:0,margin:'-1px',overflow:'hidden',clip:'rect(0,0,0,0)',whiteSpace:'nowrap',borderWidth:0}}>HVAC Financing & Payment Plans in Conroe, TX</h1>
       <Financing />
     </>
   );

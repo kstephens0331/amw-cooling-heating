@@ -18,7 +18,6 @@ export default function SmartThermostatsPage() {
         <meta name="twitter:title" content="Smart Thermostat Install Conroe TX | AMW" />
         <meta name="twitter:description" content="Smart thermostat installation in Conroe, TX. Nest, Ecobee, Honeywell. Save 10-23% on energy." />
       </Head>
-      <h1 style={{position:'absolute',width:'1px',height:'1px',padding:0,margin:'-1px',overflow:'hidden',clip:'rect(0,0,0,0)',whiteSpace:'nowrap',borderWidth:0}}>Smart Thermostat Installation in Conroe, TX</h1>
       <SmartThermostats />
     </>
   );

@@ -1,0 +1,41 @@
+# AMW Cooling & Heating, LLC
+
+> Veteran-owned, licensed and insured HVAC contractor serving Conroe, TX and the greater Houston / Montgomery County metro. Founded by Josh (Owner). Phone: (936) 331-1339. Email: admin@amwairconditioning.com. Address: 2346 Strong Horse Dr, Conroe, TX 77301.
+
+AMW Cooling & Heating installs, repairs and maintains residential and light-commercial HVAC systems across seven Texas service areas. The business is veteran-owned and operated, NATE / EPA 608 trained, and works with all major equipment brands (Trane, Lennox, Carrier, Goodman, Rheem). The website is content-dense: 7 service pages, 7 location pages, and 25+ educational blog posts focused on Texas climate (humidity, summer load, dryer-vent fire prevention, fall furnace prep).
+
+## Services
+
+- [AC Installation](https://amwairconditioning.com/services/ac-installation): Manual J load calc, SEER2 equipment, new and replacement systems.
+- [AC Repair](https://amwairconditioning.com/services/ac-repair): Same-day diagnostics, refrigerant leaks, capacitor and compressor failures.
+- [Heating Repair and Installation](https://amwairconditioning.com/services/heating-repair): Furnaces, heat pumps, hybrid systems.
+- [HVAC Maintenance](https://amwairconditioning.com/services/hvac-maintenance): Annual tune-ups and recurring maintenance plans.
+- [Indoor Air Quality](https://amwairconditioning.com/services/indoor-air-quality): Air purifiers, UV lights, ERV / HRV ventilation, filtration upgrades.
+- [Smart Thermostats](https://amwairconditioning.com/services/smart-thermostats): Nest, ecobee, Honeywell install and integration.
+- [Dryer Vent Cleaning](https://amwairconditioning.com/services/dryer-vent-cleaning): Fire-prevention focused dryer vent service.
+
+## Service Areas
+
+- [Conroe, TX](https://amwairconditioning.com/locations/conroe-tx)
+- [The Woodlands, TX](https://amwairconditioning.com/locations/the-woodlands-tx)
+- [Montgomery, TX](https://amwairconditioning.com/locations/montgomery-tx)
+- [Spring, TX](https://amwairconditioning.com/locations/spring-tx)
+- [Magnolia, TX](https://amwairconditioning.com/locations/magnolia-tx)
+- [Tomball, TX](https://amwairconditioning.com/locations/tomball-tx)
+- [Willis, TX](https://amwairconditioning.com/locations/willis-tx)
+
+## Key pages
+
+- [Home](https://amwairconditioning.com/)
+- [About / Veteran-Owned Story](https://amwairconditioning.com/about)
+- [Contact / Same-Day Service Request](https://amwairconditioning.com/contact)
+- [Financing](https://amwairconditioning.com/financing)
+- [Testimonials](https://amwairconditioning.com/testimonials)
+- [FAQs](https://amwairconditioning.com/faqs)
+- [Blog index](https://amwairconditioning.com/blog)
+
+## Optional
+
+- [Sitemap (XML)](https://amwairconditioning.com/sitemap.xml)
+- [Robots.txt](https://amwairconditioning.com/robots.txt)
+- [Full LLM context](https://amwairconditioning.com/llms-full.txt)

@@ -18,7 +18,6 @@ export default function HeatingRepairPage() {
         <meta name="twitter:title" content="Heating Repair Conroe TX | Furnace Service | AMW" />
         <meta name="twitter:description" content="Heating & furnace repair in Conroe, TX. NATE-certified, veteran-owned. Emergency service available." />
       </Head>
-      <h1 style={{position:'absolute',width:'1px',height:'1px',padding:0,margin:'-1px',overflow:'hidden',clip:'rect(0,0,0,0)',whiteSpace:'nowrap',borderWidth:0}}>Heating & Furnace Repair in Conroe, TX</h1>
       <HeatingRepair />
     </>
   );

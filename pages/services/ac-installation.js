@@ -18,7 +18,6 @@ export default function ACInstallationPage() {
         <meta name="twitter:title" content="AC Installation Conroe TX | New System | AMW" />
         <meta name="twitter:description" content="AC installation & replacement in Conroe, TX. Expert sizing, top brands, financing available." />
       </Head>
-      <h1 style={{position:'absolute',width:'1px',height:'1px',padding:0,margin:'-1px',overflow:'hidden',clip:'rect(0,0,0,0)',whiteSpace:'nowrap',borderWidth:0}}>AC Installation & Replacement in Conroe, TX</h1>
       <ACInstallation />
     </>
   );
