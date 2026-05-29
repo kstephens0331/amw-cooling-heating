@@ -291,7 +291,8 @@ export default function Blog({ initialPosts = [] }) {
                           {new Date(featuredPost.date).toLocaleDateString('en-US', {
                             year: 'numeric',
                             month: 'long',
-                            day: 'numeric'
+                            day: 'numeric',
+                            timeZone: 'UTC'
                           })}
                         </span>
                       )}
@@ -354,7 +355,8 @@ export default function Blog({ initialPosts = [] }) {
                             {new Date(p.date).toLocaleDateString('en-US', {
                               month: 'short',
                               day: 'numeric',
-                              year: 'numeric'
+                              year: 'numeric',
+                              timeZone: 'UTC'
                             })}
                           </span>
                         )}
