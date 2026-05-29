@@ -6,21 +6,25 @@ import ManufacturerCarousel from '../components/ManufacturerCarousel';
 import MapSection from '../components/MapSectionWrapper';
 import Footer from '../components/Footer';
 
-export default function Blog() {
-  const [posts, setPosts] = useState([]);
-  const [loading, setLoading] = useState(true);
+export default function Blog({ initialPosts = [] }) {
+  // initialPosts is server-rendered (getStaticProps) so the post links exist in
+  // the static HTML for crawlers. Fall back to a client fetch only if none were
+  // passed (e.g. legacy callers).
+  const [posts, setPosts] = useState(initialPosts);
+  const [loading, setLoading] = useState(initialPosts.length === 0);
 
   // filters
   const [query, setQuery] = useState('');
   const [selected, setSelected] = useState([]); // array of tag strings
 
   useEffect(() => {
+    if (initialPosts.length > 0) return;
     fetch('/data/blog/index.json', { cache: 'no-store' })
       .then((res) => res.json())
       .then((data) => setPosts(Array.isArray(data) ? data : []))
       .catch(() => setPosts([]))
       .finally(() => setLoading(false));
-  }, []);
+  }, [initialPosts.length]);
 
   // all unique tags (sorted by frequency, then alphabetically)
   const allTags = useMemo(() => {

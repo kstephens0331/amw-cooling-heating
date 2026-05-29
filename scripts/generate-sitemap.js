@@ -19,6 +19,8 @@ const pages = [
   { url: '/testimonials', priority: '0.7', changefreq: 'monthly' },
   { url: '/local-partners', priority: '0.7', changefreq: 'monthly' },
   { url: '/blog', priority: '0.8', changefreq: 'weekly' },
+  { url: '/privacy-policy', priority: '0.3', changefreq: 'yearly' },
+  { url: '/terms-of-service', priority: '0.3', changefreq: 'yearly' },
 
   // Service pages
   { url: '/services/ac-repair', priority: '0.9', changefreq: 'monthly' },

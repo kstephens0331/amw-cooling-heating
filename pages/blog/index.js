@@ -1,8 +1,10 @@
 import Head from 'next/head';
+import fs from 'fs';
+import path from 'path';
 
 import Blog from '../../src/pages/Blog';
 
-export default function BlogPage() {
+export default function BlogPage({ posts }) {
   return (
     <>
       <Head>
@@ -18,7 +20,22 @@ export default function BlogPage() {
         <meta name="twitter:title" content="HVAC Blog | Tips & Guides | AMW Conroe TX" />
         <meta name="twitter:description" content="HVAC tips, maintenance guides & energy-saving advice for Conroe, TX homeowners." />
       </Head>
-      <Blog />
+      <Blog initialPosts={posts} />
     </>
   );
+}
+
+// Server-render the post list at build time so every /blog/<slug> link is in
+// the static HTML (crawlers were seeing an empty client-only listing -> all
+// posts were flagged as orphan pages with no incoming internal links).
+export async function getStaticProps() {
+  const file = path.join(process.cwd(), 'public', 'data', 'blog', 'index.json');
+  let posts = [];
+  try {
+    const parsed = JSON.parse(fs.readFileSync(file, 'utf8'));
+    posts = Array.isArray(parsed) ? parsed : [];
+  } catch {
+    posts = [];
+  }
+  return { props: { posts } };
 }
