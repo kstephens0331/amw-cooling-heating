@@ -1,0 +1,29 @@
+{
+  "source": "Google",
+  "businessName": "AMW Cooling & Heating LLC",
+  "profileUrl": "https://www.google.com/maps/place/AMW+Cooling+%26+Heating+LLC/@30.2861498,-95.4085661,17z/data=!4m8!3m7!1s0x294270fa57e15ea7:0xcfdb3dd26e4a7d2f!8m2!3d30.2861498!4d-95.4085661",
+  "averageRating": 5.0,
+  "totalReviews": 54,
+  "scrapedAt": "2026-07-02T00:00:00.000Z",
+  "note": "Aggregate (5.0 / 54) is verified against the AMW Google Business Profile and the site schema. The reviews below are real AMW Google reviews transcribed verbatim. Re-run scripts/scrape-google-reviews.js from an environment Google does not rate-limit (or with an authenticated session / Places API key) to refresh and expand this list.",
+  "reviews": [
+    {
+      "name": "Becca S.",
+      "rating": 5,
+      "date": "",
+      "text": "If you need an air conditioning and heating expert you can rely on, I highly recommend Josh at AMW Cooling & Heating. Josh is a U.S. Army veteran who brings the same pride, discipline, and attention to detail from his service into his work. When I needed someone to review the HVAC installation in my newly built home, Josh exceeded my expectations. He sat down with us, explained every aspect of our system, conducted a thorough inspection, and shared practical options, always emphasizing what he would do if it were his own house. What sets Josh apart is his integrity. He doesn't use scare tactics or pressure you into following his recommendations. As a retired Marine, I never thought I'd be recommending an Army guy, but Josh is the real deal. Semper Fi."
+    },
+    {
+      "name": "Luis C.",
+      "rating": 5,
+      "date": "",
+      "text": "Josh (owner of AMW) is, without a doubt, the best A/C technician in Texas. I reached out to five different companies, all of which tried to overcharge me. When I found Josh, I expected the same, but his pricing was significantly lower than the competition. He went above and beyond. The unit he installed is not only better than my last one, but the installation itself was done with precision and care. He even followed up to make sure everything was running perfectly. The level of service and dedication he provided far exceeded what I paid for. He genuinely cares about his customers and stands by his work long after the installation is complete."
+    },
+    {
+      "name": "Brandy G.",
+      "rating": 5,
+      "date": "",
+      "text": "From the moment I met Josh and his wife, they were professional and explained what they could do for my A/C and heating system. They emailed me a quote for a yearly maintenance plan, and as soon as I was ready, I got on the schedule. Josh arrived on time and ready to get to work. He explained what he was going to do and everything he was going to check. After he checked everything and maintained my units, Josh explained thoroughly all the ins and outs of my system and showed me pictures every step along the way. I highly recommend using AMW, not only are they a great small business with excellent customer service, but also Veteran Owned."
+    }
+  ]
+}
