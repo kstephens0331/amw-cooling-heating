@@ -1,6 +1,6 @@
 import React from "react";
 import Link from 'next/link';
-import { FaStar, FaPhone, FaCalendarCheck, FaShieldAlt } from "react-icons/fa";
+import { FaStar, FaPhone, FaCalendarCheck, FaShieldAlt, FaComments, FaTag, FaHandshake, FaMapMarkerAlt } from "react-icons/fa";
 import GoogleReviews from "../components/GoogleReviews";
 import ManufacturerCarousel from "../components/ManufacturerCarousel";
 import MapSection from "../components/MapSectionWrapper";
@@ -82,6 +82,59 @@ export default function TestimonialsPage() {
           </div>
 
           <GoogleReviews />
+        </div>
+      </section>
+
+      {/* Why homeowners choose AMW */}
+      <section className="py-14 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-black text-blue-900 mb-3 tracking-wide">
+              WHY HOMEOWNERS CHOOSE AMW
+            </h2>
+            <p className="text-gray-600 text-lg">
+              The same things come up in review after review. Here is what you can count on.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-gray-50 rounded-xl p-6 border-t-4 border-blue-600">
+              <FaComments className="text-blue-600 w-8 h-8 mb-4" aria-hidden="true" />
+              <h3 className="font-bold text-blue-900 text-lg mb-2">Straight answers, no upselling</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                We tell you what your system actually needs and what we would do if it were our own home. No scare tactics, no pressure.
+              </p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-6 border-t-4 border-red-500">
+              <FaTag className="text-red-500 w-8 h-8 mb-4" aria-hidden="true" />
+              <h3 className="font-bold text-blue-900 text-lg mb-2">Fair, transparent pricing</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Clear quotes up front. You know the cost before we start, with no surprises and no pressure to buy more than you need.
+              </p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-6 border-t-4 border-blue-600">
+              <FaHandshake className="text-blue-600 w-8 h-8 mb-4" aria-hidden="true" />
+              <h3 className="font-bold text-blue-900 text-lg mb-2">We stand behind the work</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Josh, the owner, stays involved through the job and follows up afterward to make sure everything runs the way it should.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-gray-700">
+            <span className="inline-flex items-center gap-2 font-semibold">
+              <FaShieldAlt className="text-blue-900 w-4 h-4" aria-hidden="true" />
+              Veteran-Owned and Operated
+            </span>
+            <span className="inline-flex items-center gap-2 font-semibold">
+              <FaStar className="text-yellow-400 w-4 h-4" aria-hidden="true" />
+              {avgRating} rating from {totalReviews} Google reviews
+            </span>
+            <span className="inline-flex items-center gap-2 font-semibold">
+              <FaMapMarkerAlt className="text-red-500 w-4 h-4" aria-hidden="true" />
+              Serving Conroe and Montgomery County
+            </span>
+          </div>
         </div>
       </section>
 
