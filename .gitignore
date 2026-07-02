@@ -28,6 +28,16 @@ yarn-error.log*
 
 # Session documentation (not needed for build)
 SESSION-SUMMARY.md
+
+# StephensCode — never expose these
 .claude/
+CLAUDE.md
+CLAUDE-ADDITION.md
 
 .vercel
+
+.vercel
+
+# build artifact + editor backups (never commit)
+amw-out.tar.gz
+*.bak

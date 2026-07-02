@@ -22,9 +22,9 @@ export default function ChatBot() {
     setInput('');
 
     try {
-      // Call Railway backend (keeps API key secure server-side)
+      // Call Texas server backend (keeps API key secure server-side)
       const response = await axios.post(
-        'https://amw-cooling-heating-chatbot-server-production.up.railway.app/api/chat',
+        'https://amwairconditioning.com/api/chat',
         {
           history: updatedMessages.map((m) => ({
             role: m.from === 'bot' ? 'assistant' : 'user',
@@ -60,7 +60,7 @@ export default function ChatBot() {
 
     try {
       await axios.post(
-        'https://amw-cooling-heating-chatbot-server-production.up.railway.app/api/send-email',
+        'https://amwairconditioning.com/api/send-email',
         {
           name: contactFormData.name,
           email: contactFormData.email,
@@ -95,7 +95,7 @@ export default function ChatBot() {
         const chatHistory = messages.map(msg => `${msg.from === 'bot' ? 'AMW Assistant' : 'Customer'}: ${msg.text}`).join('\n\n');
 
         await axios.post(
-          'https://amw-cooling-heating-chatbot-server-production.up.railway.app/api/send-chat-history',
+          'https://amwairconditioning.com/api/send-chat-history',
           {
             chatHistory,
             timestamp: new Date().toLocaleString('en-US', { timeZone: 'America/Chicago' })
