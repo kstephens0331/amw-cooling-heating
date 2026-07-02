@@ -143,7 +143,7 @@ export default function LocalPartners() {
                   <a
                     href={partner.url}
                     target="_blank"
-                    rel="noopener"
+                    rel="noreferrer"
                     className="inline-block px-5 py-2 bg-blue-600 text-white rounded shadow hover:bg-blue-700 transition text-sm font-semibold"
                   >
                     Visit Website →
