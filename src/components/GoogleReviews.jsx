@@ -8,11 +8,11 @@ import "swiper/css/navigation";
 import reviewsData from "../data/googleReviews.json";
 
 // Self-owned native Google reviews section for AMW Cooling & Heating.
-// Renders from src/data/googleReviews.json as a revolving carousel of the
-// 5-star reviews. No third-party widget, no script, no iframe, nothing that
-// can lapse. Refresh the data by re-running scripts/fetch-google-reviews.js
-// (Google Places API). The carousel scales to however many reviews are in the
-// JSON, so it works with 5 now and the full set later without a change here.
+// Renders from src/data/googleReviews.json: the three most recent 5-star
+// reviews are listed up top, then the rest revolve in an auto-rotating
+// carousel. No third-party widget, no script, no iframe, nothing that can
+// lapse. Refresh the data by re-running scripts/fetch-google-reviews.js
+// (Google Places API). Scales to however many reviews are in the JSON.
 
 const LEAVE_REVIEW_URL = "https://g.page/r/CS99Sm7SPdvPEBM/review";
 
@@ -47,7 +47,7 @@ function initialsBadge(name) {
 // Alternate the left accent border between AMW blue and red for visual rhythm.
 const ACCENTS = ["border-blue-600", "border-red-500"];
 
-function ReviewCard({ review, index }) {
+function ReviewCard({ review, index, clampClass }) {
   return (
     <article
       className={`bg-white rounded-xl shadow-lg h-full flex flex-col border-l-4 ${
@@ -59,7 +59,7 @@ function ReviewCard({ review, index }) {
           <StarRow count={review.rating || 5} />
           <FaQuoteLeft className="text-blue-600 text-2xl" aria-hidden="true" />
         </div>
-        <p className="text-gray-700 text-sm leading-relaxed flex-1 line-clamp-[10]">
+        <p className={`text-gray-700 text-sm leading-relaxed flex-1 ${clampClass}`}>
           {review.text}
         </p>
         <div className="mt-4 pt-4 border-t border-gray-200 flex items-center gap-3">
@@ -86,9 +86,12 @@ export default function GoogleReviews() {
   const roundedAvg = Math.round(Number(averageRating) || 5);
   const allReviewsUrl = profileUrl || LEAVE_REVIEW_URL;
 
-  // Show only 5-star reviews, revolving. Fall back to all if none are tagged.
+  // Show only 5-star reviews. Data is ordered most-recent-first.
   const fiveStar = (reviews || []).filter((r) => Number(r.rating) === 5);
   const shown = fiveStar.length ? fiveStar : reviews || [];
+
+  // Three most recent are listed up top; everything revolves in the carousel.
+  const featured = shown.slice(0, 3);
   // Loop needs enough slides to fill the widest view; disable it below that.
   const canLoop = shown.length > 3;
 
@@ -106,6 +109,29 @@ export default function GoogleReviews() {
         </div>
       </div>
 
+      {/* Three most recent reviews, listed */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        {featured.map((review, index) => (
+          <ReviewCard
+            key={`featured-${review.name}-${index}`}
+            review={review}
+            index={index}
+            clampClass="line-clamp-[16]"
+          />
+        ))}
+      </div>
+
+      {/* Divider label */}
+      {shown.length > 0 && (
+        <div className="flex items-center gap-4 mb-8" aria-hidden="true">
+          <span className="h-px flex-1 bg-gray-200" />
+          <span className="text-xs font-semibold uppercase tracking-widest text-gray-400">
+            More reviews
+          </span>
+          <span className="h-px flex-1 bg-gray-200" />
+        </div>
+      )}
+
       {/* Revolving review carousel */}
       <div className="px-2 md:px-8" style={SWIPER_THEME}>
         <Swiper
@@ -113,7 +139,7 @@ export default function GoogleReviews() {
           spaceBetween={24}
           slidesPerView={1}
           loop={canLoop}
-          autoplay={{ delay: 5500, disableOnInteraction: false, pauseOnMouseEnter: true }}
+          autoplay={{ delay: 4000, disableOnInteraction: false, pauseOnMouseEnter: true }}
           pagination={{ clickable: true }}
           navigation
           grabCursor
@@ -125,7 +151,7 @@ export default function GoogleReviews() {
         >
           {shown.map((review, index) => (
             <SwiperSlide key={`${review.name}-${index}`} className="h-auto pb-2">
-              <ReviewCard review={review} index={index} />
+              <ReviewCard review={review} index={index} clampClass="line-clamp-[10]" />
             </SwiperSlide>
           ))}
         </Swiper>
