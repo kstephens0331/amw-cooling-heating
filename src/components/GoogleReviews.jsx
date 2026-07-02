@@ -5,7 +5,7 @@ import reviewsData from "../data/googleReviews.json";
 // Self-owned native Google reviews section for AMW Cooling & Heating.
 // Renders from src/data/googleReviews.json. No third-party widget, no script,
 // no iframe, nothing that can lapse. Refresh the data by re-running
-// scripts/scrape-google-reviews.js.
+// scripts/fetch-google-reviews.js (Google Places API).
 
 const LEAVE_REVIEW_URL = "https://g.page/r/CS99Sm7SPdvPEBM/review";
 
