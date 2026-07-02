@@ -6,8 +6,15 @@ import ManufacturerCarousel from "../components/ManufacturerCarousel";
 import MapSection from "../components/MapSectionWrapper";
 import Footer from "../components/Footer";
 import { LocalBusinessSchema } from '../components/StructuredData';
+import reviewsData from "../data/googleReviews.json";
 
 export default function TestimonialsPage() {
+  const avgRating =
+    typeof reviewsData.averageRating === "number"
+      ? reviewsData.averageRating.toFixed(1)
+      : reviewsData.averageRating;
+  const totalReviews = reviewsData.totalReviews;
+
   return (
     <div className="bg-white text-gray-800 font-sans">
       <LocalBusinessSchema />
@@ -27,7 +34,7 @@ export default function TestimonialsPage() {
               <FaStar className="w-4 h-4" />
               <FaStar className="w-4 h-4" />
             </div>
-            <span className="text-white text-sm font-medium">5.0 Rating - 54 Google Reviews</span>
+            <span className="text-white text-sm font-medium">{avgRating} rating from {totalReviews} Google reviews</span>
           </div>
 
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
