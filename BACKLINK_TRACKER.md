@@ -2,7 +2,7 @@
 
 **Business:** AMW Cooling & Heating LLC
 **Website:** https://amwairconditioning.com
-**Last Updated:** February 13, 2026
+**Last Updated:** February 16, 2026
 
 ---
 
@@ -81,10 +81,21 @@
 | 44 | Find-Us-Here | find-us-here.com | Done |
 | 45 | EZLocal | ezlocal.com | Done |
 
-### Other
-| # | Directory | URL | Status |
-|---|-----------|-----|--------|
-| 46 | StephensCode (developer) | stephenscode.dev | Done |
+### Reciprocal Local Partners (via /local-partners page)
+| # | Partner | URL | Status |
+|---|---------|-----|--------|
+| 46 | StephensCode LLC | stephenscode.dev | Done |
+| 47 | Terracotta Construction | terracottaconstruction.com | Done |
+| 48 | C.A.R.S Collision & Refinish | carscollisionandrefinishshop.com | Done |
+| 49 | Benefit Builder LLC | benefitbuilderllc.com | Done |
+| 50 | SACVPN | sacvpn.com | Done |
+| 51 | Forge-X | forge-x.app | Done |
+| 52 | LotSwap | lotswap.io | Done |
+| 53 | ColorFuse Prints | colorfuseprints.com | Done |
+| 54 | FC Photo Houston | fcphotohouston.com | Done |
+| 55 | JustWell Clinical Research | justwellclinical.org | Done |
+| 56 | GradeStack | gradestack.dev | Done |
+| 57 | Get Step Ready | getstepready.com | Done |
 
 ---
 
@@ -109,6 +120,6 @@
 
 ## Summary
 
-- **Total Completed:** 46
+- **Total Completed:** 57
 - **Remaining:** 3
-- **Completion Rate:** 94%
+- **Completion Rate:** 95%

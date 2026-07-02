@@ -1,205 +1,136 @@
-# AMW Cooling & Heating LLC Website
+# AMW Cooling & Heating — Website
 
-Official website for AMW Cooling & Heating, a veteran-owned HVAC company serving Conroe, TX and surrounding Montgomery County areas.
+Official website for AMW Cooling & Heating LLC, a veteran-owned HVAC company serving Conroe, TX and surrounding Montgomery County areas.
 
-![AMW Cooling & Heating](public/logo192.png)
+Built and maintained by StephensCode LLC.
 
-## 🚀 Tech Stack
+---
 
-- **Framework:** React 18.3.1
-- **Routing:** React Router v6
+## Tech Stack
+
+- **Framework:** Next.js 16 (Pages Router), static export
 - **Styling:** Tailwind CSS
-- **Build Tool:** Create React App 5.0.1
-- **Deployment:** Vercel
-- **Blog System:** Markdown files with JSON metadata
-- **AI Integration:** Claude API for chatbot
+- **SEO:** react-helmet-async, structured data, auto-generated sitemap
+- **Maps:** react-leaflet
+- **Blog:** Markdown files with JSON metadata
+- **Analytics:** Google Analytics GA4 (cookieless)
+- **Chatbot:** Backend proxy to separate Express server
 
-## 📦 Installation
+---
+
+## Setup
 
 ```bash
 npm install
 ```
 
-## 🛠️ Development
+Copy the environment example file:
 
 ```bash
-npm start          # Start dev server on http://localhost:3000
-npm test           # Run tests (Jest + React Testing Library)
-npm run build      # Production build to /build directory
-npm run generate:sitemap  # Generate sitemap.xml for SEO
+cp .env.example .env.local
 ```
 
-## 🔐 Environment Variables
+The frontend does not require any secrets to run. The chatbot is proxied through the separate chatbot server.
 
-Create a `.env` file in the root directory (never commit this file):
+---
 
-```env
-REACT_APP_CLAUDE_API_KEY=your_claude_api_key_here
+## Development
+
+```bash
+npm run dev              # Start dev server at http://localhost:3000
+npm run lint             # Run ESLint
+npm run build            # Production build (static export to /out)
+npm run generate:sitemap # Regenerate public/sitemap.xml
 ```
 
-**Important:**
-- The `.env` file is in `.gitignore` and should never be committed
-- For production, add environment variables in the Vercel dashboard
-- API keys should only exist in local `.env` or Vercel environment variables
+---
 
-## 📁 Project Structure
+## Testing
 
-```
-amw-cooling-heating/
-├── public/
-│   ├── blog/               # Blog post images only
-│   │   └── *.webp         # Optimized WebP images
-│   ├── data/
-│   │   └── blog/          # Blog post data
-│   │       ├── index.json # Blog post metadata
-│   │       └── *.md       # Markdown blog posts
-│   ├── favicon.ico
-│   ├── logo192.png
-│   ├── logo512.png
-│   └── manifest.json      # PWA manifest
-├── src/
-│   ├── components/        # Reusable React components
-│   │   ├── ErrorBoundary.jsx   # Error handling
-│   │   ├── LoadingSpinner.jsx  # Loading states
-│   │   ├── Navbar.jsx
-│   │   ├── ChatBot.jsx
-│   │   └── ...
-│   ├── pages/            # Route pages
-│   │   ├── HomePage.jsx
-│   │   ├── Blog.jsx
-│   │   ├── BlogPost.jsx
-│   │   ├── Contact.jsx
-│   │   └── services/     # Service-specific pages
-│   └── utils/
-│       ├── analytics.js  # Google Analytics integration
-│       └── logger.js     # Centralized logging utility
-├── .env                  # Environment variables (DO NOT COMMIT)
-├── .gitignore
-├── package.json
-├── tailwind.config.js
-├── vercel.json           # Vercel deployment config
-└── BLOG_IMAGE_FIX.md     # Documentation for blog routing fixes
+```bash
+npx playwright install   # Install browsers (first time only)
+npx playwright test      # Run full E2E suite
+npx playwright test --ui # Run with interactive UI
 ```
 
-## 📝 Adding New Blog Posts
+Test specs are in `tests/e2e/`:
+- `navigation.spec.js` — all routes load and respond
+- `seo.spec.js` — meta tags, robots.txt, sitemap
+- `responsive.spec.js` — 375px, 768px, 1280px viewports
+- `contact.spec.js` — contact page and service area pages
+- `chatbot.spec.js` — chatbot widget opens correctly
 
-1. **Create the blog post markdown file:**
-   ```bash
-   public/data/blog/your-post-slug.md
-   ```
+---
 
-2. **Add featured image:**
-   ```bash
-   public/blog/your-post-slug.webp
-   # Image must be 1200x630px, optimized WebP format
-   ```
+## Adding Blog Posts
 
-3. **Update blog index:**
-   Add entry to `public/data/blog/index.json`:
+1. Create the markdown file: `public/data/blog/your-post-slug.md`
+2. Add featured image: `public/blog/your-post-slug.webp` (1200x630px)
+3. Add entry to `public/data/blog/index.json`:
    ```json
    {
      "slug": "your-post-slug",
      "title": "Your Post Title",
-     "date": "2025-11-24",
+     "date": "2026-01-01",
      "excerpt": "Brief description...",
      "image": "/blog/your-post-slug.webp",
-     "tags": ["tag1", "tag2"]
+     "tags": ["hvac", "maintenance"]
    }
    ```
 
-4. **Important:** Always place images in `/public/blog/` and data files in `/public/data/blog/`
-   - See [BLOG_IMAGE_FIX.md](BLOG_IMAGE_FIX.md) for detailed explanation
+---
 
-## 🔒 Security
+## Project Structure
 
-- All API keys stored in environment variables
-- Content Security Policy (CSP) headers configured in `vercel.json`
-- Error boundary prevents crashes from exposing sensitive information
-- Logger utility removes console logs in production
-- All forms protected against XSS and injection attacks
-
-## 📊 Performance Optimizations
-
-- **Lazy Loading:** All routes and heavy components use React.lazy()
-- **Code Splitting:** Automatic code splitting with React.lazy()
-- **Image Optimization:** All images in WebP format with responsive sizing
-- **Cookieless Analytics:** Google Analytics configured without cookies
-- **Edge Caching:** Vercel CDN with aggressive cache headers
-- **Bundle Analysis:** Use `npm run analyze` to check bundle size
-
-## 🌐 Deployment
-
-The site automatically deploys to Vercel on every push to the `master` branch.
-
-**Manual Deployment:**
-```bash
-vercel --prod
 ```
-
-**Environment Setup:**
-```bash
-# Add environment variables to Vercel
-vercel env add REACT_APP_CLAUDE_API_KEY production
-
-# Pull environment variables locally
-vercel env pull
+amw-cooling-heating/
+├── pages/                  # Next.js pages (Pages Router)
+│   ├── index.js            # Homepage
+│   ├── 404.js              # Custom 404 page
+│   ├── blog/[slug].js      # Dynamic blog posts
+│   ├── locations/          # Location-specific pages
+│   └── services/           # Service-specific pages
+├── src/
+│   ├── components/         # React components
+│   └── utils/              # Analytics, logger utilities
+├── public/
+│   ├── robots.txt
+│   ├── sitemap.xml         # Auto-generated on build
+│   ├── data/blog/          # Blog post markdown + index
+│   └── blog/               # Blog featured images
+├── scripts/
+│   └── generate-sitemap.js # Prebuild sitemap generator
+├── tests/e2e/              # Playwright E2E tests
+├── docs/                   # Architecture and operations
+│   ├── ARCHITECTURE.md
+│   └── OPERATIONS.md
+├── tasks/                  # Task tracking
+│   ├── todo.md
+│   └── lessons.md
+└── audit.md                # Project state of truth
 ```
-
-## 🧪 Testing
-
-```bash
-npm test                    # Run all tests
-npm test -- --coverage      # Run tests with coverage report
-```
-
-**Test Files:**
-- `src/App.test.js` - Basic app rendering
-- Add more test files in `__tests__` directories
-
-## 🔧 Maintenance
-
-### Update Dependencies
-```bash
-npm update                  # Update minor/patch versions
-npm outdated                # Check for major updates
-```
-
-### Security Audits
-```bash
-npm audit                   # Check for vulnerabilities
-npm audit fix               # Auto-fix vulnerabilities
-```
-
-### Generate Sitemap
-```bash
-npm run generate:sitemap    # Creates public/sitemap.xml
-```
-
-## 📞 Contact & Support
-
-**AMW Cooling & Heating LLC**
-- **Phone:** (936) 331-1339
-- **Email:** admin@amwairconditioning.com
-- **Website:** https://amwairconditioning.com
-- **Service Area:** Conroe, The Woodlands, Spring, Montgomery County, TX
-
-**For Development Issues:**
-- Create an issue in the GitHub repository
-- Refer to [BLOG_IMAGE_FIX.md](BLOG_IMAGE_FIX.md) for common blog routing issues
-
-## 📚 Additional Documentation
-
-- [BLOG_IMAGE_FIX.md](BLOG_IMAGE_FIX.md) - Complete guide to blog image routing issues and fixes
-- [Vercel Deployment Docs](https://vercel.com/docs)
-- [React Documentation](https://react.dev)
-- [Tailwind CSS Docs](https://tailwindcss.com/docs)
-
-## 🏆 Credits
-
-Built by StephensCode for AMW Cooling & Heating LLC, a proud veteran-owned business serving North Houston.
 
 ---
 
-**Version:** 2.0.0
-**Last Updated:** November 24, 2025
-**License:** Proprietary
+## Security
+
+- All secrets stored in environment variables — never in code
+- CSP headers configured
+- Error boundary prevents crashes from exposing information
+- Chatbot proxy enforces rate limiting, input validation, origin restriction
+
+---
+
+## Client Contact
+
+AMW Cooling & Heating LLC
+- Phone: (936) 331-1339
+- Email: admin@amwairconditioning.com
+- Website: https://amwairconditioning.com
+- Service Area: Conroe, The Woodlands, Spring, Montgomery County, TX
+
+---
+
+Version: 2.1.0
+Last Updated: 2026-02-27
+License: Proprietary — StephensCode LLC

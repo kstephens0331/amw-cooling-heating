@@ -1,0 +1,32 @@
+# AMW Cooling & Heating — Caddyfile block
+# Add this to ~/Caddyfile on the Texas server
+# Chatbot runs on port 3003 (PM2: amw-chatbot)
+# Static files served from /var/www/amw/
+
+www.amwairconditioning.com {
+    redir https://amwairconditioning.com{uri} permanent
+}
+
+amwairconditioning.com {
+    # API routes → chatbot server (PM2 on 3003)
+    handle /api/* {
+        reverse_proxy localhost:3003
+    }
+
+    # Static frontend files
+    root * /var/www/amw
+    file_server
+
+    # SPA-style fallback (Next.js static export)
+    handle {
+        try_files {path} {path}.html /404.html
+    }
+
+    # Compression
+    encode gzip zstd
+
+    # Logging
+    log {
+        output file /var/log/caddy/amw.log
+    }
+}

@@ -2,6 +2,9 @@
   "name": "amw-cooling-heating",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@testing-library/dom": "^10.4.0",
@@ -10,7 +13,6 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.13.2",
     "next": "^16.1.6",
-    "openai": "^5.0.1",
     "react": "^18.2.0",
     "react-compare-image": "^2.0.4",
     "react-device-detect": "^2.2.3",
@@ -31,7 +33,7 @@
     "export": "next export",
     "generate:sitemap": "node scripts/generate-sitemap.js",
     "prebuild": "npm run generate:sitemap",
-    "lint": "next lint"
+    "lint": "eslint pages/ src/ --ext .js,.jsx"
   },
   "reactSnap": {
     "inlineCss": true,
@@ -71,12 +73,6 @@
       "--disable-gpu"
     ]
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -90,7 +86,12 @@
     ]
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.3.4",
+    "@playwright/test": "^1.58.2",
     "@tailwindcss/line-clamp": "^0.4.4",
+    "eslint": "^9.39.3",
+    "eslint-config-next": "^16.1.6",
+    "eslint-plugin-react": "^7.37.5",
     "react-scripts": "^5.0.1",
     "react-snap": "^1.23.0"
   }
