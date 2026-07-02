@@ -77,21 +77,36 @@ function toProfileUrl(place) {
   return uri || 'https://g.page/r/CS99Sm7SPdvPEBM/review';
 }
 
+// Normalize review text to plain ASCII. Google returns curly quotes, em/en
+// dashes, and ellipsis characters; the site is ASCII-only, so map them to
+// their plain equivalents and drop anything else non-ASCII. This runs on every
+// pull so a refresh can never reintroduce smart punctuation.
+function toAscii(value) {
+  if (typeof value !== 'string') return value;
+  return value
+    .replace(/[\u2018\u2019\u201a\u201b]/g, "'")
+    .replace(/[\u201c\u201d\u201e\u201f]/g, '"')
+    .replace(/\u2026/g, '...')
+    .replace(/\s*[\u2012\u2013\u2014\u2015]\s*/g, ', ')
+    .replace(/\u00a0/g, ' ')
+    .replace(/[^\x00-\x7F]/g, '');
+}
+
 function shape(place) {
   const reviews = Array.isArray(place.reviews) ? place.reviews : [];
   return {
     source: 'Google',
-    businessName: place.displayName ? place.displayName.text : 'AMW Cooling & Heating LLC',
+    businessName: toAscii(place.displayName ? place.displayName.text : 'AMW Cooling & Heating LLC'),
     profileUrl: toProfileUrl(place),
     averageRating: typeof place.rating === 'number' ? place.rating : 5,
     totalReviews: typeof place.userRatingCount === 'number' ? place.userRatingCount : 0,
     scrapedAt: new Date().toISOString(),
-    note: 'Live aggregate and reviews pulled from the Google Places API. Reviews are verbatim from Google (author names and text unchanged). Places returns a maximum of 5 reviews per business; the aggregate reflects the full count. Re-run scripts/fetch-google-reviews.js from the allowlisted IP to refresh.',
+    note: 'Live aggregate and reviews pulled from the Google Places API. Review wording is unchanged; smart punctuation is normalized to plain ASCII. Places returns a maximum of 5 reviews per business; the aggregate reflects the full count. Re-run scripts/fetch-google-reviews.js from the allowlisted IP to refresh.',
     reviews: reviews.map((r) => ({
-      name: r.authorAttribution ? r.authorAttribution.displayName : 'Google user',
+      name: toAscii(r.authorAttribution ? r.authorAttribution.displayName : 'Google user'),
       rating: typeof r.rating === 'number' ? r.rating : 5,
-      date: r.relativePublishTimeDescription || '',
-      text: (r.text && r.text.text) || (r.originalText && r.originalText.text) || '',
+      date: toAscii(r.relativePublishTimeDescription || ''),
+      text: toAscii((r.text && r.text.text) || (r.originalText && r.originalText.text) || ''),
     })),
   };
 }
