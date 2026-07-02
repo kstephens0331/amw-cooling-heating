@@ -4,7 +4,7 @@ import { LocalBusinessSchema } from '../components/StructuredData';
 import HeroLandingPage from '../components/HeroLandingPage';
 import ServicesSection from '../components/ServicesSection';
 import WhyChooseAMW from '../components/WhyChooseAMW';
-import TrustIndexWidget from '../components/TrustIndexWidget';
+import GoogleReviews from '../components/GoogleReviews';
 import MapSection from '../components/MapSectionWrapper';
 import React from "react";
 
@@ -43,8 +43,8 @@ export default function HomePage() {
             <h2 className="text-3xl md:text-4xl font-black text-center text-white mb-8 tracking-wide italic">
               TRUSTED BY YOUR NEIGHBORS
             </h2>
-            <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-2xl p-4">
-              <TrustIndexWidget height={400} />
+            <div className="max-w-6xl mx-auto bg-white rounded-xl shadow-2xl p-6 md:p-8">
+              <GoogleReviews />
             </div>
             <div className="text-center mt-8">
               <a
