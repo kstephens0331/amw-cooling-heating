@@ -139,6 +139,8 @@ const Footer = () => {
           <Link href="/privacy-policy" className="hover:text-orange-400 transition">Privacy Policy</Link>
           <span>|</span>
           <Link href="/terms-of-service" className="hover:text-orange-400 transition">Terms of Service</Link>
+          <span>|</span>
+          <Link href="/image-credits" className="hover:text-orange-400 transition">Image Credits</Link>
         </div>
         &copy; {new Date().getFullYear()} AMW Cooling & Heating LLC. All Rights Reserved. Built by{' '}
         <a

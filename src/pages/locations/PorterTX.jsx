@@ -24,8 +24,16 @@ const PorterTX = () => {
         <div className="h-1.5 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
 
         {/* Hero Section */}
-        <section className="bg-blue-900 py-12 md:py-16">
-          <div className="max-w-4xl mx-auto px-4 text-center">
+        <section className="relative py-12 md:py-16 overflow-hidden">
+          <img
+            src="/assets/images/cities/porter-tx.webp"
+            alt="Porter, Texas"
+            className="absolute inset-0 w-full h-full object-cover"
+            loading="eager"
+            fetchPriority="high"
+          />
+          <div className="absolute inset-0 bg-blue-900/75"></div>
+          <div className="relative max-w-4xl mx-auto px-4 text-center">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
               <FaMapMarkerAlt className="text-red-400 w-4 h-4" />
               <span className="text-white text-sm font-medium">Porter, Texas</span>
