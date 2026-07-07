@@ -62,16 +62,18 @@ function HeadingRenderer({ level, children }) {
   );
 }
 
-export default function BlogPost() {
+export default function BlogPost({ slug: slugProp, meta: metaProp, md: mdProp, allPosts: allPostsProp }) {
   const router = useRouter();
-  const { slug } = router.query;
-  const [md, setMd] = useState('');
-  const [meta, setMeta] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [allPosts, setAllPosts] = useState([]);
+  const slug = slugProp || router.query.slug;
+  const [md, setMd] = useState(mdProp || '');
+  const [meta, setMeta] = useState(metaProp || null);
+  const [loading, setLoading] = useState(!mdProp);
+  const [allPosts, setAllPosts] = useState(allPostsProp || []);
   const [activeHeading, setActiveHeading] = useState('');
 
   useEffect(() => {
+    // Content is provided at build via props; only fetch as a client-side fallback.
+    if (mdProp) return undefined;
     let cancelled = false;
 
     async function load() {

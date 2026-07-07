@@ -58,6 +58,12 @@ const Footer = () => {
             <Link href="/locations/willis-tx" className="hover:text-orange-400 transition">Willis</Link>
             <Link href="/locations/magnolia-tx" className="hover:text-orange-400 transition">Magnolia</Link>
             <Link href="/locations/tomball-tx" className="hover:text-orange-400 transition">Tomball</Link>
+            <Link href="/locations/new-caney-tx" className="hover:text-orange-400 transition">New Caney</Link>
+            <Link href="/locations/splendora-tx" className="hover:text-orange-400 transition">Splendora</Link>
+            <Link href="/locations/porter-tx" className="hover:text-orange-400 transition">Porter</Link>
+            <Link href="/locations/cut-and-shoot-tx" className="hover:text-orange-400 transition">Cut and Shoot</Link>
+            <Link href="/locations/shenandoah-tx" className="hover:text-orange-400 transition">Shenandoah</Link>
+            <Link href="/locations/pinehurst-tx" className="hover:text-orange-400 transition">Pinehurst</Link>
           </nav>
         </div>
 

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { FaPhone, FaCalendarCheck, FaShieldAlt, FaMapMarkerAlt, FaSnowflake, FaFire, FaWrench, FaTools, FaLeaf, FaThermometerHalf, FaFan } from 'react-icons/fa';
 import MapSection from '../../components/MapSectionWrapper';
 import ManufacturerCarousel from '../../components/ManufacturerCarousel';
+import NearbyAreas from '../../components/NearbyAreas';
 import Footer from '../../components/Footer';
 
 const ConroeTX = () => {
@@ -222,7 +223,11 @@ const ConroeTX = () => {
               <span className="w-8 h-1 bg-blue-600 rounded"></span>
               Nearby Areas We Serve
             </h3>
-            
+            <p className="text-gray-700 mb-4 leading-relaxed text-base md:text-lg">
+              AMW Cooling & Heating serves communities throughout Montgomery County and the
+              north Houston area. Explore our HVAC service in nearby towns:
+            </p>
+            <NearbyAreas currentPath="/locations/conroe-tx" />
           </div>
         </section>
 

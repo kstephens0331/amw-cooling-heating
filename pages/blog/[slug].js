@@ -19,20 +19,31 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const indexPath = path.join(process.cwd(), 'public', 'data', 'blog', 'index.json');
-  const indexJson = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
+  const dataDir = path.join(process.cwd(), 'public', 'data', 'blog');
+  const indexJson = JSON.parse(fs.readFileSync(path.join(dataDir, 'index.json'), 'utf8'));
 
   const post = indexJson.find((p) => p.slug === params.slug) || null;
+
+  // Load the article body at build time so it ships inside the static HTML
+  // instead of being fetched and markdown-parsed on the client after hydration.
+  let md = '';
+  try {
+    md = fs.readFileSync(path.join(dataDir, `${params.slug}.md`), 'utf8');
+  } catch (e) {
+    md = '';
+  }
 
   return {
     props: {
       slug: params.slug,
-      meta: post
+      meta: post,
+      md,
+      allPosts: indexJson
     }
   };
 }
 
-export default function BlogPostPage({ slug, meta }) {
+export default function BlogPostPage({ slug, meta, md, allPosts }) {
   const title = meta?.title || 'Blog Post';
   const description = meta?.excerpt || 'HVAC tips and insights from AMW Cooling & Heating.';
   const image = meta?.image ? `https://amwairconditioning.com${meta.image.split('?')[0]}` : 'https://amwairconditioning.com/assets/images/amwlogo.png';
@@ -41,7 +52,7 @@ export default function BlogPostPage({ slug, meta }) {
   return (
     <>
       <Head>
-        <title>{title} | AMW Cooling &amp; Heating LLC</title>
+        <title>{title} | AMW</title>
         <meta name="description" content={description} />
         <link rel="canonical" href={canonicalUrl} />
         <meta name="keywords" content={meta?.tags?.join(', ') || 'HVAC, Conroe, AC, heating'} />
@@ -73,7 +84,7 @@ export default function BlogPostPage({ slug, meta }) {
           })
         }} />
       </Head>
-      <BlogPost />
+      <BlogPost slug={slug} meta={meta} md={md} allPosts={allPosts} />
     </>
   );
 }

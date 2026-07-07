@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { FaPhone, FaCalendarCheck, FaShieldAlt, FaMapMarkerAlt, FaSnowflake, FaFire, FaWrench, FaTools, FaLeaf, FaThermometerHalf, FaFan } from 'react-icons/fa';
 import MapSection from '../../components/MapSectionWrapper';
 import ManufacturerCarousel from '../../components/ManufacturerCarousel';
+import NearbyAreas from '../../components/NearbyAreas';
 import Footer from '../../components/Footer';
 
 const TheWoodlandsTX = () => {
@@ -199,11 +200,7 @@ const TheWoodlandsTX = () => {
               <span className="w-8 h-1 bg-blue-600 rounded"></span>
               Nearby Areas We Serve
             </h3>
-            <div className="flex flex-wrap gap-3 mb-6">
-              <Link href="/locations/conroe-tx" className="bg-blue-50 text-blue-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-100 transition">Conroe, TX</Link>
-              <Link href="/locations/spring-tx" className="bg-blue-50 text-blue-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-100 transition">Spring, TX</Link>
-              <Link href="/locations/magnolia-tx" className="bg-blue-50 text-blue-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-100 transition">Magnolia, TX</Link>
-            </div>
+            <NearbyAreas currentPath="/locations/the-woodlands-tx" />
           </div>
         </section>
 

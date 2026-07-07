@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { FaPhone, FaCalendarCheck, FaStar, FaShieldAlt } from 'react-icons/fa';
 const heroImage = '/assets/images/josh-with-client.jpg';
+const heroSrcSet = '/assets/images/josh-with-client-400.webp 400w, /assets/images/josh-with-client-769.webp 769w, /assets/images/josh-with-client-800.webp 800w, /assets/images/josh-with-client-1200.webp 1200w, /assets/images/josh-with-client-1600.webp 1600w, /assets/images/josh-with-client-1920.webp 1920w';
 
 export default function HeroSection() {
   return (
@@ -9,9 +10,13 @@ export default function HeroSection() {
       <div className="absolute inset-0">
         <img
           src={heroImage}
+          srcSet={heroSrcSet}
+          sizes="100vw"
           alt="Josh from AMW Cooling & Heating with satisfied customer"
           className="w-full h-full object-cover object-[center_25%]"
           loading="eager"
+          fetchPriority="high"
+          decoding="async"
         />
         {/* Subtle left-side overlay for text readability only */}
         <div className="absolute inset-y-0 left-0 w-[40%] bg-gradient-to-r from-black/60 via-black/30 to-transparent"></div>

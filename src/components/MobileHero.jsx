@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { FaPhone, FaCalendarCheck, FaStar, FaShieldAlt } from 'react-icons/fa';
 const heroImage = '/assets/images/josh-with-client.jpg';
+const heroSrcSet = '/assets/images/josh-with-client-400.webp 400w, /assets/images/josh-with-client-769.webp 769w, /assets/images/josh-with-client-800.webp 800w, /assets/images/josh-with-client-1200.webp 1200w, /assets/images/josh-with-client-1600.webp 1600w, /assets/images/josh-with-client-1920.webp 1920w';
 
 export default function MobileHero() {
   return (
@@ -9,9 +10,13 @@ export default function MobileHero() {
       <div className="absolute inset-0">
         <img
           src={heroImage}
+          srcSet={heroSrcSet}
+          sizes="100vw"
           alt="Josh from AMW Cooling & Heating with satisfied customer"
           className="w-full h-full object-cover object-top"
           loading="eager"
+          fetchPriority="high"
+          decoding="async"
         />
         {/* Gradient Overlay - darker at bottom for text readability */}
         <div className="absolute inset-0 bg-gradient-to-t from-blue-900/95 via-blue-900/50 to-transparent"></div>

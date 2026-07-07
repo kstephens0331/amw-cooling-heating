@@ -39,6 +39,12 @@ const pages = [
   { url: '/locations/willis-tx', priority: '0.8', changefreq: 'monthly' },
   { url: '/locations/magnolia-tx', priority: '0.8', changefreq: 'monthly' },
   { url: '/locations/tomball-tx', priority: '0.8', changefreq: 'monthly' },
+  { url: '/locations/new-caney-tx', priority: '0.8', changefreq: 'monthly' },
+  { url: '/locations/splendora-tx', priority: '0.8', changefreq: 'monthly' },
+  { url: '/locations/porter-tx', priority: '0.8', changefreq: 'monthly' },
+  { url: '/locations/cut-and-shoot-tx', priority: '0.8', changefreq: 'monthly' },
+  { url: '/locations/shenandoah-tx', priority: '0.8', changefreq: 'monthly' },
+  { url: '/locations/pinehurst-tx', priority: '0.8', changefreq: 'monthly' },
 
   // Blog posts - dynamically loaded from index.json
   ...blogPosts.map(post => ({

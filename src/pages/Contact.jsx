@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { FaPhone, FaCalendarCheck, FaEnvelope, FaMapMarkerAlt, FaShieldAlt } from 'react-icons/fa';
 const logo = '/assets/images/amwlogo.png';
@@ -7,28 +7,30 @@ import MapSection from '../components/MapSectionWrapper';
 import Footer from '../components/Footer';
 
 export default function Contact() {
+  // Calendly sets third-party cookies, so load it only when the visitor asks for it.
+  const [showCalendly, setShowCalendly] = useState(false);
+
   useEffect(() => {
-    // Load Calendly CSS
+    if (!showCalendly) return undefined;
+
     const link = document.createElement('link');
     link.href = 'https://assets.calendly.com/assets/external/widget.css';
     link.rel = 'stylesheet';
     document.head.appendChild(link);
 
-    // Load Calendly JS
     const script = document.createElement('script');
     script.src = 'https://assets.calendly.com/assets/external/widget.js';
     script.async = true;
     document.body.appendChild(script);
 
-    // Cleanup function
     return () => {
-      document.head.removeChild(link);
-      document.body.removeChild(script);
+      if (link.parentNode) document.head.removeChild(link);
+      if (script.parentNode) document.body.removeChild(script);
     };
-  }, []);
+  }, [showCalendly]);
 
   return (
-    <div className="bg-white text-gray-800 font-sans min-h-screen">
+    <main className="bg-white text-gray-800 font-sans min-h-screen">
       {/* Patriotic Stripe */}
       <div className="h-1.5 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
 
@@ -71,9 +73,9 @@ export default function Contact() {
       {/* Contact Info Cards */}
       <section className="py-12 bg-blue-900">
         <div className="bg-red-500 py-3 mb-10">
-          <p className="text-center text-white text-sm font-medium tracking-widest uppercase">
+          <h2 className="text-center text-white text-sm font-medium tracking-widest uppercase">
             Multiple Ways to Reach Us
-          </p>
+          </h2>
         </div>
         <div className="max-w-5xl mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-6">
@@ -133,23 +135,23 @@ export default function Contact() {
               className="flex-1 bg-white p-8 rounded-xl shadow-lg border-t-4 border-red-500"
             >
               <div className="mb-5">
-                <label className="block text-base font-bold text-blue-900 mb-2">Full Name</label>
-                <input name="name" type="text" className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-base focus:border-blue-500 focus:outline-none transition" required />
+                <label htmlFor="contact-name" className="block text-base font-bold text-blue-900 mb-2">Full Name</label>
+                <input id="contact-name" name="name" type="text" autoComplete="name" className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-base focus:border-blue-500 focus:outline-none transition" required />
               </div>
 
               <div className="mb-5">
-                <label className="block text-base font-bold text-blue-900 mb-2">Email Address</label>
-                <input name="email" type="email" className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-base focus:border-blue-500 focus:outline-none transition" required />
+                <label htmlFor="contact-email" className="block text-base font-bold text-blue-900 mb-2">Email Address</label>
+                <input id="contact-email" name="email" type="email" autoComplete="email" className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-base focus:border-blue-500 focus:outline-none transition" required />
               </div>
 
               <div className="mb-5">
-                <label className="block text-base font-bold text-blue-900 mb-2">Phone Number</label>
-                <input name="phone" type="tel" className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-base focus:border-blue-500 focus:outline-none transition" />
+                <label htmlFor="contact-phone" className="block text-base font-bold text-blue-900 mb-2">Phone Number</label>
+                <input id="contact-phone" name="phone" type="tel" autoComplete="tel" className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-base focus:border-blue-500 focus:outline-none transition" />
               </div>
 
               <div className="mb-5">
-                <label className="block text-base font-bold text-blue-900 mb-2">Message</label>
-                <textarea name="message" rows="5" className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-base focus:border-blue-500 focus:outline-none transition" required></textarea>
+                <label htmlFor="contact-message" className="block text-base font-bold text-blue-900 mb-2">Message</label>
+                <textarea id="contact-message" name="message" rows="5" className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-base focus:border-blue-500 focus:outline-none transition" required></textarea>
               </div>
 
               <button
@@ -211,11 +213,27 @@ export default function Contact() {
             </p>
           </div>
           <div className="bg-white rounded-xl shadow-lg border-t-4 border-red-500 overflow-hidden">
-            <div
-              className="calendly-inline-widget"
-              data-url="https://calendly.com/admin-amwairconditioning?hide_event_type_details=1&hide_gdpr_banner=1"
-              style={{ minWidth: '320px', height: '740px' }}
-            ></div>
+            {showCalendly ? (
+              <div
+                className="calendly-inline-widget"
+                data-url="https://calendly.com/admin-amwairconditioning?hide_event_type_details=1&hide_gdpr_banner=1"
+                style={{ minWidth: '320px', height: '740px' }}
+              ></div>
+            ) : (
+              <div className="text-center py-16 px-4">
+                <p className="text-gray-600 mb-6 max-w-md mx-auto">
+                  Click below to open our live scheduling calendar and pick a time that works for you.
+                </p>
+                <button
+                  type="button"
+                  onClick={() => setShowCalendly(true)}
+                  className="inline-flex items-center gap-2 bg-red-500 text-white px-8 py-4 rounded-lg hover:bg-red-600 transition font-bold text-lg"
+                >
+                  <FaCalendarCheck className="w-5 h-5" />
+                  Open Booking Calendar
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -258,6 +276,6 @@ export default function Contact() {
       <MapSection />
       <ManufacturerCarousel />
       <Footer />
-    </div>
+    </main>
   );
 }

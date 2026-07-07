@@ -102,7 +102,10 @@ export const LocalBusinessSchema = () => {
           "addressCountry": "US"
         },
         "sameAs": [
-          "https://www.facebook.com/people/AMW-Cooling-Heating-LLC/61569862892114/"
+          "https://www.facebook.com/people/AMW-Cooling-Heating-LLC/61569862892114/",
+          "https://www.instagram.com/amwairconditioning/",
+          "https://www.yelp.com/biz/amw-cooling-and-heating-conroe",
+          "https://www.bbb.org/us/tx/conroe/profile/heating-and-air-conditioning/amw-cooling-heating-llc-0915-90075524"
         ]
       },
       {
@@ -168,7 +171,13 @@ export const LocalBusinessSchema = () => {
           {"@type": "City", "name": "Montgomery", "containedInPlace": {"@type": "State", "name": "Texas"}},
           {"@type": "City", "name": "Willis", "containedInPlace": {"@type": "State", "name": "Texas"}},
           {"@type": "City", "name": "Magnolia", "containedInPlace": {"@type": "State", "name": "Texas"}},
-          {"@type": "City", "name": "Tomball", "containedInPlace": {"@type": "State", "name": "Texas"}}
+          {"@type": "City", "name": "Tomball", "containedInPlace": {"@type": "State", "name": "Texas"}},
+          {"@type": "City", "name": "New Caney", "containedInPlace": {"@type": "State", "name": "Texas"}},
+          {"@type": "City", "name": "Splendora", "containedInPlace": {"@type": "State", "name": "Texas"}},
+          {"@type": "City", "name": "Porter", "containedInPlace": {"@type": "State", "name": "Texas"}},
+          {"@type": "City", "name": "Cut and Shoot", "containedInPlace": {"@type": "State", "name": "Texas"}},
+          {"@type": "City", "name": "Shenandoah", "containedInPlace": {"@type": "State", "name": "Texas"}},
+          {"@type": "City", "name": "Pinehurst", "containedInPlace": {"@type": "State", "name": "Texas"}}
         ],
         "hasOfferCatalog": { "@id": SERVICE_CATALOG_ID },
         "aggregateRating": {

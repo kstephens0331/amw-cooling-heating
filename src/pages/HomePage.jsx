@@ -16,10 +16,10 @@ export default function HomePage() {
       <link
         rel="preload"
         as="image"
-        href="/assets/images/DSC_2135-769.webp"
+        href="/assets/images/josh-with-client-800.webp"
         fetchPriority="high"
         type="image/webp"
-        imageSrcSet="/assets/images/DSC_2135-400.webp 400w, /assets/images/DSC_2135-769.webp 769w, /assets/images/DSC_2135-800.webp 800w, /assets/images/DSC_2135-1920.webp 1920w"
+        imageSrcSet="/assets/images/josh-with-client-400.webp 400w, /assets/images/josh-with-client-769.webp 769w, /assets/images/josh-with-client-800.webp 800w, /assets/images/josh-with-client-1200.webp 1200w, /assets/images/josh-with-client-1600.webp 1600w, /assets/images/josh-with-client-1920.webp 1920w"
         imageSizes="100vw"
       />
       <link rel="dns-prefetch" href="https://a.tile.openstreetmap.org" />
