@@ -8,6 +8,31 @@ const today = new Date().toISOString().split('T')[0];
 const blogIndexPath = path.join(__dirname, '../public/data/blog/index.json');
 const blogPosts = JSON.parse(fs.readFileSync(blogIndexPath, 'utf8'));
 
+// Hyper-local service-by-town pages. Keep these lists in sync with the wrapper
+// files under pages/services/<service>/<town>.js and the SERVICE_TOWNS data.
+const serviceTownServices = ['ac-repair', 'ac-installation', 'heating-repair'];
+const serviceTownSlugs = [
+  'conroe-tx',
+  'the-woodlands-tx',
+  'spring-tx',
+  'montgomery-tx',
+  'willis-tx',
+  'magnolia-tx',
+  'tomball-tx',
+  'new-caney-tx',
+  'splendora-tx',
+  'porter-tx',
+  'cut-and-shoot-tx',
+  'shenandoah-tx',
+  'pinehurst-tx',
+];
+const serviceTownPages = [];
+for (const svc of serviceTownServices) {
+  for (const slug of serviceTownSlugs) {
+    serviceTownPages.push({ url: `/services/${svc}/${slug}`, priority: '0.8', changefreq: 'monthly' });
+  }
+}
+
 // All existing and new routes
 const pages = [
   { url: '', priority: '1.0', changefreq: 'weekly' }, // homepage
@@ -45,6 +70,9 @@ const pages = [
   { url: '/locations/cut-and-shoot-tx', priority: '0.8', changefreq: 'monthly' },
   { url: '/locations/shenandoah-tx', priority: '0.8', changefreq: 'monthly' },
   { url: '/locations/pinehurst-tx', priority: '0.8', changefreq: 'monthly' },
+
+  // Service-by-town pages (ac-repair, ac-installation, heating-repair per town)
+  ...serviceTownPages,
 
   // Blog posts - dynamically loaded from index.json
   ...blogPosts.map(post => ({

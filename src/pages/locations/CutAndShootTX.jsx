@@ -6,6 +6,8 @@ import MapSection from '../../components/MapSectionWrapper';
 import ManufacturerCarousel from '../../components/ManufacturerCarousel';
 import NearbyAreas from '../../components/NearbyAreas';
 import Footer from '../../components/Footer';
+import LocationFAQ from '../../components/LocationFAQ';
+import { LOCATION_FAQS } from '../../data/locationFaqs';
 
 const CutAndShootTX = () => {
   return (
@@ -261,6 +263,9 @@ const CutAndShootTX = () => {
             <NearbyAreas currentPath="/locations/cut-and-shoot-tx" />
           </div>
         </section>
+
+        {/* FAQ Section */}
+        <LocationFAQ town={LOCATION_FAQS['cut-and-shoot-tx'].town} faqs={LOCATION_FAQS['cut-and-shoot-tx'].faqs} />
 
         {/* CTA Section */}
         <section className="relative overflow-hidden">

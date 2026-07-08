@@ -6,6 +6,8 @@ import MapSection from '../../components/MapSectionWrapper';
 import ManufacturerCarousel from '../../components/ManufacturerCarousel';
 import NearbyAreas from '../../components/NearbyAreas';
 import Footer from '../../components/Footer';
+import LocationFAQ from '../../components/LocationFAQ';
+import { LOCATION_FAQS } from '../../data/locationFaqs';
 
 const WillisTX = () => {
   return (
@@ -212,6 +214,9 @@ const WillisTX = () => {
           </div>
         </section>
 
+
+        {/* FAQ Section */}
+        <LocationFAQ town={LOCATION_FAQS['willis-tx'].town} faqs={LOCATION_FAQS['willis-tx'].faqs} />
 
         {/* CTA Section */}
         <section className="relative overflow-hidden">
