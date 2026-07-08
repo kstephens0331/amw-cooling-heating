@@ -5,6 +5,7 @@ import { FaPhone, FaCalendarCheck, FaShieldAlt, FaCheckCircle, FaFire, FaChevron
 import ManufacturerCarousel from '../../components/ManufacturerCarousel';
 import MapSection from '../../components/MapSectionWrapper';
 import Footer from '../../components/Footer';
+import AreasWeServe from '../../components/AreasWeServe';
 
 const serviceFaqs = [
   { question: "How much does heating repair cost in Conroe, TX?", answer: "Heating repairs in Conroe typically range from $150 to $500 for common issues like ignitor replacement, thermocouple repair, or blower motor fixes. More complex repairs involving heat exchangers may cost more. We always provide a clear estimate before starting work." },
@@ -283,6 +284,9 @@ const HeatingRepair = () => {
             </div>
           </div>
         </section>
+
+        {/* Areas We Serve Section */}
+        <AreasWeServe service="heating-repair" label="Heating Repair" />
 
         {/* CTA Section */}
         <section className="relative overflow-hidden">

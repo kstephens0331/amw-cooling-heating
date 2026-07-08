@@ -30,11 +30,11 @@ export default function MobileHero() {
           <span className="text-white text-xs font-medium">Veteran-Owned</span>
         </div>
 
-        {/* Headline */}
-        <h1 className="text-2xl font-bold text-white mb-3 leading-tight">
+        {/* Headline (h2 so the page has a single h1; the desktop hero carries the h1) */}
+        <h2 className="text-2xl font-bold text-white mb-3 leading-tight">
           Veteran-Owned HVAC
           <span className="text-blue-300"> Contractor in Conroe, TX</span>
-        </h1>
+        </h2>
 
         {/* Subheadline */}
         <p className="text-sm text-blue-100 mb-5">

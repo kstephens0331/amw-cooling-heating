@@ -5,6 +5,7 @@ import { FaPhone, FaCalendarCheck, FaShieldAlt, FaCheckCircle, FaSnowflake, FaCh
 import ManufacturerCarousel from '../../components/ManufacturerCarousel';
 import MapSection from '../../components/MapSectionWrapper';
 import Footer from '../../components/Footer';
+import AreasWeServe from '../../components/AreasWeServe';
 
 const serviceFaqs = [
   { question: "How much does a new AC system cost in Conroe, TX?", answer: "A new AC system in Conroe typically costs between $4,500 and $12,000+ depending on the system size, efficiency rating (SEER), brand, and complexity of installation. Factors like ductwork modifications, electrical upgrades, and home size affect the final price. We provide free, detailed estimates with no hidden fees." },
@@ -388,6 +389,9 @@ const ACInstallation = () => {
             </div>
           </div>
         </section>
+
+        {/* Areas We Serve Section */}
+        <AreasWeServe service="ac-installation" label="AC Installation" />
 
         {/* CTA Section */}
         <section className="relative overflow-hidden">

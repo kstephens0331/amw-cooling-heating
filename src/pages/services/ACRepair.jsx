@@ -5,6 +5,7 @@ import { FaPhone, FaCalendarCheck, FaShieldAlt, FaCheckCircle, FaSnowflake, FaCh
 import ManufacturerCarousel from '../../components/ManufacturerCarousel';
 import MapSection from '../../components/MapSectionWrapper';
 import Footer from '../../components/Footer';
+import AreasWeServe from '../../components/AreasWeServe';
 
 const serviceFaqs = [
   { question: "How much does AC repair cost in Conroe, TX?", answer: "Most AC repairs in Conroe range from $150 to $600 depending on the issue. Simple fixes like capacitor replacements or refrigerant recharges are on the lower end, while compressor or evaporator coil repairs cost more. AMW Cooling & Heating provides upfront pricing before any work begins—no hidden fees." },
@@ -392,6 +393,9 @@ const ACRepair = () => {
             </div>
           </div>
         </section>
+
+        {/* Areas We Serve Section */}
+        <AreasWeServe service="ac-repair" label="AC Repair" />
 
         {/* CTA Section */}
         <section className="relative overflow-hidden">
