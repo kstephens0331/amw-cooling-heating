@@ -175,6 +175,8 @@ AMW/
 | Structured data (JSON-LD) | Present (StructuredData component) |
 | Google Analytics | GA4 (G-PHMH5V5651) — cookieless mode |
 | Canonical URLs | Present |
+| Indexing API notifications | 71 URLs submitted 2026-07-21 for the 7/7-7/8 SEO overhaul (all pages touched by the town-page/service-hub rollout), all `published: true` |
+| sitemap.xml gap | `image-credits.js` (added 7/7-7/8) is not in sitemap.xml — regen needed (`npm run generate:sitemap`) |
 
 ---
 
@@ -182,6 +184,10 @@ AMW/
 
 | Date | Change | By |
 |------|--------|-----|
+| 2026-07-21 | Submitted 71 changed/new URLs to Google Indexing API following the SEO overhaul (town pages, service-by-town pages, homepage H1 change, etc.) | Claude |
+| 2026-07-21 | Fixed stale llms-full.txt (dated 2026-05-25, predated the 7/7-7/8 overhaul) — added the 6 missing towns to the service-area table, documented the new service-by-town URL pattern, added FAQPage to the schema list, bumped the date. **Not yet committed/deployed** | Claude |
+| 2026-07-21 | Full SEO gap audit (5 parallel agents, 137 tool calls) — see [SEO_AUDIT_2026-07-21.md](SEO_AUDIT_2026-07-21.md). Core finding: 39 new service×town pages are largely invisible in GSC (0 impressions) and cannibalize the location/service hub pages via duplicated boilerplate. Also caught a live bug: chatbot gives out a wrong phone number. Ahrefs and GBP audit access both blocked (plan tier / quota) | Claude |
+| 2026-07-21 | Cannibalization fix — 19-agent workflow rewrote the 3 shared service-town templates, backfilled all 13 location pages, repositioned all 3 service hubs to county-wide framing per a canonicalization strategy (location=broad town presence, service×town=deep single-service dive, service hub=county-wide directory). Verified by re-reading actual files post-fix, no bugs. 22 tracked files + 1 new data file changed. **Not yet committed/deployed.** | Claude |
 | 2026-02-27 | Initial audit.md created by KAS-AI | KAS-AI System |
 | 2026-02-27 | Deep read completed, remediation plan created | KAS-AI System |
 | 2026-02-27 | Auto-approve command list generated | KAS-AI System |

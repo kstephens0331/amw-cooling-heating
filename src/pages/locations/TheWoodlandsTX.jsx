@@ -161,7 +161,7 @@ const TheWoodlandsTX = () => {
               WHY THE WOODLANDS RESIDENTS CHOOSE AMW
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg text-center max-w-3xl mx-auto">
-              Woodlands homeowners expect premium service, and AMW delivers. Our technicians arrive on time, in uniform, and treat your home with respect. We understand that many Woodlands homes feature high-end HVAC systems, multi-zone configurations, and smart home integration—and we have the expertise to service them all.
+              We are a local, veteran-owned team, not a national chain routing your call to an out-of-state center. Our technicians arrive on time, in uniform, and treat your home with the same respect they would want shown to their own. We are licensed, insured, and bonded under Texas license TACLB133920E, and we show up when we say we will.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
@@ -204,12 +204,42 @@ const TheWoodlandsTX = () => {
               Alden Bridge, Cochran's Crossing, College Park, Creekside Park, Grogan's Mill, Indian Springs, Panther Creek, Sterling Ridge, Town Center, and all Woodlands villages. No matter where you are in the The Woodlands area, AMW
               Cooling & Heating is ready to help.
             </p>
-            
+
+            <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
+              <span className="w-8 h-1 bg-red-500 rounded"></span>
+              Built for The Woodlands' Villages
+            </h3>
+            <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
+              With more than 100,000 residents spread across eight villages, The Woodlands has grown
+              into one of Montgomery County's largest communities, and its homes reflect that scale.
+              We work on everything from the original 1970s and 1980s houses in Grogan's Mill and
+              Panther Creek to the newer, larger builds going up in Creekside Park and Sterling Ridge,
+              which means covering older single-stage equipment on one call and multi-zone,
+              variable-speed systems tied into smart thermostats on the next. Whatever your village and
+              whatever your setup, our technicians carry the training and the parts to handle it, on
+              your AC, your heat, or both.
+            </p>
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
               <span className="w-8 h-1 bg-blue-600 rounded"></span>
+              Emergency HVAC Service in The Woodlands
+            </h3>
+            <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
+              A system going down does not wait for a convenient time, and neither do we. We are open
+              8am to 9pm, seven days a week, with after-hours emergency service available, so call AMW
+              for same-day HVAC help anywhere in The Woodlands, from Town Center out to Alden Bridge and
+              every village between. Being about 20 minutes south of our Conroe shop keeps our
+              Woodlands response times fast.
+            </p>
+
+            <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
+              <span className="w-8 h-1 bg-red-500 rounded"></span>
               Nearby Areas We Serve
             </h3>
+            <p className="text-gray-700 mb-4 leading-relaxed text-base md:text-lg">
+              AMW Cooling & Heating serves communities across Montgomery County and the north
+              Houston area. Explore our HVAC service in nearby towns:
+            </p>
             <NearbyAreas currentPath="/locations/the-woodlands-tx" />
           </div>
         </section>

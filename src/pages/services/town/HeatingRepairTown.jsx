@@ -7,14 +7,115 @@ import MapSection from '../../../components/MapSectionWrapper';
 import Footer from '../../../components/Footer';
 import { SERVICE_TOWNS } from '../../../data/serviceTowns';
 
+// Every town is assigned a heating "profile" based on what its real
+// SERVICE_TOWNS fields (heatingAngle/housing/climate) actually describe, so
+// the problem grid, FAQ answers, and tune-up copy genuinely differ by town
+// instead of swapping in the town name over identical boilerplate.
+const TOWN_PROFILE = {
+  'conroe-tx': 'lakefront',
+  'the-woodlands-tx': 'heatpump',
+  'spring-tx': 'variedAge',
+  'montgomery-tx': 'lakefront',
+  'willis-tx': 'lakefront',
+  'magnolia-tx': 'acreage',
+  'tomball-tx': 'variedAge',
+  'new-caney-tx': 'heatpump',
+  'splendora-tx': 'acreage',
+  'porter-tx': 'heatpump',
+  'cut-and-shoot-tx': 'acreage',
+  'shenandoah-tx': 'commercial',
+  'pinehurst-tx': 'acreage'
+};
+
+const PROBLEM_CARDS = {
+  heatpump: [
+    { icon: FaFire, bg: 'bg-red-500', label: 'No Heat', desc: 'Stuck heat pump changeover, tripped auxiliary heat strip, or a lockout code' },
+    { icon: FaExclamationTriangle, bg: 'bg-blue-900', label: 'Blowing Cold Air', desc: 'Reversing valve stuck in cool mode, or a low charge affecting the heat pump' },
+    { icon: FaTools, bg: 'bg-red-500', label: 'Strange Noises', desc: 'Blower motor, loose parts, or a failing bearing' },
+    { icon: FaWrench, bg: 'bg-blue-900', label: 'Short Cycling', desc: 'Defrost control fault or an airflow restriction tripping the safety limit' },
+    { icon: FaExclamationTriangle, bg: 'bg-red-500', label: 'Odd Smells', desc: 'Dust burn-off on the auxiliary heat strips, or a smell that needs a check' },
+    { icon: FaFire, bg: 'bg-blue-900', label: 'Weak Heat', desc: 'Dirty filter, low airflow, or an aging heat pump losing capacity' }
+  ],
+  lakefront: [
+    { icon: FaFire, bg: 'bg-red-500', label: 'No Heat', desc: 'Failed igniter or flame sensor, common after a humid summer near the water' },
+    { icon: FaExclamationTriangle, bg: 'bg-blue-900', label: 'Blowing Cold Air', desc: 'A furnace pilot or ignition fault, or a thermostat not calling for heat' },
+    { icon: FaTools, bg: 'bg-red-500', label: 'Strange Noises', desc: 'Blower motor strain or corrosion linked to lake-area moisture' },
+    { icon: FaWrench, bg: 'bg-blue-900', label: 'Short Cycling', desc: 'Humidity-related limit trips or a restricted airflow path' },
+    { icon: FaExclamationTriangle, bg: 'bg-red-500', label: 'Odd Smells', desc: 'A musty smell from lake moisture in the system, or dust burn-off' },
+    { icon: FaFire, bg: 'bg-blue-900', label: 'Weak Heat', desc: 'Dirty filter, duct leaks, or an aging system working harder near the water' }
+  ],
+  acreage: [
+    { icon: FaFire, bg: 'bg-red-500', label: 'No Heat', desc: 'Failed igniter or flame sensor, or a safety switch tripped after sitting idle' },
+    { icon: FaExclamationTriangle, bg: 'bg-blue-900', label: 'Blowing Cold Air', desc: 'A thermostat not calling for heat, or an aging furnace losing its flame' },
+    { icon: FaTools, bg: 'bg-red-500', label: 'Strange Noises', desc: 'Blower motor strain from long duct runs, loose parts, or a failing bearing' },
+    { icon: FaWrench, bg: 'bg-blue-900', label: 'Short Cycling', desc: 'Airflow imbalance across long duct runs, or a safety limit trip' },
+    { icon: FaExclamationTriangle, bg: 'bg-red-500', label: 'Odd Smells', desc: 'Dust burn-off, or a warning sign that needs a check' },
+    { icon: FaFire, bg: 'bg-blue-900', label: 'Weak Heat', desc: 'Duct leaks or airflow imbalance leaving rooms at the far end of the house cold' }
+  ],
+  variedAge: [
+    { icon: FaFire, bg: 'bg-red-500', label: 'No Heat', desc: 'A failed igniter on an older furnace, or a control board fault on a newer system' },
+    { icon: FaExclamationTriangle, bg: 'bg-blue-900', label: 'Blowing Cold Air', desc: 'A thermostat miscall, or a heat pump reversing valve on newer installs' },
+    { icon: FaTools, bg: 'bg-red-500', label: 'Strange Noises', desc: 'Blower motor, loose parts, or a failing bearing' },
+    { icon: FaWrench, bg: 'bg-blue-900', label: 'Short Cycling', desc: 'Age-related wear on older units, or a safety trip on high-efficiency systems' },
+    { icon: FaExclamationTriangle, bg: 'bg-red-500', label: 'Odd Smells', desc: 'Dust burn-off, or a warning sign that needs a check' },
+    { icon: FaFire, bg: 'bg-blue-900', label: 'Weak Heat', desc: 'Dirty filter, duct leaks, or a system nearing the end of its service life' }
+  ],
+  commercial: [
+    { icon: FaFire, bg: 'bg-red-500', label: 'No Heat', desc: 'A failed igniter on a home furnace, or a control fault on a light commercial unit' },
+    { icon: FaExclamationTriangle, bg: 'bg-blue-900', label: 'Blowing Cold Air', desc: 'A thermostat or control board issue on either a house or a storefront' },
+    { icon: FaTools, bg: 'bg-red-500', label: 'Strange Noises', desc: 'Blower motor, loose parts, or a failing bearing' },
+    { icon: FaWrench, bg: 'bg-blue-900', label: 'Short Cycling', desc: 'Airflow or safety limit trips, more common on units running long hours' },
+    { icon: FaExclamationTriangle, bg: 'bg-red-500', label: 'Odd Smells', desc: 'Dust burn-off, or a wiring smell that needs an immediate check' },
+    { icon: FaFire, bg: 'bg-blue-900', label: 'Weak Heat', desc: 'Dirty filter, duct leaks, or an aging system, residential or commercial' }
+  ]
+};
+
+const CAUSE_TEXT = {
+  heatpump: 'Common causes include a stuck heat pump changeover, a tripped auxiliary heat strip, or a lockout code from a defrost control fault. On older backup heat elements a failed igniter is the more likely cause.',
+  lakefront: 'Common causes include a dirty filter, a failed igniter or flame sensor, or a thermostat that is not calling for heat correctly. Near the water we also check for moisture and corrosion that can affect ignition and safety switches.',
+  acreage: 'Common causes include a dirty filter, a failed igniter or flame sensor, or airflow imbalance across the long duct runs common on bigger lots.',
+  variedAge: 'Common causes include a dirty filter, a failed igniter or flame sensor on an older furnace, or a control board fault on newer high-efficiency equipment.',
+  commercial: 'Common causes include a dirty filter, a failed igniter or flame sensor, or a control fault, whether it is a home system or a light commercial rooftop unit.'
+};
+
+const TOP_REPAIR_TEXT = {
+  heatpump: 'most calls involve a heat pump changeover problem or a tripped auxiliary heat strip',
+  lakefront: 'most calls trace back to an igniter or flame sensor that failed after a humid summer near the water',
+  acreage: 'most calls involve airflow problems across long duct runs on bigger lots, along with the usual igniter and flame sensor failures',
+  variedAge: 'we see everything from aging furnaces finally giving out to newer systems with a tricky control board fault',
+  commercial: 'we repair both home furnaces and light commercial rooftop units, most often for a failed igniter, flame sensor, or control fault'
+};
+
+const SEASON_NOTE = {
+  heatpump: 'Because your heat pump handles both heating and cooling, keeping the changeover and auxiliary heat dialed in matters year-round, not just when a front rolls through.',
+  lakefront: 'Because Texas homes lean on their heat only a handful of weeks a year, a problem often shows up on the first cold night, right when lake-area humidity is already testing the rest of the system.',
+  acreage: 'On a bigger lot, heat loss shows up fastest in the rooms farthest from the unit, so we check duct runs along with the equipment itself.',
+  variedAge: 'With homes ranging from decades old to brand new, we never assume a fix that worked on one system will work on the other.',
+  commercial: 'Between homes and light commercial spaces along the corridor, we treat a heating call with the same urgency whether it is a house or a storefront.'
+};
+
+const PREVENT_NOTE = {
+  heatpump: 'A pre-season tune-up clears dust, tests the igniter and safety controls, and confirms the heat pump changeover and auxiliary heat work correctly before the cold arrives.',
+  lakefront: 'A pre-season tune-up clears dust, tests the igniter and safety controls, and checks for the corrosion that lake-area moisture can cause before the cold arrives.',
+  acreage: 'A pre-season tune-up clears dust, tests the igniter and safety controls, and checks airflow across the long duct runs common on bigger lots before the cold arrives.',
+  variedAge: 'A pre-season tune-up clears dust, tests the igniter and safety controls, and confirms an older furnace or a newer high-efficiency system is running the way it should before the cold arrives.',
+  commercial: 'A pre-season tune-up clears dust, tests the igniter and safety controls, and confirms the system is ready before the cold arrives, whether it serves a home or a business.'
+};
+
 const HeatingRepairTown = ({ townKey }) => {
   const t = SERVICE_TOWNS[townKey];
   const [openFaq, setOpenFaq] = useState(null);
+  const profile = TOWN_PROFILE[townKey] || 'variedAge';
+  const problemCards = PROBLEM_CARDS[profile];
+  const causeText = CAUSE_TEXT[profile];
+  const topRepairText = TOP_REPAIR_TEXT[profile];
+  const seasonNote = SEASON_NOTE[profile];
+  const preventNote = PREVENT_NOTE[profile];
 
   const faqs = [
     {
       question: `Do you offer emergency heating repair in ${t.name}?`,
-      answer: `Yes. When a cold front hits and the heat goes out, we offer after-hours emergency service from 5pm to 9pm on top of our regular 8am to 9pm hours, seven days a week. Call (936) 331-1339 and we will get a technician headed your way. Additional charges may apply for after-hours calls.`
+      answer: `Yes. When a cold front hits and the heat goes out, we offer after-hours emergency service from 5pm to 9pm on top of our regular 8am to 9pm hours, seven days a week. Since we're ${t.drive}, we can usually get a technician to your ${t.name} home quickly. Call (936) 331-1339. Additional charges may apply for after-hours calls.`
     },
     {
       question: `What types of heating systems do you repair in ${t.name}?`,
@@ -22,15 +123,15 @@ const HeatingRepairTown = ({ townKey }) => {
     },
     {
       question: `Why is my ${t.name} heater blowing cold air or not keeping up?`,
-      answer: `Common causes include a dirty filter, a failed igniter or flame sensor on a gas furnace, a stuck reversing valve or low charge on a heat pump, or a thermostat that is not calling for heat correctly. We diagnose the real cause and fix it, rather than guessing.`
+      answer: `${causeText} We diagnose the real cause and fix it, rather than guessing.`
     },
     {
       question: `Is it safe to keep running a heater that is acting up in ${t.name}?`,
       answer: `If you smell gas, leave the home and call your gas provider and us right away. For other symptoms like short cycling, odd noises, or weak heat, it is best to have it checked promptly, since a small issue on a gas system can become a safety concern. We check for safe operation on every visit.`
     },
     {
-      question: `Do you offer financing on heating repairs in ${t.name}?`,
-      answer: `Yes. We offer financing through Synchrony and FTL Finance for larger heating repairs and system replacements, so an unexpected fix does not have to come out of pocket all at once. We can go over the options during your visit.`
+      question: `What is the most common heating repair you see in ${t.name}?`,
+      answer: `In ${t.name}, ${topRepairText}. We offer same-day service on most calls, so an overnight fix is rare.`
     }
   ];
 
@@ -105,7 +206,7 @@ const HeatingRepairTown = ({ townKey }) => {
               Winters in Southeast Texas are short, but the cold fronts that push through can drop temperatures fast, and a
               heating system that sat idle all summer does not always start when you need it. AMW Cooling &amp; Heating
               repairs furnaces and heat pumps throughout {t.name}, {t.geography}. As a veteran-owned company {t.drive},
-              we can usually be there the same day. {t.heatingAngle}
+              we can usually be there the same day. {t.repairAngle}
             </p>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
               We serve {t.housing}, and our licensed technicians work on gas furnaces, electric furnaces, heat pumps, and
@@ -127,48 +228,18 @@ const HeatingRepairTown = ({ townKey }) => {
               COMMON HEATING PROBLEMS WE FIX IN {t.name.toUpperCase()}
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
-              <div className="bg-white rounded-xl p-5 text-center">
-                <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <FaFire className="w-5 h-5 text-white" />
-                </div>
-                <span className="font-bold text-blue-900 text-sm">No Heat</span>
-                <p className="text-gray-600 text-xs mt-1">Failed igniter, flame sensor, or thermostat issues</p>
-              </div>
-              <div className="bg-white rounded-xl p-5 text-center">
-                <div className="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <FaExclamationTriangle className="w-5 h-5 text-white" />
-                </div>
-                <span className="font-bold text-blue-900 text-sm">Blowing Cold Air</span>
-                <p className="text-gray-600 text-xs mt-1">Heat pump charge, reversing valve, or control problems</p>
-              </div>
-              <div className="bg-white rounded-xl p-5 text-center">
-                <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <FaTools className="w-5 h-5 text-white" />
-                </div>
-                <span className="font-bold text-blue-900 text-sm">Strange Noises</span>
-                <p className="text-gray-600 text-xs mt-1">Blower motor, loose parts, or a failing bearing</p>
-              </div>
-              <div className="bg-white rounded-xl p-5 text-center">
-                <div className="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <FaWrench className="w-5 h-5 text-white" />
-                </div>
-                <span className="font-bold text-blue-900 text-sm">Short Cycling</span>
-                <p className="text-gray-600 text-xs mt-1">Airflow, overheating, or safety limit trips</p>
-              </div>
-              <div className="bg-white rounded-xl p-5 text-center">
-                <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <FaExclamationTriangle className="w-5 h-5 text-white" />
-                </div>
-                <span className="font-bold text-blue-900 text-sm">Odd Smells</span>
-                <p className="text-gray-600 text-xs mt-1">Dust burn-off, or a warning sign that needs a check</p>
-              </div>
-              <div className="bg-white rounded-xl p-5 text-center">
-                <div className="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <FaFire className="w-5 h-5 text-white" />
-                </div>
-                <span className="font-bold text-blue-900 text-sm">Weak Heat</span>
-                <p className="text-gray-600 text-xs mt-1">Dirty filter, duct leaks, or an aging system</p>
-              </div>
+              {problemCards.map((card, idx) => {
+                const Icon = card.icon;
+                return (
+                  <div key={idx} className="bg-white rounded-xl p-5 text-center">
+                    <div className={`w-12 h-12 ${card.bg} rounded-full flex items-center justify-center mx-auto mb-3`}>
+                      <Icon className="w-5 h-5 text-white" />
+                    </div>
+                    <span className="font-bold text-blue-900 text-sm">{card.label}</span>
+                    <p className="text-gray-600 text-xs mt-1">{card.desc}</p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -182,18 +253,14 @@ const HeatingRepairTown = ({ townKey }) => {
               Heating Repair Built for {t.name} Homes
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              We repair heating systems throughout {t.name}, including {t.neighborhoods}. {t.heatingAngle} Because Texas
-              homes lean on their heat only a handful of weeks a year, a problem often shows up on the first cold night,
-              which is exactly when you need a fast, reliable fix.
+              We repair heating systems throughout {t.name}, including {t.neighborhoods}. {t.heatingAngle} {seasonNote}
             </p>
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
               <span className="w-8 h-1 bg-blue-600 rounded"></span>
               Prevent the Next Breakdown
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              Most no-heat calls trace back to something a seasonal check would have caught. A pre-season tune-up on your
-              {' '}{t.name} system clears dust, tests the igniter and safety controls, and confirms the heat pump changeover
-              works before the cold arrives. Ask us about
+              Most no-heat calls trace back to something a seasonal check would have caught. {preventNote} Ask us about
               {' '}<Link href="/services/hvac-maintenance" className="text-blue-600 hover:underline">HVAC maintenance</Link> that keeps
               both your heating and cooling ready year-round.
             </p>
@@ -236,6 +303,10 @@ const HeatingRepairTown = ({ townKey }) => {
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">&#10003;</span>
                 <span className="text-gray-700 text-base font-medium">5.0-star Google rating</span>
+              </div>
+              <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3 col-span-2 md:col-span-3">
+                <span className="text-green-500 font-bold text-lg mt-0.5">&#10003;</span>
+                <span className="text-gray-700 text-base font-medium">{t.repairAngle}</span>
               </div>
             </div>
           </div>

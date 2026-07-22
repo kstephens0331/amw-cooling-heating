@@ -224,16 +224,19 @@ const PorterTX = () => {
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
               <span className="w-8 h-1 bg-blue-600 rounded"></span>
-              New Construction and Warranty Protection
+              New Construction and Established Homes
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              With new construction making up roughly two thirds of Porter and New Caney West closings,
-              a large share of systems in the 77365 area are still under manufacturer warranty. Most of
-              those warranties require documented annual maintenance, and skipping it can void your
-              coverage. Our tune-up visits keep builder-grade equipment running efficiently through the
-              Southeast Texas summer and keep that warranty intact, so a future repair does not land on
-              you unexpectedly. As those first-generation systems reach eight to ten years old, we also
-              handle honest, upfront replacements when the numbers stop making sense to keep repairing.
+              With new construction making up a large share of Porter and New Caney West closings, a lot
+              of the equipment in the 77365 area is young and still under manufacturer warranty, while
+              homes near the original Porter town center run older systems that have earned some
+              attention. We cover the full range for both situations, whether that means a documented
+              tune-up to protect a builder-grade system's warranty, an honest repair on a unit with good
+              years left, or a straightforward replacement when a system is past its useful life. For a
+              closer look at any one of those, visit our{' '}
+              <Link href="/services/ac-installation" className="text-blue-600 hover:underline">AC installation</Link>,{' '}
+              <Link href="/services/ac-repair" className="text-blue-600 hover:underline">AC repair</Link>, and{' '}
+              <Link href="/services/hvac-maintenance" className="text-blue-600 hover:underline">maintenance</Link> pages.
             </p>
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">

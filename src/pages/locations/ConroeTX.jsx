@@ -79,17 +79,22 @@ const ConroeTX = () => {
               Your Local Conroe HVAC Contractor
             </h2>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              AMW Cooling & Heating proudly serves Conroe, Texas with comprehensive heating,
-              ventilation, and air conditioning services. As a veteran-owned HVAC company
-              based in Conroe, we understand the unique climate challenges of Montgomery
-              County and provide reliable, professional HVAC solutions for local homeowners
-              and businesses.
+              AMW Cooling & Heating is proud to call Conroe home. As the Montgomery County
+              seat on the shores of Lake Conroe, just off Interstate 45 north of Houston,
+              Conroe is where our shop is based, so it is usually one of the fastest
+              responses we offer anywhere in our service area. We are a veteran-owned HVAC
+              company providing complete heating, cooling, indoor air quality, and
+              maintenance services for homeowners across the city.
             </p>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              Located in the heart of Montgomery County, Conroe experiences hot, humid
-              summers that demand reliable air conditioning and mild winters that still
-              require dependable heating systems. Our team knows what it takes to keep
-              Conroe homes and businesses comfortable year-round.
+              Conroe summers are long, hot, and humid, and being this close to Lake Conroe
+              means extra moisture in the air that any cooling system has to work to pull
+              out, while the cold fronts that push through in winter still call for heating
+              you can count on. The city's housing stock is a wide mix, from older homes in
+              established neighborhoods like River Plantation and April Sound to the newer
+              high-efficiency builds going up around the edges of town near Crighton Ridge,
+              and we have built our team to handle both the repair and replacement work that
+              comes with it.
             </p>
           </div>
         </section>
@@ -170,9 +175,10 @@ const ConroeTX = () => {
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg text-center max-w-3xl mx-auto">
               As a local, veteran-owned HVAC company, we're invested in the Conroe community.
-              We're not a franchise or national chain - we're your neighbors. When you call AMW,
-              you get personalized service from technicians who understand Conroe's climate and
-              care about your comfort.
+              We're not a franchise or national chain - we're your neighbors, and our shop is
+              right here in town. When you call AMW, you get personalized service from
+              technicians who understand Conroe's climate and care about your comfort. We hold
+              Texas license TACLB133920E.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
@@ -211,23 +217,39 @@ const ConroeTX = () => {
               Serving Conroe Neighborhoods
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              We provide HVAC services throughout Conroe and surrounding areas including
-              Downtown Conroe, Crighton Ridge, River Plantation, April Sound, and all
-              Conroe neighborhoods. No matter where you are in the Conroe area, AMW
-              Cooling & Heating is ready to help.
+              We provide HVAC service throughout Conroe, the Montgomery County seat sitting
+              on the shores of Lake Conroe just off Interstate 45. That covers Downtown
+              Conroe's historic core, the established neighborhoods of River Plantation and
+              April Sound, the newer builds going up around Crighton Ridge, and every other
+              Conroe neighborhood in between. No matter where you are in the Conroe area,
+              AMW Cooling & Heating is ready to help.
             </p>
-            
+
+            <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
+              <span className="w-8 h-1 bg-blue-600 rounded"></span>
+              Old Homes and New Builds, One Team
+            </h3>
+            <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
+              Conroe's housing stock runs the full range, from older homes in established
+              neighborhoods like River Plantation and April Sound to the newer
+              high-efficiency construction going up around the edges of town. That mix
+              means we see everything from aging equipment that has earned an honest
+              repair-or-replace conversation to newer systems that just need routine
+              maintenance to stay under warranty. Whatever stage your system is in, we give
+              you a straight answer instead of a sales pitch.
+            </p>
+
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
               <span className="w-8 h-1 bg-red-500 rounded"></span>
               Emergency HVAC Service in Conroe
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              AC emergencies don't wait for business hours, and neither do we. When your
+              HVAC emergencies don't wait for business hours, and neither do we. When your
               air conditioning fails on a 95-degree day or your heating goes out on a cold
-              night, call AMW for emergency HVAC service in Conroe, TX. We'll get a
-              technician to your location fast.
+              night, call AMW for same-day and emergency HVAC service in Conroe, TX. We'll
+              get a technician to your location fast.
             </p>
-            
+
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
               <span className="w-8 h-1 bg-blue-600 rounded"></span>

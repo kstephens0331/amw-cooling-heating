@@ -46,6 +46,12 @@
     }
   ],
   "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.amwairconditioning.com" }],
+      "destination": "https://amwairconditioning.com/:path*",
+      "permanent": true
+    },
     { "source": "/about-us", "destination": "/about", "permanent": true },
     { "source": "/about-us/", "destination": "/about", "permanent": true },
     { "source": "/contact-us", "destination": "/contact", "permanent": true },

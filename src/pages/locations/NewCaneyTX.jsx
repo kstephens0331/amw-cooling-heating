@@ -171,6 +171,7 @@ const NewCaneyTX = () => {
               We are a local, veteran-owned team, not a national franchise routing your call to a
               center three states away. When a New Caney family calls AMW, they reach people who
               know the area, know the Southeast Texas climate, and show up when they say they will.
+              We hold Texas license TACLB133920E.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">

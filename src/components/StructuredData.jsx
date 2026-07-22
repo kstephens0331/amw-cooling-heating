@@ -1,6 +1,31 @@
 import React from 'react';
 import Head from 'next/head';
 
+// Escapes "</" and the U+2028/U+2029 line/paragraph separator characters
+// before JSON-LD is injected via dangerouslySetInnerHTML. All fields feeding
+// these schemas are hardcoded today, so this is defense-in-depth against a
+// future dynamic field (e.g. a blog title or review quote) breaking out of
+// the <script> tag or tripping up strict JSON parsers.
+// (Built with String.fromCharCode/join instead of a regex literal containing
+// the raw separator characters, since those characters are treated as line
+// terminators and are not valid unescaped inside a regex literal.)
+const BACKSLASH = String.fromCharCode(92);
+const LINE_SEPARATOR = String.fromCharCode(0x2028);
+const PARAGRAPH_SEPARATOR = String.fromCharCode(0x2029);
+
+export const escapeJsonLd = (json) =>
+  json
+    .split('<').join(BACKSLASH + 'u003c')
+    .split(LINE_SEPARATOR).join(BACKSLASH + 'u2028')
+    .split(PARAGRAPH_SEPARATOR).join(BACKSLASH + 'u2029');
+
+// Canonical @id references shared across all schema graphs.
+const ORG_ID = "https://amwairconditioning.com/#organization";
+const HVAC_ID = "https://amwairconditioning.com/#hvacbusiness";
+const WEBSITE_ID = "https://amwairconditioning.com/#website";
+const FOUNDER_ID = "https://amwairconditioning.com/#founder";
+const SERVICE_CATALOG_ID = "https://amwairconditioning.com/#servicecatalog";
+
 // Service Schema
 export const ServiceSchema = ({ service, city = "Conroe" }) => {
   const schema = {
@@ -8,21 +33,7 @@ export const ServiceSchema = ({ service, city = "Conroe" }) => {
     "@type": "Service",
     "serviceType": service.name,
     "name": service.name,
-    "provider": {
-      "@type": "HVACBusiness",
-      "name": "AMW Cooling & Heating, LLC",
-      "telephone": "+1-936-331-1339",
-      "email": "admin@amwairconditioning.com",
-      "url": "https://amwairconditioning.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "2346 Strong Horse Dr",
-        "addressLocality": "Conroe",
-        "addressRegion": "TX",
-        "postalCode": "77301",
-        "addressCountry": "US"
-      }
-    },
+    "provider": { "@id": HVAC_ID },
     "areaServed": {
       "@type": "City",
       "name": city,
@@ -36,7 +47,7 @@ export const ServiceSchema = ({ service, city = "Conroe" }) => {
 
   return (
     <Head>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: escapeJsonLd(JSON.stringify(schema)) }} />
     </Head>
   );
 };
@@ -56,17 +67,10 @@ export const BreadcrumbSchema = ({ items }) => {
 
   return (
     <Head>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: escapeJsonLd(JSON.stringify(schema)) }} />
     </Head>
   );
 };
-
-// Canonical @id references shared across all schema graphs.
-const ORG_ID = "https://amwairconditioning.com/#organization";
-const HVAC_ID = "https://amwairconditioning.com/#hvacbusiness";
-const WEBSITE_ID = "https://amwairconditioning.com/#website";
-const FOUNDER_ID = "https://amwairconditioning.com/#founder";
-const SERVICE_CATALOG_ID = "https://amwairconditioning.com/#servicecatalog";
 
 // LocalBusiness Schema (HVACBusiness + Organization + WebSite + Person + Service catalog).
 // Emitted as a single @graph so cross-@id references resolve cleanly for crawlers.
@@ -77,9 +81,9 @@ export const LocalBusinessSchema = () => {
       {
         "@type": "Organization",
         "@id": ORG_ID,
-        "name": "AMW Cooling & Heating, LLC",
+        "name": "AMW Cooling & Heating LLC",
         "alternateName": "AMW Air Conditioning",
-        "legalName": "AMW Cooling & Heating, LLC",
+        "legalName": "AMW Cooling & Heating LLC",
         "url": "https://amwairconditioning.com",
         "logo": "https://amwairconditioning.com/assets/images/amwlogo.png",
         "image": "https://amwairconditioning.com/assets/images/amwlogo.png",
@@ -125,17 +129,12 @@ export const LocalBusinessSchema = () => {
         "url": "https://amwairconditioning.com",
         "name": "AMW Cooling & Heating",
         "publisher": { "@id": ORG_ID },
-        "inLanguage": "en-US",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://amwairconditioning.com/?s={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
+        "inLanguage": "en-US"
       },
       {
         "@type": "HVACBusiness",
         "@id": HVAC_ID,
-        "name": "AMW Cooling & Heating, LLC",
+        "name": "AMW Cooling & Heating LLC",
         "image": "https://amwairconditioning.com/assets/images/amwlogo.png",
         "url": "https://amwairconditioning.com",
         "telephone": "+1-936-331-1339",
@@ -209,7 +208,7 @@ export const LocalBusinessSchema = () => {
 
   return (
     <Head>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: escapeJsonLd(JSON.stringify(graph)) }} />
     </Head>
   );
 };
@@ -231,7 +230,7 @@ export const FAQSchema = ({ faqs }) => {
 
   return (
     <Head>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: escapeJsonLd(JSON.stringify(schema)) }} />
     </Head>
   );
 };

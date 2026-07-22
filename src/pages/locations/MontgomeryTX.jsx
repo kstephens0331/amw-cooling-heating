@@ -45,7 +45,7 @@ const MontgomeryTX = () => {
               HVAC Services in Montgomery, TX
             </h1>
             <p className="text-lg text-blue-100 max-w-2xl mx-auto mb-8">
-              Trusted HVAC contractor serving Montgomery, Texas—from historic downtown to Lake Conroe communities.
+              Trusted HVAC contractor serving Montgomery, Texas, from historic downtown to the Lake Conroe communities.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -78,10 +78,10 @@ const MontgomeryTX = () => {
               Your Local Montgomery HVAC Contractor
             </h2>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              AMW Cooling & Heating serves Montgomery, Texas with the same dedication and expertise that has earned us a perfect 5-star Google rating. Montgomery is one of the oldest towns in Texas, blending rich history with modern lakefront living along the shores of Lake Conroe. From the charming historic downtown district to the upscale Walden on Lake Conroe community and the growing neighborhoods along FM 149, our veteran-owned team delivers HVAC services that match the quality of life Montgomery residents expect.
+              AMW Cooling & Heating serves Montgomery, Texas with the same dedication and expertise that has earned us a perfect 5-star Google rating. Montgomery is one of the oldest towns in Texas, blending rich history with modern lakefront living along the shores of Lake Conroe. From the charming historic downtown district to the upscale Walden on Lake Conroe community and the growing neighborhoods along FM 149, our veteran-owned team handles every part of your home comfort system: air conditioning, heating, indoor air quality, thermostats, and more, all from a quick trip west of our Conroe home base.
             </p>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              Montgomery's mix of older homes in the historic district and newer lakefront properties presents unique HVAC challenges. Older homes may have outdated ductwork or undersized systems, while lakefront properties face extreme humidity from Lake Conroe that demands proper dehumidification and AC maintenance. Our technicians understand these local conditions and provide tailored solutions for every home type.
+              Montgomery's housing runs the full range, from established places near historic downtown to upscale lakefront and golf-community homes in Walden, Bentwater, and April Sound. That mix means we walk into very different jobs across town: older ductwork and aging equipment near downtown, and humidity-driven comfort issues on properties close to the water. Whatever the job or whichever service you need, our technicians know Montgomery and show up ready for it.
             </p>
           </div>
         </section>
@@ -161,7 +161,7 @@ const MontgomeryTX = () => {
               WHY MONTGOMERY RESIDENTS CHOOSE AMW
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg text-center max-w-3xl mx-auto">
-              Montgomery homeowners value reliability and honesty—qualities that define AMW Cooling & Heating. As fellow Montgomery County residents, we're not just your HVAC contractor; we're your neighbors. We provide the same quality of service we'd want for our own families.
+              Montgomery homeowners value reliability and honesty, qualities that define AMW Cooling & Heating. As fellow Montgomery County residents, we're not just your HVAC contractor, we're your neighbors, and we hold Texas license TACLB133920E. We provide the same quality of service we'd want for our own families, whether that call comes from the historic downtown square or a home on the water in Walden or Bentwater.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
@@ -192,7 +192,7 @@ const MontgomeryTX = () => {
           </div>
         </section>
 
-        {/* Neighborhoods Section */}
+        {/* Neighborhoods + Local Detail Section */}
         <section className="py-12 bg-white">
           <div className="max-w-4xl mx-auto px-4">
             <h3 className="text-2xl font-bold text-blue-900 mb-4 flex items-center gap-2">
@@ -201,15 +201,42 @@ const MontgomeryTX = () => {
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
               We provide HVAC services throughout Montgomery and surrounding areas including
-              Historic Downtown Montgomery, Walden on Lake Conroe, April Sound, Bentwater, FM 149 corridor, La Torretta area, and all Montgomery communities. No matter where you are in the Montgomery area, AMW
-              Cooling & Heating is ready to help.
+              Historic Downtown Montgomery, Walden on Lake Conroe, April Sound, Bentwater, the FM 149 corridor, the La Torretta area, and all Montgomery communities on the west side of Montgomery County. No matter where you are in the Montgomery area, AMW
+              Cooling & Heating is ready to help with any part of your heating and cooling system.
             </p>
-            
+
+            <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
+              <span className="w-8 h-1 bg-blue-600 rounded"></span>
+              Lake Conroe Humidity and Year-Round Comfort
+            </h3>
+            <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
+              Homes near Lake Conroe deal with extra humidity coming off the water, and that moisture
+              affects more than just your AC. It can leave rooms feeling clammy, encourage mold and
+              mildew, and shorten the life of equipment that isn't sized or maintained correctly. We
+              look at the whole system on lakefront and golf-community properties, cooling, heating,
+              and indoor air quality alike, so your home stays comfortable and healthy in every
+              season, not just cold.
+            </p>
+
+            <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
+              <span className="w-8 h-1 bg-red-500 rounded"></span>
+              Emergency HVAC Service in Montgomery
+            </h3>
+            <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
+              A system failure doesn't wait for a convenient time, and neither do we. We are open 8am
+              to 9pm, seven days a week, with after-hours emergency service from 5pm to 9pm, so call
+              AMW for same-day and emergency HVAC service anywhere in Montgomery, from the historic
+              downtown square to the lakefront communities along Lake Conroe.
+            </p>
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
               <span className="w-8 h-1 bg-blue-600 rounded"></span>
               Nearby Areas We Serve
             </h3>
+            <p className="text-gray-700 mb-4 leading-relaxed text-base md:text-lg">
+              AMW Cooling & Heating serves communities across Montgomery County. Explore our HVAC
+              service in nearby towns:
+            </p>
             <NearbyAreas currentPath="/locations/montgomery-tx" />
           </div>
         </section>

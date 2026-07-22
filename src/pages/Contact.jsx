@@ -112,6 +112,14 @@ export default function Contact() {
                 <h3 className="text-lg font-bold text-blue-900">Service Area</h3>
               </div>
               <p className="text-gray-600 mb-3">Serving Conroe, The Woodlands, Spring, Willis, and surrounding areas.</p>
+              <a
+                href="https://www.google.com/maps?cid=14977632959753518383"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-blue-600 hover:text-blue-700 font-semibold mb-1 transition"
+              >
+                2346 Strong Horse Dr, Conroe, TX 77301
+              </a>
               <span className="text-blue-900 font-semibold">Montgomery County, TX</span>
             </div>
           </div>

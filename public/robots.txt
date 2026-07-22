@@ -1,10 +1,14 @@
 # AMW Cooling & Heating LLC - Robots.txt
 # Website: https://amwairconditioning.com
-# Last updated: 2026-01-20
+# Last updated: 2026-07-22
 
-# Default rule - allow all bots
+# Default rule - allow all bots, block sensitive directories
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.git/
+Disallow: /node_modules/
 
 # Search Engine Bots
 User-agent: Googlebot
@@ -107,13 +111,6 @@ Allow: /
 
 User-agent: Screaming Frog SEO Spider
 Allow: /
-
-# Block access to sensitive directories only
-User-agent: *
-Disallow: /admin/
-Disallow: /private/
-Disallow: /.git/
-Disallow: /node_modules/
 
 # Sitemap location
 Sitemap: https://amwairconditioning.com/sitemap.xml

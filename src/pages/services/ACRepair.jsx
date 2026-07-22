@@ -8,13 +8,14 @@ import Footer from '../../components/Footer';
 import AreasWeServe from '../../components/AreasWeServe';
 
 const serviceFaqs = [
-  { question: "How much does AC repair cost in Conroe, TX?", answer: "Most AC repairs in Conroe range from $150 to $600 depending on the issue. Simple fixes like capacitor replacements or refrigerant recharges are on the lower end, while compressor or evaporator coil repairs cost more. AMW Cooling & Heating provides upfront pricing before any work begins—no hidden fees." },
+  { question: "What's involved in a professional AC repair visit?", answer: "Every repair visit starts with a full diagnostic to find the actual cause, not just the symptom. We check refrigerant levels, electrical components, airflow, and the condensate drain, then walk you through what we found and give you upfront pricing before any work begins. Once you approve the repair, we complete the fix and test the system to confirm it is cooling properly before we leave." },
+  { question: "How long does a typical AC repair take?", answer: "Most AC repairs are completed in a single visit, often within one to two hours once the problem is diagnosed. More involved repairs, such as a compressor or evaporator coil replacement, can take longer depending on parts availability. We always give you a time estimate up front so you know what to expect." },
   { question: "Why is my AC blowing warm air?", answer: "Warm air from your AC can be caused by low refrigerant, a dirty air filter, a frozen evaporator coil, or a faulty compressor. Sometimes it's as simple as a tripped breaker or incorrect thermostat setting. Our technicians diagnose the root cause and fix it right the first time." },
-  { question: "Do you offer emergency AC repair in Conroe?", answer: "Yes! We offer after-hours emergency AC repair from 5 PM to 9 PM, seven days a week. In the Texas heat, we know a broken AC can't wait. Call (936) 331-1339 for fast, reliable emergency service." },
-  { question: "What AC brands do you service?", answer: "We service all major AC brands including Carrier, Trane, Lennox, Goodman, Rheem, York, Daikin, and more. Our NATE-certified technicians are trained to diagnose and repair any make or model." },
-  { question: "Should I repair or replace my AC unit?", answer: "As a general rule, if your AC is over 10-15 years old and the repair cost exceeds 50% of a new system's price, replacement is often the better investment. We'll give you an honest assessment and help you weigh the options—never pushing unnecessary replacements." },
-  { question: "Do you offer financing for AC repairs?", answer: "Yes! We partner with Synchrony and FTL Finance to offer flexible payment plans for AC repairs and installations. Whether your credit is perfect or needs a second chance, we have options to keep you comfortable without breaking the bank." },
-  { question: "What are warning signs I need AC repair?", answer: "Watch for these signs: unusual noises (grinding, squealing, banging), weak airflow, warm air from vents, frequent cycling on and off, ice on the refrigerant line, higher-than-normal energy bills, or strange odors. If you notice any of these, call us before a small problem becomes a major breakdown." }
+  { question: "Should I repair or replace my AC unit?", answer: "As a general rule, if your AC is over 10-15 years old and the repair cost exceeds 50% of a new system's price, replacement is often the better investment. We'll give you an honest assessment and help you weigh the options, never pushing unnecessary replacements." },
+  { question: "What are warning signs I need AC repair?", answer: "Watch for these signs: unusual noises (grinding, squealing, banging), weak airflow, warm air from vents, frequent cycling on and off, ice on the refrigerant line, higher-than-normal energy bills, or strange odors. If you notice any of these, call us before a small problem becomes a major breakdown." },
+  { question: "Is there a warranty on your AC repair work?", answer: "Yes. We stand behind every repair with our own workmanship warranty, and any parts we install carry the manufacturer's warranty. If something isn't right after we leave, call us and we'll make it right." },
+  { question: "Do you offer emergency AC repair?", answer: "Yes. We're open 8 AM to 9 PM seven days a week, with after-hours emergency AC repair available from 5 PM to 9 PM. Texas heat doesn't wait for business hours, and neither do we. Call (936) 331-1339 for fast, reliable service." },
+  { question: "Do you offer financing for AC repairs?", answer: "Yes! We partner with Synchrony and FTL Finance to offer flexible payment plans for AC repairs and installations. Whether your credit is perfect or needs a second chance, we have options to keep you comfortable without breaking the bank." }
 ];
 
 const ACRepair = () => {
@@ -27,9 +28,9 @@ const ACRepair = () => {
       <ServiceSchema
         service={{
           name: "Air Conditioning Repair",
-          description: "Professional AC repair services in Conroe, TX. Fast, reliable service."
+          description: "Professional AC repair services throughout Montgomery County and the north Houston area. Fast, reliable service, upfront pricing."
         }}
-        city="Conroe"
+        city="Montgomery County"
       />
 
       <BreadcrumbSchema
@@ -86,19 +87,21 @@ const ACRepair = () => {
         <section className="py-12 bg-white">
           <div className="max-w-4xl mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6">
-              Expert Air Conditioning Repair in Conroe
+              Expert Air Conditioning Repair Across Montgomery County
             </h2>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
               When your AC stops working in the Texas heat, you need immediate help.
               AMW Cooling & Heating provides fast, professional air conditioning repair
-              throughout Conroe, The Woodlands, Montgomery, and surrounding areas. Our
+              throughout Montgomery County and the north Houston area. Our
               licensed technicians diagnose and fix AC problems quickly, getting your
-              home comfortable again.
+              home comfortable again, wherever in our service area you call home.
             </p>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              In Conroe's hot, humid climate, your air conditioner works overtime from April through October.
-              Recognizing the signs of AC trouble early can save you money and prevent a complete breakdown
-              during the worst heat of summer.
+              Across this stretch of Southeast Texas, your air conditioner works overtime from April
+              through October in hot, humid conditions. Recognizing the signs of AC trouble early can
+              save you money and prevent a complete breakdown during the worst heat of summer. Every town
+              we serve has its own housing stock and climate quirks, so if you want the details for your
+              specific area, jump to the town-by-town breakdown below.
             </p>
           </div>
         </section>
@@ -243,7 +246,7 @@ const ACRepair = () => {
           <div className="max-w-4xl mx-auto px-4">
             <h3 className="text-2xl font-bold text-blue-900 mb-4 flex items-center gap-2">
               <span className="w-8 h-1 bg-red-500 rounded"></span>
-              When to Call for AC Repair in Conroe
+              When to Call for AC Repair
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
               Here are the warning signs that mean it's time to call AMW:
@@ -253,7 +256,7 @@ const ACRepair = () => {
                 <FaExclamationTriangle className="text-red-500 w-4 h-4 mt-1 flex-shrink-0" />
                 <div>
                   <span className="font-bold text-blue-900">Weak airflow</span>
-                  <p className="text-gray-600 text-sm mt-1">Some rooms aren't cooling properly—ductwork issues or a failing blower motor</p>
+                  <p className="text-gray-600 text-sm mt-1">Some rooms aren't cooling properly, often ductwork issues or a failing blower motor</p>
                 </div>
               </div>
               <div className="bg-gray-50 rounded-lg p-4 flex items-start gap-3">
@@ -267,14 +270,14 @@ const ACRepair = () => {
                 <FaExclamationTriangle className="text-red-500 w-4 h-4 mt-1 flex-shrink-0" />
                 <div>
                   <span className="font-bold text-blue-900">Unusual smells</span>
-                  <p className="text-gray-600 text-sm mt-1">Burning odors could mean electrical issues—consider our <Link href="/services/indoor-air-quality" className="text-blue-600 hover:underline">indoor air quality solutions</Link></p>
+                  <p className="text-gray-600 text-sm mt-1">Burning odors could mean electrical issues, consider our <Link href="/services/indoor-air-quality" className="text-blue-600 hover:underline">indoor air quality solutions</Link></p>
                 </div>
               </div>
               <div className="bg-gray-50 rounded-lg p-4 flex items-start gap-3">
                 <FaExclamationTriangle className="text-red-500 w-4 h-4 mt-1 flex-shrink-0" />
                 <div>
                   <span className="font-bold text-blue-900">Frequent cycling</span>
-                  <p className="text-gray-600 text-sm mt-1">AC turns on and off constantly—working too hard and wasting energy</p>
+                  <p className="text-gray-600 text-sm mt-1">AC turns on and off constantly, working too hard and wasting energy</p>
                 </div>
               </div>
               <div className="bg-gray-50 rounded-lg p-4 flex items-start gap-3">
@@ -305,7 +308,7 @@ const ACRepair = () => {
               AC BRANDS WE SERVICE
             </h3>
             <p className="text-blue-100 text-center max-w-2xl mx-auto mb-8">
-              Our technicians are trained and experienced in repairing all major HVAC brands—residential split systems and commercial package units alike.
+              Our technicians are trained and experienced in repairing all major HVAC brands, from residential split systems to commercial package units.
             </p>
             <div className="grid grid-cols-3 md:grid-cols-3 gap-3 max-w-3xl mx-auto">
               <div className="bg-white/10 border border-white/20 rounded-lg p-3 text-center text-white font-medium">Carrier</div>
@@ -339,13 +342,14 @@ const ACRepair = () => {
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
               <span className="w-8 h-1 bg-blue-600 rounded"></span>
-              Serving Conroe and All of Montgomery County
+              Serving All of Montgomery County and the North Houston Area
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              As a local, veteran-owned business, we understand the unique climate challenges in Montgomery County.
-              We provide fast, professional AC repair services throughout Conroe, The Woodlands, Montgomery, Willis,
-              Cut and Shoot, Splendora, New Caney, Porter, and surrounding communities. Our technicians know the area
-              well and can typically reach you within an hour for emergency calls.
+              As a local, veteran-owned business, we understand the climate challenges across our whole service area.
+              We provide fast, professional AC repair throughout Conroe, The Woodlands, Spring, Montgomery, Willis,
+              Magnolia, Tomball, New Caney, Splendora, Porter, Cut and Shoot, Shenandoah, Pinehurst, and every
+              community in between. Our technicians know each of these areas well and can typically reach you within
+              an hour for emergency calls. Find the AC repair page for your town below for local pricing and details.
             </p>
           </div>
         </section>
@@ -410,7 +414,7 @@ const ACRepair = () => {
                 Schedule Your AC Repair Today
               </h2>
               <p className="text-lg text-blue-200 max-w-xl mx-auto mb-8">
-                Don't suffer in the heat. Contact AMW Cooling & Heating for fast, professional AC repair in Conroe, TX.
+                Don't suffer in the heat. Contact AMW Cooling & Heating for fast, professional AC repair anywhere in Montgomery County and the north Houston area.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a

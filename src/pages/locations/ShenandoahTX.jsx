@@ -226,16 +226,18 @@ const ShenandoahTX = () => {
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
               <span className="w-8 h-1 bg-blue-600 rounded"></span>
-              Older Homes and System Replacement
+              An Established City With Aging Systems
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              A lot of Shenandoah Valley's single-family homes date to the 1970s and 1980s, and the
-              air conditioners and furnaces in many of them are near the end of their service life.
-              Running an undersized or worn-out system through a humid Gulf-coast summer costs you in
-              energy bills and comfort, and it usually fails on the hottest day of the year. We give
-              you a straight assessment of whether a repair makes sense or whether a right-sized,
-              higher-efficiency replacement will save you more over time, then we install it cleanly
-              and stand behind the work.
+              A lot of Shenandoah Valley's single-family homes date to the 1970s and 1980s, so the
+              cooling and heating equipment inside many of them is well into its service life. That
+              shows up across everything we do here, from AC repair and full system installation to
+              heating service, maintenance, and indoor air quality. Whatever the job, we bring the
+              same veteran-owned, licensed and insured team and the same upfront pricing to your
+              Shenandoah address. Visit our <Link href="/services/ac-repair" className="text-blue-600 hover:underline">AC repair</Link>,{' '}
+              <Link href="/services/ac-installation" className="text-blue-600 hover:underline">AC installation</Link>, and{' '}
+              <Link href="/services/heating-repair" className="text-blue-600 hover:underline">heating repair</Link> pages for a
+              closer look at how we handle each one in Shenandoah.
             </p>
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">

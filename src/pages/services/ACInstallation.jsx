@@ -6,14 +6,20 @@ import ManufacturerCarousel from '../../components/ManufacturerCarousel';
 import MapSection from '../../components/MapSectionWrapper';
 import Footer from '../../components/Footer';
 import AreasWeServe from '../../components/AreasWeServe';
+import { SERVICE_TOWNS, SERVICE_TOWN_ORDER } from '../../data/serviceTowns';
 
+// General, procedural FAQ set for this county-wide hub page. These cover what's
+// involved in an installation, timelines, warranty, and financing at a level
+// that applies across the whole service area. None of these duplicate the
+// town-specific questions asked on the /services/ac-installation/{town} pages
+// (which ask things like "How do you size a new AC system for a {town} home?").
 const serviceFaqs = [
-  { question: "How much does a new AC system cost in Conroe, TX?", answer: "A new AC system in Conroe typically costs between $4,500 and $12,000+ depending on the system size, efficiency rating (SEER), brand, and complexity of installation. Factors like ductwork modifications, electrical upgrades, and home size affect the final price. We provide free, detailed estimates with no hidden fees." },
-  { question: "How long does AC installation take?", answer: "Most standard AC installations take 1 day to complete. More complex jobs involving ductwork modifications, zoning systems, or multi-stage equipment may take 2 days. We'll give you a clear timeline before we start and work efficiently to minimize disruption to your home." },
-  { question: "What AC brands do you install?", answer: "We install all major AC brands including Carrier, Trane, Lennox, Goodman, Rheem, York, Daikin, and more. Each brand offers different features and price points. We'll help you choose the best option based on your home's needs, budget, and efficiency goals." },
-  { question: "What SEER rating should I choose for my new AC?", answer: "In Texas, we recommend a minimum 15 SEER for good efficiency, with 16-20 SEER being ideal for maximum energy savings. Higher SEER units cost more upfront but save significantly on monthly energy bills. Given Conroe's long, hot summers, a higher-efficiency unit typically pays for itself within 3-5 years." },
-  { question: "Do you offer financing for AC installation?", answer: "Yes! We partner with Synchrony and FTL Finance to offer flexible payment plans for new AC installations. Options include low monthly payments and second-chance financing for all credit types. Don't let budget concerns keep you uncomfortable—contact us to learn about affordable options." },
-  { question: "What warranty comes with a new AC installation?", answer: "New AC systems come with manufacturer warranties typically covering 5-10 years on parts and compressor. We also provide our own labor warranty on the installation. Many manufacturers offer extended warranties when the system is registered within 90 days of installation—we handle this for you." }
+  { question: "How much does a new AC system cost?", answer: "A new AC system across our Montgomery County and north Houston service area typically costs between $4,500 and $12,000+ depending on the system size, efficiency rating (SEER2), brand, and complexity of installation. Factors like ductwork modifications, electrical upgrades, and home size affect the final price. We provide free, detailed estimates with no hidden fees no matter which town you're in." },
+  { question: "What actually happens during an AC installation, start to finish?", answer: "It starts with a free in-home visit and a Manual J load calculation, followed by a ductwork assessment and equipment selection. On install day, our licensed technicians remove the old system, set the new equipment, then test airflow, refrigerant charge, and thermostat calibration before walking you through your new system. We finish by registering your warranty and scheduling a follow-up." },
+  { question: "Do you remove and dispose of my old AC system?", answer: "Yes. Removing and safely disposing of your old system is part of every installation we do, so you don't have to arrange separate haul-away or worry about leftover refrigerant." },
+  { question: "How do you decide the right SEER rating and brand for my home?", answer: "We size every system with a load calculation instead of just matching the old unit, then walk you through brand and SEER2 options, from the minimum efficiency standard up to premium variable-speed equipment, based on your home, budget, and how long you plan to stay in it. We install all major brands, including Carrier, Trane, Lennox, Goodman, Rheem, York, and Daikin, and we'll tell you honestly which tier makes sense rather than upselling the biggest unit on the truck." },
+  { question: "What financing options are available for a new AC system?", answer: "We partner with Synchrony and FTL Finance to offer flexible payment plans, including options for a range of credit situations. We review the available plans with you during your free estimate so a new system fits your monthly budget." },
+  { question: "What warranty comes with a new AC installation, and how does registration work?", answer: "New AC systems come with manufacturer warranties typically covering 5-10 years on parts and the compressor, plus our own labor warranty on the installation. Many manufacturers require registration within 90 days of installation to unlock the full warranty term, and we handle that registration for you as part of the job." }
 ];
 
 const ACInstallation = () => {
@@ -26,9 +32,9 @@ const ACInstallation = () => {
       <ServiceSchema
         service={{
           name: "Air Conditioning Installation",
-          description: "Professional AC installation and replacement services in Conroe, TX. Expert sizing, top brands, financing available."
+          description: "Professional AC installation and replacement services across Montgomery County and the north Houston area. Expert sizing, top brands, financing available."
         }}
-        city="Conroe"
+        city="Montgomery County"
       />
 
       <BreadcrumbSchema
@@ -106,14 +112,15 @@ const ACInstallation = () => {
         <section className="py-12 bg-white">
           <div className="max-w-4xl mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6">
-              Professional AC Installation in Conroe, TX
+              Professional AC Installation Across Montgomery County & North Houston
             </h2>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
               When your air conditioner is beyond repair, or you're ready to upgrade to a more efficient system,
-              AMW Cooling & Heating delivers expert AC installation throughout Conroe, The Woodlands, Montgomery,
-              and surrounding areas. We handle everything from load calculations and equipment selection to
-              professional installation and system commissioning—ensuring your new AC runs at peak performance
-              from day one.
+              AMW Cooling & Heating delivers expert AC installation across Montgomery County and the north Houston
+              area, from Conroe and The Woodlands to Willis, Magnolia, Tomball, New Caney, and every community in
+              between. We handle everything from load calculations and equipment selection to professional
+              installation and system commissioning, ensuring your new AC runs at peak performance from day one.
+              Jump to the <Link href="#areas-we-serve" className="text-blue-600 hover:underline">town-by-town details below</Link> for the specific neighborhoods and housing stock we install in.
             </p>
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
@@ -218,7 +225,7 @@ const ACInstallation = () => {
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
               SEER (Seasonal Energy Efficiency Ratio) measures how efficiently your AC converts electricity into cooling.
-              Higher SEER = lower energy bills. Here's what the ratings mean for Conroe homeowners:
+              Higher SEER = lower energy bills. Here's what the ratings mean for homeowners across our service area:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
               <div className="bg-gray-50 rounded-lg p-5 border-t-4 border-blue-400">
@@ -227,7 +234,7 @@ const ACInstallation = () => {
               </div>
               <div className="bg-gray-50 rounded-lg p-5 border-t-4 border-blue-600">
                 <span className="font-black text-blue-900 text-lg">16-17 SEER</span>
-                <p className="text-gray-600 text-sm mt-2">Great balance of efficiency and cost. Most popular choice in Conroe</p>
+                <p className="text-gray-600 text-sm mt-2">Great balance of efficiency and cost. The most popular choice across our service area</p>
               </div>
               <div className="bg-gray-50 rounded-lg p-5 border-t-4 border-red-500">
                 <span className="font-black text-blue-900 text-lg">18-20+ SEER</span>
@@ -235,7 +242,7 @@ const ACInstallation = () => {
               </div>
             </div>
             <p className="text-gray-700 leading-relaxed text-base md:text-lg">
-              In Conroe's climate, where your AC runs 6-8 months per year, upgrading from a 10 SEER system
+              Across our Gulf Coast service area, where your AC runs 6-8 months per year, upgrading from a 10 SEER system
               to a 16 SEER system can cut your cooling costs nearly in half.
             </p>
           </div>
@@ -363,16 +370,29 @@ const ACInstallation = () => {
         </section>
 
         {/* Service Areas + Related Services */}
-        <section className="py-12 bg-gray-50">
+        <section id="areas-we-serve" className="py-12 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4">
             <h3 className="text-2xl font-bold text-blue-900 mb-4 flex items-center gap-2">
               <span className="w-8 h-1 bg-red-500 rounded"></span>
-              Service Areas
+              Service Area: Montgomery County & North Houston
             </h3>
+            <p className="text-gray-700 mb-4 leading-relaxed text-base md:text-lg">
+              We install AC systems county-wide, not just around our Conroe shop. Visit your town's HVAC page for the
+              full picture of local housing stock, neighborhoods, and the general service we provide there:
+            </p>
             <div className="flex flex-wrap gap-2 mb-8">
-              {['Conroe', 'The Woodlands', 'Spring', 'Montgomery', 'Willis', 'Magnolia', 'Tomball'].map(city => (
-                <span key={city} className="bg-blue-50 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">{city}</span>
-              ))}
+              {SERVICE_TOWN_ORDER.map((key) => {
+                const town = SERVICE_TOWNS[key];
+                return (
+                  <Link
+                    key={key}
+                    href={town.locationPath}
+                    className="bg-blue-50 text-blue-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-100 transition"
+                  >
+                    {town.name}
+                  </Link>
+                );
+              })}
             </div>
 
             <h3 className="text-2xl font-bold text-blue-900 mb-6 flex items-center gap-2">

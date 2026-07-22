@@ -233,10 +233,14 @@ const CutAndShootTX = () => {
               Cooling a home on a wooded country lot is a different job than servicing a tract house
               in a dense subdivision. Longer duct runs, detached shops, older manufactured homes, and
               equipment that sits out in the East Montgomery County humidity all put real strain on a
-              system. We size, service, and repair with those conditions in mind, and for the older
-              systems common on established Cut and Shoot properties we give you a straight answer on
-              whether a repair makes sense or a replacement will save you money over the long Texas
-              summer.
+              system. We handle every part of that, from{' '}
+              <Link href="/services/ac-repair" className="text-blue-600 hover:underline">AC repair</Link> and{' '}
+              <Link href="/services/ac-installation" className="text-blue-600 hover:underline">new system installation</Link> to{' '}
+              <Link href="/services/heating-repair" className="text-blue-600 hover:underline">heating repair</Link> and{' '}
+              <Link href="/services/hvac-maintenance" className="text-blue-600 hover:underline">routine maintenance</Link>, and
+              for the older systems common on established Cut and Shoot properties we give you a
+              straight answer on whether a repair makes sense or a replacement will save you money
+              over the long Texas summer.
             </p>
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">

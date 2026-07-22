@@ -8,13 +8,14 @@ import Footer from '../../components/Footer';
 import AreasWeServe from '../../components/AreasWeServe';
 
 const serviceFaqs = [
-  { question: "How much does heating repair cost in Conroe, TX?", answer: "Heating repairs in Conroe typically range from $150 to $500 for common issues like ignitor replacement, thermocouple repair, or blower motor fixes. More complex repairs involving heat exchangers may cost more. We always provide a clear estimate before starting work." },
-  { question: "Why is my furnace blowing cold air?", answer: "A furnace blowing cold air could indicate a dirty air filter restricting airflow, a malfunctioning thermostat, a pilot light or ignition problem, or a faulty flame sensor. In some cases, the heat exchanger may be cracked. Our technicians can quickly diagnose and resolve the issue." },
-  { question: "Do you offer emergency heating repair?", answer: "Yes! We provide after-hours emergency heating repair from 5 PM to 9 PM, seven days a week. When temperatures drop in Conroe, you need heat fast. Call (936) 331-1339 for prompt emergency heating service." },
-  { question: "What heating brands do you service?", answer: "We repair and service all major heating brands including Carrier, Trane, Lennox, Goodman, Rheem, York, and more. Our experienced technicians handle furnaces, heat pumps, and ductless mini-split systems." },
-  { question: "How often should I replace my furnace filter?", answer: "Standard 1-inch filters should be replaced every 1-3 months, especially during heavy use seasons. Thicker 4-inch or 5-inch media filters can last 6-12 months. A dirty filter restricts airflow, reduces efficiency, and can cause your system to overheat." },
-  { question: "What are signs my heater needs repair?", answer: "Warning signs include: strange noises (banging, rattling, or screeching), uneven heating throughout your home, a yellow or flickering pilot light, frequent cycling, rising energy bills, or a carbon monoxide detector alarm. Don't ignore these signs—call us right away." },
-  { question: "Do you repair heat pumps?", answer: "Absolutely! We service and repair all types of heat pumps, including air-source and ductless mini-split systems. Heat pumps are popular in Texas because they provide both heating and cooling, and our technicians are trained to handle any heat pump issue." }
+  { question: "How much does heating repair typically cost?", answer: "Heating repairs typically range from $150 to $500 for common issues like igniter replacement, thermocouple repair, or blower motor fixes. More involved repairs, such as a cracked heat exchanger, can cost more. We always provide a clear, upfront estimate before starting work, no matter which of our towns the call comes from." },
+  { question: "What areas do you provide heating repair service in?", answer: "We repair furnaces, heat pumps, and heating systems throughout Montgomery County and the north Houston area, including Conroe, The Woodlands, Spring, Montgomery, Willis, Magnolia, Tomball, New Caney, Splendora, Porter, Cut and Shoot, Shenandoah, and Pinehurst. Choose your town below for local details and to schedule service." },
+  { question: "What does a heating repair visit typically involve?", answer: "Every visit starts with a full diagnostic. We test the ignition system, safety controls, airflow, and electrical components to find the real cause of the problem instead of just treating a symptom, explain what we find in plain terms, and give you an upfront price before any repair work begins." },
+  { question: "How long does a heating repair take?", answer: "Most common repairs, such as replacing an igniter, thermocouple, capacitor, or blower motor, are completed in a single visit, usually within one to two hours once we're on site. If a repair needs a special-order part, we'll tell you upfront and work to get your heat back on as fast as possible." },
+  { question: "Do you warranty your heating repair work?", answer: "Yes. Parts we install carry the manufacturer's warranty, and our labor is backed by our own workmanship warranty. We'll go over the coverage on your specific repair before we start any work." },
+  { question: "What heating brands and system types do you service?", answer: "We repair and service all major heating brands, including Carrier, Trane, Lennox, Goodman, Rheem, and York. Our technicians work on gas furnaces, electric furnaces, heat pumps, and ductless mini-split systems." },
+  { question: "How often should I replace my furnace filter?", answer: "Standard 1-inch filters should be replaced every 1 to 3 months, especially during heavy use seasons. Thicker 4-inch or 5-inch media filters can last 6 to 12 months. A dirty filter restricts airflow, reduces efficiency, and can cause your system to overheat." },
+  { question: "Do you offer financing for heating repairs?", answer: "Yes. We offer financing through Synchrony and FTL Finance so a larger heating repair or system replacement does not have to come out of pocket all at once. We can go over the options during your visit." }
 ];
 
 const HeatingRepair = () => {
@@ -27,9 +28,9 @@ const HeatingRepair = () => {
       <ServiceSchema
         service={{
           name: "Heating Repair",
-          description: "Professional heating and furnace repair services in Conroe, TX."
+          description: "Professional heating and furnace repair services across Montgomery County and the north Houston area."
         }}
-        city="Conroe"
+        city="Montgomery County"
       />
 
       <BreadcrumbSchema
@@ -86,13 +87,21 @@ const HeatingRepair = () => {
         <section className="py-12 bg-white">
           <div className="max-w-4xl mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6">
-              Expert Heating & Furnace Repair in Conroe
+              Expert Heating & Furnace Repair Across Montgomery County
             </h2>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
               When your heating system fails during a cold snap, you need fast, reliable service.
-              AMW Cooling & Heating provides expert heating and furnace repair throughout Conroe,
-              The Woodlands, and Montgomery County. Our licensed technicians diagnose and repair
-              all types of heating systems quickly and efficiently.
+              AMW Cooling & Heating provides expert heating and furnace repair throughout Montgomery
+              County and the north Houston area, from Conroe and The Woodlands to Spring, Tomball,
+              and every town in between. Our licensed technicians diagnose and repair all types of
+              heating systems quickly and efficiently, wherever you call home.
+            </p>
+            <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
+              Every town we serve has its own housing stock and heating quirks, from lakefront homes
+              near Lake Conroe to new construction off the Grand Parkway. Browse the list of towns
+              further down this page for local heating repair details, or call{' '}
+              <a href="tel:+19363311339" className="text-blue-600 hover:underline">(936) 331-1339</a> to
+              schedule service anywhere in our coverage area.
             </p>
           </div>
         </section>
@@ -301,7 +310,7 @@ const HeatingRepair = () => {
                 Schedule Heating Repair Today
               </h2>
               <p className="text-lg text-blue-200 max-w-xl mx-auto mb-8">
-                Don't wait until the next cold front. Contact AMW Cooling & Heating for expert heating repair in Conroe, TX.
+                Don't wait until the next cold front. Contact AMW Cooling & Heating for expert heating repair across Montgomery County and the north Houston area.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a

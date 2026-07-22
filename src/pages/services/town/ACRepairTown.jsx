@@ -7,9 +7,141 @@ import MapSection from '../../../components/MapSectionWrapper';
 import Footer from '../../../components/Footer';
 import { SERVICE_TOWNS } from '../../../data/serviceTowns';
 
+// AC-repair-specific local framing, grounded in the same real per-town facts
+// stored in SERVICE_TOWNS (geography, neighborhoods, housing stock). These
+// short notes let the "Common Problems" cards explain WHY a given failure
+// shows up in that particular town instead of repeating identical copy.
+const CARD_NOTES = {
+  'conroe-tx': {
+    moisture: 'the extra humidity Lake Conroe adds to the air right around town',
+    debris: 'mature trees dropping leaves and debris in the older Conroe neighborhoods',
+    duct: 'the mix of decades-old homes and newer builds we see around town'
+  },
+  'the-woodlands-tx': {
+    moisture: 'moisture trapped under The Woodlands\' heavy tree canopy',
+    debris: 'pollen, leaves, and canopy debris that clog outdoor coils',
+    duct: 'the multi-zone and variable-speed systems common in Woodlands homes'
+  },
+  'spring-tx': {
+    moisture: 'the same intense Gulf humidity greater Houston sees all summer',
+    debris: 'the wear that comes with Spring\'s older 1970s-era homes',
+    duct: 'the wide range of home ages, from Champions Forest to new construction near the Grand Parkway'
+  },
+  'montgomery-tx': {
+    moisture: 'the extra humidity coming off Lake Conroe on the west side of the county',
+    debris: 'algae and moisture buildup common near lakefront and golf-community homes',
+    duct: 'the mix of lakefront estates and homes near historic downtown Montgomery'
+  },
+  'willis-tx': {
+    moisture: 'moisture rolling off Lake Conroe on the north shore',
+    debris: 'lake humidity that promotes mold and musty odors',
+    duct: 'the mix of lakefront homes and rural acreage properties'
+  },
+  'magnolia-tx': {
+    moisture: 'the same hot, humid Southeast Texas summers as the rest of the region',
+    debris: 'dust and debris that build up on larger ranch and acreage lots',
+    duct: 'the longer duct runs common on bigger Magnolia properties'
+  },
+  'tomball-tx': {
+    moisture: 'the humid Gulf-coast climate Tomball shares with greater Houston',
+    debris: 'wear and tear across Tomball\'s mix of older and newer homes',
+    duct: 'the range of system ages found across the Tomball area'
+  },
+  'new-caney-tx': {
+    moisture: 'the humid piney woods climate of East Montgomery County',
+    debris: 'construction dust common near newer developments like Tavola and Valley Ranch',
+    duct: 'new master-planned builds sitting next to older homes near the town center'
+  },
+  'splendora-tx': {
+    moisture: 'the humid piney woods climate around Splendora',
+    debris: 'debris that collects on the larger acreage lots out on Northcrest Ranch',
+    duct: 'brand-new systems in The Canopies sitting alongside decades-old units on the acreage'
+  },
+  'porter-tx': {
+    moisture: 'the humid East Montgomery County climate',
+    debris: 'dust from the ongoing construction near the Grand Parkway',
+    duct: 'new construction in The Highlands alongside established homes nearby'
+  },
+  'cut-and-shoot-tx': {
+    moisture: 'the same hot, humid Montgomery County summers as the rest of the area',
+    debris: 'debris that collects on the rural and acreage lots along Highway 105',
+    duct: 'the rural and acreage housing stock found around town'
+  },
+  'shenandoah-tx': {
+    moisture: 'the humid Gulf-coast heat shared across the I-45 corridor',
+    debris: 'wear from heavy use in both homes and light commercial spaces',
+    duct: 'the mix of residential and light commercial systems along I-45'
+  },
+  'pinehurst-tx': {
+    moisture: 'the high humidity that lingers in the piney woods around Pinehurst',
+    debris: 'debris from mature trees on larger, wooded lots',
+    duct: 'the longer duct runs common on bigger, wooded Pinehurst properties'
+  }
+};
+
+// Short, town-specific differentiators for the "Why Choose" grid, paraphrased
+// from the same real facts already in SERVICE_TOWNS (drive, neighborhoods,
+// housing, repair/install angles) rather than invented.
+const LOCAL_PERKS = {
+  'conroe-tx': ['Based right in Conroe for the fastest response', 'Familiar with Lake Conroe humidity and older neighborhoods'],
+  'the-woodlands-tx': ['About 20 minutes from our shop, serving all eight villages', 'Trained on multi-zone, variable-speed, and smart thermostat systems'],
+  'spring-tx': ['Serving Old Town Spring through the Champions area', 'Experienced with everything from 1970s homes to new construction'],
+  'montgomery-tx': ['Regular service on the Lake Conroe west side', 'Careful attention to drain lines and dehumidification near the water'],
+  'willis-tx': ['Serving Seven Coves, Point Aquarius, and rural Willis', 'Focused on humidity control for lakefront and acreage homes'],
+  'magnolia-tx': ['Covering the FM 1488 and FM 1774 corridors', 'Built for longer duct runs on bigger Magnolia lots'],
+  'tomball-tx': ['Reliable service across the northwest Houston area', 'Load calculations sized for Tomball\'s Gulf-coast humidity'],
+  'new-caney-tx': ['Serving Tavola, Valley Ranch, and the US-59 corridor', 'Warranty-conscious repairs for newer New Caney construction'],
+  'splendora-tx': ['Covering The Canopies out to the Northcrest Ranch acreage', 'From brand-new systems to decades-old units, we repair both'],
+  'porter-tx': ['Serving The Highlands and the FM 1314/1485 area', 'Warranty-documented repairs for newer Porter homes'],
+  'cut-and-shoot-tx': ['Just about 6 miles east of our shop on Highway 105', 'Fast response for rural and acreage properties'],
+  'shenandoah-tx': ['Covering the I-45 corridor\'s homes and businesses', 'Experienced with both residential and light commercial systems'],
+  'pinehurst-tx': ['Serving Decker Oaks Estates and the FM 1774 corridor', 'Built for longer duct runs on larger, wooded lots']
+};
+
 const ACRepairTown = ({ townKey }) => {
   const t = SERVICE_TOWNS[townKey];
+  const notes = CARD_NOTES[townKey];
+  const perks = LOCAL_PERKS[townKey];
   const [openFaq, setOpenFaq] = useState(null);
+
+  const problems = [
+    {
+      icon: FaSnowflake,
+      iconBg: 'bg-blue-900',
+      title: 'AC Not Cooling',
+      desc: `Refrigerant leaks, a weak compressor, or a thermostat problem, made worse by ${notes.moisture}.`
+    },
+    {
+      icon: FaExclamationTriangle,
+      iconBg: 'bg-red-500',
+      title: "AC Won't Turn On",
+      desc: `Electrical issues, capacitor failure, or breaker trips, which turn up across ${notes.duct}.`
+    },
+    {
+      icon: FaTools,
+      iconBg: 'bg-blue-900',
+      title: 'Strange Noises',
+      desc: `Fan motor problems, loose parts, or ${notes.debris}.`
+    },
+    {
+      icon: FaSnowflake,
+      iconBg: 'bg-red-500',
+      title: 'Frozen Coils',
+      desc: `Airflow restrictions behind a frozen coil often trace back to ${notes.debris}.`
+    },
+    {
+      icon: FaWrench,
+      iconBg: 'bg-blue-900',
+      title: 'Water Leaks',
+      desc: `Clogged drain lines or damaged drain pans, common given ${notes.moisture}.`
+    },
+    {
+      icon: FaExclamationTriangle,
+      iconBg: 'bg-red-500',
+      title: 'High Energy Bills',
+      desc: `Energy bills climb fastest across ${notes.duct} once a system starts falling behind.`
+    }
+  ];
 
   const faqs = [
     {
@@ -18,11 +150,11 @@ const ACRepairTown = ({ townKey }) => {
     },
     {
       question: `How much does AC repair cost in ${t.name}?`,
-      answer: `It depends on the problem. A simple capacitor or contactor replacement is on the lower end, while a compressor or coil repair costs more. We always give you upfront pricing before any work begins, so there are no surprises, and if a repair does not make sense on an aging system we will tell you honestly.`
+      answer: `It depends on the problem. ${t.name} homes run ${t.housing}, so cost varies with what we find: a simple capacitor or contactor swap is on the lower end, while a compressor or coil repair on an older system costs more. We always give you upfront pricing before any work begins, so there are no surprises, and if a repair does not make sense on an aging system we will tell you honestly.`
     },
     {
       question: `What AC brands do you repair in ${t.name}?`,
-      answer: `Our technicians service every major brand, including Carrier, Trane, Lennox, Goodman, Rheem, York, American Standard, Bryant, and Ruud. We repair both older units and newer high-efficiency systems.`
+      answer: `Our technicians repair every major brand, including Carrier, Trane, Lennox, Goodman, Rheem, York, American Standard, Bryant, and Ruud. That range matters in ${t.name}, since we see ${t.housing}, so we carry parts and diagnostic tools for both older equipment and newer high-efficiency systems.`
     },
     {
       question: `Why does my ${t.name} home feel humid even when the AC runs?`,
@@ -30,7 +162,7 @@ const ACRepairTown = ({ townKey }) => {
     },
     {
       question: `Do you offer financing on AC repairs in ${t.name}?`,
-      answer: `Yes. We offer financing through Synchrony and FTL Finance for larger repairs and new systems, so a big fix does not have to come out of pocket all at once. We can review the options during your visit.`
+      answer: `Yes. We offer financing through Synchrony and FTL Finance for larger repairs and new systems, so a big fix does not have to come out of pocket all at once. ${t.repairAngle} We can review financing options during your visit.`
     }
   ];
 
@@ -126,48 +258,18 @@ const ACRepairTown = ({ townKey }) => {
               COMMON AC PROBLEMS WE FIX IN {t.name.toUpperCase()}
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
-              <div className="bg-white rounded-xl p-5 text-center">
-                <div className="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <FaSnowflake className="w-5 h-5 text-white" />
-                </div>
-                <span className="font-bold text-blue-900 text-sm">AC Not Cooling</span>
-                <p className="text-gray-600 text-xs mt-1">Refrigerant leaks, compressor issues, or thermostat problems</p>
-              </div>
-              <div className="bg-white rounded-xl p-5 text-center">
-                <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <FaExclamationTriangle className="w-5 h-5 text-white" />
-                </div>
-                <span className="font-bold text-blue-900 text-sm">AC Won't Turn On</span>
-                <p className="text-gray-600 text-xs mt-1">Electrical issues, capacitor failure, or breaker trips</p>
-              </div>
-              <div className="bg-white rounded-xl p-5 text-center">
-                <div className="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <FaTools className="w-5 h-5 text-white" />
-                </div>
-                <span className="font-bold text-blue-900 text-sm">Strange Noises</span>
-                <p className="text-gray-600 text-xs mt-1">Fan motor problems, loose parts, or debris in unit</p>
-              </div>
-              <div className="bg-white rounded-xl p-5 text-center">
-                <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <FaSnowflake className="w-5 h-5 text-white" />
-                </div>
-                <span className="font-bold text-blue-900 text-sm">Frozen Coils</span>
-                <p className="text-gray-600 text-xs mt-1">Airflow restrictions or refrigerant issues</p>
-              </div>
-              <div className="bg-white rounded-xl p-5 text-center">
-                <div className="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <FaWrench className="w-5 h-5 text-white" />
-                </div>
-                <span className="font-bold text-blue-900 text-sm">Water Leaks</span>
-                <p className="text-gray-600 text-xs mt-1">Clogged drain lines or damaged drain pans</p>
-              </div>
-              <div className="bg-white rounded-xl p-5 text-center">
-                <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <FaExclamationTriangle className="w-5 h-5 text-white" />
-                </div>
-                <span className="font-bold text-blue-900 text-sm">High Energy Bills</span>
-                <p className="text-gray-600 text-xs mt-1">Inefficient operation or system age</p>
-              </div>
+              {problems.map((p, idx) => {
+                const Icon = p.icon;
+                return (
+                  <div key={idx} className="bg-white rounded-xl p-5 text-center">
+                    <div className={`w-12 h-12 ${p.iconBg} rounded-full flex items-center justify-center mx-auto mb-3`}>
+                      <Icon className="w-5 h-5 text-white" />
+                    </div>
+                    <span className="font-bold text-blue-900 text-sm">{p.title}</span>
+                    <p className="text-gray-600 text-xs mt-1">{p.desc}</p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -228,11 +330,11 @@ const ACRepairTown = ({ townKey }) => {
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">&#10003;</span>
-                <span className="text-gray-700 text-base font-medium"><Link href="/financing" className="text-blue-600 hover:underline">Financing options</Link> available</span>
+                <span className="text-gray-700 text-base font-medium">{perks[0]}</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">&#10003;</span>
-                <span className="text-gray-700 text-base font-medium">5.0-star Google rating</span>
+                <span className="text-gray-700 text-base font-medium">{perks[1]}</span>
               </div>
             </div>
           </div>

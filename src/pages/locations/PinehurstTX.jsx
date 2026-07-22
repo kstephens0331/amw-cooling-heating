@@ -232,11 +232,12 @@ const PinehurstTX = () => {
               Emergency HVAC Service in Pinehurst
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              An AC failure on a 95-degree August afternoon does not wait for business hours, and
-              neither do we. Since we are open 8am to 9pm every day of the week, you can call AMW for
-              same-day and emergency HVAC service in Pinehurst, TX, and we will get a technician headed
-              your way fast down SH 249 or FM 1774. We also serve nearby Magnolia, Tomball, and Conroe
-              across Montgomery County.
+              Comfort problems in Pinehurst rarely pick a convenient time, whether that is a
+              compressor giving out during a 95-degree August afternoon or a furnace that will not
+              fire on a cold January morning. We are open 8am to 9pm every day of the week, so call
+              AMW for same-day and emergency HVAC service in Pinehurst, TX, and we will get a
+              technician headed your way fast down SH 249 or FM 1774. We also serve nearby Magnolia,
+              Tomball, and Conroe across Montgomery County.
             </p>
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">

@@ -45,7 +45,7 @@ const MagnoliaTX = () => {
               HVAC Services in Magnolia, TX
             </h1>
             <p className="text-lg text-blue-100 max-w-2xl mx-auto mb-8">
-              Expert heating and cooling services for Magnolia, Texas—from FM 1488 corridor homes to rural properties.
+              Complete heating and cooling service for Magnolia, Texas, from the FM 1488 corridor's newer neighborhoods to the ranch and acreage properties on the edge of town.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -78,10 +78,10 @@ const MagnoliaTX = () => {
               Your Local Magnolia HVAC Contractor
             </h2>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              AMW Cooling & Heating extends our trusted HVAC services to Magnolia, Texas—a rapidly growing community along the FM 1488 corridor in western Montgomery County. Magnolia has evolved from a quiet rural town into a thriving suburban community, with master-planned neighborhoods like Woodforest, Mostyn Manor, and the Reserve at Grogan's Mill joining the area's established ranch properties and acreage homes. Our veteran-owned team understands the diverse HVAC needs that come with Magnolia's mix of property types.
+              AMW Cooling & Heating brings our veteran-owned HVAC service to Magnolia, a growing community on the west side of Montgomery County along the FM 1488 and FM 1774 corridors. Magnolia is a real mix of master-planned neighborhoods like Woodforest and Mostyn Manor alongside established ranch and acreage homes on larger lots, and our team is just as comfortable in one setting as the other. We reach Magnolia with a straight run out FM 1488 from our Conroe shop, so we can get to homes and businesses across the area quickly.
             </p>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              Magnolia's location at the intersection of FM 1488 and FM 1774 puts it within easy reach of our Conroe headquarters. Many Magnolia homes sit on larger lots or acreage, which can mean longer ductwork runs, larger cooling loads, and unique installation challenges compared to subdivision homes. Our technicians are experienced with both traditional subdivision HVAC systems and the larger, more complex setups found on rural Magnolia properties.
+              From AC repair and installation to heating service, maintenance, indoor air quality, smart thermostats, and dryer vent cleaning, we handle every part of your home's comfort system, not just one piece of it. Magnolia gets the same hot, humid Southeast Texas summers as the rest of the region, which pushes cooling systems hard from spring through fall, and the area's larger lots often mean bigger equipment and more ductwork to keep comfortable. As a licensed, insured, and veteran-owned company, we bring the same straightforward assessments and upfront pricing to every Magnolia visit.
             </p>
           </div>
         </section>
@@ -161,7 +161,7 @@ const MagnoliaTX = () => {
               WHY MAGNOLIA RESIDENTS CHOOSE AMW
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg text-center max-w-3xl mx-auto">
-              Magnolia residents value hard work, honesty, and community—values that mirror our own military-instilled principles. We provide straightforward assessments, fair pricing, and reliable service that Magnolia families can count on season after season.
+              Magnolia residents value hard work, honesty, and community, values that mirror our own military-instilled principles. We provide straightforward assessments, fair pricing, and reliable service that Magnolia families can count on season after season.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
@@ -192,7 +192,7 @@ const MagnoliaTX = () => {
           </div>
         </section>
 
-        {/* Neighborhoods Section */}
+        {/* Neighborhoods + Local Detail Section */}
         <section className="py-12 bg-white">
           <div className="max-w-4xl mx-auto px-4">
             <h3 className="text-2xl font-bold text-blue-900 mb-4 flex items-center gap-2">
@@ -200,16 +200,34 @@ const MagnoliaTX = () => {
               Serving Magnolia Neighborhoods
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              We provide HVAC services throughout Magnolia and surrounding areas including
-              Woodforest, Mostyn Manor, FM 1488 corridor, FM 1774 corridor, Decker Prairie area, Dobbin area, and all Magnolia-area communities. No matter where you are in the Magnolia area, AMW
+              We provide HVAC service throughout Magnolia and the surrounding area, including
+              Woodforest, Mostyn Manor, the FM 1488 corridor, the FM 1774 corridor, Decker Prairie, Dobbin, and all Magnolia-area communities. Whether you are in a subdivision home or out on a rural acreage property, AMW
               Cooling & Heating is ready to help.
             </p>
-            
+
+            <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
+              <span className="w-8 h-1 bg-blue-600 rounded"></span>
+              Every Type of Magnolia Home
+            </h3>
+            <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
+              Magnolia's mix of housing stock means we see a wide range of systems on any given day, from standard setups in newer subdivisions to the larger equipment often found on bigger rural lots. Whatever type of home or property you have, our veteran-owned team brings the same honest assessment and upfront pricing to every job, on every service we offer.
+            </p>
+
+            <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
+              <span className="w-8 h-1 bg-red-500 rounded"></span>
+              Emergency HVAC Service in Magnolia
+            </h3>
+            <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
+              HVAC problems do not wait for business hours, and neither do we. We are open 8am to 9pm, seven days a week, with after-hours emergency service from 5pm to 9pm. Call (936) 331-1339 for same-day and emergency service anywhere in the Magnolia area, whether you need AC repair, heating repair, or help with any other part of your system.
+            </p>
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
               <span className="w-8 h-1 bg-blue-600 rounded"></span>
               Nearby Areas We Serve
             </h3>
+            <p className="text-gray-700 mb-4 leading-relaxed text-base md:text-lg">
+              AMW Cooling & Heating serves communities across Montgomery County and the surrounding area. Explore our HVAC service in nearby towns:
+            </p>
             <NearbyAreas currentPath="/locations/magnolia-tx" />
           </div>
         </section>

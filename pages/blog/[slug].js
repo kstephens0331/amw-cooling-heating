@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 import BlogPost from '../../src/pages/BlogPost';
+import { escapeJsonLd } from '../../src/components/StructuredData';
 
 export async function getStaticPaths() {
   const indexPath = path.join(process.cwd(), 'public', 'data', 'blog', 'index.json');
@@ -66,7 +67,7 @@ export default function BlogPostPage({ slug, meta, md, allPosts }) {
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={image} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
+          __html: escapeJsonLd(JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'BlogPosting',
             headline: title,
@@ -81,7 +82,7 @@ export default function BlogPostPage({ slug, meta, md, allPosts }) {
             },
             description: description,
             mainEntityOfPage: canonicalUrl,
-          })
+          }))
         }} />
       </Head>
       <BlogPost slug={slug} meta={meta} md={md} allPosts={allPosts} />

@@ -45,7 +45,7 @@ const SpringTX = () => {
               HVAC Services in Spring, TX
             </h1>
             <p className="text-lg text-blue-100 max-w-2xl mx-auto mb-8">
-              Expert heating and cooling services for Spring, Texas homeowners—from Old Town Spring to the Champions area.
+              Veteran-owned heating and cooling services for Spring, Texas homeowners, from Old Town Spring to the Champions area.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -78,10 +78,10 @@ const SpringTX = () => {
               Your Local Spring HVAC Contractor
             </h2>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              AMW Cooling & Heating provides comprehensive HVAC services throughout Spring, Texas—a diverse and rapidly growing community in northern Harris County. Spring offers a unique mix of charming historic districts like Old Town Spring, established neighborhoods in the Champions area, and newer developments in the Klein ISD corridor. Whether your home is a classic ranch-style along Cypresswood Drive or a modern build near the Grand Parkway, our technicians have the experience to keep your HVAC system running at peak performance.
+              AMW Cooling & Heating is a veteran-owned, licensed and insured HVAC contractor providing complete heating and cooling services throughout Spring, Texas, a fast-growing community in northern Harris County that runs from historic Old Town Spring to the Champions area. We are a short drive south of our Conroe shop, and we know this stretch of Harris County well: classic ranch-style homes along Cypresswood Drive, established neighborhoods in Champions Forest and Klein, and newer construction near the Grand Parkway in Gleannloch Farms and Spring Stuebner. Wherever your home falls on that spectrum, our technicians have the experience to keep every part of your HVAC system, cooling, heating, air quality and controls, running at peak performance.
             </p>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              Spring's proximity to Houston means it experiences the same intense heat and humidity that characterize Southeast Texas summers. With temperatures regularly exceeding 95°F from June through September, a reliable AC system isn't a luxury—it's a necessity. AMW Cooling & Heating offers same-day service and after-hours emergency repairs to ensure Spring homeowners never have to endure a sweltering home for long.
+              Spring's proximity to Houston means it gets the same intense heat and humidity that define Southeast Texas summers, with temperatures regularly topping 95°F from June through September. A reliable AC system here is not a luxury, it is a necessity, and a working furnace or heat pump still matters on the occasional hard freeze. That is why we offer same-day service and after-hours emergency repairs across every service we provide, always with upfront pricing before any work begins, so Spring homeowners are never stuck waiting on an uncomfortable house.
             </p>
           </div>
         </section>
@@ -161,7 +161,7 @@ const SpringTX = () => {
               WHY SPRING RESIDENTS CHOOSE AMW
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg text-center max-w-3xl mx-auto">
-              Spring's diverse housing stock—from 1970s-era homes in Champions Forest to new construction near Spring Stuebner—means HVAC needs vary widely. Our technicians are trained to work on both older systems and the latest high-efficiency equipment. We provide honest assessments and never push unnecessary replacements.
+              We are a local, veteran-owned team, not a call center in another state. When you call AMW for HVAC service in Spring, you reach technicians who work this part of Harris County every week, are trained on both older equipment and the latest high-efficiency systems, and show up when we say we will. We hold Texas license TACLB133920E and give every Spring homeowner an honest assessment rather than a sales pitch.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
@@ -204,12 +204,30 @@ const SpringTX = () => {
               Old Town Spring, Champions Forest, Klein, Gleannloch Farms, Spring Stuebner, Cypresswood, Louetta, and all Spring-area communities. No matter where you are in the Spring area, AMW
               Cooling & Heating is ready to help.
             </p>
-            
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
               <span className="w-8 h-1 bg-blue-600 rounded"></span>
+              A Wide Range of Homes and Systems
+            </h3>
+            <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
+              Spring has a diverse housing stock, from 1970s-era homes in Champions Forest to new construction near the Grand Parkway, and the AC units, furnaces, and heat pumps inside vary just as widely. Rather than a one-size-fits-all approach, we look at the age and condition of your specific system, whether it needs a repair, a tune-up, or a full replacement, and give you a straight answer. That holds whether we are out for a cooling call, a heating call, an air quality upgrade, or a routine maintenance visit.
+            </p>
+
+            <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
+              <span className="w-8 h-1 bg-blue-600 rounded"></span>
+              Emergency HVAC Service in Spring
+            </h3>
+            <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
+              A system failure in Spring does not wait for business hours, and neither do we. We are open 8am to 9pm, seven days a week, with after-hours emergency service from 5pm to 9pm, so call AMW for same-day and emergency HVAC service anywhere in Spring, from Old Town Spring to Gleannloch Farms, and we will get a technician headed your way fast.
+            </p>
+
+            <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
+              <span className="w-8 h-1 bg-red-500 rounded"></span>
               Nearby Areas We Serve
             </h3>
+            <p className="text-gray-700 mb-4 leading-relaxed text-base md:text-lg">
+              AMW Cooling & Heating serves communities across Harris and Montgomery counties. Explore our HVAC service in nearby towns:
+            </p>
             <NearbyAreas currentPath="/locations/spring-tx" />
           </div>
         </section>

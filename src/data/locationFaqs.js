@@ -10,24 +10,24 @@ export const LOCATION_FAQS = {
     town: 'Conroe',
     faqs: [
       {
-        question: 'How fast can you get to my home in Conroe for AC repair?',
-        answer: 'AMW is based right here in Conroe, so we are usually the closest HVAC company to you. For most calls inside the city and around Montgomery County we can reach you the same day, and often within an hour for emergencies. We are open 8am to 9pm seven days a week, with after-hours emergency service from 5pm to 9pm.'
+        question: 'What HVAC services does AMW provide in Conroe?',
+        answer: 'We provide the full range of residential HVAC work in Conroe: AC repair and installation, heating repair, seasonal maintenance, indoor air quality, smart thermostats, and dryer vent cleaning. Because our shop is based in Conroe, we can handle whatever your system needs, from a same-day repair to a full system replacement, without bringing in a subcontractor.'
       },
       {
-        question: 'What AC brands do you service in Conroe?',
-        answer: 'Our technicians service every major brand, including Carrier, Trane, Lennox, Goodman, Rheem, York, American Standard, Bryant, and Ruud. We repair older systems in established neighborhoods like River Plantation and April Sound as well as the newer high-efficiency units going into Crighton Ridge and other newer parts of Conroe.'
+        question: 'What parts of Conroe and Montgomery County do you serve?',
+        answer: 'We cover the whole city, from Downtown Conroe and the neighborhoods around Lake Conroe to River Plantation, April Sound, and the newer construction around Crighton Ridge, plus the surrounding Montgomery County communities. Wherever you are in the Conroe area, AMW Cooling and Heating is ready to help.'
       },
       {
-        question: 'Do you offer financing on new systems in Conroe?',
-        answer: 'Yes. We offer financing through Synchrony and FTL Finance so a new system or a larger repair does not have to come out of pocket all at once. We can walk you through the options during your estimate and help you pick a monthly payment that fits your budget.'
-      },
-      {
-        question: 'Why does my Conroe home feel humid even when the AC is running?',
-        answer: 'Conroe sits in a humid Gulf-coast climate, and an AC that is oversized or low on refrigerant will cool the air without pulling out enough moisture. If your home feels cold and clammy, or you see condensation on vents and windows, have us check the refrigerant charge, airflow, and system sizing. Proper dehumidification also protects against mold in our long, wet summers.'
+        question: 'How fast can AMW respond to an HVAC emergency in Conroe?',
+        answer: 'Since we are based right here in Conroe, we are usually the closest HVAC company to you, and we can typically reach you the same day for both cooling and heating emergencies. We are open 8am to 9pm seven days a week, with after-hours emergency service from 5pm to 9pm.'
       },
       {
         question: 'Are you licensed and insured to work in Conroe?',
         answer: 'Yes. AMW Cooling and Heating is a veteran-owned company that is fully licensed under TACLB133920E, insured, and bonded. You get honest, upfront pricing before any work starts, backed by a 5.0-star Google rating from your neighbors around Montgomery County.'
+      },
+      {
+        question: 'Do you offer financing on HVAC systems in Conroe?',
+        answer: 'Yes. We offer financing through Synchrony and FTL Finance so a new system or a larger repair does not have to come out of pocket all at once. We can walk you through the options during your estimate and help you pick a monthly payment that fits your budget.'
       },
       {
         question: 'Do you offer maintenance plans for Conroe homeowners?',
@@ -47,8 +47,8 @@ export const LOCATION_FAQS = {
         answer: 'Yes. Many Woodlands homes have multi-zone setups, variable-speed equipment, and smart thermostats, and our technicians are trained to diagnose and repair all of it. We work on high-end systems from Trane, Carrier, Lennox, and others without pushing you toward a full replacement when a repair will do.'
       },
       {
-        question: 'How do the wooded lots in The Woodlands affect my AC?',
-        answer: 'The tree cover that makes The Woodlands beautiful also drops a lot of pollen, leaves, and debris that clog outdoor condenser coils and reduce efficiency. Heavy shade and humidity can also encourage mold in ducts. Seasonal maintenance keeps coils clean and airflow strong so your system does not overwork itself through the summer.'
+        question: 'Do you work on light commercial systems in The Woodlands, or just homes?',
+        answer: 'Both. Alongside single-family homes throughout the villages, we service light commercial HVAC for the offices and shops around Town Center and the village centers, from routine repair to full system replacement.'
       },
       {
         question: 'Do you offer emergency AC repair in The Woodlands?',
@@ -64,20 +64,20 @@ export const LOCATION_FAQS = {
     town: 'Spring',
     faqs: [
       {
+        question: 'What HVAC services does AMW provide in Spring?',
+        answer: 'We provide the full range of residential HVAC work in Spring: AC repair and installation, heating repair, seasonal maintenance, indoor air quality, smart thermostats, and dryer vent cleaning. Whatever your system needs, from a same-day repair to a full replacement, we handle it directly without bringing in a subcontractor.'
+      },
+      {
         question: 'What parts of Spring do you serve?',
         answer: 'We serve all of Spring, including Old Town Spring, the Champions and Champions Forest area, Klein, Gleannloch Farms, Spring Stuebner, Cypresswood, and Louetta. Whether your home is a 1970s build in Champions Forest or new construction near the Grand Parkway, we have the experience to keep it comfortable.'
       },
       {
-        question: 'How much does AC repair cost in Spring?',
-        answer: 'Most AC repairs land somewhere between a simple capacitor or contactor replacement and a larger job like a compressor or coil. We always give you upfront pricing before any work begins, so there are no surprises. If a repair does not make sense on an aging system, we will tell you honestly and lay out your options.'
+        question: 'Are you licensed and insured to work in Spring?',
+        answer: 'Yes. We hold Texas HVAC license TACLB133920E and carry full insurance. As a veteran-owned company, we also stand behind every job with upfront, transparent pricing before any work begins, so there are never surprises on your invoice.'
       },
       {
-        question: 'My Spring home has an older system. Should I repair or replace it?',
-        answer: 'As a rule of thumb, if a system is more than 10 to 15 years old and the repair would cost more than about half of a new unit, replacement is usually the better value, especially with today\'s higher-efficiency SEER2 equipment. We give an honest assessment and never push an unnecessary replacement on a system that has good years left.'
-      },
-      {
-        question: 'Why does Spring humidity make my AC work so hard?',
-        answer: 'Spring sits just north of Houston and gets the same intense Gulf heat and humidity, with temperatures over 95 degrees from June through September. That constant load runs your compressor hard and pulls a lot of moisture out of the air. Keeping the coils clean, the filter fresh, and the refrigerant properly charged helps the system keep up without spiking your energy bill.'
+        question: 'Can you come out the same day for a Spring HVAC emergency?',
+        answer: 'In most cases, yes. We are a short drive south of our Conroe shop, so Spring is one of the areas we can typically reach the same day. We are open 8am to 9pm, seven days a week, with after-hours emergency service from 5pm to 9pm. Call (936) 331-1339 and we will get a technician headed your way.'
       },
       {
         question: 'Do you offer financing and maintenance plans in Spring?',
@@ -118,12 +118,12 @@ export const LOCATION_FAQS = {
         answer: 'Yes. We cover Willis and the surrounding lake communities, including Seven Coves, Point Aquarius, and Panorama Village, along with homes near downtown Willis and along FM 830. From lakefront properties to rural acreage, we handle the full range of HVAC needs in the Willis area.'
       },
       {
-        question: 'Why do lakeside Willis homes have more AC and moisture problems?',
-        answer: 'Homes near Lake Conroe deal with higher humidity that can strain AC systems and encourage mold growth if moisture is not managed. We check that your system is pulling out enough humidity, that drain lines are clear, and that the coils are clean. In some cases a dedicated dehumidifier or air quality upgrade makes a big difference near the water.'
+        question: 'Why does the humidity near Lake Conroe affect Willis homes so much?',
+        answer: 'Homes near Lake Conroe deal with higher humidity than homes further from the water, and that extra moisture puts more strain on both cooling and heating equipment and can encourage mold growth if it is not managed well. We factor that into every visit in the Willis area, whether it is a routine maintenance check, a repair, or a new installation, so your system is sized and set up for the moisture load, not just the temperature.'
       },
       {
-        question: 'How quickly can you reach Willis for emergency AC repair?',
-        answer: 'Willis is a short drive up I-45 from our Conroe base, so we can usually get there the same day, and fast for emergencies. We are open 8am to 9pm seven days a week, with after-hours emergency service from 5pm to 9pm. Call (936) 331-1339 when your AC goes out.'
+        question: 'How quickly can you reach Willis for emergency HVAC service?',
+        answer: 'Willis is a short drive up I-45 from our Conroe base, so we can usually get there the same day, and fast for emergencies. We are open 8am to 9pm seven days a week, with after-hours emergency service from 5pm to 9pm. Call (936) 331-1339 when your heating or cooling system goes down.'
       },
       {
         question: 'What HVAC brands do you install and repair in Willis?',
@@ -140,23 +140,23 @@ export const LOCATION_FAQS = {
     faqs: [
       {
         question: 'What areas of Magnolia do you serve?',
-        answer: 'We serve all of Magnolia along the FM 1488 and FM 1774 corridors, including master-planned neighborhoods like Woodforest and Mostyn Manor as well as the established ranch and acreage properties around town. Whether you are on a large lot or in a newer subdivision, we have the right approach for your system.'
+        answer: 'We serve all of Magnolia along the FM 1488 and FM 1774 corridors, including master-planned neighborhoods like Woodforest and Mostyn Manor as well as the established ranch and acreage properties around town. No matter where you are in the Magnolia area, we are ready to help.'
       },
       {
-        question: 'Do you service HVAC on larger acreage and ranch properties in Magnolia?',
-        answer: 'Yes. Many Magnolia homes sit on bigger lots with longer duct runs, multiple systems, or equipment that has to move a lot of air. Our technicians are comfortable working on these setups and can diagnose airflow and balance issues that show up more often on larger homes.'
+        question: 'What HVAC services does AMW provide in Magnolia?',
+        answer: 'We offer complete HVAC service in Magnolia, including AC repair, AC installation, heating repair, maintenance, indoor air quality, smart thermostats, and dryer vent cleaning. Whatever your home or property needs, our veteran-owned team can handle it.'
       },
       {
-        question: 'How does the humid Magnolia climate affect my AC?',
-        answer: 'Magnolia gets the same hot, humid Southeast Texas summers as the rest of the region. High humidity makes your AC work harder and can leave the house feeling sticky if the system is not sized or charged properly. Keeping coils clean and refrigerant correct helps the system remove moisture and hold temperature without running up the power bill.'
+        question: 'Do you work on both subdivision homes and acreage properties in Magnolia?',
+        answer: 'Yes. Magnolia is a genuine mix of newer subdivision homes and established ranch and acreage properties on larger lots, and we are equally comfortable working in either setting. Whatever type of property you have, you get the same honest assessment and upfront pricing.'
       },
       {
         question: 'Do you offer same-day and emergency service in Magnolia?',
-        answer: 'Yes. We are open 8am to 9pm seven days a week and offer after-hours emergency service from 5pm to 9pm. When your AC quits during a hot Magnolia afternoon, call (936) 331-1339 and we will get a technician headed your way. Additional charges may apply for after-hours calls.'
+        answer: 'Yes. We are open 8am to 9pm seven days a week and offer after-hours emergency service from 5pm to 9pm. Call (936) 331-1339 and we will get a technician headed your way. Additional charges may apply for after-hours calls.'
       },
       {
-        question: 'Is financing available for a new system in Magnolia?',
-        answer: 'Yes. We offer financing through Synchrony and FTL Finance so a replacement system or a larger repair fits your budget. We provide honest, upfront pricing and will explain the options during your free estimate.'
+        question: 'Is financing available for HVAC work in Magnolia?',
+        answer: 'Yes. We offer financing through Synchrony and FTL Finance so a repair, replacement, or new installation fits your budget. We provide honest, upfront pricing and will explain the options during your free estimate.'
       }
     ]
   },
@@ -168,16 +168,16 @@ export const LOCATION_FAQS = {
         answer: 'Yes. We serve Tomball and the surrounding northwest Harris and Montgomery County area for AC repair, AC installation, heating repair, maintenance, and indoor air quality. As a veteran-owned company, we bring the same honest, upfront service to Tomball that we give every community we cover.'
       },
       {
-        question: 'What AC brands do you service in Tomball?',
-        answer: 'We service all major brands, including Carrier, Trane, Lennox, Goodman, Rheem, York, and American Standard. Whether your Tomball home has an older unit or a newer high-efficiency system, our technicians can diagnose and repair it.'
+        question: 'What HVAC equipment do you work on in Tomball?',
+        answer: 'We work on complete heating and cooling systems, including central air conditioners, heat pumps, gas and electric furnaces, thermostats, and indoor air quality equipment, from every major brand such as Carrier, Trane, Lennox, Goodman, Rheem, York, and American Standard. Whether a Tomball home near the historic downtown runs an older system or a new build off the 249 corridor has the latest high-efficiency equipment, our technicians handle it.'
       },
       {
-        question: 'How does Tomball humidity affect my cooling system?',
-        answer: 'Tomball shares the humid Gulf-coast climate of the greater Houston area. That humidity puts a heavy load on your AC and can leave the house feeling muggy if the system is not pulling out enough moisture. We check refrigerant, airflow, and drainage so your system cools and dehumidifies the way it should.'
+        question: 'Which parts of the Tomball area do you serve?',
+        answer: 'We cover Tomball and the surrounding communities where Harris, Montgomery, and Waller counties meet, from the historic downtown and Tomball Parkway area to newer developments like Rosehill Reserve, Lakewood Grove, and the Hufsmith area. If you are unsure whether your address falls inside our Tomball coverage, call (936) 331-1339 and we can tell you right away.'
       },
       {
-        question: 'Do you offer emergency AC repair in Tomball?',
-        answer: 'Yes. We are open 8am to 9pm seven days a week, with after-hours emergency service from 5pm to 9pm. When your AC fails on a hot day, call (936) 331-1339 and we will get to you as fast as we can. Additional charges may apply for after-hours calls.'
+        question: 'Do you offer emergency heating and cooling service in Tomball?',
+        answer: 'Yes. We are open 8am to 9pm seven days a week, with after-hours emergency service from 5pm to 9pm, for both AC and heating breakdowns. Call (936) 331-1339 and we will get a technician headed your way as fast as we can. Additional charges may apply for after-hours calls.'
       },
       {
         question: 'Do you offer financing and maintenance plans in Tomball?',
@@ -197,12 +197,12 @@ export const LOCATION_FAQS = {
         answer: 'Yes, and it is more important than people think. Most new systems in communities like Tavola and Valley Ranch are still under manufacturer warranty, and those warranties usually require documented annual maintenance. Skipping it can void your coverage, so a maintenance visit protects both your comfort and your warranty.'
       },
       {
-        question: 'How fast can you reach New Caney for emergency AC repair?',
-        answer: 'New Caney is a straight shot down US-59 from our Conroe base, so we can usually get there the same day and fast for emergencies. We are open 8am to 9pm seven days a week, with after-hours emergency service from 5pm to 9pm. Call (936) 331-1339 when the AC goes out.'
+        question: 'How fast can you reach New Caney for emergency HVAC service?',
+        answer: 'New Caney is a straight shot down US-59 from our Conroe base, so we can usually get a technician there the same day for any HVAC emergency, whether it is the AC or the heat. We are open 8am to 9pm seven days a week, with after-hours emergency service from 5pm to 9pm. Call (936) 331-1339.'
       },
       {
-        question: 'What brands do you install and repair in New Caney?',
-        answer: 'We service and install all major brands, including Carrier, Trane, Lennox, Goodman, Rheem, and York. Whether you need a repair on an older system near the town center or a new high-efficiency unit for a home off SH-99, we can help you pick the right equipment.'
+        question: 'Does AMW handle every kind of HVAC work in New Caney, not just AC?',
+        answer: 'Yes. Beyond AC repair and installation, we handle heating repair, seasonal maintenance, indoor air quality equipment, smart thermostats, and dryer vent cleaning for New Caney homes and businesses, all backed by the same veteran-owned team and upfront pricing.'
       },
       {
         question: 'Do you offer financing on a new system in New Caney?',
@@ -222,16 +222,16 @@ export const LOCATION_FAQS = {
         answer: 'Yes. A lot of the new systems going into communities like The Canopies are still under manufacturer warranty, and those warranties usually require documented annual maintenance. Skipping it can void the coverage, so our maintenance visits keep the equipment efficient and keep that warranty intact.'
       },
       {
-        question: 'How quickly can you get to Splendora for emergency AC repair?',
-        answer: 'Splendora sits along US-59 and I-69, an easy run from our Conroe base, so we can usually reach you the same day. We are open 8am to 9pm seven days a week, with after-hours emergency service from 5pm to 9pm. Call (936) 331-1339 when your AC fails on a hot afternoon.'
+        question: 'Does AMW provide emergency heating and cooling service in Splendora?',
+        answer: 'Yes. Splendora sits along US-59 and I-69, an easy run from our Conroe base, so we can usually reach you the same day. We are open 8am to 9pm seven days a week, with after-hours emergency service from 5pm to 9pm, covering a failed AC in August and a furnace that will not start on a cold morning alike. Call (936) 331-1339 and we will get a technician headed your way.'
       },
       {
-        question: 'How does the humid piney-woods climate affect my Splendora AC?',
-        answer: 'Splendora sits in the humid piney woods of East Montgomery County, so your AC has to remove a lot of moisture along with heat through the long cooling season. A system that is low on refrigerant or has dirty coils will leave the house feeling sticky and run up the power bill. Seasonal maintenance keeps it cooling and dehumidifying the way it should.'
+        question: 'Is AMW licensed, insured, and veteran owned to work in Splendora?',
+        answer: 'Yes. We are a veteran owned company, fully licensed under TACLB133920E, insured, and bonded. You get honest, upfront pricing before any work starts, backed by a 5.0-star Google rating from neighbors across Splendora and East Montgomery County.'
       },
       {
-        question: 'Do you offer financing for a new system in Splendora?',
-        answer: 'Yes. We offer financing through Synchrony and FTL Finance so a new install or a bigger repair fits your budget. We give upfront pricing and can walk you through the payment options during your free estimate.'
+        question: 'Do you offer financing for HVAC work in Splendora?',
+        answer: 'Yes. We offer financing through Synchrony and FTL Finance, so a new system, a bigger repair, or any other HVAC project in Splendora fits your budget. We give upfront pricing and can walk you through the payment options during your free estimate.'
       }
     ]
   },
@@ -268,16 +268,16 @@ export const LOCATION_FAQS = {
         answer: 'Yes. Cut and Shoot sits just about 6 miles east of Conroe along State Highway 105, right next door to our home base, so it is one of the closest communities we serve. We cover the homes near the city center and the surrounding 77306 and 77303 areas for the full range of HVAC work.'
       },
       {
-        question: 'How quickly can you get to Cut and Shoot for a repair?',
-        answer: 'Very quickly. Because Cut and Shoot is only a few miles east of our Conroe shop along SH-105, we can usually reach you the same day and fast for emergencies. We are open 8am to 9pm seven days a week, with after-hours emergency service from 5pm to 9pm. Call (936) 331-1339.'
+        question: 'How fast can AMW respond to a service call in Cut and Shoot?',
+        answer: 'Very quickly, for any kind of HVAC visit. Cut and Shoot is only about 6 miles east of our Conroe shop along SH-105, so whether you need a repair, a new system installed, or routine maintenance, we can usually get a technician out the same day. We are open 8am to 9pm seven days a week, with after-hours emergency service from 5pm to 9pm. Call (936) 331-1339.'
       },
       {
         question: 'Do you service HVAC on rural and acreage properties near Cut and Shoot?',
-        answer: 'Yes. A lot of homes in and around Cut and Shoot sit on larger lots with longer duct runs or multiple systems. Our technicians are comfortable diagnosing airflow, balance, and sizing issues that come up more often on rural and acreage properties.'
+        answer: 'Yes. A lot of homes in and around Cut and Shoot sit on larger lots with longer duct runs or multiple systems, and we also work on the mobile and manufactured homes common out on the acreage. Our technicians are comfortable diagnosing airflow, balance, and sizing issues that come up more often on rural properties.'
       },
       {
-        question: 'How does the humid climate affect my Cut and Shoot AC?',
-        answer: 'Cut and Shoot shares the same hot, humid summers as the rest of Montgomery County. High humidity makes your AC work harder and can leave the house feeling sticky if the system is not pulling out enough moisture. Keeping the coils clean and refrigerant charged correctly helps it cool and dehumidify without wasting energy.'
+        question: 'Does AMW handle more than AC repair in Cut and Shoot?',
+        answer: 'Yes. Beyond AC repair, we handle AC installation, heating repair, HVAC maintenance, indoor air quality, smart thermostat installation, and dryer vent cleaning for homes throughout Cut and Shoot and the surrounding acreage. We are a full-service HVAC contractor, not just a repair outfit, so one call covers whatever your system needs.'
       },
       {
         question: 'Do you offer financing for a new system near Cut and Shoot?',
@@ -297,12 +297,12 @@ export const LOCATION_FAQS = {
         answer: 'Yes. Shenandoah has a strong mix of residential neighborhoods and commercial and retail space along the I-45 corridor. Our technicians handle residential split systems as well as light commercial equipment, so we can keep both your home and your business comfortable.'
       },
       {
-        question: 'How fast can you reach Shenandoah for emergency AC repair?',
-        answer: 'Shenandoah is a short hop down I-45 from our Conroe base, so we can usually be there the same day and fast for emergencies. We are open 8am to 9pm seven days a week, with after-hours emergency service from 5pm to 9pm. Call (936) 331-1339 when your AC quits.'
+        question: 'Do you offer emergency heating and cooling service in Shenandoah?',
+        answer: 'Yes. Shenandoah is a short hop down I-45 from our Conroe base, so we can usually be there the same day for either an AC or a heating breakdown. We are open 8am to 9pm seven days a week, with after-hours emergency service from 5pm to 9pm. Call (936) 331-1339 and we will get a technician headed your way.'
       },
       {
-        question: 'What HVAC brands do you install and repair in Shenandoah?',
-        answer: 'We service and install all major brands, including Carrier, Trane, Lennox, Goodman, Rheem, and York. Whether you need a repair on an older system or a new high-efficiency unit, our technicians can diagnose and fix it and help you choose the right equipment.'
+        question: 'What HVAC equipment do you service in Shenandoah?',
+        answer: 'We work on complete heating and cooling systems for both homes and businesses, including central air conditioners, furnaces, heat pumps, thermostats, and indoor air quality equipment, from every major brand such as Carrier, Trane, Lennox, Goodman, Rheem, and York. Our technicians handle residential split systems as well as the light-commercial units common along the I-45 corridor.'
       },
       {
         question: 'Do you offer financing on new systems in Shenandoah?',
@@ -322,12 +322,12 @@ export const LOCATION_FAQS = {
         answer: 'Yes. Many Pinehurst-area homes sit on bigger, wooded lots with longer duct runs or more than one system. Our technicians are comfortable working on these setups and can track down airflow and balance issues that show up more often on larger properties.'
       },
       {
-        question: 'How does the humid piney-woods climate affect my Pinehurst AC?',
-        answer: 'Pinehurst sits in the piney woods northwest of Houston, where humidity stays high through the long cooling season. That extra moisture makes your AC work harder and can leave the house feeling sticky if the system is not charged and sized correctly. Seasonal maintenance keeps coils clean and airflow strong so it cools and dehumidifies properly.'
+        question: 'What makes HVAC service different in Pinehurst compared to other areas?',
+        answer: 'Pinehurst sits in the piney woods northwest of Houston, where humidity stays high through the long cooling season and wooded, oversized lots are common. That mix means we see everything from brand-new systems still under warranty in the ZIP 77362 subdivisions to older equipment on established acreage homes, often with longer duct runs to match the bigger lots. We size and maintain whole-home systems with all of that in mind so your house stays comfortable year-round.'
       },
       {
-        question: 'How quickly can you reach Pinehurst for emergency AC repair?',
-        answer: 'Pinehurst is an easy run down FM 1774 from the Conroe and Magnolia area, so we can usually get to you the same day and fast for emergencies. We are open 8am to 9pm seven days a week, with after-hours emergency service from 5pm to 9pm. Call (936) 331-1339 when your AC fails.'
+        question: 'How quickly can AMW respond to a heating or cooling emergency in Pinehurst?',
+        answer: 'Pinehurst is an easy run down FM 1774 from the Conroe and Magnolia area, so we can usually get to you the same day, whether the problem is a failed air conditioner or a furnace that will not start. We are open 8am to 9pm seven days a week, with after-hours emergency service from 5pm to 9pm. Call (936) 331-1339 for any heating or cooling emergency.'
       },
       {
         question: 'Do you offer financing for a new system in Pinehurst?',

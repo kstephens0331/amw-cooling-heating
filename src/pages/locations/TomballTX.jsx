@@ -45,7 +45,7 @@ const TomballTX = () => {
               HVAC Services in Tomball, TX
             </h1>
             <p className="text-lg text-blue-100 max-w-2xl mx-auto mb-8">
-              Trusted heating and cooling contractor for Tomball, Texas—from historic downtown to the growing 249 corridor.
+              Trusted heating and cooling contractor for Tomball, Texas, from historic downtown to the growing 249 corridor.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -78,10 +78,10 @@ const TomballTX = () => {
               Your Local Tomball HVAC Contractor
             </h2>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              AMW Cooling & Heating provides professional HVAC services to Tomball, Texas—a charming city that perfectly blends small-town character with modern suburban growth. Tomball's historic downtown, anchored by Main Street and the Tomball Depot, offers a warm community feel, while the booming 249 Tollway corridor continues to attract new families and businesses. From established neighborhoods near Tomball Parkway to newer developments like Rosehill Reserve and Lakewood Grove, our NATE-certified technicians deliver expert heating and cooling solutions for every home.
+              AMW Cooling & Heating provides professional HVAC services to Tomball, Texas, a charming city that perfectly blends small-town character with modern suburban growth. Tomball's historic downtown, anchored by Main Street and the Tomball Depot, offers a warm community feel, while the booming 249 Tollway corridor continues to attract new families and businesses. From established neighborhoods near Tomball Parkway to newer developments like Rosehill Reserve and Lakewood Grove, our NATE-certified technicians deliver expert heating and cooling solutions for every home.
             </p>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              Tomball sits at the intersection of Harris, Montgomery, and Waller counties, making it a crossroads community that benefits from suburban convenience and open-space living. The area's rapid growth means many homes feature modern high-efficiency HVAC systems, while older Tomball properties may run on aging equipment that needs professional attention. AMW handles both with equal expertise, helping homeowners maintain comfort and efficiency regardless of their system's age.
+              Tomball sits at the intersection of Harris, Montgomery, and Waller counties, making it a crossroads community that benefits from suburban convenience and open-space living. Whatever you need, from a routine tune-up to a full system replacement, AMW is the local team Tomball residents call for straightforward, dependable HVAC service.
             </p>
           </div>
         </section>
@@ -192,7 +192,7 @@ const TomballTX = () => {
           </div>
         </section>
 
-        {/* Neighborhoods Section */}
+        {/* Neighborhoods + Local Detail Section */}
         <section className="py-12 bg-white">
           <div className="max-w-4xl mx-auto px-4">
             <h3 className="text-2xl font-bold text-blue-900 mb-4 flex items-center gap-2">
@@ -204,12 +204,42 @@ const TomballTX = () => {
               Historic Downtown Tomball, Rosehill Reserve, Lakewood Grove, Tomball Parkway area, 249 Tollway corridor, Hufsmith area, and all Tomball-area communities. No matter where you are in the Tomball area, AMW
               Cooling & Heating is ready to help.
             </p>
-            
+
+            <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
+              <span className="w-8 h-1 bg-blue-600 rounded"></span>
+              Homes Across Tomball, Old and New
+            </h3>
+            <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
+              Tomball's housing stock reflects its growth story. Near the historic downtown and
+              along the older streets closer to Main Street, you will find established homes
+              running HVAC equipment that has been in service for years. Out toward the 249
+              corridor, in newer communities like Rosehill Reserve and Lakewood Grove, homes tend
+              to come with modern, high-efficiency systems still under warranty. Whichever end of
+              that spectrum your home falls on, our licensed technicians handle the full range of
+              services, from AC repair and installation to heating repair, routine maintenance,
+              and indoor air quality upgrades.
+            </p>
+
+            <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
+              <span className="w-8 h-1 bg-red-500 rounded"></span>
+              Emergency HVAC Service in Tomball
+            </h3>
+            <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
+              A broken AC or furnace does not wait for a convenient time, so neither do we. We are
+              open 8am to 9pm, seven days a week, with after-hours emergency service available from
+              5pm to 9pm, for both cooling and heating breakdowns. Call (936) 331-1339 and we will
+              get a technician headed your way, whether you are near the historic downtown, out
+              along the 249 corridor, or anywhere else in the Tomball area.
+            </p>
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
               <span className="w-8 h-1 bg-blue-600 rounded"></span>
               Nearby Areas We Serve
             </h3>
+            <p className="text-gray-700 mb-4 leading-relaxed text-base md:text-lg">
+              AMW Cooling & Heating serves communities across Montgomery County and the north
+              Houston area. Explore our HVAC service in nearby towns:
+            </p>
             <NearbyAreas currentPath="/locations/tomball-tx" />
           </div>
         </section>

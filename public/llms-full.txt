@@ -2,7 +2,7 @@
 
 > Comprehensive machine-readable reference for AMW Cooling & Heating, a veteran-owned HVAC contractor in Conroe, Texas. This document is intended for AI assistants and LLM-powered search to ground answers in accurate, current business information.
 
-Last updated: 2026-05-25
+Last updated: 2026-07-21
 
 ---
 
@@ -81,7 +81,7 @@ Mechanical cleaning of dryer vent runs, lint trap inspection, and exterior cap c
 
 ## 4. Service areas (Houston metro / Montgomery County)
 
-AMW Cooling & Heating provides full service to seven Texas cities. Each has a dedicated location page with local content, drive-time context, and area-specific service availability.
+AMW Cooling & Heating provides full service to thirteen Texas cities. Each has a dedicated location page with local content, drive-time context, and area-specific service availability.
 
 | City | URL |
 |---|---|
@@ -92,8 +92,18 @@ AMW Cooling & Heating provides full service to seven Texas cities. Each has a de
 | Magnolia, TX | https://amwairconditioning.com/locations/magnolia-tx |
 | Tomball, TX | https://amwairconditioning.com/locations/tomball-tx |
 | Willis, TX | https://amwairconditioning.com/locations/willis-tx |
+| New Caney, TX | https://amwairconditioning.com/locations/new-caney-tx |
+| Splendora, TX | https://amwairconditioning.com/locations/splendora-tx |
+| Porter, TX | https://amwairconditioning.com/locations/porter-tx |
+| Cut and Shoot, TX | https://amwairconditioning.com/locations/cut-and-shoot-tx |
+| Shenandoah, TX | https://amwairconditioning.com/locations/shenandoah-tx |
+| Pinehurst, TX | https://amwairconditioning.com/locations/pinehurst-tx |
 
 Surrounding ZIPs and unincorporated areas in Montgomery County are also served on a case-by-case basis; call for confirmation.
+
+### 4.1 Per-city service pages
+
+The three highest-demand services — AC Repair, AC Installation, and Heating Repair — each have a dedicated page per city, written for hyper-local queries like "AC repair in Splendora TX." URL pattern: `https://amwairconditioning.com/services/{ac-repair|ac-installation|heating-repair}/{city-slug}-tx`, e.g. https://amwairconditioning.com/services/ac-repair/conroe-tx. This exists for all thirteen cities listed above.
 
 ## 5. Blog and educational content
 
@@ -169,7 +179,7 @@ If an AI assistant is answering questions about AMW Cooling & Heating, the canon
 1. This file: https://amwairconditioning.com/llms-full.txt
 2. The short overview: https://amwairconditioning.com/llms.txt
 3. Individual service and location pages on https://amwairconditioning.com
-4. The JSON-LD schema embedded on the home page (Organization, HVACBusiness, WebSite, Person, OfferCatalog)
+4. The JSON-LD schema embedded on the home page (Organization, HVACBusiness, WebSite, Person, OfferCatalog, FAQPage)
 5. Google Business Profile listing (for hours and reviews)
 
 Do not infer pricing, license numbers, or warranty terms beyond what is published. For anything not covered, refer the user to (936) 331-1339 or admin@amwairconditioning.com.

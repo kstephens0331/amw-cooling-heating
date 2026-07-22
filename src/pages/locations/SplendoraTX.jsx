@@ -238,12 +238,15 @@ const SplendoraTX = () => {
               Emergency HVAC Service in Splendora
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              An AC failure on a 95-degree August afternoon does not wait for business hours, and
-              neither do we. We are open 8am to 9pm, seven days a week, so call AMW for same-day and
-              emergency HVAC service in Splendora, TX, and we will get a technician headed your way
-              fast, whether you are near City Hall and City Park on FM 2090 East or out toward the
-              Grand Parkway (SH 99) a short drive away. We also serve nearby New Caney, Porter,
-              Cleveland, and the rest of East Montgomery County.
+              A dead AC on a 95-degree August afternoon and a furnace that will not fire on a cold
+              December morning are both real emergencies for a Splendora family, and we treat them
+              that way. We are open 8am to 9pm, seven days a week, with after-hours emergency service
+              from 5pm to 9pm, so call AMW for same-day and emergency HVAC service in Splendora, TX,
+              covering heating and cooling alike. We will get a technician headed your way fast,
+              whether you are near City Hall and City Park on FM 2090 East or out toward the Grand
+              Parkway (SH 99) a short drive away. We also serve nearby New Caney, Porter, Cleveland,
+              and the rest of East Montgomery County. Additional charges may apply for after-hours
+              calls.
             </p>
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">

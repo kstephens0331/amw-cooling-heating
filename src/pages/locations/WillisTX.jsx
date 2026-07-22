@@ -45,7 +45,7 @@ const WillisTX = () => {
               HVAC Services in Willis, TX
             </h1>
             <p className="text-lg text-blue-100 max-w-2xl mx-auto mb-8">
-              Reliable heating and cooling services for Willis, Texas—serving the Lake Conroe and I-45 corridor communities.
+              Reliable heating and cooling services for Willis, Texas, serving the Lake Conroe and I-45 corridor communities.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -78,10 +78,10 @@ const WillisTX = () => {
               Your Local Willis HVAC Contractor
             </h2>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              AMW Cooling & Heating brings professional HVAC services to Willis, Texas—a growing community nestled between Conroe and Huntsville along the I-45 corridor. Willis offers a welcoming small-town atmosphere with convenient access to Lake Conroe recreation and Montgomery County amenities. Whether you live near downtown Willis, along FM 830, or in one of the lakeside communities, our veteran-owned team provides the reliable HVAC service your family deserves.
+              AMW Cooling & Heating brings professional HVAC services to Willis, Texas, a growing Montgomery County community nestled between Conroe and Huntsville along the I-45 corridor. Willis offers a welcoming small-town atmosphere with convenient access to Lake Conroe recreation. Whether you live near downtown Willis, along FM 830, in the Seven Coves or Point Aquarius lake communities, in Panorama Village, or out on rural acreage, our veteran-owned team provides the full range of heating and cooling service your home or business needs, from repair and installation to maintenance, air quality, and thermostat upgrades.
             </p>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              Willis sits at the northern edge of the greater Houston metro area, where summer temperatures routinely climb above 95°F and humidity levels stay high. Homes in the Willis area—especially those near Lake Conroe—face additional moisture challenges that can strain AC systems and promote mold growth. Our technicians are experienced with the specific HVAC needs of Willis properties, from lakefront homes to rural acreage.
+              Willis sits at the northern edge of the greater Houston metro area, where summer temperatures routinely climb above 95°F and humidity levels stay high, and winter cold fronts still test your heating system when they roll through. Homes in the Willis area, especially those near Lake Conroe, face additional moisture challenges that can strain cooling equipment and promote mold growth if it is not managed well. The local housing mix runs from lakefront homes to rural acreage properties, and our technicians are experienced with the full range of HVAC needs those different homes bring, from humidity and drainage near the water to longer duct runs on bigger rural lots.
             </p>
           </div>
         </section>
@@ -161,7 +161,7 @@ const WillisTX = () => {
               WHY WILLIS RESIDENTS CHOOSE AMW
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg text-center max-w-3xl mx-auto">
-              As a small, veteran-owned company based just minutes from Willis in Conroe, we treat every customer like family. You won't get automated phone trees or distant dispatchers—when you call AMW, you get real people who care about your comfort and will be at your door quickly.
+              As a small, veteran-owned company based just minutes from Willis in Conroe, we treat every customer like family. You won't get automated phone trees or distant dispatchers. When you call AMW, you get real people who care about your comfort and will be at your door quickly. We hold Texas license TACLB133920E and know the Willis area, from the lakefront streets around Seven Coves and Point Aquarius to the rural roads off FM 830.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
@@ -200,16 +200,24 @@ const WillisTX = () => {
               Serving Willis Neighborhoods
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              We provide HVAC services throughout Willis and surrounding areas including
-              Downtown Willis, FM 830 corridor, Lake Conroe area, Seven Coves, Point Aquarius, Panorama Village, and all Willis-area communities. No matter where you are in the Willis area, AMW
-              Cooling & Heating is ready to help.
+              We provide HVAC service throughout Willis, a lake community north of Conroe along the I-45 corridor near Lake Conroe. That covers Downtown Willis, the FM 830 corridor, and the lake communities of Seven Coves, Point Aquarius, and Panorama Village, along with the rural acreage properties spread around them. No matter where you are in the Willis area, AMW Cooling & Heating is ready to help, on any system, in any home.
             </p>
-            
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
               <span className="w-8 h-1 bg-blue-600 rounded"></span>
+              Emergency HVAC Service in Willis
+            </h3>
+            <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
+              A heating or cooling system does not wait for business hours to fail, and near the lake the added humidity and wind off the water only put more strain on that equipment. We are open 8am to 9pm, seven days a week, with after-hours emergency service from 5pm to 9pm, so call AMW for same-day and emergency HVAC service in Willis, TX. Whether you are on a Lake Conroe waterfront lot, along FM 830, or out on rural acreage, we will get a technician headed your way fast.
+            </p>
+
+            <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
+              <span className="w-8 h-1 bg-red-500 rounded"></span>
               Nearby Areas We Serve
             </h3>
+            <p className="text-gray-700 mb-4 leading-relaxed text-base md:text-lg">
+              AMW Cooling & Heating serves communities across Montgomery County and the north Houston area. Explore our HVAC service in nearby towns:
+            </p>
             <NearbyAreas currentPath="/locations/willis-tx" />
           </div>
         </section>
