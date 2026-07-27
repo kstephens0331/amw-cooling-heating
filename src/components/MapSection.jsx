@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { FaMapMarkerAlt, FaPhoneAlt, FaCheckCircle, FaShieldAlt, FaStar } from 'react-icons/fa';
 import Link from 'next/link';
+import reviewsData from '../data/googleReviews.json';
 
 const MapSection = () => {
   const [isClient, setIsClient] = useState(false);
@@ -205,9 +206,9 @@ const MapSection = () => {
                 <div>
                   <div className="flex items-center justify-center gap-1 text-yellow-400 mb-1">
                     <FaStar className="w-4 h-4" />
-                    <span className="font-bold text-xl">5.0</span>
+                    <span className="font-bold text-xl">{reviewsData.averageRating.toFixed(1)}</span>
                   </div>
-                  <p className="text-xs text-blue-200">54 Google Reviews</p>
+                  <p className="text-xs text-blue-200">{reviewsData.totalReviews} Google Reviews</p>
                 </div>
                 <div>
                   <div className="flex items-center justify-center gap-1 text-white mb-1">

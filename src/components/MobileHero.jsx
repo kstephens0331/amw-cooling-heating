@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { FaPhone, FaCalendarCheck, FaStar, FaShieldAlt } from 'react-icons/fa';
+import reviewsData from '../data/googleReviews.json';
 const heroImage = '/assets/images/josh-with-client.jpg';
 const heroSrcSet = '/assets/images/josh-with-client-400.webp 400w, /assets/images/josh-with-client-769.webp 769w, /assets/images/josh-with-client-800.webp 800w, /assets/images/josh-with-client-1200.webp 1200w, /assets/images/josh-with-client-1600.webp 1600w, /assets/images/josh-with-client-1920.webp 1920w';
 
@@ -70,8 +71,8 @@ export default function MobileHero() {
               <FaStar className="w-3 h-3" />
               <FaStar className="w-3 h-3" />
             </div>
-            <span className="text-white text-xs font-semibold">5.0</span>
-            <span className="text-blue-200 text-xs">54 Google Reviews</span>
+            <span className="text-white text-xs font-semibold">{reviewsData.averageRating.toFixed(1)}</span>
+            <span className="text-blue-200 text-xs">{reviewsData.totalReviews} Google Reviews</span>
           </div>
 
           {/* Badge */}

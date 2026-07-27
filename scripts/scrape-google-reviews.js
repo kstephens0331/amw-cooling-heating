@@ -25,18 +25,22 @@ const { chromium } = require('playwright');
 const fs = require('fs');
 const path = require('path');
 
-// AMW Cooling and Heating on Google Maps. Business name search is used so the
-// script keeps working even if the internal place id changes. Override with
-// --url if Google ever needs a direct place URL.
-const BUSINESS_QUERY = 'AMW Cooling & Heating LLC Conroe TX';
-const SEARCH_URL =
-  'https://www.google.com/maps/search/' +
-  encodeURIComponent(BUSINESS_QUERY) +
-  '?hl=en';
+// Direct place URL (via CID) rather than a text search. A search query can
+// land on an ambiguous results list depending on session/locale, which is
+// fragile to automate; a direct place link always opens the business panel.
+const PLACE_URL = 'https://www.google.com/maps?cid=14977632959753518383&hl=en';
+
+// Google shows a deliberately reduced "limited view" of Maps (no review list
+// at all) to any signed-out/anonymous session — this isn't fixable by
+// scrolling or selector tweaks. A real signed-in Google session is required.
+// Run scripts/setup-review-auth.js once (or again if this profile's session
+// ever expires) to sign in; this persistent profile dir is gitignored and
+// never committed.
+const PROFILE_DIR = path.join(__dirname, '..', '.auth', 'chrome-profile');
 
 const OUT_FILE = path.join(__dirname, '..', 'src', 'data', 'googleReviews.json');
 const TARGET_WRITTEN_REVIEWS = 20; // aim for up to this many that have text
-const MAX_SCROLL_ROUNDS = 40;
+const MAX_SCROLL_ROUNDS = 30;
 
 const args = process.argv.slice(2);
 const HEADED = args.includes('--headed');
@@ -48,7 +52,6 @@ function log(...m) {
 }
 
 async function acceptConsent(page) {
-  // Google consent interstitial (consent.google.com) or in-page cookie banner.
   const consentSelectors = [
     'button[aria-label*="Accept all" i]',
     'button[aria-label*="Agree" i]',
@@ -74,7 +77,6 @@ async function acceptConsent(page) {
 }
 
 async function openReviewsTab(page) {
-  // Click the "Reviews" tab in the place panel.
   const tabSelectors = [
     'button[role="tab"]:has-text("Reviews")',
     'button:has-text("Reviews")',
@@ -96,42 +98,84 @@ async function openReviewsTab(page) {
   return false;
 }
 
-async function getScrollContainer(page) {
-  // The reviews list scrolls inside a specific div. Find the scrollable
-  // feed that contains review nodes.
-  return await page.evaluateHandle(() => {
-    const candidates = Array.from(document.querySelectorAll('div'));
-    for (const el of candidates) {
-      const hasReview = el.querySelector('[data-review-id], .jftiEf');
-      const scrollable = el.scrollHeight > el.clientHeight + 50;
-      if (hasReview && scrollable) return el;
-    }
-    // Fallback: the main feed role.
-    return document.querySelector('[role="main"]') || document.body;
-  });
+async function sortByNewest(page) {
+  // Default Google sort ("most relevant") can skip genuinely brand-new
+  // reviews entirely, since relevance ranking is about more than recency.
+  // Since the daily job only keeps the top TARGET_WRITTEN_REVIEWS, sorting
+  // by Newest first is what actually guarantees new reviews show up.
+  try {
+    const sortBtn = page.locator('button[aria-label*="Sort" i]').first();
+    if (!(await sortBtn.count())) return false;
+    await sortBtn.click({ timeout: 3000 });
+    await page.waitForTimeout(800);
+    // The menu item's own click handler lives on the role="menuitemradio"
+    // ancestor, not the inner text span — clicking the text node directly
+    // gets its pointer events intercepted by that ancestor.
+    const newestOption = page.locator('div[role="menuitemradio"]:has-text("Newest")').first();
+    await newestOption.click({ timeout: 3000 });
+    await page.waitForTimeout(1500);
+    log('sorted reviews by Newest');
+    return true;
+  } catch (err) {
+    log('could not sort by Newest, continuing with default order:', err.message);
+    return false;
+  }
 }
 
 async function expandMoreButtons(page) {
-  // Click every "More" button so full review text is in the DOM.
-  try {
-    const moreButtons = page.locator('button:has-text("More")');
-    const count = await moreButtons.count();
-    for (let i = 0; i < count; i++) {
-      try {
-        await moreButtons.nth(i).click({ timeout: 800 });
-      } catch (_) {
-        /* some are off-screen or already expanded */
+  // Click every "More" button so full review text is in the DOM. Two passes:
+  // once over whatever is currently rendered, then again after a short pause
+  // to catch buttons that were off-screen/not yet interactive on the first pass.
+  for (let pass = 0; pass < 2; pass++) {
+    try {
+      const moreButtons = page.locator('button:has-text("More")');
+      const count = await moreButtons.count();
+      for (let i = 0; i < count; i++) {
+        try {
+          await moreButtons.nth(i).click({ timeout: 800 });
+        } catch (_) {
+          /* some are off-screen or already expanded */
+        }
       }
+    } catch (_) {
+      /* none */
     }
-  } catch (_) {
-    /* none */
+    await page.waitForTimeout(300);
+  }
+}
+
+async function scrollReviewsList(page) {
+  // Google Maps' review list is a virtualized feed. Programmatic
+  // element.scrollBy()/scrollTop assignment does NOT trigger it to load more
+  // rows (confirmed by testing) — it needs genuine wheel-scroll input over the
+  // panel. Hover the review column and dispatch real mouse wheel events.
+  await page.mouse.move(220, 500);
+  let lastCount = 0;
+  let stable = 0;
+  for (let round = 0; round < MAX_SCROLL_ROUNDS; round++) {
+    await page.mouse.wheel(0, 700);
+    await page.waitForTimeout(800);
+    const count = await page.evaluate(
+      () => new Set([...document.querySelectorAll('[data-review-id]')].map((n) => n.getAttribute('data-review-id'))).size
+    );
+    log(`scroll round ${round + 1}: ${count} unique reviews loaded`);
+    if (count >= TARGET_WRITTEN_REVIEWS) break;
+    if (count === lastCount) {
+      stable += 1;
+      if (stable >= 4) {
+        log('review count stable, stopping scroll');
+        break;
+      }
+    } else {
+      stable = 0;
+    }
+    lastCount = count;
   }
 }
 
 async function extractReviews(page) {
   return await page.evaluate(() => {
     function parseStars(el) {
-      // Stars live in an element with aria-label like "5 stars".
       const star = el.querySelector('[role="img"][aria-label*="star" i], [aria-label*="star" i]');
       if (star) {
         const label = star.getAttribute('aria-label') || '';
@@ -141,14 +185,30 @@ async function extractReviews(page) {
       return null;
     }
 
-    const nodes = Array.from(
-      document.querySelectorAll('[data-review-id], .jftiEf')
-    );
+    // A review's own text and the owner's reply text both use the same
+    // `.wiI7pd` class. If a review has no written text of its own but the
+    // owner replied, the only `.wiI7pd` found is the REPLY's text — treating
+    // that as the reviewer's words would misattribute the owner's own reply
+    // to the customer. Guard against that by only accepting a `.wiI7pd` block
+    // that appears BEFORE any "Response from the owner" marker in the node.
+    function findResponseMarker(node) {
+      const walker = document.createTreeWalker(node, NodeFilter.SHOW_TEXT);
+      let n;
+      while ((n = walker.nextNode())) {
+        if (n.textContent.trim().startsWith('Response from')) return n;
+      }
+      return null;
+    }
+
+    const nodes = Array.from(document.querySelectorAll('[data-review-id]'));
     const out = [];
-    const seen = new Set();
+    const seenIds = new Set();
 
     for (const node of nodes) {
-      // Reviewer name: usually the first button/div with class d4r55 or an aria-label.
+      const id = node.getAttribute('data-review-id');
+      if (seenIds.has(id)) continue;
+      seenIds.add(id);
+
       let name = '';
       const nameEl = node.querySelector('.d4r55, [class*="d4r55"]');
       if (nameEl) name = nameEl.textContent.trim();
@@ -159,19 +219,26 @@ async function extractReviews(page) {
 
       const rating = parseStars(node);
 
-      // Relative date, e.g. "2 weeks ago".
       let date = '';
       const dateEl = node.querySelector('.rsqaWe, [class*="rsqaWe"]');
       if (dateEl) date = dateEl.textContent.trim();
 
-      // Review text.
+      const marker = findResponseMarker(node);
+      const wiiEls = Array.from(node.querySelectorAll('.wiI7pd, [class*="wiI7pd"]'));
       let text = '';
-      const textEl = node.querySelector('.wiI7pd, [class*="wiI7pd"]');
-      if (textEl) text = textEl.textContent.trim();
-
-      const key = (name + '|' + date + '|' + text).slice(0, 120);
-      if (seen.has(key)) continue;
-      seen.add(key);
+      for (const w of wiiEls) {
+        if (!marker) {
+          text = w.textContent.trim();
+          break;
+        }
+        const pos = w.compareDocumentPosition(marker);
+        // Only accept this block if the reply marker comes AFTER it — i.e.
+        // this text is the review's own words, not the owner's reply.
+        if (pos & Node.DOCUMENT_POSITION_FOLLOWING) {
+          text = w.textContent.trim();
+          break;
+        }
+      }
 
       if (name || text) {
         out.push({ name, rating, date, text });
@@ -183,20 +250,28 @@ async function extractReviews(page) {
 
 async function extractAggregate(page) {
   return await page.evaluate(() => {
-    const bodyText = document.body.innerText || '';
     let average = null;
     let total = null;
 
-    // Average rating: a standalone number like "5.0" near the top of the panel.
     const avgEl = document.querySelector('.fontDisplayLarge, [class*="fontDisplayLarge"]');
     if (avgEl) {
       const v = parseFloat(avgEl.textContent.trim().replace(',', '.'));
       if (!Number.isNaN(v)) average = v;
     }
 
-    // Total count: text like "54 reviews" or "(54)".
+    // Total count: the first ".fontBodySmall" leaf node matching "NN reviews"
+    // is the aggregate summary near the star breakdown (e.g. "77 reviews").
+    // Per-reviewer "X reviews" counts (their own review history, e.g. "11
+    // reviews" under a reviewer's name) use a different class (RfnDt) and
+    // appear later in document order, so taking the first match here is
+    // reliable and avoids the earlier bug where an unscoped body-text regex
+    // could match unrelated numbers (e.g. a phone number) on the page.
+    const bodySmallMatch = Array.from(document.querySelectorAll('.fontBodySmall'))
+      .map((el) => el.textContent.trim())
+      .find((t) => /^\d+\s+reviews?$/i.test(t));
     const countMatch =
-      bodyText.match(/([\d,]+)\s+reviews/i) || bodyText.match(/\(([\d,]+)\)/);
+      (bodySmallMatch && bodySmallMatch.match(/([\d,]+)\s+reviews?/i)) ||
+      document.body.innerText.match(/([\d,]+)\s+Google reviews/i);
     if (countMatch) {
       total = parseInt(countMatch[1].replace(/,/g, ''), 10);
     }
@@ -206,18 +281,24 @@ async function extractAggregate(page) {
 }
 
 async function run() {
-  const target = DIRECT_URL || SEARCH_URL;
-  log('launching chromium', HEADED ? '(headed)' : '(headless)');
-  const browser = await chromium.launch({ headless: !HEADED });
-  const context = await browser.newContext({
+  const target = DIRECT_URL || PLACE_URL;
+  if (!fs.existsSync(PROFILE_DIR)) {
+    throw new Error(
+      `No signed-in browser profile found at ${PROFILE_DIR}. Run ` +
+        '"node scripts/setup-review-auth.js" once first to sign into ' +
+        "AMW's Google account (Google hides the review list entirely " +
+        'from anonymous/signed-out sessions).'
+    );
+  }
+  log('launching chromium', HEADED ? '(headed)' : '(headless)', 'using saved profile', PROFILE_DIR);
+  const context = await chromium.launchPersistentContext(PROFILE_DIR, {
+    headless: !HEADED,
     locale: 'en-US',
     timezoneId: 'America/Chicago',
-    userAgent:
-      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 ' +
-      '(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
     viewport: { width: 1366, height: 900 },
+    args: ['--disable-blink-features=AutomationControlled'],
   });
-  const page = await context.newPage();
+  const page = context.pages()[0] || (await context.newPage());
 
   try {
     log('navigating to', target);
@@ -227,14 +308,14 @@ async function run() {
     await acceptConsent(page);
     await page.waitForTimeout(1500);
 
-    // If we landed on a search results list rather than a place, click the
-    // first business result.
+    // If a direct place URL still somehow lands on a search results list
+    // (e.g. the CID moved), fall back to clicking the first result.
     try {
       const firstResult = page.locator('a[href*="/maps/place/"]').first();
       if (await firstResult.count()) {
         await firstResult.click({ timeout: 4000 });
         await page.waitForTimeout(2500);
-        log('opened first place result');
+        log('opened first place result (unexpected search-list landing)');
       }
     } catch (_) {
       /* already on a place */
@@ -244,51 +325,20 @@ async function run() {
     log('aggregate (pre-tab):', JSON.stringify(aggregate));
 
     await openReviewsTab(page);
+    await page.waitForTimeout(1000);
+    await sortByNewest(page);
 
-    // Lazy-load: scroll the reviews container repeatedly.
-    let container = await getScrollContainer(page);
-    let lastCount = 0;
-    let stable = 0;
-    for (let round = 0; round < MAX_SCROLL_ROUNDS; round++) {
-      await expandMoreButtons(page);
-      const reviews = await extractReviews(page);
-      const withText = reviews.filter((r) => r.text && r.text.length > 0);
-      log(`round ${round + 1}: ${reviews.length} loaded, ${withText.length} with text`);
-
-      if (withText.length >= TARGET_WRITTEN_REVIEWS) break;
-
-      if (reviews.length === lastCount) {
-        stable += 1;
-        if (stable >= 4) {
-          log('review count stable, stopping scroll');
-          break;
-        }
-      } else {
-        stable = 0;
-      }
-      lastCount = reviews.length;
-
-      try {
-        await page.evaluate((el) => {
-          el.scrollBy(0, el.scrollHeight);
-        }, container);
-      } catch (_) {
-        // container handle may go stale after re-render; re-acquire.
-        container = await getScrollContainer(page);
-      }
-      await page.waitForTimeout(1400);
-    }
-
+    await scrollReviewsList(page);
     await expandMoreButtons(page);
-    await page.waitForTimeout(500);
+    // One more scroll+expand pass: expanding text can reflow the list and
+    // reveal additional "More" buttons that weren't visible before.
+    await expandMoreButtons(page);
 
     let reviews = await extractReviews(page);
     const finalAggregate = await extractAggregate(page);
-    // Prefer whichever aggregate reading is populated.
     const average = finalAggregate.average || aggregate.average;
     const total = finalAggregate.total || aggregate.total;
 
-    // Keep reviews that have written text, trim to target, clean up.
     const written = reviews
       .filter((r) => r.text && r.text.trim().length > 0 && r.name)
       .map((r) => ({
@@ -309,13 +359,16 @@ async function run() {
 
     const payload = {
       source: 'Google',
-      profileUrl:
-        DIRECT_URL ||
-        'https://www.google.com/maps/search/' +
-          encodeURIComponent(BUSINESS_QUERY),
+      businessName: 'AMW Cooling & Heating LLC',
+      profileUrl: DIRECT_URL || PLACE_URL,
       averageRating: average != null ? average : 5.0,
       totalReviews: total != null ? total : written.length,
       scrapedAt: new Date().toISOString(),
+      note:
+        "Live aggregate and reviews pulled directly from AMW's Google Maps listing via " +
+        'scripts/scrape-google-reviews.js. Reviews are verbatim from Google (author names ' +
+        'and text unchanged); reviews where the customer left only a star rating with no ' +
+        'written text are omitted here. Re-run the scraper to refresh.',
       reviews: written,
     };
 
@@ -326,7 +379,7 @@ async function run() {
         `(avg ${payload.averageRating}, total ${payload.totalReviews})`
     );
   } finally {
-    await browser.close();
+    await context.close();
   }
 }
 

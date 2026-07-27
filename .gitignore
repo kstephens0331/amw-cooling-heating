@@ -41,3 +41,5 @@ CLAUDE-ADDITION.md
 # build artifact + editor backups (never commit)
 amw-out.tar.gz
 *.bak
+.auth/
+scripts/daily-review-sync.log

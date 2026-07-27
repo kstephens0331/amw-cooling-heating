@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import reviewsData from '../data/googleReviews.json';
 
 // Escapes "</" and the U+2028/U+2029 line/paragraph separator characters
 // before JSON-LD is injected via dangerouslySetInnerHTML. All fields feeding
@@ -181,8 +182,8 @@ export const LocalBusinessSchema = () => {
         "hasOfferCatalog": { "@id": SERVICE_CATALOG_ID },
         "aggregateRating": {
           "@type": "AggregateRating",
-          "ratingValue": 5.0,
-          "reviewCount": 54
+          "ratingValue": reviewsData.averageRating,
+          "reviewCount": reviewsData.totalReviews
         }
       },
       {
