@@ -4,13 +4,13 @@
   "profileUrl": "https://www.google.com/maps?cid=14977632959753518383&hl=en",
   "averageRating": 5,
   "totalReviews": 77,
-  "scrapedAt": "2026-07-27T04:19:41.881Z",
+  "scrapedAt": "2026-07-27T14:00:57.327Z",
   "note": "Live aggregate and reviews pulled directly from AMW's Google Maps listing via scripts/scrape-google-reviews.js. Reviews are verbatim from Google (author names and text unchanged); reviews where the customer left only a star rating with no written text are omitted here. Re-run the scraper to refresh.",
   "reviews": [
     {
       "name": "Laura Carrillo",
       "rating": 5,
-      "date": "7 hours ago",
+      "date": "17 hours ago",
       "text": "As we searched, we ended finding out that AMW Cooling and Heating, LLC was rated #2 on the top 10 list per CHAT GPT based on ratings. At this point we were without AC for a day already and just went out on a limb. Fortunately for us, we made the right decision going with AMW. They were wonderful from the start. They are so professional, fast, efficient and very economical!! Just what we needed as a family of 5! They not only do excellent work, but guarantee their work for at least a year and did a thorough follow up as part of their service! We haven’t had any issues since they’ve repaired things! They are trustworthy and I love supporting local, small businesses, and with AMW you will get taken care of for sure, plus they are veteran owned! Thank you for your excellent service AMW! We appreciate your hard work with us! Can’t express it enough!"
     },
     {
