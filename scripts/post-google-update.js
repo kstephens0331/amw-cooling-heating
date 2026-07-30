@@ -74,14 +74,15 @@ function buildReviewHighlightDescription() {
   if (!review) {
     throw new Error('No reviews available in googleReviews.json to build a review-highlight post.');
   }
-  const stars = '⭐'.repeat(Math.round(review.rating || 5));
+  const starCount = Math.round(review.rating || 5);
+  const stars = `${starCount}-star`;
   let quote = review.text.trim();
   const MAX_QUOTE = 450;
   if (quote.length > MAX_QUOTE) {
     quote = quote.slice(0, MAX_QUOTE).replace(/\s+\S*$/, '') + '...';
   }
   return (
-    `${stars} from a recent customer: "${quote}" -- ${review.name}. ` +
+    `${stars} review from a recent customer: "${quote}" -- ${review.name}. ` +
     `AMW Cooling & Heating LLC is a veteran-owned HVAC contractor serving Conroe and ` +
     `Montgomery County. Call ${PHONE_NUMBER} to schedule your service.`
   );
