@@ -1,0 +1,69 @@
+{
+  "note": "Rotation queue for scripts/post-google-update.js. Each run posts the item with the oldest lastPostedAt (nulls go first), then stamps lastPostedAt with the run time. Add more items over time so the rotation doesn't repeat too often -- review and refresh this file periodically rather than letting it run unattended forever.",
+  "items": [
+    {
+      "id": "summer-ac-urgency",
+      "type": "static",
+      "description": "Texas summer heat doesn't let up, and neither should your AC. AMW Cooling & Heating LLC is a veteran-owned, licensed and insured HVAC contractor serving Conroe, The Woodlands, Spring, Willis, Magnolia, and all of Montgomery County. Our NATE-certified technicians offer same-day and 24/7 emergency AC repair, so a breakdown doesn't turn into a rough night. Call (936) 331-1339 to schedule service today.",
+      "photo": "tech-servicing-unit.jpg",
+      "button": "CALL",
+      "lastPostedAt": "2026-07-29T16:45:00.000Z"
+    },
+    {
+      "id": "new-install-quality",
+      "type": "static",
+      "description": "A new AC system is a big investment -- and correct installation is what makes it actually perform. AMW Cooling & Heating LLC is veteran-owned and NATE-certified, and every install is sized and set up to manufacturer spec, not just swapped in. If your system is aging out or costing more to run every summer, call (936) 331-1339 for an honest installation estimate.",
+      "photo": "new-install.jpg",
+      "button": "CALL",
+      "lastPostedAt": null
+    },
+    {
+      "id": "aging-equipment",
+      "type": "static",
+      "description": "Older AC units work harder (and cost more to run) every year past their prime. If your system is 12+ years old, frequently needs repairs, or just can't keep up with a Texas summer anymore, it may be cheaper long-term to replace than repair. AMW Cooling & Heating LLC offers honest, no-pressure evaluations -- call (936) 331-1339 and we'll tell you straight whether repair or replacement makes more sense for your home.",
+      "photo": "old-unit.jpg",
+      "button": "CALL",
+      "lastPostedAt": null
+    },
+    {
+      "id": "veteran-owned-trust",
+      "type": "static",
+      "description": "AMW Cooling & Heating LLC is a veteran-owned small business serving Conroe and Montgomery County. We bring the same discipline and integrity to every HVAC job -- honest diagnoses, fair pricing, and technicians who show up when they say they will. Licensed, insured, and NATE-certified. Call (936) 331-1339 for AC repair, heating repair, or installation.",
+      "photo": "tech-with-client.jpg",
+      "button": "CALL",
+      "lastPostedAt": null
+    },
+    {
+      "id": "indoor-air-quality",
+      "type": "static",
+      "description": "Your AC does more than cool the air -- it filters it. If allergies, dust, or stuffy rooms have been an issue this summer, an indoor air quality checkup can make a real difference. AMW Cooling & Heating LLC offers indoor air quality solutions alongside standard AC service. Call (936) 331-1339 to ask what's right for your home.",
+      "photo": "tech-servicing-unit.jpg",
+      "button": "CALL",
+      "lastPostedAt": null
+    },
+    {
+      "id": "dryer-vent-fire-safety",
+      "type": "static",
+      "description": "A clogged dryer vent isn't just a maintenance issue -- it's a leading cause of house fires. AMW Cooling & Heating LLC offers dryer vent cleaning alongside our HVAC services, so this easy-to-miss safety check doesn't fall through the cracks. Call (936) 331-1339 to get it looked at.",
+      "photo": "new-install.jpg",
+      "button": "CALL",
+      "lastPostedAt": null
+    },
+    {
+      "id": "same-day-emergency",
+      "type": "static",
+      "description": "No AC in a Texas summer isn't something that can wait until next week. AMW Cooling & Heating LLC offers same-day and 24/7 emergency service across Conroe, The Woodlands, Spring, Willis, Magnolia, and the surrounding area. Call (936) 331-1339 -- we'll get someone out to you fast.",
+      "photo": "tech-with-client.jpg",
+      "button": "CALL",
+      "lastPostedAt": null
+    },
+    {
+      "id": "review-highlight",
+      "type": "review-highlight",
+      "description": null,
+      "photo": "tech-servicing-unit.jpg",
+      "button": "CALL",
+      "lastPostedAt": null
+    }
+  ]
+}

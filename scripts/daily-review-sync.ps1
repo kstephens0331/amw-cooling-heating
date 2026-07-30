@@ -45,7 +45,20 @@ try {
     git add src/data/googleReviews.json
     $commitMsg = "chore: refresh Google reviews data ({0})" -f (Get-Date -Format 'yyyy-MM-dd')
     git commit -m $commitMsg | ForEach-Object { Write-Log $_ }
-    git push origin master 2>&1 | ForEach-Object { Write-Log $_ }
+
+    # NOTE: do not pipe git's stderr through 2>&1 here. With
+    # $ErrorActionPreference = 'Stop', PowerShell 5.1 wraps each stderr line
+    # from a native command in a terminating NativeCommandError -- and git
+    # push writes its normal, successful status line ("To https://...") to
+    # stderr. That turned every SUCCESSFUL push into a logged "ERROR" and a
+    # non-zero task result for three days straight (2026-07-27 to 07-29)
+    # even though the push had already completed fine by the time the error
+    # was raised. Redirect stderr to $null and check $LASTEXITCODE instead.
+    git push origin master 2>$null
+    if ($LASTEXITCODE -ne 0) {
+        Write-Log "git push failed with exit code $LASTEXITCODE"
+        exit 1
+    }
     Write-Log 'Pushed -- Vercel will auto-deploy.'
 }
 catch {
