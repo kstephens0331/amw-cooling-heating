@@ -145,7 +145,7 @@ export default function PrivacyPolicy() {
               <ul className="list-disc list-inside space-y-2 text-base md:text-lg text-gray-700 ml-4">
                 <li><strong>Formspree:</strong> Contact form submission processing</li>
                 <li><strong>Synchrony and FTL Finance:</strong> Financing application portals</li>
-                <li><strong>Cal.com:</strong> Online appointment scheduling</li>
+                <li><strong>EmailJS:</strong> Appointment confirmation and notification emails</li>
                 <li><strong>Google Analytics:</strong> Website usage analytics (cookieless mode)</li>
                 <li><strong>Google Maps:</strong> Location and directions</li>
                 <li><strong>Ahrefs:</strong> Website performance monitoring</li>

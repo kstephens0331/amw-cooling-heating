@@ -1,35 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { FaPhone, FaCalendarCheck, FaEnvelope, FaMapMarkerAlt, FaShieldAlt } from 'react-icons/fa';
 const logo = '/assets/images/amwlogo.png';
 import ManufacturerCarousel from '../components/ManufacturerCarousel';
 import MapSection from '../components/MapSectionWrapper';
 import Footer from '../components/Footer';
-
-const CAL_EMBED_LOADER = `(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://book.stephenscode.dev/embed/embed.js", "init");
-Cal("init", { origin: "https://book.stephenscode.dev" });`;
+import BookingWidget from '../components/BookingWidget';
 
 export default function Contact() {
-  // The booking widget sets third-party cookies, so load it only when the visitor asks for it.
-  const [showBooking, setShowBooking] = useState(false);
-
-  useEffect(() => {
-    if (!showBooking) return undefined;
-
-    const script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.text = `${CAL_EMBED_LOADER}
-Cal("inline", {
-  elementOrSelector: "#amw-cal-inline",
-  calLink: "amw",
-  layout: "month_view",
-});`;
-    document.body.appendChild(script);
-
-    return () => {
-      if (script.parentNode) document.body.removeChild(script);
-    };
-  }, [showBooking]);
 
   return (
     <main className="bg-white text-gray-800 font-sans min-h-screen">
@@ -222,24 +200,8 @@ Cal("inline", {
               Whether you're looking for a second opinion, urgent HVAC help, or a seasonal check-up, our booking calendar makes it simple.
             </p>
           </div>
-          <div className="bg-white rounded-xl shadow-lg border-t-4 border-red-500 overflow-hidden">
-            {showBooking ? (
-              <div id="amw-cal-inline" style={{ minWidth: '320px', height: '740px' }}></div>
-            ) : (
-              <div className="text-center py-16 px-4">
-                <p className="text-gray-600 mb-6 max-w-md mx-auto">
-                  Click below to open our live scheduling calendar and pick a time that works for you.
-                </p>
-                <button
-                  type="button"
-                  onClick={() => setShowBooking(true)}
-                  className="inline-flex items-center gap-2 bg-red-500 text-white px-8 py-4 rounded-lg hover:bg-red-600 transition font-bold text-lg"
-                >
-                  <FaCalendarCheck className="w-5 h-5" />
-                  Open Booking Calendar
-                </button>
-              </div>
-            )}
+          <div id="book-a-service" className="bg-white rounded-xl shadow-lg border-t-4 border-red-500 overflow-hidden">
+            <BookingWidget />
           </div>
         </div>
       </section>

@@ -1,8 +1,8 @@
 import React, { useEffect, useMemo, useState } from 'react';
+import Link from 'next/link';
 import { IoClose } from 'react-icons/io5';
 import { FaPhone, FaCalendarCheck } from 'react-icons/fa';
 
-const BOOKING_URL = 'https://book.stephenscode.dev/amw';
 const STORAGE_KEY = 'amw_promo_dismissed';
 
 const isActivePromoWindow = (now = new Date()) => {
@@ -46,15 +46,13 @@ const IncentiveBanner = () => {
             <FaPhone className="w-4 h-4" />
             (936) 331-1339
           </a>
-          <a
-            href={BOOKING_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/contact#book-a-service"
             className="inline-flex items-center gap-2 bg-white hover:bg-blue-50 text-blue-900 font-bold text-sm px-4 py-2 rounded-lg transition"
           >
             <FaCalendarCheck className="w-4 h-4" />
             Schedule
-          </a>
+          </Link>
         </div>
       </div>
       <button

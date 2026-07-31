@@ -1,0 +1,41 @@
+services:
+  api:
+    build: .
+    container_name: amw-booking-api
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      DATABASE_URL: postgres://amw:${POSTGRES_PASSWORD}@db:5432/amw_booking
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:4000:4000"
+    networks:
+      - amw-booking-net
+
+  db:
+    image: postgres:16-alpine
+    container_name: amw-booking-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: amw
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: amw_booking
+    volumes:
+      - amw-booking-data:/var/lib/postgresql/data
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U amw -d amw_booking"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - amw-booking-net
+
+volumes:
+  amw-booking-data:
+
+networks:
+  amw-booking-net:
+    driver: bridge
