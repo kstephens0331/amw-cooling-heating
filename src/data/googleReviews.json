@@ -4,19 +4,19 @@
   "profileUrl": "https://www.google.com/maps?cid=14977632959753518383&hl=en",
   "averageRating": 5,
   "totalReviews": 76,
-  "scrapedAt": "2026-07-30T14:00:37.050Z",
+  "scrapedAt": "2026-07-31T14:00:42.469Z",
   "note": "Live aggregate and reviews pulled directly from AMW's Google Maps listing via scripts/scrape-google-reviews.js. Reviews are verbatim from Google (author names and text unchanged); reviews where the customer left only a star rating with no written text are omitted here. Re-run the scraper to refresh.",
   "reviews": [
     {
       "name": "Laura Carrillo",
       "rating": 5,
-      "date": "3 days ago",
+      "date": "4 days ago",
       "text": "As we searched, we ended finding out that AMW Cooling and Heating, LLC was rated #2 on the top 10 list per CHAT GPT based on ratings. At this point we were without AC for a day already and just went out on a limb. Fortunately for us, we made the right decision going with AMW. They were wonderful from the start. They are so professional, fast, efficient and very economical!! Just what we needed as a family of 5! They not only do excellent work, but guarantee their work for at least a year and did a thorough follow up as part of their service! We haven’t had any issues since they’ve repaired things! They are trustworthy and I love supporting local, small businesses, and with AMW you will get taken care of for sure, plus they are veteran owned! Thank you for your excellent service AMW! We appreciate your hard work with us! Can’t express it enough!"
     },
     {
       "name": "Kimberly Greenup",
       "rating": 5,
-      "date": "6 days ago",
+      "date": "a week ago",
       "text": "Josh was amazing! I had an emergency with my A/C and he came right out. He was extremely professional and knowledgeable. I highly recommend AMW Cooling and Heating! I will definitely be signing up for the maintenance program. Love that this is a Veteran owned company. Thank you Josh!!"
     },
     {
@@ -28,13 +28,13 @@
     {
       "name": "Jaime Monica",
       "rating": 5,
-      "date": "a week ago",
+      "date": "2 weeks ago",
       "text": "They were fantastic! Super kind. Super fast! And so reasonable with pricing. I will for sure be using them in the future."
     },
     {
       "name": "Andy Keeton",
       "rating": 5,
-      "date": "2 weeks ago",
+      "date": "3 weeks ago",
       "text": "Thank you all! Joshua with AMW just left. He was extremely helpful, knowledgeable, and took the time to actually show me what the issue was instead of trying to sell me something I didn’t need. You can tell he takes pride in his workmanship and genuinely cares about helping people. I never felt like he was just trying to make a sale, he was honest, straightforward, and explained everything clearly. That kind of service is hard to find these days. We will definitely be using AMW again in the future. I just wish we could have met under better circumstances where it could have been a “little cooler”!😂"
     },
     {
@@ -124,7 +124,7 @@
     {
       "name": "Sean McKenna",
       "rating": 5,
-      "date": "Edited 3 months ago",
+      "date": "Edited 4 months ago",
       "text": "Josh was very easy to work with and did an excellent job installing my new system. I would recommend this company to anybody."
     }
   ]
