@@ -6,28 +6,30 @@ import ManufacturerCarousel from '../components/ManufacturerCarousel';
 import MapSection from '../components/MapSectionWrapper';
 import Footer from '../components/Footer';
 
+const CAL_EMBED_LOADER = `(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://book.stephenscode.dev/embed/embed.js", "init");
+Cal("init", { origin: "https://book.stephenscode.dev" });`;
+
 export default function Contact() {
-  // Calendly sets third-party cookies, so load it only when the visitor asks for it.
-  const [showCalendly, setShowCalendly] = useState(false);
+  // The booking widget sets third-party cookies, so load it only when the visitor asks for it.
+  const [showBooking, setShowBooking] = useState(false);
 
   useEffect(() => {
-    if (!showCalendly) return undefined;
-
-    const link = document.createElement('link');
-    link.href = 'https://assets.calendly.com/assets/external/widget.css';
-    link.rel = 'stylesheet';
-    document.head.appendChild(link);
+    if (!showBooking) return undefined;
 
     const script = document.createElement('script');
-    script.src = 'https://assets.calendly.com/assets/external/widget.js';
-    script.async = true;
+    script.type = 'text/javascript';
+    script.text = `${CAL_EMBED_LOADER}
+Cal("inline", {
+  elementOrSelector: "#amw-cal-inline",
+  calLink: "amw",
+  layout: "month_view",
+});`;
     document.body.appendChild(script);
 
     return () => {
-      if (link.parentNode) document.head.removeChild(link);
       if (script.parentNode) document.body.removeChild(script);
     };
-  }, [showCalendly]);
+  }, [showBooking]);
 
   return (
     <main className="bg-white text-gray-800 font-sans min-h-screen">
@@ -210,7 +212,7 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Calendly Embed - Book a Service */}
+      {/* Cal.com Embed - Book a Service */}
       <section className="py-12 bg-white">
         <div className="h-1 bg-gradient-to-r from-blue-600 via-white to-red-500 mb-10"></div>
         <div className="max-w-6xl mx-auto px-4">
@@ -221,12 +223,8 @@ export default function Contact() {
             </p>
           </div>
           <div className="bg-white rounded-xl shadow-lg border-t-4 border-red-500 overflow-hidden">
-            {showCalendly ? (
-              <div
-                className="calendly-inline-widget"
-                data-url="https://calendly.com/admin-amwairconditioning?hide_event_type_details=1&hide_gdpr_banner=1"
-                style={{ minWidth: '320px', height: '740px' }}
-              ></div>
+            {showBooking ? (
+              <div id="amw-cal-inline" style={{ minWidth: '320px', height: '740px' }}></div>
             ) : (
               <div className="text-center py-16 px-4">
                 <p className="text-gray-600 mb-6 max-w-md mx-auto">
@@ -234,7 +232,7 @@ export default function Contact() {
                 </p>
                 <button
                   type="button"
-                  onClick={() => setShowCalendly(true)}
+                  onClick={() => setShowBooking(true)}
                   className="inline-flex items-center gap-2 bg-red-500 text-white px-8 py-4 rounded-lg hover:bg-red-600 transition font-bold text-lg"
                 >
                   <FaCalendarCheck className="w-5 h-5" />

@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { IoClose } from 'react-icons/io5';
 import { FaPhone, FaCalendarCheck } from 'react-icons/fa';
 
-const CALENDLY_URL = 'https://calendly.com/admin-amwairconditioning?embed_domain=www.amwairconditioning.com&embed_type=Inline';
+const BOOKING_URL = 'https://book.stephenscode.dev/amw';
 const STORAGE_KEY = 'amw_promo_dismissed';
 
 const isActivePromoWindow = (now = new Date()) => {
@@ -47,7 +47,7 @@ const IncentiveBanner = () => {
             (936) 331-1339
           </a>
           <a
-            href={CALENDLY_URL}
+            href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-white hover:bg-blue-50 text-blue-900 font-bold text-sm px-4 py-2 rounded-lg transition"
