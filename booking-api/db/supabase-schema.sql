@@ -126,6 +126,11 @@ revoke all on bookings from anon, authenticated;
 grant select on service_types to anon, authenticated;
 grant select on business_hours to anon, authenticated;
 
+-- booking_rate_limits holds visitor IPs -- lock it down the same way as
+-- bookings. Only the SECURITY DEFINER functions below ever touch it.
+alter table booking_rate_limits enable row level security;
+revoke all on booking_rate_limits from anon, authenticated;
+
 -- ---------------------------------------------------------------------
 -- get_available_slots(service_slug, date) -> setof timestamptz
 -- ---------------------------------------------------------------------
@@ -223,6 +228,13 @@ begin
     split_part(current_setting('request.headers', true)::json ->> 'x-forwarded-for', ',', 1),
     'unknown'
   );
+
+  -- Serialize concurrent calls from the same IP for the rest of this
+  -- transaction, so the count-check below can't race with another
+  -- in-flight request's not-yet-committed insert (an xact-scoped advisory
+  -- lock auto-releases at commit/rollback, matching PostgREST's
+  -- one-transaction-per-request model exactly).
+  perform pg_advisory_xact_lock(hashtext('booking_rate_limit:' || v_client_ip));
 
   -- Rate limit is counted against successful bookings only (a raised exception
   -- rolls back everything in this function call, so a row logged before a later

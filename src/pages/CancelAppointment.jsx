@@ -6,9 +6,11 @@ import { LocalBusinessSchema } from '../components/StructuredData';
 import SEO from '../components/SEO';
 import { SUPABASE_URL, SUPABASE_ANON_KEY, supabaseHeaders, parsePostgrestError } from '../lib/supabaseBooking';
 
+const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+const FRIENDLY_FALLBACK = 'Something went wrong. Please call (936) 331-1339 instead.';
+
 export default function CancelAppointment() {
   const router = useRouter();
-  const { id, token } = router.query;
 
   // The static export bakes this page with no query string known yet, and
   // router.isReady can flip to true on the very first client render when the
@@ -16,7 +18,25 @@ export default function CancelAppointment() {
   // until after the first effect) guarantees the first client render matches
   // the exported HTML exactly, avoiding a hydration mismatch either way.
   const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
+
+  // Captured once into state, then the URL itself is scrubbed. id/token are
+  // the sole authorization credential for cancel_booking -- leaving them in
+  // the visible URL means every pageview/analytics script on the site
+  // (GA4 included) reports them as part of page_location.
+  const [creds, setCreds] = useState({ id: null, token: null });
+
+  useEffect(() => {
+    if (!router.isReady) return;
+    const { id, token } = router.query;
+    setCreds({
+      id: typeof id === 'string' ? id : null,
+      token: typeof token === 'string' ? token : null,
+    });
+    setMounted(true);
+    if (window.location.search) {
+      window.history.replaceState(null, '', window.location.pathname);
+    }
+  }, [router.isReady, router.query]);
 
   const [status, setStatus] = useState('confirm'); // confirm | cancelling | success | error
   const [error, setError] = useState(null);
@@ -24,27 +44,41 @@ export default function CancelAppointment() {
   const handleCancel = async () => {
     setStatus('cancelling');
     setError(null);
+
+    let res;
     try {
-      const res = await fetch(`${SUPABASE_URL}/rpc/cancel_booking`, {
+      res = await fetch(`${SUPABASE_URL}/rpc/cancel_booking`, {
         method: 'POST',
         headers: supabaseHeaders(),
-        body: JSON.stringify({ p_booking_id: id, p_cancel_token: token }),
+        body: JSON.stringify({ p_booking_id: creds.id, p_cancel_token: creds.token }),
       });
+    } catch (_networkErr) {
+      setError(FRIENDLY_FALLBACK);
+      setStatus('error');
+      return;
+    }
+
+    try {
       if (!res.ok) {
-        throw new Error(await parsePostgrestError(res, 'Something went wrong. Please call (936) 331-1339 instead.'));
+        throw new Error(await parsePostgrestError(res, FRIENDLY_FALLBACK));
       }
-      const cancelled = await res.json();
+      let cancelled;
+      try {
+        cancelled = await res.json();
+      } catch (_parseErr) {
+        throw new Error(FRIENDLY_FALLBACK);
+      }
       if (!cancelled) {
         throw new Error('This appointment was already cancelled, or the link has expired.');
       }
       setStatus('success');
     } catch (err) {
-      setError(err.message);
+      setError(err.message || FRIENDLY_FALLBACK);
       setStatus('error');
     }
   };
 
-  const linkIsValid = typeof id === 'string' && typeof token === 'string' && id && token;
+  const linkIsValid = UUID_RE.test(creds.id || '') && UUID_RE.test(creds.token || '');
   const missingConfig = !SUPABASE_URL || !SUPABASE_ANON_KEY;
 
   return (
