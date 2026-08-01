@@ -1,0 +1,14 @@
+title = "gitleaks config for amw-cooling-heating"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Known-public, non-secret identifiers that match generic-api-key's entropy heuristic"
+regexes = [
+  # Ahrefs Analytics site key -- a public per-site tracking identifier meant
+  # to ship in client-side HTML/JS (same category as a GA4 measurement ID),
+  # not a credential that grants access to anything. Already present in
+  # pages/_document.js's git history before this file existed.
+  '''oHf5q/BX6z0BwN6cy\+VL8w''',
+]

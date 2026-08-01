@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { FaChevronRight } from 'react-icons/fa';
+import { escapeJsonLd } from './StructuredData';
 
 /**
  * Breadcrumb navigation component for SEO and UX
@@ -29,9 +30,7 @@ export default function Breadcrumbs({ items, light = false }) {
   return (
     <>
       {/* JSON-LD for Google rich snippets */}
-      <script type="application/ld+json">
-        {JSON.stringify(jsonLd)}
-      </script>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: escapeJsonLd(JSON.stringify(jsonLd)) }} />
 
       {/* Visual breadcrumb navigation */}
       <nav aria-label="Breadcrumb" className="mb-4">

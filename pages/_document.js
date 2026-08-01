@@ -13,8 +13,8 @@ export default function Document() {
         <link rel="dns-prefetch" href="https://a.tile.openstreetmap.org" />
         <link rel="dns-prefetch" href="https://b.tile.openstreetmap.org" />
         <link rel="dns-prefetch" href="https://c.tile.openstreetmap.org" />
-        {/* Ahrefs Analytics */}
-        <script src="https://analytics.ahrefs.com/analytics.js" data-key="oHf5q/BX6z0BwN6cy+VL8w" async></script>
+        {/* Ahrefs Analytics - deferred loading (see ahrefs-loader.js for why) */}
+        <script src="/ahrefs-loader.js" defer></script>
         {/* Google Analytics GA4 - Deferred loading for performance */}
         <script src="/ga-loader.js" defer></script>
       </Head>
