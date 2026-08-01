@@ -4,9 +4,8 @@
 
 | Environment | URL | Host |
 |-------------|-----|------|
-| Production | https://amwairconditioning.com | Vercel (pending Texas migration) |
-| Chatbot | Railway URL | Railway (pending Texas migration) |
-| Staging | amw.scdevelopment.com (planned) | Texas server |
+| Production | https://amwairconditioning.com | Vercel |
+| Chatbot | https://chat.amwairconditioning.com | advance1 tenant VM `amw-chatbot` (`10.10.10.229`), Caddy on host |
 
 ## Maintenance
 
@@ -15,42 +14,48 @@
 - Always take backup before any changes
 - Run regression suite after every deployment
 
-## Deployment (Current — Vercel)
+## Deployment — Frontend (Vercel)
 
 ```bash
 # Frontend auto-deploys on push to master via Vercel integration
 git push origin master
 ```
 
-## Deployment (Target — Texas Server)
+## Deployment — Chatbot Server (advance1)
 
 ```bash
-# From project root
-./scripts/deploy.sh
+# From the chatbot-server submodule, after pushing to its own repo:
+scp -r chatbot-server/{server.js,lib,package.json} \
+  advance1:/tmp/amw-chatbot-release/
+ssh advance1 "ssh -i /srv/admin/keys/sites_id_ed25519 site@10.10.10.229 'cd /srv/amw-chatbot/current && npm ci --omit=dev && sudo systemctl restart amw-chatbot'"
 ```
 
 ## Chatbot Server Health Check
 
 ```bash
-curl https://amwairconditioning.com/api/health
-# Expected: { "status": "ok", "service": "amw-chatbot", ... }
+curl https://chat.amwairconditioning.com/api/health
+# Expected: { "status": "ok", "service": "amw-chatbot", "uptime": ... }
 ```
 
 ## Environment Variables
 
 ### Frontend
-No required env vars for production (chatbot URL is hardcoded to backend proxy).
+No required env vars for production (chatbot URL is hardcoded to `https://chat.amwairconditioning.com` in `src/components/ChatBot.jsx`).
 
 ### Chatbot Server
+Real values live at `/etc/amw-chatbot/.env` on the VM (chmod 600) -- see `chatbot-server/.env.example`.
+
 | Variable | Description |
 |----------|-------------|
 | ANTHROPIC_API_KEY | Claude API key |
-| PORT | Server port (default 3001) |
+| PORT | Server port (default 5001) |
 | NODE_ENV | production |
 | LOG_LEVEL | info (production) |
-| ALLOWED_ORIGINS | https://amwairconditioning.com |
-| GMAIL_USER | Gmail address for sending |
-| GMAIL_APP_PASSWORD | Gmail App Password (16 chars) |
+| ALLOWED_ORIGINS | https://amwairconditioning.com,https://www.amwairconditioning.com |
+| RESEND_API_KEY | Resend API key (amwairconditioning.com is domain-verified) |
+| MAIL_FROM | Sending address, e.g. `AMW Chatbot <chatbot@send.amwairconditioning.com>` |
+| ADMIN_EMAIL | admin@amwairconditioning.com |
+| DATA_DIR | Where the permanent conversation/lead log lives (`/srv/amw-chatbot/data`) |
 
 ## Incident Response
 
@@ -68,8 +73,8 @@ Contact: kyle@stephenscode.dev / (936) 323-4527
 | Endpoint | Limit |
 |----------|-------|
 | /api/chat | 15 requests / IP / minute |
-| /api/send-email | 5 requests / IP / 10 minutes |
-| /api/send-chat-history | 5 requests / IP / 10 minutes |
+| /api/lead | 5 requests / IP / 10 minutes |
+| /api/chat/close | 5 requests / IP / 10 minutes |
 
 ## Known Issues
 

@@ -6,9 +6,9 @@ Client website for AMW Cooling & Heating LLC, Conroe TX. Two separate services:
 
 ```
 User
- └─ Cloudflare (DNS, CDN, WAF, SSL) [planned]
-     ├─ amwairconditioning.com → Next.js Frontend
-     └─ /api/chat proxy → Express Chatbot Server
+ └─ Cloudflare (DNS, CDN, WAF, SSL)
+     ├─ amwairconditioning.com → Next.js Frontend (Vercel)
+     └─ chat.amwairconditioning.com → Caddy (advance1) → Chatbot Server (dedicated KVM tenant VM)
 ```
 
 ## Services
@@ -18,32 +18,34 @@ User
 - Language: JavaScript
 - Styling: Tailwind CSS
 - Rendering: Static export (`output: 'export'`)
-- Current host: Vercel (pending migration to Texas server)
+- Current host: Vercel
 - Build: `npm run build` → `/out` directory of static HTML/CSS/JS
 
 ### 2. Chatbot Server — Express
 - Framework: Express.js
 - Language: JavaScript (ESM)
-- AI: Anthropic Claude (claude-3-haiku-20240307)
-- Email: Nodemailer + Gmail SMTP
-- Current host: Railway (pending migration to Texas server)
+- AI: Anthropic Claude (`claude-haiku-4-5`)
+- Email: Resend (amwairconditioning.com is domain-verified)
+- Current host: dedicated KVM tenant VM on advance1 (`amw-chatbot`, `10.10.10.229`), reverse-proxied by Caddy on the host at `chat.amwairconditioning.com` -- same isolation pattern as every other advance1 tenant, see `g:\StephensCode\docs\TENANT-VM-PROVISIONING.md`
 - Security: Helmet, CORS (origin-restricted), rate limiting, Zod validation, Pino logging
+- Persistence: every message and lead is appended to a permanent, never-rotated JSONL log on the VM (see chatbot-server/README.md)
 
 ## Data Flow
 
 ```
 [Browser]
   │
-  ├─ Static assets ──────────────────────── [Next.js / Nginx serve /out]
+  ├─ Static assets ──────────────────────── [Next.js served from Vercel]
   │
-  ├─ POST /api/chat ─────────────────────── [Express Chatbot Server]
-  │    └─ Anthropic API (claude-3-haiku)
+  ├─ POST chat.amwairconditioning.com/api/chat ──────── [Express Chatbot Server]
+  │    ├─ Anthropic API (claude-haiku-4-5)
+  │    └─ permanent JSONL log (conversations/<date>.jsonl)
   │
-  ├─ POST /api/send-email ───────────────── [Express Chatbot Server]
-  │    └─ Gmail SMTP → admin@amwairconditioning.com
+  ├─ POST chat.amwairconditioning.com/api/lead ───────── [Express Chatbot Server]
+  │    └─ Resend → admin@amwairconditioning.com
   │
-  └─ POST /api/send-chat-history ────────── [Express Chatbot Server]
-       └─ Gmail SMTP → admin@amwairconditioning.com
+  └─ POST chat.amwairconditioning.com/api/chat/close ─── [Express Chatbot Server]
+       └─ Resend → admin@amwairconditioning.com (transcript pulled from the permanent log)
 ```
 
 ## Key Libraries
@@ -62,9 +64,9 @@ User
 | @anthropic-ai/sdk | Claude API |
 | helmet | Security headers |
 | express-rate-limit | Rate limiting |
-| pino / pino-http | Structured logging |
+| pino | Structured logging |
 | zod | Request validation |
-| nodemailer | Email via Gmail SMTP |
+| resend | Email via Resend (amwairconditioning.com domain-verified) |
 
 ## Directory Structure
 
@@ -93,11 +95,9 @@ amw-cooling-heating/           ← Inner Next.js project
 └── tasks/                      ← Task tracking & lessons
 ```
 
-## Target Infrastructure (Texas Server)
+## Infrastructure (current)
 
-| Component | Port | PM2 Process | Nginx |
-|-----------|------|-------------|-------|
-| Frontend (static) | TBD | amw-frontend | amw.conf |
-| Chatbot Server | TBD | amw-chatbot | amw.conf |
-
-Ports to be assigned from KAS registry (frontend: 3000-3099, chatbot: 4000-4099).
+| Component | Host | Port | Process manager | Reverse proxy |
+|-----------|------|------|------------------|----------------|
+| Frontend (static export) | Vercel | -- | -- | Vercel edge |
+| Chatbot Server | advance1 tenant VM `amw-chatbot` (`10.10.10.229`) | 5001 | systemd (`amw-chatbot.service`) | Caddy on advance1 host, `chat.amwairconditioning.com` |

@@ -3,6 +3,8 @@ import { FaRobot, FaTimes } from 'react-icons/fa';
 import axios from 'axios';
 import { logger } from '../utils/logger';
 
+const CHATBOT_API = 'https://chat.amwairconditioning.com';
+
 export default function ChatBot() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
@@ -12,6 +14,9 @@ export default function ChatBot() {
   const [showContactForm, setShowContactForm] = useState(false);
   const [contactFormData, setContactFormData] = useState({ name: '', email: '', phone: '', message: '' });
   const [chatHistorySent, setChatHistorySent] = useState(false);
+  const [sessionId] = useState(() => (
+    typeof crypto !== 'undefined' && crypto.randomUUID ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(36).slice(2)}`
+  ));
 
   const handleSend = async () => {
     if (!input.trim()) return;
@@ -22,11 +27,12 @@ export default function ChatBot() {
     setInput('');
 
     try {
-      // Call Texas server backend (keeps API key secure server-side)
+      // Dedicated backend on advance1 (keeps the Claude API key secure server-side)
       const response = await axios.post(
-        'https://amwairconditioning.com/api/chat',
+        `${CHATBOT_API}/api/chat`,
         {
-          history: updatedMessages.map((m) => ({
+          sessionId,
+          history: messages.map((m) => ({
             role: m.from === 'bot' ? 'assistant' : 'user',
             content: m.text,
           })),
@@ -60,13 +66,13 @@ export default function ChatBot() {
 
     try {
       await axios.post(
-        'https://amwairconditioning.com/api/send-email',
+        `${CHATBOT_API}/api/lead`,
         {
+          sessionId,
           name: contactFormData.name,
           email: contactFormData.email,
           phone: contactFormData.phone,
           message: contactFormData.message,
-          source: 'chatbot',
         }
       );
 
@@ -91,16 +97,9 @@ export default function ChatBot() {
 
     if (hasUserMessages && !chatHistorySent) {
       try {
-        // Format chat history for email
-        const chatHistory = messages.map(msg => `${msg.from === 'bot' ? 'AMW Assistant' : 'Customer'}: ${msg.text}`).join('\n\n');
-
-        await axios.post(
-          'https://amwairconditioning.com/api/send-chat-history',
-          {
-            chatHistory,
-            timestamp: new Date().toLocaleString('en-US', { timeZone: 'America/Chicago' })
-          }
-        );
+        // Server emails the transcript from its own permanent log by sessionId --
+        // no need to resend the conversation text from the client.
+        await axios.post(`${CHATBOT_API}/api/chat/close`, { sessionId });
 
         setChatHistorySent(true);
       } catch (error) {

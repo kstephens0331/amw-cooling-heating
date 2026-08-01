@@ -1,32 +1,22 @@
-# AMW Cooling & Heating — Caddyfile block
-# Add this to ~/Caddyfile on the Texas server
-# Chatbot runs on port 3003 (PM2: amw-chatbot)
-# Static files served from /var/www/amw/
+# chat.amwairconditioning.com -- AMW chatbot API (Claude-powered)
+# This is a REFERENCE COPY. The live file is /etc/caddy/sites/chat-amwairconditioning.caddy
+# on the advance1 host (40.160.29.159) -- edit there, not here, then copy back.
+# Provisioned 2026-08-01. VM: amw-chatbot (10.10.10.229), port 5001.
 
-www.amwairconditioning.com {
-    redir https://amwairconditioning.com{uri} permanent
+(amw_chatbot_common) {
+    encode zstd gzip
+    header {
+        Strict-Transport-Security "max-age=31536000; includeSubDomains"
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "DENY"
+        Referrer-Policy "strict-origin-when-cross-origin"
+        -Server
+    }
 }
 
-amwairconditioning.com {
-    # API routes → chatbot server (PM2 on 3003)
-    handle /api/* {
-        reverse_proxy localhost:3003
-    }
-
-    # Static frontend files
-    root * /var/www/amw
-    file_server
-
-    # SPA-style fallback (Next.js static export)
-    handle {
-        try_files {path} {path}.html /404.html
-    }
-
-    # Compression
-    encode gzip zstd
-
-    # Logging
-    log {
-        output file /var/log/caddy/amw.log
+chat.amwairconditioning.com {
+    import amw_chatbot_common
+    reverse_proxy 10.10.10.229:5001 {
+        header_up X-Forwarded-Proto https
     }
 }
