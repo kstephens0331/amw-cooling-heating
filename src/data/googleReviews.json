@@ -4,7 +4,7 @@
   "profileUrl": "https://www.google.com/maps?cid=14977632959753518383&hl=en",
   "averageRating": 5,
   "totalReviews": 76,
-  "scrapedAt": "2026-08-03T14:00:36.863Z",
+  "scrapedAt": "2026-08-04T14:00:38.118Z",
   "note": "Live aggregate and reviews pulled directly from AMW's Google Maps listing via scripts/scrape-google-reviews.js. Reviews are verbatim from Google (author names and text unchanged); reviews where the customer left only a star rating with no written text are omitted here. Re-run the scraper to refresh.",
   "reviews": [
     {
@@ -22,7 +22,7 @@
     {
       "name": "Gerry King",
       "rating": 5,
-      "date": "a week ago",
+      "date": "2 weeks ago",
       "text": "After hour's work went extra mile"
     },
     {
@@ -40,7 +40,7 @@
     {
       "name": "Me Xochi",
       "rating": 5,
-      "date": "Edited 3 weeks ago",
+      "date": "Edited 4 weeks ago",
       "text": "Was very happy with AMW Cooling and Heating. I was able to quickly get an appointment and was very pleased with how thorough Josh was when servicing the unit. Asked if I wanted him to do the repairs before doing them. And I appreciated that he explained what the issue was and how he would do the repairs first. By the way the issue was fixed. I highly recommend AMW for any air con or heating issues you might have."
     },
     {
