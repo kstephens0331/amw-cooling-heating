@@ -12,6 +12,7 @@ const dryerVent = '/assets/images/duct_cleaning.webp';
 const emergency = '/assets/images/emergency.webp';
 const thermostatImg = '/assets/images/thermostat.webp';
 import ReactCompareImage from 'react-compare-image';
+import { trackPhoneClick } from '../utils/analytics';
 const newInstallBefore = '/assets/images/6392-old_unit.webp';
 const newInstallAfter = '/assets/images/6387-new_install.webp';
 
@@ -30,7 +31,7 @@ export default function Services() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="tel:+19363311339"
+              href="tel:+19363311339" onClick={() => trackPhoneClick('services_page')}
               className="inline-flex items-center gap-2 bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600 transition font-semibold"
             >
               <FaPhone className="w-4 h-4" />
@@ -265,7 +266,7 @@ export default function Services() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="tel:+19363311339"
+                href="tel:+19363311339" onClick={() => trackPhoneClick('services_page')}
                 className="inline-flex items-center justify-center gap-2 bg-red-500 text-white px-8 py-4 rounded-lg hover:bg-red-600 transition font-bold text-lg"
               >
                 <FaPhone className="w-5 h-5" />

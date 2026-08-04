@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
-import { event } from '../utils/analytics';
+import { event, trackPhoneClick } from '../utils/analytics';
 import Breadcrumbs from '../components/Breadcrumbs';
 import ManufacturerCarousel from '../components/ManufacturerCarousel';
 import MapSection from '../components/MapSectionWrapper';
@@ -421,7 +421,7 @@ export default function Blog({ initialPosts = [] }) {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="tel:+19363311339"
+                href="tel:+19363311339" onClick={() => trackPhoneClick('blog_page')}
                 className="inline-flex items-center justify-center gap-2 bg-red-500 text-white px-8 py-4 rounded-lg hover:bg-red-600 transition font-bold text-lg"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

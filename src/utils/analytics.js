@@ -20,6 +20,14 @@ export const event = (action, params = {}) => {
   }
 };
 
+// GA4 Enhanced Measurement's automatic "outbound click" tracking does not fire on
+// tel:/mailto: links (only on external http(s) links to other domains), so every
+// click-to-call CTA needs to report this explicitly. `linkLocation` identifies which
+// component/page the tap came from (e.g. "header", "hero_mobile", "footer").
+export const trackPhoneClick = (linkLocation) => {
+  event('phone_click', { link_location: linkLocation });
+};
+
 export const initGA = () => {
   if (!window.gtag) return;
   window.gtag('js', new Date());

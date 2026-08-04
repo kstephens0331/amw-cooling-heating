@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { IoClose } from 'react-icons/io5';
 import { FaPhone, FaCalendarCheck } from 'react-icons/fa';
+import { trackPhoneClick } from '../utils/analytics';
 
 const STORAGE_KEY = 'amw_promo_dismissed';
 
@@ -40,7 +41,7 @@ const IncentiveBanner = () => {
         </div>
         <div className="flex items-center gap-2 flex-shrink-0">
           <a
-            href="tel:+19363311339"
+            href="tel:+19363311339" onClick={() => trackPhoneClick('incentive_banner')}
             className="inline-flex items-center gap-2 bg-blue-900 hover:bg-blue-800 text-white font-bold text-sm px-4 py-2 rounded-lg transition"
           >
             <FaPhone className="w-4 h-4" />

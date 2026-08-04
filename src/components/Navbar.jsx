@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { FaFacebook, FaInstagram, FaYelp, FaBars, FaTimes } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
+import { trackPhoneClick } from '../utils/analytics';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -73,12 +74,18 @@ const Navbar = () => {
               <Link href="/locations/willis-tx" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Willis</Link>
               <Link href="/locations/magnolia-tx" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Magnolia</Link>
               <Link href="/locations/tomball-tx" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Tomball</Link>
+              <Link href="/locations/new-caney-tx" className="block py-1 hover:text-orange-600" onClick={closeMenu}>New Caney</Link>
+              <Link href="/locations/splendora-tx" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Splendora</Link>
+              <Link href="/locations/porter-tx" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Porter</Link>
+              <Link href="/locations/cut-and-shoot-tx" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Cut and Shoot</Link>
+              <Link href="/locations/shenandoah-tx" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Shenandoah</Link>
+              <Link href="/locations/pinehurst-tx" className="block py-1 hover:text-orange-600" onClick={closeMenu}>Pinehurst</Link>
             </div>
 
             {/* Column 4: Contact & Social (visible on md+) */}
             <div className="col-span-2 md:col-span-1 mt-3 md:mt-0 pt-3 md:pt-0 border-t md:border-t-0 border-gray-100">
               <div className="font-semibold text-gray-500 text-xs uppercase mb-1">Connect</div>
-              <a href="tel:+19363311339" className="block py-1 text-blue-600 font-medium">(936) 331-1339</a>
+              <a href="tel:+19363311339" onClick={() => trackPhoneClick('header')} className="block py-1 text-blue-600 font-medium">(936) 331-1339</a>
               <div className="flex gap-3 mt-2">
                 <a href="https://www.facebook.com/people/AMW-Cooling-Heating-LLC/61569862892114/" target="_blank" rel="noopener noreferrer" className="text-blue-600" aria-label="Facebook">
                   <FaFacebook size={18} />

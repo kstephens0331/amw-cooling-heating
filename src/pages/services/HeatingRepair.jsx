@@ -6,6 +6,7 @@ import ManufacturerCarousel from '../../components/ManufacturerCarousel';
 import MapSection from '../../components/MapSectionWrapper';
 import Footer from '../../components/Footer';
 import AreasWeServe from '../../components/AreasWeServe';
+import { trackPhoneClick } from '../../utils/analytics';
 
 const serviceFaqs = [
   { question: "How much does heating repair typically cost?", answer: "Heating repairs typically range from $150 to $500 for common issues like igniter replacement, thermocouple repair, or blower motor fixes. More involved repairs, such as a cracked heat exchanger, can cost more. We always provide a clear, upfront estimate before starting work, no matter which of our towns the call comes from." },
@@ -63,7 +64,7 @@ const HeatingRepair = () => {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="tel:+19363311339"
+                href="tel:+19363311339" onClick={() => trackPhoneClick('service_heating-repair_page')}
                 className="inline-flex items-center gap-2 bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600 transition font-semibold"
               >
                 <FaPhone className="w-4 h-4" />
@@ -100,7 +101,7 @@ const HeatingRepair = () => {
               Every town we serve has its own housing stock and heating quirks, from lakefront homes
               near Lake Conroe to new construction off the Grand Parkway. Browse the list of towns
               further down this page for local heating repair details, or call{' '}
-              <a href="tel:+19363311339" className="text-blue-600 hover:underline">(936) 331-1339</a> to
+              <a href="tel:+19363311339" onClick={() => trackPhoneClick('service_heating-repair_page')} className="text-blue-600 hover:underline">(936) 331-1339</a> to
               schedule service anywhere in our coverage area.
             </p>
           </div>
@@ -172,7 +173,7 @@ const HeatingRepair = () => {
             </h3>
             <p className="text-gray-700 mb-8 leading-relaxed text-base md:text-lg">
               Heating emergencies can't wait. We provide prompt emergency heating repair services
-              to keep your family warm and safe. Prevent emergencies with <Link href="/services/hvac-maintenance" className="text-blue-600 hover:underline">regular HVAC maintenance</Link>. Call <a href="tel:+19363311339" className="text-blue-600 hover:underline">(936) 331-1339</a> for
+              to keep your family warm and safe. Prevent emergencies with <Link href="/services/hvac-maintenance" className="text-blue-600 hover:underline">regular HVAC maintenance</Link>. Call <a href="tel:+19363311339" onClick={() => trackPhoneClick('service_heating-repair_page')} className="text-blue-600 hover:underline">(936) 331-1339</a> for
               immediate assistance.
             </p>
 
@@ -314,7 +315,7 @@ const HeatingRepair = () => {
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
-                  href="tel:+19363311339"
+                  href="tel:+19363311339" onClick={() => trackPhoneClick('service_heating-repair_page')}
                   className="inline-flex items-center justify-center gap-2 bg-red-500 text-white px-8 py-4 rounded-lg hover:bg-red-600 transition font-bold text-lg"
                 >
                   <FaPhone className="w-5 h-5" />

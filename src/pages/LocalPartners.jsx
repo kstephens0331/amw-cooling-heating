@@ -1,5 +1,6 @@
 import React from 'react';
 import Footer from '../components/Footer';
+import { trackPhoneClick } from '../utils/analytics';
 
 const partners = [
   {
@@ -168,7 +169,7 @@ export default function LocalPartners() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="tel:+19363311339"
+                  href="tel:+19363311339" onClick={() => trackPhoneClick('local_partners_page')}
                   className="inline-flex items-center justify-center gap-2 bg-red-500 text-white px-8 py-4 rounded-lg hover:bg-red-600 transition font-bold text-lg"
                 >
                   📞 (936) 331-1339

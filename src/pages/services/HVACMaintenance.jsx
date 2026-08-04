@@ -5,6 +5,7 @@ import { FaPhone, FaCalendarCheck, FaShieldAlt, FaCheckCircle, FaCog, FaChevronD
 import ManufacturerCarousel from '../../components/ManufacturerCarousel';
 import MapSection from '../../components/MapSectionWrapper';
 import Footer from '../../components/Footer';
+import { trackPhoneClick } from '../../utils/analytics';
 
 const serviceFaqs = [
   { question: "How often should I service my HVAC system in Texas?", answer: "In Texas, we recommend servicing your HVAC system twice a year—once in spring before cooling season and once in fall before heating season. The extreme Texas heat puts extra strain on AC systems, making regular maintenance essential for peak performance and longevity." },
@@ -60,7 +61,7 @@ const HVACMaintenance = () => {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="tel:+19363311339"
+                href="tel:+19363311339" onClick={() => trackPhoneClick('service_hvac-maintenance_page')}
                 className="inline-flex items-center gap-2 bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600 transition font-semibold"
               >
                 <FaPhone className="w-4 h-4" />
@@ -330,7 +331,7 @@ const HVACMaintenance = () => {
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
-                  href="tel:+19363311339"
+                  href="tel:+19363311339" onClick={() => trackPhoneClick('service_hvac-maintenance_page')}
                   className="inline-flex items-center justify-center gap-2 bg-red-500 text-white px-8 py-4 rounded-lg hover:bg-red-600 transition font-bold text-lg"
                 >
                   <FaPhone className="w-5 h-5" />

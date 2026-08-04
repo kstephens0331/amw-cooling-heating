@@ -1,5 +1,6 @@
 import { FaPhone, FaCalendarAlt } from 'react-icons/fa';
 import Link from 'next/link';
+import { trackPhoneClick } from '../utils/analytics';
 
 export default function MobileCTABar() {
   return (
@@ -12,7 +13,7 @@ export default function MobileCTABar() {
         <div className="flex">
           {/* Call Button */}
           <a
-            href="tel:+19363311339"
+            href="tel:+19363311339" onClick={() => trackPhoneClick('mobile_cta_bar')}
             className="flex-1 flex items-center justify-center gap-2 py-4 bg-blue-600 text-white font-bold text-base active:bg-blue-700 transition"
           >
             <FaPhone className="w-5 h-5" />

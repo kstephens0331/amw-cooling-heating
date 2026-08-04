@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { FaMapMarkerAlt, FaPhoneAlt, FaCheckCircle, FaShieldAlt, FaStar } from 'react-icons/fa';
 import Link from 'next/link';
 import reviewsData from '../data/googleReviews.json';
+import { trackPhoneClick } from '../utils/analytics';
 
 const MapSection = () => {
   const [isClient, setIsClient] = useState(false);
@@ -133,7 +134,7 @@ const MapSection = () => {
                             <strong className="text-blue-900">{city.name}</strong>
                             {city.label && <span className="ml-1 bg-red-500 text-white text-xs px-2 py-0.5 rounded">{city.label}</span>}
                             <br />
-                            <a href="tel:+19363311339" className="text-blue-600 text-sm">Call: (936) 331-1339</a>
+                            <a href="tel:+19363311339" onClick={() => trackPhoneClick('map_section')} className="text-blue-600 text-sm">Call: (936) 331-1339</a>
                           </div>
                         </LeafletComponents.Popup>
                       </LeafletComponents.Marker>
@@ -183,7 +184,7 @@ const MapSection = () => {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-2">
                     <a
-                      href="tel:+19363311339"
+                      href="tel:+19363311339" onClick={() => trackPhoneClick('map_section')}
                       className="flex-1 inline-flex items-center justify-center gap-2 bg-red-500 text-white px-5 py-3 rounded-lg hover:bg-red-600 transition font-semibold text-sm"
                     >
                       <FaPhoneAlt className="w-4 h-4" />

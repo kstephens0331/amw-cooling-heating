@@ -2,7 +2,7 @@ import { useEffect, useState, useMemo } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
-import { event } from '../utils/analytics';
+import { event, trackPhoneClick } from '../utils/analytics';
 import Breadcrumbs from '../components/Breadcrumbs';
 import ManufacturerCarousel from '../components/ManufacturerCarousel';
 import MapSection from '../components/MapSectionWrapper';
@@ -179,7 +179,7 @@ export default function BlogPost({ slug: slugProp, meta: metaProp, md: mdProp, a
               All Articles
             </Link>
             <a
-              href="tel:+19363311339"
+              href="tel:+19363311339" onClick={() => trackPhoneClick('blog_post_page')}
               className="hidden sm:flex items-center gap-2 text-sm bg-red-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-red-600 transition"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -325,7 +325,7 @@ export default function BlogPost({ slug: slugProp, meta: metaProp, md: mdProp, a
                 <div className="p-4">
                   <p className="text-sm font-bold text-blue-900 mb-2">Need HVAC Help?</p>
                   <a
-                    href="tel:+19363311339"
+                    href="tel:+19363311339" onClick={() => trackPhoneClick('blog_post_page')}
                     className="block w-full bg-red-500 text-white text-center py-2.5 rounded-lg font-semibold hover:bg-red-600 transition text-sm mb-2"
                   >
                     Call (936) 331-1339

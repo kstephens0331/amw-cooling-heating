@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { FaPhone, FaCalendarCheck, FaStar, FaShieldAlt } from 'react-icons/fa';
 import reviewsData from '../data/googleReviews.json';
+import { trackPhoneClick } from '../utils/analytics';
 const heroImage = '/assets/images/josh-with-client.jpg';
 const heroSrcSet = '/assets/images/josh-with-client-400.webp 400w, /assets/images/josh-with-client-769.webp 769w, /assets/images/josh-with-client-800.webp 800w, /assets/images/josh-with-client-1200.webp 1200w, /assets/images/josh-with-client-1600.webp 1600w, /assets/images/josh-with-client-1920.webp 1920w';
 
@@ -45,7 +46,7 @@ export default function MobileHero() {
         {/* CTA Buttons */}
         <div className="flex gap-3 mb-5">
           <a
-            href="tel:+19363311339"
+            href="tel:+19363311339" onClick={() => trackPhoneClick('hero_mobile')}
             className="flex-1 flex items-center justify-center gap-2 px-4 py-3.5 bg-red-500 text-white rounded-lg font-bold text-sm"
           >
             <FaPhone className="w-4 h-4" />

@@ -6,6 +6,7 @@ import ManufacturerCarousel from '../components/ManufacturerCarousel';
 import MapSection from '../components/MapSectionWrapper';
 import Footer from '../components/Footer';
 import BookingWidget from '../components/BookingWidget';
+import { trackPhoneClick } from '../utils/analytics';
 
 export default function Contact() {
 
@@ -30,7 +31,7 @@ export default function Contact() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="tel:+19363311339"
+              href="tel:+19363311339" onClick={() => trackPhoneClick('contact_page')}
               className="inline-flex items-center gap-2 bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600 transition font-semibold"
             >
               <FaPhone className="w-4 h-4" />
@@ -68,7 +69,7 @@ export default function Contact() {
                 <h3 className="text-lg font-bold text-blue-900">Call Us</h3>
               </div>
               <p className="text-gray-600 mb-3">Speak directly with our team for immediate assistance.</p>
-              <a href="tel:+19363311339" className="text-red-500 font-bold text-lg hover:text-red-600">(936) 331-1339</a>
+              <a href="tel:+19363311339" onClick={() => trackPhoneClick('contact_page')} className="text-red-500 font-bold text-lg hover:text-red-600">(936) 331-1339</a>
             </div>
 
             {/* Email Card */}
@@ -223,7 +224,7 @@ export default function Contact() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="tel:+19363311339"
+                href="tel:+19363311339" onClick={() => trackPhoneClick('contact_page')}
                 className="inline-flex items-center justify-center gap-2 bg-red-500 text-white px-8 py-4 rounded-lg hover:bg-red-600 transition font-bold text-lg"
               >
                 <FaPhone className="w-5 h-5" />

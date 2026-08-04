@@ -5,6 +5,7 @@ import MapSection from '../components/MapSectionWrapper';
 import Footer from '../components/Footer';
 import { LocalBusinessSchema } from '../components/StructuredData';
 import SEO from '../components/SEO';
+import { trackPhoneClick } from '../utils/analytics';
 
 export default function TermsOfService() {
   return (
@@ -37,7 +38,7 @@ export default function TermsOfService() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="tel:+19363311339"
+                href="tel:+19363311339" onClick={() => trackPhoneClick('terms_of_service_page')}
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-red-500 text-white rounded-lg hover:bg-red-600 transition font-bold"
               >
                 <FaPhone className="w-4 h-4" />
@@ -248,7 +249,7 @@ export default function TermsOfService() {
               <ul className="text-base md:text-lg text-gray-700 space-y-1">
                 <li><strong>AMW Cooling & Heating LLC</strong></li>
                 <li>2346 Strong Horse Dr, Conroe, TX 77301</li>
-                <li>Phone: <a href="tel:+19363311339" className="text-blue-600 hover:text-blue-800 transition">(936) 331-1339</a></li>
+                <li>Phone: <a href="tel:+19363311339" onClick={() => trackPhoneClick('terms_of_service_page')} className="text-blue-600 hover:text-blue-800 transition">(936) 331-1339</a></li>
                 <li>Email: <a href="mailto:admin@amwairconditioning.com" className="text-blue-600 hover:text-blue-800 transition">admin@amwairconditioning.com</a></li>
                 <li>License #: TACLB133920E</li>
               </ul>
@@ -267,7 +268,7 @@ export default function TermsOfService() {
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
-                  href="tel:+19363311339"
+                  href="tel:+19363311339" onClick={() => trackPhoneClick('terms_of_service_page')}
                   className="inline-flex items-center justify-center gap-2 bg-red-500 text-white px-8 py-4 rounded-lg hover:bg-red-600 transition font-bold text-lg"
                 >
                   <FaPhone className="w-5 h-5" />

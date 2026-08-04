@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { FaFacebook, FaInstagram, FaYelp } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
+import { trackPhoneClick } from '../utils/analytics';
 
 const Footer = () => {
   return (
@@ -12,7 +13,16 @@ const Footer = () => {
           <h4 className="font-bold text-lg mb-2">AMW Cooling & Heating LLC</h4>
           <p className="text-sm">2346 Strong Horse Dr</p>
           <p className="text-sm">Conroe, TX 77301</p>
-          <p className="text-sm whitespace-nowrap">Phone: (936) 331-1339</p>
+          <p className="text-sm whitespace-nowrap">
+            Phone:{' '}
+            <a
+              href="tel:+19363311339"
+              onClick={() => trackPhoneClick('footer')}
+              className="hover:text-orange-400 transition"
+            >
+              (936) 331-1339
+            </a>
+          </p>
           <p className="text-xs whitespace-nowrap">admin@amwairconditioning.com</p>
           <p className="text-sm mt-2">License #: TACLB133920E</p>
         </div>

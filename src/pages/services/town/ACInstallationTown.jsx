@@ -6,6 +6,7 @@ import ManufacturerCarousel from '../../../components/ManufacturerCarousel';
 import MapSection from '../../../components/MapSectionWrapper';
 import Footer from '../../../components/Footer';
 import { SERVICE_TOWNS } from '../../../data/serviceTowns';
+import { trackPhoneClick } from '../../../utils/analytics';
 
 // Per-town install specifics not already covered by SERVICE_TOWNS' longer-form
 // fields. Kept short and grounded in the same facts (housing stock, named
@@ -174,7 +175,7 @@ const ACInstallationTown = ({ townKey }) => {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="tel:+19363311339"
+                href="tel:+19363311339" onClick={() => trackPhoneClick('service_town_ac-installation_page')}
                 className="inline-flex items-center gap-2 bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600 transition font-semibold"
               >
                 <FaPhone className="w-4 h-4" />
@@ -379,7 +380,7 @@ const ACInstallationTown = ({ townKey }) => {
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
-                  href="tel:+19363311339"
+                  href="tel:+19363311339" onClick={() => trackPhoneClick('service_town_ac-installation_page')}
                   className="inline-flex items-center justify-center gap-2 bg-red-500 text-white px-8 py-4 rounded-lg hover:bg-red-600 transition font-bold text-lg"
                 >
                   <FaPhone className="w-5 h-5" />

@@ -5,6 +5,7 @@ import { FaPhone, FaCalendarCheck, FaShieldAlt, FaCheckCircle, FaExclamationTria
 import ManufacturerCarousel from '../../components/ManufacturerCarousel';
 import MapSection from '../../components/MapSectionWrapper';
 import Footer from '../../components/Footer';
+import { trackPhoneClick } from '../../utils/analytics';
 
 const serviceFaqs = [
   { question: "How often should I clean my dryer vent?", answer: "The U.S. Fire Administration recommends cleaning your dryer vent at least once a year. If you have a large family, do frequent laundry loads, or notice your dryer taking longer to dry clothes, you may need cleaning every 6 months. Annual cleaning prevents lint buildup that causes house fires." },
@@ -59,7 +60,7 @@ const DryerVentCleaning = () => {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="tel:+19363311339"
+                href="tel:+19363311339" onClick={() => trackPhoneClick('service_dryer-vent-cleaning_page')}
                 className="inline-flex items-center gap-2 bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600 transition font-semibold"
               >
                 <FaPhone className="w-4 h-4" />
@@ -387,7 +388,7 @@ const DryerVentCleaning = () => {
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
-                  href="tel:+19363311339"
+                  href="tel:+19363311339" onClick={() => trackPhoneClick('service_dryer-vent-cleaning_page')}
                   className="inline-flex items-center justify-center gap-2 bg-red-500 text-white px-8 py-4 rounded-lg hover:bg-red-600 transition font-bold text-lg"
                 >
                   <FaPhone className="w-5 h-5" />

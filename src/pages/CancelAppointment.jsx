@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import { LocalBusinessSchema } from '../components/StructuredData';
 import SEO from '../components/SEO';
 import { SUPABASE_URL, SUPABASE_ANON_KEY, supabaseHeaders, parsePostgrestError } from '../lib/supabaseBooking';
+import { trackPhoneClick } from '../utils/analytics';
 
 const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 const FRIENDLY_FALLBACK = 'Something went wrong. Please call (936) 331-1339 instead.';
@@ -107,7 +108,7 @@ export default function CancelAppointment() {
                 <FaExclamationTriangle className="w-12 h-12 text-yellow-500 mx-auto mb-4" />
                 <p className="text-gray-700">
                   Online cancellation is temporarily unavailable. Please call{' '}
-                  <a href="tel:+19363311339" className="text-red-500 font-bold">(936) 331-1339</a> and we'll cancel it for you.
+                  <a href="tel:+19363311339" onClick={() => trackPhoneClick('cancel_appointment_page')} className="text-red-500 font-bold">(936) 331-1339</a> and we'll cancel it for you.
                 </p>
               </div>
             ) : !linkIsValid ? (
@@ -115,7 +116,7 @@ export default function CancelAppointment() {
                 <FaExclamationTriangle className="w-12 h-12 text-yellow-500 mx-auto mb-4" />
                 <p className="text-gray-700">
                   This cancellation link looks incomplete. Please use the link from your confirmation email, or call{' '}
-                  <a href="tel:+19363311339" className="text-red-500 font-bold">(936) 331-1339</a>.
+                  <a href="tel:+19363311339" onClick={() => trackPhoneClick('cancel_appointment_page')} className="text-red-500 font-bold">(936) 331-1339</a>.
                 </p>
               </div>
             ) : status === 'confirm' || status === 'cancelling' ? (
@@ -137,7 +138,7 @@ export default function CancelAppointment() {
                 <p className="text-gray-700">
                   Need to schedule a new time? Visit our{' '}
                   <a href="/contact#book-a-service" className="text-blue-700 font-semibold underline">booking page</a>{' '}
-                  or call <a href="tel:+19363311339" className="text-red-500 font-bold">(936) 331-1339</a>.
+                  or call <a href="tel:+19363311339" onClick={() => trackPhoneClick('cancel_appointment_page')} className="text-red-500 font-bold">(936) 331-1339</a>.
                 </p>
               </div>
             ) : (

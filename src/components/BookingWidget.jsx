@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { FaCalendarCheck, FaCheckCircle, FaChevronLeft, FaChevronRight, FaClock } from 'react-icons/fa';
 import { SUPABASE_URL, SUPABASE_ANON_KEY, supabaseHeaders, parsePostgrestError } from '../lib/supabaseBooking';
 import { sendBookingConfirmationEmails } from '../lib/bookingEmail';
+import { trackPhoneClick } from '../utils/analytics';
 
 function formatDateKey(date) {
   const y = date.getFullYear();
@@ -181,7 +182,7 @@ export default function BookingWidget() {
       <div className="text-center py-16 px-4">
         <p className="text-gray-600">
           Online booking is temporarily unavailable. Please call{' '}
-          <a href="tel:+19363311339" className="text-red-500 font-bold">(936) 331-1339</a> to schedule.
+          <a href="tel:+19363311339" onClick={() => trackPhoneClick('booking_widget')} className="text-red-500 font-bold">(936) 331-1339</a> to schedule.
         </p>
       </div>
     );

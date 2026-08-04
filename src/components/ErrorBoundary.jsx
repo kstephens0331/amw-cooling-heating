@@ -1,4 +1,5 @@
 import React from 'react';
+import { trackPhoneClick } from '../utils/analytics';
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -52,7 +53,7 @@ class ErrorBoundary extends React.Component {
                 Refresh Page
               </button>
               <a
-                href="tel:+19363311339"
+                href="tel:+19363311339" onClick={() => trackPhoneClick('error_boundary')}
                 className="block w-full bg-orange-600 text-white px-6 py-3 rounded-lg hover:bg-orange-700 transition font-medium"
               >
                 Call (936) 331-1339

@@ -7,6 +7,7 @@ import MapSection from '../../components/MapSectionWrapper';
 import Footer from '../../components/Footer';
 import AreasWeServe from '../../components/AreasWeServe';
 import { SERVICE_TOWNS, SERVICE_TOWN_ORDER } from '../../data/serviceTowns';
+import { trackPhoneClick } from '../../utils/analytics';
 
 // General, procedural FAQ set for this county-wide hub page. These cover what's
 // involved in an installation, timelines, warranty, and financing at a level
@@ -67,7 +68,7 @@ const ACInstallation = () => {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="tel:+19363311339"
+                href="tel:+19363311339" onClick={() => trackPhoneClick('service_ac-installation_page')}
                 className="inline-flex items-center gap-2 bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600 transition font-semibold"
               >
                 <FaPhone className="w-4 h-4" />
@@ -428,7 +429,7 @@ const ACInstallation = () => {
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
-                  href="tel:+19363311339"
+                  href="tel:+19363311339" onClick={() => trackPhoneClick('service_ac-installation_page')}
                   className="inline-flex items-center justify-center gap-2 bg-red-500 text-white px-8 py-4 rounded-lg hover:bg-red-600 transition font-bold text-lg"
                 >
                   <FaPhone className="w-5 h-5" />

@@ -6,6 +6,7 @@ import ManufacturerCarousel from '../../components/ManufacturerCarousel';
 import MapSection from '../../components/MapSectionWrapper';
 import Footer from '../../components/Footer';
 import AreasWeServe from '../../components/AreasWeServe';
+import { trackPhoneClick } from '../../utils/analytics';
 
 const serviceFaqs = [
   { question: "What's involved in a professional AC repair visit?", answer: "Every repair visit starts with a full diagnostic to find the actual cause, not just the symptom. We check refrigerant levels, electrical components, airflow, and the condensate drain, then walk you through what we found and give you upfront pricing before any work begins. Once you approve the repair, we complete the fix and test the system to confirm it is cooling properly before we leave." },
@@ -63,7 +64,7 @@ const ACRepair = () => {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="tel:+19363311339"
+                href="tel:+19363311339" onClick={() => trackPhoneClick('service_ac-repair_page')}
                 className="inline-flex items-center gap-2 bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600 transition font-semibold"
               >
                 <FaPhone className="w-4 h-4" />
@@ -418,7 +419,7 @@ const ACRepair = () => {
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
-                  href="tel:+19363311339"
+                  href="tel:+19363311339" onClick={() => trackPhoneClick('service_ac-repair_page')}
                   className="inline-flex items-center justify-center gap-2 bg-red-500 text-white px-8 py-4 rounded-lg hover:bg-red-600 transition font-bold text-lg"
                 >
                   <FaPhone className="w-5 h-5" />
