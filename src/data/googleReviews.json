@@ -4,9 +4,15 @@
   "profileUrl": "https://www.google.com/maps?cid=14977632959753518383&hl=en",
   "averageRating": 5,
   "totalReviews": 76,
-  "scrapedAt": "2026-08-04T14:00:38.118Z",
+  "scrapedAt": "2026-08-05T14:00:58.543Z",
   "note": "Live aggregate and reviews pulled directly from AMW's Google Maps listing via scripts/scrape-google-reviews.js. Reviews are verbatim from Google (author names and text unchanged); reviews where the customer left only a star rating with no written text are omitted here. Re-run the scraper to refresh.",
   "reviews": [
+    {
+      "name": "Ron Claver",
+      "rating": 5,
+      "date": "Edited 16 hours ago",
+      "text": "Can't say enough about Josh and his service. Let me say first that we had a different company come out and wanted to charge $3800 for freon and a new drip pan because it was so rusted. I had told the guy it was a lot of money for that so he dropped the price real quick to $2,400 then again to $1200. I didn't think that was good so we called Josh with AMW COOLING & Heating! Totally different story. Josh is awesome. He found a bad fan motor and replaced it. Our system didn't need freon and it didn't need the drip pan. Josh had great communication and explained everything, showed photos before and after and gave suggestions for a yearly maintenance plan. We will be using him again. Thank you Josh for our cold AC again!! Great pricing!! Trustworthy!"
+    },
     {
       "name": "Laura Carrillo",
       "rating": 5,
@@ -41,7 +47,7 @@
       "name": "Me Xochi",
       "rating": 5,
       "date": "Edited 4 weeks ago",
-      "text": "Was very happy with AMW Cooling and Heating. I was able to quickly get an appointment and was very pleased with how thorough Josh was when servicing the unit. Asked if I wanted him to do the repairs before doing them. And I appreciated that he explained what the issue was and how he would do the repairs first. By the way the issue was fixed. I highly recommend AMW for any air con or heating issues you might have."
+      "text": "Was very happy with AMW Cooling and Heating. I was able to quickly get an appointment and was very pleased with how thorough Josh was when servicing the unit. Asked if I wanted him to do the repairs before doing them. And I appreciated that …"
     },
     {
       "name": "Ramon Rodriguez",
@@ -70,13 +76,13 @@
     {
       "name": "Michael Partin",
       "rating": 5,
-      "date": "Edited a month ago",
+      "date": "Edited 2 months ago",
       "text": "very professional and prompt"
     },
     {
       "name": "Vishnu Desai",
       "rating": 5,
-      "date": "Edited a month ago",
+      "date": "Edited 2 months ago",
       "text": "As always excellent service and come in quick notice."
     },
     {
@@ -112,7 +118,7 @@
     {
       "name": "Jaclyn Franks",
       "rating": 5,
-      "date": "3 months ago",
+      "date": "4 months ago",
       "text": "AMW came out immediately when I called. They were thorough, looked at everything, and made recommendations on what to do going forward."
     },
     {
@@ -120,12 +126,6 @@
       "rating": 5,
       "date": "4 months ago",
       "text": "We had multiple quotes from several businesses. The quote and initial consult left us feeling confident in their honesty and competence. They had us scheduled within the same week for our ductwork and plenum replacement. They arrived on time for the schedule work and left our home clean and COOL. It's has been weeks since the work was done and our AC continues to work great. I highly recommend them!"
-    },
-    {
-      "name": "Sean McKenna",
-      "rating": 5,
-      "date": "Edited 4 months ago",
-      "text": "Josh was very easy to work with and did an excellent job installing my new system. I would recommend this company to anybody."
     }
   ]
 }
