@@ -79,11 +79,43 @@ const TheWoodlandsTX = () => {
               Your Local The Woodlands HVAC Contractor
             </h2>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              AMW Cooling & Heating proudly serves The Woodlands, Texas—one of the premier master-planned communities in the Houston metropolitan area. With over 100,000 residents across eight distinct villages, The Woodlands demands HVAC contractors who understand the unique needs of its well-appointed homes. From the established neighborhoods of Panther Creek and Indian Springs to the newer communities of Creekside Park and Sterling Ridge, our NATE-certified technicians deliver reliable, professional HVAC services tailored to each home.
+              AMW Cooling & Heating proudly serves The Woodlands, Texas, one of the premier master-planned communities in the Houston metropolitan area. With over 100,000 residents across eight distinct villages, The Woodlands demands HVAC contractors who understand the unique needs of its well-appointed homes. From the established neighborhoods of Panther Creek and Indian Springs to the newer communities of Creekside Park and Sterling Ridge, our NATE-certified technicians deliver reliable, professional HVAC services tailored to each home.
             </p>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
               The Woodlands sits just 20 minutes south of our Conroe headquarters, making it one of our primary service areas. The community's tree-lined streets and wooded lots create beautiful living spaces, but they also mean increased pollen, humidity challenges, and seasonal debris that can affect HVAC system performance. We understand these local factors and provide solutions that keep Woodlands homes comfortable and efficient year-round.
             </p>
+          </div>
+        </section>
+
+        {/* Common Problems Section */}
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4">
+            <h3 className="text-2xl font-bold text-blue-900 mb-4 flex items-center gap-2">
+              <span className="w-8 h-1 bg-blue-600 rounded"></span>
+              Common HVAC Problems in The Woodlands
+            </h3>
+            <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
+              The homes we service here run bigger and newer than in most towns nearby, and that
+              brings a different set of problems than a single-stage window unit ever would.
+            </p>
+            <ul className="space-y-4">
+              <li className="bg-white rounded-lg p-4 shadow-sm">
+                <span className="block text-blue-900 font-bold mb-1">Zone-to-zone temperature swings</span>
+                <span className="text-gray-700 leading-relaxed">One bedroom running warm while the rest of the house is comfortable usually points to a failed zone damper or a control board that has lost communication with a thermostat, not a refrigerant problem, and it needs a technician who can actually trace the zoning wiring.</span>
+              </li>
+              <li className="bg-white rounded-lg p-4 shadow-sm">
+                <span className="block text-blue-900 font-bold mb-1">Variable-speed compressor and blower faults</span>
+                <span className="text-gray-700 leading-relaxed">Variable-speed compressors and ECM blower motors run quieter and cheaper than older single-stage equipment, but they fail differently too, and diagnosing them means reading the actual fault codes instead of guessing at a capacitor.</span>
+              </li>
+              <li className="bg-white rounded-lg p-4 shadow-sm">
+                <span className="block text-blue-900 font-bold mb-1">Undersized equipment in newer construction</span>
+                <span className="text-gray-700 leading-relaxed">A builder-grade system sized to a spec sheet instead of the actual house is a common cause of a hot upstairs in two-story Creekside Park and Sterling Ridge homes, especially with vaulted ceilings or a lot of west-facing glass.</span>
+              </li>
+              <li className="bg-white rounded-lg p-4 shadow-sm">
+                <span className="block text-blue-900 font-bold mb-1">Condenser airflow choked by HOA screening</span>
+                <span className="text-gray-700 leading-relaxed">Fencing or landscaping used to hide a condenser from the street is standard practice here, but too little clearance traps heat around the unit and shortens compressor life, and pollen and tree debris off wooded lots clog the coil faster than in a more open neighborhood.</span>
+              </li>
+            </ul>
           </div>
         </section>
 
@@ -162,32 +194,32 @@ const TheWoodlandsTX = () => {
               WHY THE WOODLANDS RESIDENTS CHOOSE AMW
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg text-center max-w-3xl mx-auto">
-              We are a local, veteran-owned team, not a national chain routing your call to an out-of-state center. Our technicians arrive on time, in uniform, and treat your home with the same respect they would want shown to their own. We are licensed, insured, and bonded under Texas license TACLB133920E, and we show up when we say we will.
+              A multi-zone system in a 4,000-square-foot Creekside Park home is a different job than a single-stage unit in an original Panther Creek house, and Woodlands homeowners want a technician who has actually worked on both before anyone touches a system that size. Our crew holds Texas HVAC license TACLB133920E, carries full insurance, and starts every visit with a real inspection and a written number, not a guess. We also keep condenser placement and any exterior work inside HOA guidelines, because that matters here as much as the repair itself.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">Veteran-owned and operated</span>
+                <span className="text-gray-700 text-base font-medium">Trained on multi-zone & variable-speed systems</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">Licensed, insured & bonded</span>
+                <span className="text-gray-700 text-base font-medium">TACLB133920E licensed & fully insured</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">Same-day & emergency service</span>
+                <span className="text-gray-700 text-base font-medium">Exterior work kept within HOA guidelines</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">Upfront, transparent pricing</span>
+                <span className="text-gray-700 text-base font-medium">Written pricing before any work begins</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium"><Link href="/financing" className="text-blue-600 hover:underline">Financing options</Link> available</span>
+                <span className="text-gray-700 text-base font-medium"><Link href="/financing" className="text-blue-600 hover:underline">Financing</Link> for larger installs</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">5.0-star Google rating</span>
+                <span className="text-gray-700 text-base font-medium">Veteran-owned, 5.0 stars on Google</span>
               </div>
             </div>
           </div>
@@ -201,9 +233,12 @@ const TheWoodlandsTX = () => {
               Serving The Woodlands Neighborhoods
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              We provide HVAC services throughout The Woodlands and surrounding areas including
-              Alden Bridge, Cochran's Crossing, College Park, Creekside Park, Grogan's Mill, Indian Springs, Panther Creek, Sterling Ridge, Town Center, and all Woodlands villages. No matter where you are in the The Woodlands area, AMW
-              Cooling & Heating is ready to help.
+              Every village in The Woodlands has its own character, but the same AMW crew covers
+              all of them: Alden Bridge, Cochran's Crossing, College Park, Creekside Park,
+              Grogan's Mill, Indian Springs, Panther Creek, Sterling Ridge, Town Center, and the
+              rest of the community. Wherever your village sits, we already know the local HOA
+              rules on equipment placement and screening before we ever pull into your driveway,
+              so there are no surprises for you or your neighbors.
             </p>
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
@@ -226,11 +261,11 @@ const TheWoodlandsTX = () => {
               Emergency HVAC Service in The Woodlands
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              A system going down does not wait for a convenient time, and neither do we. We are open
-              8am to 9pm, seven days a week, with after-hours emergency service available, so call AMW
-              for same-day HVAC help anywhere in The Woodlands, from Town Center out to Alden Bridge and
-              every village between. Being about 20 minutes south of our Conroe shop keeps our
-              Woodlands response times fast.
+              In a home this size, when one zone fails the rest of the system usually is not far
+              behind, so we do not make Woodlands residents wait on a callback. We run 8am to 9pm
+              every day of the week, with after-hours emergency coverage on top of that, and since
+              our Conroe shop sits about 20 minutes north, a technician can typically reach Town
+              Center, Alden Bridge, or any other village the same day.
             </p>
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
@@ -259,10 +294,10 @@ const TheWoodlandsTX = () => {
                 <span className="text-white text-sm font-semibold">Veteran-Owned & Operated</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
-                Contact AMW for HVAC Service in The Woodlands
+                Do Not Let a Small Woodlands Problem Become a Full Replacement
               </h2>
               <p className="text-lg text-blue-200 max-w-xl mx-auto mb-8">
-                Ready to schedule service? Call us today or fill out our contact form. We're standing by to help with all your heating and cooling needs in The Woodlands, Texas.
+                Multi-zone equipment in a Creekside Park or Sterling Ridge home is built to last for years, but only if a warning sign gets addressed instead of ignored. Reach the form below or call (936) 331-1339; our estimate already accounts for what your HOA will and will not allow on equipment placement.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a

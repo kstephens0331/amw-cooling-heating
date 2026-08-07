@@ -98,6 +98,64 @@ const ShenandoahTX = () => {
           </div>
         </section>
 
+        {/* Common HVAC Problems Section */}
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6">
+              Common HVAC Problems in Shenandoah
+            </h2>
+            <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
+              Because Shenandoah runs on a mix of established homes and heavy commercial traffic
+              along I-45, the calls we get here break down differently than in a purely residential
+              town. These are the four issues we see most:
+            </p>
+            <div className="space-y-5">
+              <div className="bg-white rounded-lg p-5 shadow-sm">
+                <h3 className="font-bold text-blue-900 text-base md:text-lg mb-2">Rooftop units giving out during business hours</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  The package units on top of the retail and restaurant buildings around Metropark
+                  Square and Portofino Shopping Center run nearly nonstop through the day, with
+                  doors opening and closing constantly and dining rooms full of body heat and
+                  kitchen exhaust. That duty cycle wears out contactors, capacitors, and compressors
+                  faster than a typical home system, and a failure at 1pm on a Saturday is a
+                  different emergency than one at midnight.
+                </p>
+              </div>
+              <div className="bg-white rounded-lg p-5 shadow-sm">
+                <h3 className="font-bold text-blue-900 text-base md:text-lg mb-2">Kitchen exhaust pulling more air than it replaces</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Restaurants along the corridor run grease-hood exhaust fans that can pull more
+                  air out of the building than the makeup-air system replaces, which drops the space
+                  into negative pressure. The HVAC system ends up fighting that imbalance, running
+                  longer to hold temperature and pulling humid outside air in around doors and vents.
+                  We check the balance, not just the thermostat, when a commercial customer's
+                  dining room will not cool down.
+                </p>
+              </div>
+              <div className="bg-white rounded-lg p-5 shadow-sm">
+                <h3 className="font-bold text-blue-900 text-base md:text-lg mb-2">Original equipment aging out in Shenandoah Valley homes</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Many houses in the Shenandoah Valley subdivision still have equipment dating back
+                  to the 1970s and 1980s, some of it original to the home. That means old refrigerant
+                  types, corroded coils, and ductwork sized for a smaller electrical load than
+                  today's homes carry. We see more compressor failures and refrigerant leaks on this
+                  side of town than anywhere else we serve.
+                </p>
+              </div>
+              <div className="bg-white rounded-lg p-5 shadow-sm">
+                <h3 className="font-bold text-blue-900 text-base md:text-lg mb-2">Isolated comfort complaints in multi-zone hospitality buildings</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  A hotel like the Hyatt House runs dozens of individual room units off one property,
+                  so a single guest room running hot rarely means the whole building has a problem.
+                  It usually means one zone or one packaged terminal unit needs attention. We
+                  diagnose and fix the specific unit instead of treating it as a building-wide
+                  system failure, which keeps the rest of the property running while we work.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Services Grid Section */}
         <section className="py-12 bg-blue-900">
           <div className="max-w-5xl mx-auto px-4">
@@ -173,36 +231,40 @@ const ShenandoahTX = () => {
               WHY SHENANDOAH CHOOSES AMW
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg text-center max-w-3xl mx-auto">
-              We are a local, veteran-owned team, not a national chain handing your call off to a
-              call center out of state. When a Shenandoah homeowner or business owner calls AMW, they
-              reach people who work this stretch of I-45 every week, understand the older homes in
-              Shenandoah Valley as well as the newer builds and light-commercial buildings along the
-              corridor, and show up when they say they will. We hold Texas license TACLB133920E.
+              Roughly seventy percent of Shenandoah's sales-tax revenue comes from the shops,
+              restaurants, and hotels along I-45, which means a rooftop unit going out at Metropark
+              Square or Portofino is a business problem, not just a comfort problem, and we treat it
+              that way. We are veteran-owned, based just up the road in Conroe, and every technician
+              on our crew has worked both settings long enough to know the difference between a
+              1970s split system in a Shenandoah Valley house and a package unit over a restaurant
+              kitchen on the corridor, no relay through an out-of-state center required. We carry
+              Texas license TACLB133920E and back every job, home or storefront, with the same
+              upfront pricing.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">Veteran-owned and operated</span>
+                <span className="text-gray-700 text-base font-medium">Veteran-owned techs who work this stretch of I-45 every week</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">Licensed, insured & bonded</span>
+                <span className="text-gray-700 text-base font-medium">Rooftop and light-commercial units serviced alongside home systems</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">Same-day & emergency service</span>
+                <span className="text-gray-700 text-base font-medium">Same-day calls, because a closed dining room or hotel floor costs you money</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">Upfront, transparent pricing</span>
+                <span className="text-gray-700 text-base font-medium">Texas license TACLB133920E, insured and bonded</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium"><Link href="/financing" className="text-blue-600 hover:underline">Financing options</Link> available</span>
+                <span className="text-gray-700 text-base font-medium">Upfront pricing quoted before any work begins</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">5.0-star Google rating</span>
+                <span className="text-gray-700 text-base font-medium">Google reviews averaging a full 5.0 stars</span>
               </div>
             </div>
           </div>
@@ -216,13 +278,14 @@ const ShenandoahTX = () => {
               Serving Shenandoah Neighborhoods
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              We provide HVAC service throughout Shenandoah, with the residential core in the
-              Shenandoah Valley subdivision, the city's original late-1960s development laid out on
-              the east bank of Panther Creek just west of I-45. Those large, mature homes make up the
-              heart of our residential work here. We also cover the businesses along the I-45
-              corridor and out along David Memorial Drive and Tamina Road east of the freeway.
-              Whether you are in a longtime Shenandoah Valley home or a storefront near the Research
-              Forest interchange, AMW Cooling & Heating is ready to help.
+              Shenandoah runs as two distinct service areas for us, divided by the interstate
+              that cuts through town. West of I-45 is the Shenandoah Valley
+              subdivision, the city's original late-1960s development laid out on the east bank of
+              Panther Creek, where large, mature homes make up most of our residential calls. East of
+              the freeway is the commercial side: the businesses along David Memorial Drive, past
+              Woodforest Bank Stadium, and out Tamina Road. From a compressor tucked behind a
+              Shenandoah Valley ranch house to a rooftop unit above a storefront near the Research
+              Forest interchange, our trucks cover both without a special trip.
             </p>
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
@@ -260,12 +323,12 @@ const ShenandoahTX = () => {
               Emergency HVAC Service in Shenandoah
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              An AC failure during a humid South Montgomery County summer will not wait for business
-              hours, and neither do we. We are open 8am to 9pm, seven days a week, so call AMW for
-              same-day and emergency HVAC service in Shenandoah, TX, and we will get a technician
-              rolling down I-45 toward you fast. Whether you are near Woodforest Bank Stadium on David
-              Memorial Drive or over by the Research Forest interchange, we serve every corner of the
-              city and the surrounding communities.
+              In Shenandoah a system failure rarely picks a convenient moment. It is a compressor
+              going out in a Shenandoah Valley house on a Saturday afternoon, or a rooftop unit
+              dropping out over a packed dining room at Metropark Square on a Friday night. We keep
+              the schedule open for both: 8am to 9pm, seven days a week, with after-hours emergency
+              dispatch from 5pm to 9pm, and a technician sent down I-45 the same day whenever we can
+              manage it.
             </p>
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
@@ -293,11 +356,14 @@ const ShenandoahTX = () => {
                 <span className="text-white text-sm font-semibold">Veteran-Owned & Operated</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
-                Contact AMW for HVAC Service in Shenandoah
+                A Closed Dining Room Costs Metropark Square More Than a Repair Bill
               </h2>
               <p className="text-lg text-blue-200 max-w-xl mx-auto mb-8">
-                Ready to schedule service? Call us today or fill out our contact form. We are standing
-                by to help with all your heating and cooling needs in Shenandoah, Texas.
+                Restaurant kitchens along the I-45 corridor run their rooftop units nearly
+                nonstop through the lunch rush, which wears out a compressor faster than a
+                typical home system ever would. Say what kind of building you are calling
+                about when you dial (936) 331-1339, and the crew that shows up brings the
+                right parts for it, not a guess.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a

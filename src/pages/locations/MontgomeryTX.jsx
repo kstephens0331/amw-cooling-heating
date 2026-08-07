@@ -87,6 +87,59 @@ const MontgomeryTX = () => {
           </div>
         </section>
 
+        {/* Common HVAC Problems Section */}
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4">
+            <h3 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6 text-center">
+              Common HVAC Problems in Montgomery, TX
+            </h3>
+            <p className="text-gray-700 mb-8 leading-relaxed text-base md:text-lg text-center max-w-3xl mx-auto">
+              Being this close to Lake Conroe changes what tends to break and why. These are the
+              issues we see most often on lakefront, golf-community, and historic downtown
+              properties around Montgomery.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-white rounded-lg p-5 shadow-sm">
+                <h4 className="font-bold text-blue-900 mb-2 text-lg">Undersized or mis-charged systems near the water</h4>
+                <p className="text-gray-700 text-base leading-relaxed">
+                  A lakefront home carries a heavier moisture load than a house a few miles inland.
+                  An AC that is the right tonnage on paper but not charged correctly for that extra
+                  humidity will hit the set temperature and still leave rooms feeling clammy. We
+                  check refrigerant charge and airflow against the actual moisture load, not just
+                  the square footage.
+                </p>
+              </div>
+              <div className="bg-white rounded-lg p-5 shadow-sm">
+                <h4 className="font-bold text-blue-900 mb-2 text-lg">Mold and mildew in ductwork and closets</h4>
+                <p className="text-gray-700 text-base leading-relaxed">
+                  Moisture off the lake works its way into insulation, interior closets, and duct
+                  runs long before it shows up as a musty smell. On Walden, Bentwater, and April
+                  Sound properties we inspect ductwork and drain lines for standing moisture and
+                  recommend dehumidification when the AC alone cannot keep up.
+                </p>
+              </div>
+              <div className="bg-white rounded-lg p-5 shadow-sm">
+                <h4 className="font-bold text-blue-900 mb-2 text-lg">Frozen coils and iced-over lines</h4>
+                <p className="text-gray-700 text-base leading-relaxed">
+                  Higher ambient humidity combined with low refrigerant or restricted airflow is a
+                  common recipe for a frozen evaporator coil on lake-area homes, especially on
+                  systems that run nonstop trying to fight the moisture. We diagnose the root cause
+                  instead of just thawing the line and sending you on your way.
+                </p>
+              </div>
+              <div className="bg-white rounded-lg p-5 shadow-sm">
+                <h4 className="font-bold text-blue-900 mb-2 text-lg">Aging ductwork and equipment near downtown</h4>
+                <p className="text-gray-700 text-base leading-relaxed">
+                  Homes near historic downtown Montgomery often carry older duct systems and
+                  equipment that were never built for today's efficiency or dehumidification
+                  standards. That shows up as uneven cooling room to room and higher bills than a
+                  properly sealed, correctly sized system should run.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Services Grid Section */}
         <section className="py-12 bg-blue-900">
           <div className="max-w-5xl mx-auto px-4">
@@ -162,32 +215,28 @@ const MontgomeryTX = () => {
               WHY MONTGOMERY RESIDENTS CHOOSE AMW
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg text-center max-w-3xl mx-auto">
-              Montgomery homeowners value reliability and honesty, qualities that define AMW Cooling & Heating. As fellow Montgomery County residents, we're not just your HVAC contractor, we're your neighbors, and we hold Texas license TACLB133920E. We provide the same quality of service we'd want for our own families, whether that call comes from the historic downtown square or a home on the water in Walden or Bentwater.
+              A system that keeps a Montgomery home comfortable has to solve two problems at once: Texas heat and the extra moisture rolling off Lake Conroe. Get the sizing or the refrigerant charge wrong and you end up with a unit that cools the air but still leaves rooms feeling damp, or one that runs nonstop and never catches up. That is the standard our technicians work to on every call, lakefront or downtown, backed by Texas license TACLB133920E.
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 max-w-3xl mx-auto">
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">Veteran-owned and operated</span>
+                <span className="text-gray-700 text-base font-medium">Who answers your call? A licensed local technician, not a distant hold queue</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">Licensed, insured & bonded</span>
+                <span className="text-gray-700 text-base font-medium">Same-day and after-hours calls covered, 8am to 9pm every day</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">Same-day & emergency service</span>
+                <span className="text-gray-700 text-base font-medium">Upfront pricing before we start, with <Link href="/financing" className="text-blue-600 hover:underline">financing</Link> through Synchrony and FTL Finance</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">Upfront, transparent pricing</span>
+                <span className="text-gray-700 text-base font-medium">Equipment sized and charged for Lake Conroe humidity, not just the thermostat</span>
               </div>
-              <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
+              <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3 md:col-span-2 md:max-w-xs md:mx-auto">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium"><Link href="/financing" className="text-blue-600 hover:underline">Financing options</Link> available</span>
-              </div>
-              <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
-                <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">5.0-star Google rating</span>
+                <span className="text-gray-700 text-base font-medium">5.0-star Google rating from Montgomery County neighbors</span>
               </div>
             </div>
           </div>
@@ -201,9 +250,12 @@ const MontgomeryTX = () => {
               Serving Montgomery Neighborhoods
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              We provide HVAC services throughout Montgomery and surrounding areas including
-              Historic Downtown Montgomery, Walden on Lake Conroe, April Sound, Bentwater, the FM 149 corridor, the La Torretta area, and all Montgomery communities on the west side of Montgomery County. No matter where you are in the Montgomery area, AMW
-              Cooling & Heating is ready to help with any part of your heating and cooling system.
+              Our Montgomery technicians work the whole map, from the historic town square to the
+              gated communities ringing the lake: Historic Downtown Montgomery, Walden on Lake
+              Conroe, April Sound, Bentwater, the FM 149 corridor, the La Torretta area, and the
+              rest of Montgomery County's west side. If your property sits behind a gate or down
+              a private dock road, just mention it when you call so the first trip out is also
+              the last one.
             </p>
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
@@ -224,10 +276,10 @@ const MontgomeryTX = () => {
               Emergency HVAC Service in Montgomery
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              A system failure doesn't wait for a convenient time, and neither do we. We are open 8am
-              to 9pm, seven days a week, with after-hours emergency service from 5pm to 9pm, so call
-              AMW for same-day and emergency HVAC service anywhere in Montgomery, from the historic
-              downtown square to the lakefront communities along Lake Conroe.
+              Heat and humidity off Lake Conroe do not check the clock before an AC gives out, and
+              neither do we. The phones are covered 8am to 9pm every day, with after-hours emergency
+              coverage until 9pm, so whether the call comes from a dock house on the water or a
+              place near the historic square, we get a technician moving the same day.
             </p>
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
@@ -256,10 +308,13 @@ const MontgomeryTX = () => {
                 <span className="text-white text-sm font-semibold">Veteran-Owned & Operated</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
-                Contact AMW for HVAC Service in Montgomery
+                Stop Lake Conroe Humidity Before It Becomes a Mold Problem
               </h2>
               <p className="text-lg text-blue-200 max-w-xl mx-auto mb-8">
-                Ready to schedule service? Call us today or fill out our contact form. We're standing by to help with all your heating and cooling needs in Montgomery, Texas.
+                A musty smell or a room that never quite feels dry usually means moisture is already
+                winning. Call AMW and we will check your system's sizing, refrigerant charge, and
+                drainage before it turns into a bigger repair, whether you are on the water in
+                Walden or a few blocks from the historic square.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a

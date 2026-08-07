@@ -27,7 +27,7 @@ export const LOCATION_FAQS = {
       },
       {
         question: 'Do you offer financing on HVAC systems in Conroe?',
-        answer: 'Yes. We offer financing through Synchrony and FTL Finance so a new system or a larger repair does not have to come out of pocket all at once. We can walk you through the options during your estimate and help you pick a monthly payment that fits your budget.'
+        answer: 'A full system replacement is a big expense to absorb in one payment, which is why we set up financing through Synchrony and FTL Finance for Conroe customers. Bring it up when we are on-site for your estimate and we will lay out the plans on the spot, before you decide anything.'
       },
       {
         question: 'Do you offer maintenance plans for Conroe homeowners?',
@@ -52,11 +52,11 @@ export const LOCATION_FAQS = {
       },
       {
         question: 'Do you offer emergency AC repair in The Woodlands?',
-        answer: 'Yes. We offer after-hours emergency service from 5pm to 9pm, seven days a week, on top of our regular 8am to 9pm hours. When the AC quits on a hot evening, call (936) 331-1339 and we will get a technician headed your way. Additional charges may apply for after-hours calls.'
+        answer: 'We do, and because The Woodlands is one of our closest, busiest service areas, a technician is rarely far away when a system quits after hours. Our after-hours window runs 5pm to 9pm on top of the normal 8am to 9pm day, seven days a week. Dial (936) 331-1339 as soon as the AC stops keeping up; after-hours calls carry an additional charge.'
       },
       {
         question: 'Is financing available for a new system in The Woodlands?',
-        answer: 'Yes. We offer financing through Synchrony and FTL Finance, with options for a range of credit situations. We give you honest, upfront pricing and can review payment plans during your free estimate so a new install fits your budget.'
+        answer: 'It is, and it matters more here than in a lot of towns, since the multi-zone and variable-speed systems common in Woodlands homes cost more up front than a basic single-stage unit. Synchrony and FTL Finance let you spread that cost into a monthly payment, and your technician can run the numbers next to your free estimate before you decide between a repair and a replacement.'
       }
     ]
   },
@@ -102,11 +102,11 @@ export const LOCATION_FAQS = {
       },
       {
         question: 'Can you get to Montgomery the same day?',
-        answer: 'In most cases, yes. We are based in nearby Conroe and cover Montgomery and the west side of the county every day. We are open 8am to 9pm with after-hours emergency service from 5pm to 9pm, so a failed AC on a hot afternoon does not have to wait. Call (936) 331-1339.'
+        answer: 'Usually. Montgomery sits just west of our Conroe shop, so most calls, lakefront or downtown, get a technician out the same day. Our hours run 8am to 9pm daily, and if your system quits after that, our after-hours emergency line covers you until 9pm. Reach us at (936) 331-1339.'
       },
       {
         question: 'Do you offer financing on new systems in Montgomery?',
-        answer: 'Yes. We offer financing through Synchrony and FTL Finance so a new install or a big repair fits your monthly budget. We provide honest, upfront pricing and can review the options during a free estimate.'
+        answer: 'We do, through Synchrony and FTL Finance. A properly sized system for a Lake Conroe humidity load sometimes calls for larger equipment or added dehumidification, so financing helps spread that upfront cost into monthly payments. We will walk through the options during your free estimate, no pressure.'
       }
     ]
   },
@@ -123,7 +123,7 @@ export const LOCATION_FAQS = {
       },
       {
         question: 'How quickly can you reach Willis for emergency HVAC service?',
-        answer: 'Willis is a short drive up I-45 from our Conroe base, so we can usually get there the same day, and fast for emergencies. We are open 8am to 9pm seven days a week, with after-hours emergency service from 5pm to 9pm. Call (936) 331-1339 when your heating or cooling system goes down.'
+        answer: 'Most Willis calls get a same-day appointment, and often faster, since Conroe is just down I-45. Our regular hours run 8am to 9pm every day, with emergency coverage extending from 5pm to 9pm on top of that. Dial (936) 331-1339 and tell us what is going on.'
       },
       {
         question: 'What HVAC brands do you install and repair in Willis?',
@@ -131,7 +131,7 @@ export const LOCATION_FAQS = {
       },
       {
         question: 'Do you offer financing for a new AC in Willis?',
-        answer: 'Yes. We offer financing through Synchrony and FTL Finance, with options for different credit situations, so a new system does not have to be paid all at once. We give upfront pricing and can go over payment plans during your estimate.'
+        answer: 'Yes, and it is worth asking about before you assume a full replacement is out of reach. Synchrony and FTL Finance both run through us and cover a range of credit situations, and we will lay out real monthly numbers next to the upfront repair-or-replace pricing when we are at your house, no pressure either way.'
       }
     ]
   },
@@ -140,7 +140,7 @@ export const LOCATION_FAQS = {
     faqs: [
       {
         question: 'What areas of Magnolia do you serve?',
-        answer: 'We serve all of Magnolia along the FM 1488 and FM 1774 corridors, including master-planned neighborhoods like Woodforest and Mostyn Manor as well as the established ranch and acreage properties around town. No matter where you are in the Magnolia area, we are ready to help.'
+        answer: 'We cover Magnolia along the FM 1488 and FM 1774 corridors, from master-planned neighborhoods like Woodforest and Mostyn Manor out to the established ranch and acreage properties around Decker Prairie and Dobbin. Give us your street and we can usually tell you on the spot whether it falls inside our regular coverage.'
       },
       {
         question: 'What HVAC services does AMW provide in Magnolia?',
@@ -152,11 +152,11 @@ export const LOCATION_FAQS = {
       },
       {
         question: 'Do you offer same-day and emergency service in Magnolia?',
-        answer: 'Yes. We are open 8am to 9pm seven days a week and offer after-hours emergency service from 5pm to 9pm. Call (936) 331-1339 and we will get a technician headed your way. Additional charges may apply for after-hours calls.'
+        answer: 'Yes, and it is not limited to daytime hours. Our regular schedule runs 8am to 9pm seven days a week, with dedicated after-hours emergency coverage from 5pm to 9pm for anything that cannot wait until morning. Call (936) 331-1339 and tell us what is going on; additional charges apply outside normal business hours.'
       },
       {
         question: 'Is financing available for HVAC work in Magnolia?',
-        answer: 'Yes. We offer financing through Synchrony and FTL Finance so a repair, replacement, or new installation fits your budget. We provide honest, upfront pricing and will explain the options during your free estimate.'
+        answer: 'Yes. Synchrony and FTL Finance both work with us to spread out the cost of a larger repair or a full system replacement. We give you an upfront price first, then walk through the actual payment numbers for your situation during the estimate, not just a list of general options.'
       }
     ]
   },
@@ -177,11 +177,11 @@ export const LOCATION_FAQS = {
       },
       {
         question: 'Do you offer emergency heating and cooling service in Tomball?',
-        answer: 'Yes. We are open 8am to 9pm seven days a week, with after-hours emergency service from 5pm to 9pm, for both AC and heating breakdowns. Call (936) 331-1339 and we will get a technician headed your way as fast as we can. Additional charges may apply for after-hours calls.'
+        answer: 'We do, and Tomball\'s spread from downtown to the 249 corridor does not slow us down. Our regular hours run 8am to 9pm every day, and we cover after-hours AC and heating emergencies from 5pm to 9pm as well. Call (936) 331-1339; after-hours calls carry an additional charge, which we will confirm with you before dispatching.'
       },
       {
         question: 'Do you offer financing and maintenance plans in Tomball?',
-        answer: 'Yes. We offer financing through Synchrony and FTL Finance for new systems and larger repairs, and we offer maintenance plans with seasonal tune-ups and priority scheduling. Regular maintenance is the best way to avoid a summer breakdown. Call (936) 331-1339 for current details.'
+        answer: 'Ask about our maintenance plans first, since seasonal tune-ups and priority scheduling catch most problems before they turn into a summer breakdown. If a repair or new system is bigger than a maintenance plan can prevent, Synchrony and FTL Finance financing is available to spread out the cost. Call (936) 331-1339 and we will walk you through both.'
       }
     ]
   },
@@ -194,11 +194,11 @@ export const LOCATION_FAQS = {
       },
       {
         question: 'My New Caney home is a new build. Do I still need HVAC maintenance?',
-        answer: 'Yes, and it is more important than people think. Most new systems in communities like Tavola and Valley Ranch are still under manufacturer warranty, and those warranties usually require documented annual maintenance. Skipping it can void your coverage, so a maintenance visit protects both your comfort and your warranty.'
+        answer: 'It matters more here than in most towns. New Caney has grown so fast that a large share of the systems out there have not even hit their second summer, and the manufacturer paperwork behind that warranty almost always lists an annual maintenance visit as a condition, not a suggestion. We log the visit, note the system condition, and hand you a copy for your records so a coil or compressor that fails early is not coming out of your pocket.'
       },
       {
         question: 'How fast can you reach New Caney for emergency HVAC service?',
-        answer: 'New Caney is a straight shot down US-59 from our Conroe base, so we can usually get a technician there the same day for any HVAC emergency, whether it is the AC or the heat. We are open 8am to 9pm seven days a week, with after-hours emergency service from 5pm to 9pm. Call (936) 331-1339.'
+        answer: 'Fast. Our shop sits on US-59 in Conroe, which puts most of New Caney within about a twenty-minute drive, so same-day is the rule rather than the exception. Emergency calls outside our normal 8am to 9pm hours go straight to a technician, not a voicemail box, through 9pm every night. Dial (936) 331-1339.'
       },
       {
         question: 'Does AMW handle every kind of HVAC work in New Caney, not just AC?',
@@ -206,7 +206,7 @@ export const LOCATION_FAQS = {
       },
       {
         question: 'Do you offer financing on a new system in New Caney?',
-        answer: 'Yes. We offer financing through Synchrony and FTL Finance so a new install or a larger repair fits your monthly budget. We give honest, upfront pricing and will review the payment options during your free estimate.'
+        answer: 'We do. A lot of New Caney homeowners are already carrying a new mortgage, so we work with Synchrony and FTL Finance to spread out the cost of a full system replacement or a major repair. Ask about it when we quote the job and we will walk through the numbers before anything gets scheduled.'
       }
     ]
   },
@@ -219,11 +219,11 @@ export const LOCATION_FAQS = {
       },
       {
         question: 'My Splendora home is a new build under warranty. Do I need maintenance?',
-        answer: 'Yes. A lot of the new systems going into communities like The Canopies are still under manufacturer warranty, and those warranties usually require documented annual maintenance. Skipping it can void the coverage, so our maintenance visits keep the equipment efficient and keep that warranty intact.'
+        answer: 'It depends on the builder, but most require it. Builders putting up homes in The Canopies typically use manufacturer warranties that only stay valid with a documented service record, so a skipped or untracked maintenance visit can quietly void coverage before you ever need it. We log every visit in writing, which protects you if you ever have to file a claim.'
       },
       {
         question: 'Does AMW provide emergency heating and cooling service in Splendora?',
-        answer: 'Yes. Splendora sits along US-59 and I-69, an easy run from our Conroe base, so we can usually reach you the same day. We are open 8am to 9pm seven days a week, with after-hours emergency service from 5pm to 9pm, covering a failed AC in August and a furnace that will not start on a cold morning alike. Call (936) 331-1339 and we will get a technician headed your way.'
+        answer: 'We treat a dead AC in August and a furnace that will not fire in December the same way: as an emergency, not something that waits for the next opening. Because we are based in Conroe, most Splendora calls, whether you are near FM 2090 or out toward Old Highway 59, get a technician out same-day. We are open 8am to 9pm seven days a week, and after-hours emergency service runs from 5pm to 9pm. Call (936) 331-1339.'
       },
       {
         question: 'Is AMW licensed, insured, and veteran owned to work in Splendora?',
@@ -231,7 +231,7 @@ export const LOCATION_FAQS = {
       },
       {
         question: 'Do you offer financing for HVAC work in Splendora?',
-        answer: 'Yes. We offer financing through Synchrony and FTL Finance, so a new system, a bigger repair, or any other HVAC project in Splendora fits your budget. We give upfront pricing and can walk you through the payment options during your free estimate.'
+        answer: 'We do, through Synchrony and FTL Finance. Whether you are replacing an aging system in one of the older homes off Old Highway 59 or adding a unit for an addition on an acreage property, financing spreads the cost out instead of forcing a decision under pressure. Ask about the current plans when we come out for your free estimate.'
       }
     ]
   },
@@ -244,11 +244,11 @@ export const LOCATION_FAQS = {
       },
       {
         question: 'My Porter home is in a new community. Should I keep up maintenance?',
-        answer: 'Yes. Many homes in newer Porter communities like The Highlands still have systems under manufacturer warranty, and those warranties usually require documented annual maintenance. A maintenance visit keeps your equipment efficient through the Texas heat and keeps the warranty valid so a future repair does not come out of pocket.'
+        answer: 'Keep it up, and keep the paperwork. Almost every system installed in The Highlands or Valley Ranch in the last few years is still inside its manufacturer warranty window, but that coverage usually comes with a catch: skip the annual documented maintenance and the manufacturer can deny a claim later. We handle the tune-up and the documentation together, so if something does fail down the road, you are not stuck paying for a repair that should have been covered.'
       },
       {
         question: 'How fast can you reach Porter for emergency AC repair?',
-        answer: 'Porter is a quick trip down US-59 from Conroe, so we can usually be there the same day and fast for emergencies. We are open 8am to 9pm seven days a week, with after-hours emergency service from 5pm to 9pm. Call (936) 331-1339 when your AC goes out.'
+        answer: 'Porter sits close enough to our Conroe shop, just down US-59, that a technician reaching you the same day is the norm, and the newer Grand Parkway segments have only shaved more time off that drive. If your AC dies well after most companies have gone home, we are still taking calls right up until 9pm, seven nights a week, so you are not stuck waiting until morning. Call (936) 331-1339.'
       },
       {
         question: 'What HVAC brands do you install and repair in Porter?',
@@ -256,7 +256,7 @@ export const LOCATION_FAQS = {
       },
       {
         question: 'Do you offer financing on new systems in Porter?',
-        answer: 'Yes. We offer financing through Synchrony and FTL Finance so a new install or a larger repair fits your budget. We provide honest, upfront pricing and will go over the payment plans during your free estimate.'
+        answer: 'Yes, through Synchrony and FTL Finance. It comes up often in Porter, where homeowners are frequently weighing whether to patch an aging system near the old town center or replace it outright, and financing is usually what tips the decision toward replacing. We lay out the monthly options side by side with repair costs so you can compare before committing to either one.'
       }
     ]
   },
@@ -269,7 +269,7 @@ export const LOCATION_FAQS = {
       },
       {
         question: 'How fast can AMW respond to a service call in Cut and Shoot?',
-        answer: 'Very quickly, for any kind of HVAC visit. Cut and Shoot is only about 6 miles east of our Conroe shop along SH-105, so whether you need a repair, a new system installed, or routine maintenance, we can usually get a technician out the same day. We are open 8am to 9pm seven days a week, with after-hours emergency service from 5pm to 9pm. Call (936) 331-1339.'
+        answer: 'Six miles is not much of a drive, which is the point of running our shop out of Conroe. Repair, install, or a maintenance visit, a same-day appointment is realistic for most Cut and Shoot calls along SH-105. Doors are open 8am to 9pm every day, and if your system goes down after that, our after-hours emergency line runs until 9pm. Reach us at (936) 331-1339.'
       },
       {
         question: 'Do you service HVAC on rural and acreage properties near Cut and Shoot?',
@@ -281,7 +281,7 @@ export const LOCATION_FAQS = {
       },
       {
         question: 'Do you offer financing for a new system near Cut and Shoot?',
-        answer: 'Yes. We offer financing through Synchrony and FTL Finance so a new install or a bigger repair fits your budget. We give upfront pricing and can review the options during a free estimate.'
+        answer: 'A full system replacement on a larger rural property is rarely a small bill, so yes, we work with Synchrony and FTL Finance to spread the cost out. Ask about it when we come out for your free estimate and we will walk you through what a monthly payment actually looks like before any work starts.'
       }
     ]
   },
@@ -298,7 +298,7 @@ export const LOCATION_FAQS = {
       },
       {
         question: 'Do you offer emergency heating and cooling service in Shenandoah?',
-        answer: 'Yes. Shenandoah is a short hop down I-45 from our Conroe base, so we can usually be there the same day for either an AC or a heating breakdown. We are open 8am to 9pm seven days a week, with after-hours emergency service from 5pm to 9pm. Call (936) 331-1339 and we will get a technician headed your way.'
+        answer: 'Yes, and same-day is the norm here rather than the exception, since Shenandoah sits close to our Conroe base. Regular hours run 8am to 9pm every day, with after-hours emergency coverage from 5 to 9pm, so a Friday-night rooftop unit failure at Metropark Square gets the same response as a Tuesday-morning house call in Shenandoah Valley. Reach us at (936) 331-1339.'
       },
       {
         question: 'What HVAC equipment do you service in Shenandoah?',
@@ -306,7 +306,7 @@ export const LOCATION_FAQS = {
       },
       {
         question: 'Do you offer financing on new systems in Shenandoah?',
-        answer: 'Yes. We offer financing through Synchrony and FTL Finance so a new install or a larger repair fits your budget. We provide honest, upfront pricing and will explain the payment options during your free estimate.'
+        answer: 'A new system for a Shenandoah Valley home, or a bigger repair on a commercial rooftop unit, is easier to manage with financing through Synchrony and FTL Finance. Ask your technician about the options when we quote the job at your free estimate, and the price we quote is the price you pay.'
       }
     ]
   },
@@ -331,7 +331,7 @@ export const LOCATION_FAQS = {
       },
       {
         question: 'Do you offer financing for a new system in Pinehurst?',
-        answer: 'Yes. We offer financing through Synchrony and FTL Finance so a new install or a bigger repair fits your budget. We give honest, upfront pricing and can review the payment options during your free estimate.'
+        answer: 'We do, through Synchrony and FTL Finance, with plans built around a range of credit situations. A lot of the calls we get in the newer ZIP 77362 subdivisions are about protecting a system that is already under warranty rather than replacing one outright, but when a full install or a major repair is the right call, we lay out the payment options and give you honest pricing before any work starts.'
       }
     ]
   }

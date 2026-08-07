@@ -162,32 +162,32 @@ const SpringTX = () => {
               WHY SPRING RESIDENTS CHOOSE AMW
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg text-center max-w-3xl mx-auto">
-              We are a local, veteran-owned team, not a call center in another state. When you call AMW for HVAC service in Spring, you reach technicians who work this part of Harris County every week, are trained on both older equipment and the latest high-efficiency systems, and show up when we say we will. We hold Texas license TACLB133920E and give every Spring homeowner an honest assessment rather than a sales pitch.
+              Spring's homes span five decades within a few miles of each other, from original 1970s and 80s construction in Champions Forest to brand-new builds going up near the Grand Parkway in Gleannloch Farms. A technician who is quick with a smart thermostat in one of those new builds still needs to know their way around an original furnace a few streets over, and every AMW technician works both kinds of calls in the same week. We hold Texas license TACLB133920E, and because dispatch runs out of our own Conroe shop rather than a national call center, the technician who answers your call is usually the one who ends up at your door.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">Veteran-owned and operated</span>
+                <span className="text-gray-700 text-base font-medium">Experienced with original 1970s-80s equipment, not just new installs</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">Licensed, insured & bonded</span>
+                <span className="text-gray-700 text-base font-medium">Texas licensed, insured, and bonded under TACLB133920E</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">Same-day & emergency service</span>
+                <span className="text-gray-700 text-base font-medium">Being veteran-owned and Conroe-based keeps every call local</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">Upfront, transparent pricing</span>
+                <span className="text-gray-700 text-base font-medium">Written, upfront pricing before we start any repair</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium"><Link href="/financing" className="text-blue-600 hover:underline">Financing options</Link> available</span>
+                <span className="text-gray-700 text-base font-medium"><Link href="/financing" className="text-blue-600 hover:underline">Financing</Link> for repairs or a full replacement</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">5.0-star Google rating</span>
+                <span className="text-gray-700 text-base font-medium">Rated 5.0 stars by Spring-area neighbors on Google</span>
               </div>
             </div>
           </div>
@@ -201,25 +201,37 @@ const SpringTX = () => {
               Serving Spring Neighborhoods
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              We provide HVAC services throughout Spring and surrounding areas including
-              Old Town Spring, Champions Forest, Klein, Gleannloch Farms, Spring Stuebner, Cypresswood, Louetta, and all Spring-area communities. No matter where you are in the Spring area, AMW
-              Cooling & Heating is ready to help.
+              Our trucks run this stretch of Harris County daily, from the shaded streets of Old Town Spring out to Champions Forest, Klein, Gleannloch Farms, Spring Stuebner, Cypresswood, and Louetta. Whether your unit is older than the subdivision around it or fresh out of the box, the same crew handles both without needing a second visit to figure out which one it is.
             </p>
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
               <span className="w-8 h-1 bg-blue-600 rounded"></span>
-              A Wide Range of Homes and Systems
+              Common HVAC Problems in Spring
             </h3>
-            <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              Spring has a diverse housing stock, from 1970s-era homes in Champions Forest to new construction near the Grand Parkway, and the AC units, furnaces, and heat pumps inside vary just as widely. Rather than a one-size-fits-all approach, we look at the age and condition of your specific system, whether it needs a repair, a tune-up, or a full replacement, and give you a straight answer. That holds whether we are out for a cooling call, a heating call, an air quality upgrade, or a routine maintenance visit.
+            <p className="text-gray-700 mb-4 leading-relaxed text-base md:text-lg">
+              Spring's mix of decades-old neighborhoods and newer construction produces a specific set of recurring issues, and knowing which one you are dealing with is half the repair:
             </p>
+            <ul className="list-disc pl-6 text-gray-700 mb-6 leading-relaxed text-base md:text-lg space-y-2">
+              <li>
+                <span className="font-semibold text-blue-900">Original equipment finally wearing out.</span> A lot of Champions Forest and Klein homes are still running their second or even original system from decades back. Weak airflow, a compressor that short-cycles, or a unit that runs nonstop without reaching the set temperature are all signs a system is nearing the end of its life rather than needing a simple part.
+              </li>
+              <li>
+                <span className="font-semibold text-blue-900">Sagging or disconnected attic ductwork.</span> Older homes in this area have been through decades of attic heat cycling, and flex duct that has slipped off a boot or sagged between joists shows up as one room that never quite cools down while the rest of the house is fine.
+              </li>
+              <li>
+                <span className="font-semibold text-blue-900">Clogged condensate drains under mature tree cover.</span> Old Town Spring's oak canopy is part of its charm, but the pollen and debris it sheds clogs condensate lines faster than in newer, less shaded subdivisions. A clogged line trips the safety switch and shuts the whole system down.
+              </li>
+              <li>
+                <span className="font-semibold text-blue-900">Builder-grade systems outgrown by finished space.</span> In newer sections near Gleannloch Farms and Spring Stuebner, we often find a single-zone system that was sized correctly for the original floor plan but now has to cover a finished bonus room or converted garage, leaving that space noticeably warmer than the rest of the house.
+              </li>
+            </ul>
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
               <span className="w-8 h-1 bg-blue-600 rounded"></span>
               Emergency HVAC Service in Spring
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              A system failure in Spring does not wait for business hours, and neither do we. We are open 8am to 9pm, seven days a week, with after-hours emergency service from 5pm to 9pm, so call AMW for same-day and emergency HVAC service anywhere in Spring, from Old Town Spring to Gleannloch Farms, and we will get a technician headed your way fast.
+              Old equipment tends to pick the worst possible moment to quit, usually the hottest afternoon of the week, and we plan our schedule around that reality. We are open 8am to 9pm, seven days a week, with after-hours emergency coverage until 9pm, so if a Spring system goes down, get in touch and we will route a technician to you as quickly as the day allows.
             </p>
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
@@ -247,10 +259,10 @@ const SpringTX = () => {
                 <span className="text-white text-sm font-semibold">Veteran-Owned & Operated</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
-                Contact AMW for HVAC Service in Spring
+                From Champions Forest's Original Systems to Gleannloch Farms' Newest
               </h2>
               <p className="text-lg text-blue-200 max-w-xl mx-auto mb-8">
-                Ready to schedule service? Call us today or fill out our contact form. We're standing by to help with all your heating and cooling needs in Spring, Texas.
+                Champions Forest has more 1980s compressors still limping along than almost anywhere else we service, and knowing when a repair stops making financial sense is half the job. (936) 331-1339 is a direct line to Conroe, no menu to punch through and no call center to explain your neighborhood to.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a

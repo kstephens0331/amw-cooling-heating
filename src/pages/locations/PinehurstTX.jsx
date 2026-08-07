@@ -89,6 +89,55 @@ const PinehurstTX = () => {
           </div>
         </section>
 
+        {/* Common HVAC Problems Section */}
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6">
+              Common HVAC Problems in Pinehurst
+            </h2>
+            <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
+              The piney woods setting that makes Pinehurst a nice place to live is the same thing
+              that drives a specific set of HVAC calls we see out here more than almost anywhere
+              else in Montgomery County.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-white rounded-lg p-5 shadow-sm">
+                <h3 className="font-bold text-blue-900 mb-2">Humidity that will not quit, even when it reads cool</h3>
+                <p className="text-gray-700 text-base leading-relaxed">
+                  The cooling season here runs long and sticky. A system that is oversized or short-cycling
+                  chills the air fast without pulling the moisture out of it, so the thermostat says 74 and
+                  the house still feels damp.
+                </p>
+              </div>
+              <div className="bg-white rounded-lg p-5 shadow-sm">
+                <h3 className="font-bold text-blue-900 mb-2">Condensate lines clogged by pine debris</h3>
+                <p className="text-gray-700 text-base leading-relaxed">
+                  Falling pine needles combined with near-constant humidity grow the kind of slime buildup
+                  that clogs a condensate line fast. We clear these regularly on wooded Pinehurst lots
+                  before they trip a safety switch and shut the whole system down.
+                </p>
+              </div>
+              <div className="bg-white rounded-lg p-5 shadow-sm">
+                <h3 className="font-bold text-blue-900 mb-2">Outdoor units starved for airflow</h3>
+                <p className="text-gray-700 text-base leading-relaxed">
+                  Oversized, tree-lined lots are great for shade and privacy, but a condenser tucked close
+                  to a fence line or a stand of pines does not get the clearance it needs. Restricted
+                  airflow makes the compressor work harder and wears it out well before its time.
+                </p>
+              </div>
+              <div className="bg-white rounded-lg p-5 shadow-sm">
+                <h3 className="font-bold text-blue-900 mb-2">New-build systems that were never dialed in</h3>
+                <p className="text-gray-700 text-base leading-relaxed">
+                  With roughly fifty new-home communities built out across ZIP 77362 in recent years, we
+                  regularly find factory-set equipment that was never adjusted for the finished home.
+                  Rooms at the far end of the duct run stay a few degrees warmer no matter how long the
+                  AC runs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Services Grid Section */}
         <section className="py-12 bg-blue-900">
           <div className="max-w-5xl mx-auto px-4">
@@ -164,36 +213,38 @@ const PinehurstTX = () => {
               WHY PINEHURST CHOOSES AMW
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg text-center max-w-3xl mx-auto">
-              We are a local, veteran-owned team, not a national franchise routing your
-              call to a center in another state. When a Pinehurst family calls AMW, they reach people
-              who know the area, understand the demands of a fast-growing SH 249 corridor spread across
-              both Magnolia ISD and Tomball ISD, and show up when they say they will. We are licensed,
-              insured, and bonded under TACLB133920E.
+              Pinehurst is still figuring out what it wants to be, a rural community of wooded acreage
+              lots or one of the fastest-growing pockets of new construction off SH 249, and honestly
+              it is both at once. That split matters for HVAC work: a two-year-old system under
+              manufacturer warranty needs different care than a unit that has been humming along on an
+              old Cripple Creek Farms lot for fifteen years. AMW is veteran-owned and based just up the
+              road in Conroe, licensed, insured, and bonded under TACLB133920E, and our technicians are
+              equally comfortable with both jobs because they work both jobs, every week, in this ZIP.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">&#10003;</span>
-                <span className="text-gray-700 text-base font-medium">Veteran-owned &amp; operated</span>
+                <span className="text-gray-700 text-base font-medium">Techs who know Decker Oaks from Cripple Creek Farms</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">&#10003;</span>
-                <span className="text-gray-700 text-base font-medium">Licensed, insured &amp; bonded</span>
+                <span className="text-gray-700 text-base font-medium">Maintenance visits that keep new-build warranties valid</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">&#10003;</span>
-                <span className="text-gray-700 text-base font-medium">Same-day &amp; emergency service</span>
+                <span className="text-gray-700 text-base font-medium">Veteran-owned, TACLB133920E licensed, insured &amp; bonded</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">&#10003;</span>
-                <span className="text-gray-700 text-base font-medium">Open 8am to 9pm, 7 days a week</span>
+                <span className="text-gray-700 text-base font-medium">Calls answered 8am to 9pm, seven days a week</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">&#10003;</span>
-                <span className="text-gray-700 text-base font-medium"><Link href="/financing" className="text-blue-600 hover:underline">Financing options</Link> available</span>
+                <span className="text-gray-700 text-base font-medium"><Link href="/financing" className="text-blue-600 hover:underline">Synchrony and FTL Finance</Link> payment plans</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">&#10003;</span>
-                <span className="text-gray-700 text-base font-medium">5.0-star Google rating</span>
+                <span className="text-gray-700 text-base font-medium">5.0 stars on Google, earned one Montgomery County roof at a time</span>
               </div>
             </div>
           </div>
@@ -207,25 +258,29 @@ const PinehurstTX = () => {
               Serving Pinehurst Neighborhoods
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              We provide HVAC service throughout Pinehurst, including the Decker Oaks Estates and
-              Village of Decker Oaks communities off SH 249, plus the established acreage subdivisions
-              like Oak Hill Acres and Cripple Creek Farms West. Whether you are in a newer single-family
-              build near the post office on Wright Road or on a wooded lot out where FM 1774 meets the
-              highway, AMW Cooling &amp; Heating is ready to help. We also cover the adjacent Magnolia
-              ZIPs of 77354 and 77355 that overlap the greater Pinehurst area.
+              Our trucks are on these streets often enough that the neighborhoods stopped being
+              names on a map a while ago: the Decker Oaks Estates and Village of Decker Oaks
+              communities off SH 249, the established acreage of Oak Hill Acres and Cripple Creek
+              Farms West, and the newer single-family builds near the post office on Wright Road.
+              Pinehurst does not have one typical house, so we do not show up with one typical
+              approach, whether the address is a fresh slab off the highway or a shaded lot out where
+              FM 1774 meets it. We also cover the adjacent Magnolia ZIPs of 77354 and 77355 that
+              overlap the greater Pinehurst area.
             </p>
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
               <span className="w-8 h-1 bg-blue-600 rounded"></span>
-              New Construction and Warranty Protection
+              Protecting a Decker Oaks Warranty Before It Lapses
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              With hundreds of new homes going up across ZIP 77362, a large share of Pinehurst systems
-              are still under manufacturer warranty. Most of those warranties require documented annual
-              maintenance, and skipping it can void your coverage. Our maintenance visits keep new
-              equipment running efficiently through the brutal Texas summers and protect that warranty,
-              so a future repair does not come out of your pocket. For the older acreage homes on larger
-              lots, we handle straightforward repairs and full replacements alike.
+              Roughly fifty new-home communities have gone up across ZIP 77362 in the past few
+              years, and most of that equipment is still inside its manufacturer's warranty window.
+              What a lot of new homeowners do not realize is that the warranty comes with strings
+              attached: manufacturers typically require a documented service visit every twelve
+              months, and a gap in that record is one of the most common reasons a covered repair
+              gets denied. We log every Pinehurst maintenance visit so the warranty file stays
+              complete, and for the older acreage homes running out-of-warranty equipment, we
+              handle straightforward repairs and full replacements the same way.
             </p>
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
@@ -266,11 +321,13 @@ const PinehurstTX = () => {
                 <span className="text-white text-sm font-semibold">Veteran-Owned &amp; Operated</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
-                Contact AMW for HVAC Service in Pinehurst
+                Pinehurst's Cooling Season Runs Longer Than the Calendar Admits
               </h2>
               <p className="text-lg text-blue-200 max-w-xl mx-auto mb-8">
-                Ready to schedule service? Call us today or fill out our contact form. We are standing
-                by to help with all your heating and cooling needs in Pinehurst, Texas.
+                A musty smell that will not quit past October usually means humidity, not
+                just heat, is running your system into the ground. Phone (936) 331-1339
+                and describe what you are noticing; a technician who already knows Decker
+                Oaks and Cripple Creek Farms will take it from there.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a

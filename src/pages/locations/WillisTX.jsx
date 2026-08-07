@@ -87,6 +87,44 @@ const WillisTX = () => {
           </div>
         </section>
 
+        {/* Common HVAC Problems Section */}
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4">
+            <h3 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6">
+              Common HVAC Problems in Willis, TX
+            </h3>
+            <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
+              Willis calls split pretty cleanly along the water line: lakefront lots around Seven Coves and Point Aquarius bring one set of problems, and wide-open acreage off FM 830 brings another. Here is the handful of issues that account for most of what our trucks handle out here:
+            </p>
+            <div className="grid md:grid-cols-2 gap-5">
+              <div className="bg-white rounded-lg p-5 shadow-sm">
+                <h4 className="font-bold text-blue-900 mb-2">Clogged drain lines and musty air near the water</h4>
+                <p className="text-gray-700 text-base leading-relaxed">
+                  Homes around Seven Coves and Point Aquarius pull in more moisture off the lake than homes farther inland. That extra humidity backs up condensate drain lines faster and leaves closets and back bedrooms smelling musty if the system is not cycling the air properly.
+                </p>
+              </div>
+              <div className="bg-white rounded-lg p-5 shadow-sm">
+                <h4 className="font-bold text-blue-900 mb-2">Weak airflow at the far end of rural duct runs</h4>
+                <p className="text-gray-700 text-base leading-relaxed">
+                  Acreage properties off FM 830 often have ductwork stretched well beyond what a standard subdivision layout needs. The rooms farthest from the unit end up under-cooled in August and under-heated in January because the duct run and the equipment were never matched to the distance.
+                </p>
+              </div>
+              <div className="bg-white rounded-lg p-5 shadow-sm">
+                <h4 className="font-bold text-blue-900 mb-2">Outdoor units fouled by lakeside growth</h4>
+                <p className="text-gray-700 text-base leading-relaxed">
+                  Wooded lots near the water grow leaves, pollen, and grass clippings that pack into a condenser coil quickly. A unit that looks fine from a distance can be running at a fraction of its rated efficiency once the coil is caked over.
+                </p>
+              </div>
+              <div className="bg-white rounded-lg p-5 shadow-sm">
+                <h4 className="font-bold text-blue-900 mb-2">Downtime that businesses along the corridor cannot absorb</h4>
+                <p className="text-gray-700 text-base leading-relaxed">
+                  Willis has a growing strip of shops and offices along the I-45 corridor, and a down system during business hours costs more than the repair itself. We prioritize light commercial calls so a storefront is not sitting without air conditioning through a full workday.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Services Grid Section */}
         <section className="py-12 bg-blue-900">
           <div className="max-w-5xl mx-auto px-4">
@@ -162,32 +200,32 @@ const WillisTX = () => {
               WHY WILLIS RESIDENTS CHOOSE AMW
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg text-center max-w-3xl mx-auto">
-              As a small, veteran-owned company based just minutes from Willis in Conroe, we treat every customer like family. You won't get automated phone trees or distant dispatchers. When you call AMW, you get real people who care about your comfort and will be at your door quickly. We hold Texas license TACLB133920E and know the Willis area, from the lakefront streets around Seven Coves and Point Aquarius to the rural roads off FM 830.
+              Willis sits close enough to our Conroe shop that a technician can be on FM 830 or at Seven Coves within a few minutes, not a few hours, and that response time is what most Willis customers notice first. Our crews already know the difference between a lakefront condenser fighting moisture off Lake Conroe and a unit at the end of a long acreage driveway, because we run both kinds of calls here every week. We carry Texas license TACLB133920E, and unlike the national chains that rarely bother staffing a market this size, it is our own technicians who show up.
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">Veteran-owned and operated</span>
+                <span className="text-gray-700 text-base font-medium">Techs who already know Seven Coves, Point Aquarius, and Panorama Village</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">Licensed, insured & bonded</span>
+                <span className="text-gray-700 text-base font-medium">A short trip up I-45 from our Conroe shop, not a dispatcher out of state</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">Same-day & emergency service</span>
+                <span className="text-gray-700 text-base font-medium">Written pricing before we touch your system, lakefront or rural</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">Upfront, transparent pricing</span>
+                <span className="text-gray-700 text-base font-medium">Licensed under TACLB133920E, insured, and bonded</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium"><Link href="/financing" className="text-blue-600 hover:underline">Financing options</Link> available</span>
+                <span className="text-gray-700 text-base font-medium"><Link href="/financing" className="text-blue-600 hover:underline">Financing</Link> through Synchrony and FTL for bigger jobs</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">5.0-star Google rating</span>
+                <span className="text-gray-700 text-base font-medium">Veteran-owned, with a 5.0-star Google rating from neighbors up and down I-45</span>
               </div>
             </div>
           </div>
@@ -201,7 +239,10 @@ const WillisTX = () => {
               Serving Willis Neighborhoods
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              We provide HVAC service throughout Willis, a lake community north of Conroe along the I-45 corridor near Lake Conroe. That covers Downtown Willis, the FM 830 corridor, and the lake communities of Seven Coves, Point Aquarius, and Panorama Village, along with the rural acreage properties spread around them. No matter where you are in the Willis area, AMW Cooling & Heating is ready to help, on any system, in any home.
+              Every week our trucks handle two very different kinds of Willis calls: tight lake lots around Seven Coves and Point Aquarius where the condenser sits ten feet from the water, and wide-open acreage off FM 830 where the nearest neighbor is a quarter mile away. Add in Downtown Willis and Panorama Village and you have the full territory our trucks cover.
+            </p>
+            <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
+              Most Willis calls get a same-day answer, and plenty get a technician scheduled before you've even hung up the phone.
             </p>
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
@@ -209,7 +250,7 @@ const WillisTX = () => {
               Emergency HVAC Service in Willis
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              A heating or cooling system does not wait for business hours to fail, and near the lake the added humidity and wind off the water only put more strain on that equipment. We are open 8am to 9pm, seven days a week, with after-hours emergency service from 5pm to 9pm, so call AMW for same-day and emergency HVAC service in Willis, TX. Whether you are on a Lake Conroe waterfront lot, along FM 830, or out on rural acreage, we will get a technician headed your way fast.
+              Lake air holds more moisture than the rest of Montgomery County, and that extra load is usually what pushes an already-weak system over the edge, often on the worst afternoon possible. Our regular hours are 8am to 9pm daily, and we keep taking emergency calls until 9pm on top of that. Reach us at (936) 331-1339 and we will get someone routed out to you, whether that is a dock-side condenser in Point Aquarius or a unit at the end of a long driveway on FM 830.
             </p>
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
@@ -237,10 +278,10 @@ const WillisTX = () => {
                 <span className="text-white text-sm font-semibold">Veteran-Owned & Operated</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
-                Contact AMW for HVAC Service in Willis
+                Whether You Are on the Lake or Down a Back Road, We Cover Willis
               </h2>
               <p className="text-lg text-blue-200 max-w-xl mx-auto mb-8">
-                Ready to schedule service? Call us today or fill out our contact form. We're standing by to help with all your heating and cooling needs in Willis, Texas.
+                A condenser ten feet from Lake Conroe fights different battles than one at the end of a quarter-mile driveway off FM 830, and our crew treats neither as the unusual case. Call (936) 331-1339 and describe which kind of Willis property you have; we already know the difference.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a

@@ -87,6 +87,69 @@ const TomballTX = () => {
           </div>
         </section>
 
+        {/* Common HVAC Problems Section */}
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-4">
+              Common HVAC Problems in Tomball
+            </h2>
+            <p className="text-gray-700 mb-8 leading-relaxed text-base md:text-lg">
+              Main Street's original housing stock and the fast-growing 249 corridor pull our
+              service calls in two very different directions, and the list below reflects that
+              split. Here is what we run into most, whether the address is a few blocks off
+              historic downtown or brand new construction along the tollway.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-white rounded-lg p-5 shadow-sm">
+                <div className="flex items-center gap-3 mb-2">
+                  <FaFire className="text-red-500 w-5 h-5 flex-shrink-0" />
+                  <h3 className="font-bold text-blue-900 text-lg">Aging Equipment Near Downtown</h3>
+                </div>
+                <p className="text-gray-700 text-base">
+                  Homes near Main Street and the Tomball Depot are often running cooling and
+                  heating equipment that has been in service well over a decade. Worn capacitors
+                  and contactors, refrigerant leaks in older line sets, and duct runs in tight,
+                  original crawl spaces that were never resealed are all common finds.
+                </p>
+              </div>
+              <div className="bg-white rounded-lg p-5 shadow-sm">
+                <div className="flex items-center gap-3 mb-2">
+                  <FaTools className="text-blue-900 w-5 h-5 flex-shrink-0" />
+                  <h3 className="font-bold text-blue-900 text-lg">Builder-Grade Sizing Out on 249</h3>
+                </div>
+                <p className="text-gray-700 text-base">
+                  Newer homes in developments like Rosehill Reserve and Lakewood Grove sometimes
+                  come with a system sized to a builder's spec sheet rather than the actual house.
+                  That shows up as short cycling, a room that never quite cools, and utility bills
+                  that run higher than a new system should.
+                </p>
+              </div>
+              <div className="bg-white rounded-lg p-5 shadow-sm">
+                <div className="flex items-center gap-3 mb-2">
+                  <FaFan className="text-red-500 w-5 h-5 flex-shrink-0" />
+                  <h3 className="font-bold text-blue-900 text-lg">Humidity in Older Attics</h3>
+                </div>
+                <p className="text-gray-700 text-base">
+                  Gulf Coast humidity meeting original attic insulation and ductwork in older
+                  Tomball homes is a common recipe for condensation at the supply vents, musty
+                  smells, and, left alone, mold near the registers.
+                </p>
+              </div>
+              <div className="bg-white rounded-lg p-5 shadow-sm">
+                <div className="flex items-center gap-3 mb-2">
+                  <FaThermometerHalf className="text-blue-900 w-5 h-5 flex-shrink-0" />
+                  <h3 className="font-bold text-blue-900 text-lg">Uneven Comfort After Additions</h3>
+                </div>
+                <p className="text-gray-700 text-base">
+                  Historic downtown homes with room additions and larger Hufsmith-area properties
+                  with outbuildings often end up with a single system covering more square
+                  footage than it was designed for, leaving some rooms too warm and others too cold.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Services Grid Section */}
         <section className="py-12 bg-blue-900">
           <div className="max-w-5xl mx-auto px-4">
@@ -162,34 +225,33 @@ const TomballTX = () => {
               WHY TOMBALL RESIDENTS CHOOSE AMW
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg text-center max-w-3xl mx-auto">
-              Tomball residents support local businesses, and AMW is proud to serve this community as a veteran-owned, family-operated company. We bring the same integrity and work ethic to every Tomball service call that earned us our military service record and our perfect 5-star Google rating.
+              Historic Main Street and the 249 corridor sit only a few miles apart, but they call for two different kinds of HVAC know-how. Our technicians spend as much time diagnosing older package units tucked behind homes near the Tomball Depot as they do commissioning new, high-efficiency systems in Rosehill Reserve and Lakewood Grove, and that range is exactly what a mixed old-town, new-growth city like Tomball needs from its HVAC company.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">Veteran-owned and operated</span>
+                <span className="text-gray-700 text-base font-medium">Techs who work on original downtown construction and brand-new 249 corridor builds alike</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">Licensed, insured & bonded</span>
+                <span className="text-gray-700 text-base font-medium">Veteran-owned, with every technician licensed, insured, and bonded in Texas</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">Same-day & emergency service</span>
+                <span className="text-gray-700 text-base font-medium">A price you see before we start, not after</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">Upfront, transparent pricing</span>
+                <span className="text-gray-700 text-base font-medium"><Link href="/financing" className="text-blue-600 hover:underline">Synchrony and FTL Finance</Link> options when a repair or replacement runs bigger than expected</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium"><Link href="/financing" className="text-blue-600 hover:underline">Financing options</Link> available</span>
-              </div>
-              <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
-                <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">5.0-star Google rating</span>
+                <span className="text-gray-700 text-base font-medium">Dial the number and a real Tomball-area technician answers, not a script</span>
               </div>
             </div>
+            <p className="text-gray-700 mt-6 leading-relaxed text-base md:text-lg text-center max-w-3xl mx-auto">
+              That combination is a big part of why our Google rating in Tomball has held at 5.0 stars.
+            </p>
           </div>
         </section>
 
@@ -201,9 +263,8 @@ const TomballTX = () => {
               Serving Tomball Neighborhoods
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              We provide HVAC services throughout Tomball and surrounding areas including
-              Historic Downtown Tomball, Rosehill Reserve, Lakewood Grove, Tomball Parkway area, 249 Tollway corridor, Hufsmith area, and all Tomball-area communities. No matter where you are in the Tomball area, AMW
-              Cooling & Heating is ready to help.
+              From the century-old storefronts downtown to the newest rooflines going up along 249, AMW technicians are in and out of Tomball homes every week, covering
+              Historic Downtown Tomball, Rosehill Reserve, Lakewood Grove, Tomball Parkway area, 249 Tollway corridor, Hufsmith area, and the neighborhoods in between. Every truck carries parts for both sides of town, since a single day's route rarely stays on one side of the Tollway.
             </p>
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
@@ -226,11 +287,12 @@ const TomballTX = () => {
               Emergency HVAC Service in Tomball
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              A broken AC or furnace does not wait for a convenient time, so neither do we. We are
-              open 8am to 9pm, seven days a week, with after-hours emergency service available from
-              5pm to 9pm, for both cooling and heating breakdowns. Call (936) 331-1339 and we will
-              get a technician headed your way, whether you are near the historic downtown, out
-              along the 249 corridor, or anywhere else in the Tomball area.
+              Emergency HVAC service in Tomball means reaching both ends of town fast, whether
+              that is a downtown home two blocks off Main Street or a new build off the 249
+              corridor. We keep the phones open 8am to 9pm, seven days a week, and dispatch
+              after-hours emergency calls from 5pm to 9pm for AC and heating breakdowns alike.
+              Call (936) 331-1339 and tell us where you are; we will get a technician moving
+              right away.
             </p>
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
@@ -259,10 +321,10 @@ const TomballTX = () => {
                 <span className="text-white text-sm font-semibold">Veteran-Owned & Operated</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
-                Contact AMW for HVAC Service in Tomball
+                Tomball Runs Two Housing Eras. We Run Both Every Week.
               </h2>
               <p className="text-lg text-blue-200 max-w-xl mx-auto mb-8">
-                Ready to schedule service? Call us today or fill out our contact form. We're standing by to help with all your heating and cooling needs in Tomball, Texas.
+                Ask about a century-old duct system near the Depot or a two-year-old unit out by Rosehill Reserve and you get the same confident answer, because our technicians handle both every week. Dial (936) 331-1339, mention which one is yours, and the right technician gets matched to the job, not whoever is next in line.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a

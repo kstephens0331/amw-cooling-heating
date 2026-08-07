@@ -175,36 +175,90 @@ const CutAndShootTX = () => {
               WHY CUT AND SHOOT CHOOSES AMW
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg text-center max-w-3xl mx-auto">
-              We are a local, veteran-owned team, not a national franchise routing your call to a
-              center three states away. When a Cut and Shoot family calls AMW, they reach neighbors
-              from just up SH 105 in Conroe who know these rural roads, understand the demands of
-              cooling a home on acreage, and show up when they say they will. We are licensed,
-              insured, and bonded under Texas license TACLB133920E.
+              Ask a Cut and Shoot homeowner what they actually need from an HVAC company and the
+              answer rarely starts with a logo. It starts with someone who will drive the extra
+              gravel road, who knows the difference between a torn belly duct on a manufactured
+              home and a standard supply-line leak, and who does not treat a property tucked back
+              off FM 1485 as too far out of the way. That is the job here. Our shop sits six miles
+              west on SH 105 in Conroe, veteran-owned since we opened, Texas license TACLB133920E
+              in hand, and every technician we send has already worked acreage properties like
+              yours.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">&#10003;</span>
-                <span className="text-gray-700 text-base font-medium">Veteran-owned and operated</span>
+                <span className="text-gray-700 text-base font-medium">Comfortable on mobile, manufactured & site-built homes</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">&#10003;</span>
-                <span className="text-gray-700 text-base font-medium">Licensed, insured & bonded</span>
+                <span className="text-gray-700 text-base font-medium">Straight repair-vs-replace calls on older rural systems</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">&#10003;</span>
-                <span className="text-gray-700 text-base font-medium">Same-day & emergency service</span>
+                <span className="text-gray-700 text-base font-medium">TACLB133920E licensed, insured & bonded</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">&#10003;</span>
-                <span className="text-gray-700 text-base font-medium">Open 8am to 9pm, 7 days a week</span>
+                <span className="text-gray-700 text-base font-medium">Same-day runs out SH 105 and FM 1485</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">&#10003;</span>
-                <span className="text-gray-700 text-base font-medium"><Link href="/financing" className="text-blue-600 hover:underline">Financing options</Link> available</span>
+                <span className="text-gray-700 text-base font-medium"><Link href="/financing" className="text-blue-600 hover:underline">Financing</Link> through Synchrony & FTL Finance</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">&#10003;</span>
                 <span className="text-gray-700 text-base font-medium">5.0-star Google rating</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Common HVAC Problems Section */}
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4">
+            <h3 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6">
+              Common HVAC Problems in Cut and Shoot
+            </h3>
+            <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
+              Country properties break down in different ways than a house on a tight subdivision
+              lot. These are the calls we run most often out on the Cut and Shoot acreage:
+            </p>
+            <div className="space-y-4">
+              <div className="bg-white rounded-lg p-5 shadow-sm">
+                <h4 className="font-bold text-blue-900 mb-1">Sagging or torn belly ducts on manufactured homes</h4>
+                <p className="text-gray-700">
+                  The underbelly ductwork on older mobile and manufactured homes stretches, tears,
+                  or gets chewed through by animals over the years. The result is weak airflow at
+                  the register, a system that runs long, and a power bill that climbs even though
+                  the thermostat has not moved.
+                </p>
+              </div>
+              <div className="bg-white rounded-lg p-5 shadow-sm">
+                <h4 className="font-bold text-blue-900 mb-1">Weak airflow to rooms far from the air handler</h4>
+                <p className="text-gray-700">
+                  Bigger lots mean bigger houses, additions, converted porches, and detached
+                  shops, and the duct run built for the original floor plan often was not sized
+                  for the extra distance. The back bedroom or the addition off the kitchen never
+                  quite matches the rest of the house.
+                </p>
+              </div>
+              <div className="bg-white rounded-lg p-5 shadow-sm">
+                <h4 className="font-bold text-blue-900 mb-1">Outdoor units clogged by pasture and tree debris</h4>
+                <p className="text-gray-700">
+                  Without a subdivision landscaping crew keeping grass and leaf litter off the
+                  condenser, coils out on acreage properties collect pasture grass clippings, oak
+                  leaves, and dust a lot faster than a mowed suburban yard, which drives up
+                  compressor strain and cuts efficiency.
+                </p>
+              </div>
+              <div className="bg-white rounded-lg p-5 shadow-sm">
+                <h4 className="font-bold text-blue-900 mb-1">Aging systems past their honest service life</h4>
+                <p className="text-gray-700">
+                  A lot of Cut and Shoot properties have been in the same family for years, and so
+                  has the HVAC system. When an older unit starts needing repeat repairs, we give
+                  you a straight comparison of what another patch job costs against a replacement
+                  built for how the property is actually used today.
+                </p>
               </div>
             </div>
           </div>
@@ -218,12 +272,13 @@ const CutAndShootTX = () => {
               Serving Cut and Shoot and Groceville
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              We cover the whole of Cut and Shoot, including the homes clustered near the city
-              offices and post office on SH 105 East, the Groceville community that lies within
-              Cut and Shoot, and the scattered acreage properties reaching down FM 1485 as it
-              begins off SH 105 and heads southeast toward New Caney. Whether your place sits in
-              the 77306 or 77303 ZIP, on a quarter-acre lot or a hundred-plus-acre spread, AMW
-              Cooling & Heating is ready to help.
+              Getting around Cut and Shoot means running the county roads themselves, since
+              properties here sit scattered across acreage rather than packed onto city blocks:
+              the homes near the city offices and post office on SH 105 East, the
+              Groceville community folded inside Cut and Shoot's boundaries, and the acreage
+              tracts running down FM 1485 toward New Caney. Whether your ZIP reads 77306 or
+              77303, the work gets the same careful attention; the only real variable is how
+              long the driveway is before we reach your front door.
             </p>
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
@@ -249,11 +304,11 @@ const CutAndShootTX = () => {
               Emergency HVAC Service in Cut and Shoot
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              An AC failure on a 95-degree August afternoon does not wait for business hours, and out
-              on the acreage it can turn a comfortable home miserable fast. That is why we keep our
-              doors open 8am to 9pm, 7 days a week. Call AMW for same-day and emergency HVAC service
-              in Cut and Shoot, TX, and we will head east on SH 105 from Conroe to get a technician to
-              your door quickly. We also serve nearby Conroe, Cleveland out toward US 59, and the rest
+              Out on acreage, a dead AC in August is not something you can count on a neighbor to
+              notice, since the nearest one might be a quarter mile down the road. When your system
+              quits, call (936) 331-1339 and we will send a technician east on SH 105 from our
+              Conroe shop, same day whenever we can manage it, doors open 8am to 9pm every day of
+              the week. We also run calls to nearby Conroe, Cleveland out toward US 59, and the rest
               of eastern Montgomery County.
             </p>
 
@@ -282,11 +337,13 @@ const CutAndShootTX = () => {
                 <span className="text-white text-sm font-semibold">Veteran-Owned & Operated</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
-                Contact AMW for HVAC Service in Cut and Shoot
+                Gravel Driveway? That Is a Tuesday for Us.
               </h2>
               <p className="text-lg text-blue-200 max-w-xl mx-auto mb-8">
-                Ready to schedule service? Call us today or fill out our contact form. We are standing
-                by to help with all your heating and cooling needs in Cut and Shoot, Texas.
+                A quarter-mile drive back off FM 1485 or a manufactured home tucked behind
+                the tree line does not slow our crew down, since acreage calls like that
+                fill half our week already. Ring (936) 331-1339, give us a landmark if the
+                address is tricky to find, and finding you becomes our problem, not yours.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a

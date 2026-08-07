@@ -85,9 +85,9 @@ const PorterTX = () => {
               heat and humidity and the cold fronts that still push through each winter.
             </p>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              Porter has boomed along the Eastex Freeway (I-69 / US-59) and the Grand Parkway
-              (State Highway 99), whose key northeast segments opened in 2022. That growth shows in
-              the numbers. HAR's Q1 2024 report ranked Porter and New Caney West among the region's
+              Porter has boomed along the Eastex Freeway (I-69 / US-59) and the stretch of the
+              Grand Parkway (State Highway 99) that finished tying this side of the county
+              together back in 2022. That growth shows in the numbers. HAR's Q1 2024 report ranked Porter and New Caney West among the region's
               fastest-growing submarkets, with home sales up 121 percent year over year and 68 percent
               of closings being new construction. What that means for us is a lot of builder-grade
               systems in ZIP code 77365 that are now aging out of warranty and due for their first
@@ -173,35 +173,91 @@ const PorterTX = () => {
               WHY PORTER CHOOSES AMW
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg text-center max-w-3xl mx-auto">
-              We are a local, veteran-owned team, not a national franchise sending your call to a
-              center three states away. When a Porter family calls AMW, they reach people who know
-              the area, know what Gulf Coast heat does to a system, and show up when they say they
-              will. We answer seven days a week.
+              Porter is in the middle of one of Montgomery County's biggest building booms, and
+              fast growth tends to draw in national chains that add pins to a map instead of
+              technicians who actually know the ground. AMW is not one of those. We are
+              veteran-owned, we run out of a shop up FM 1314 in Conroe, and the same crew that
+              services new construction in The Highlands and Valley Ranch also handles the older
+              homes near Porter's original town center. Call before 9pm any night of the week and
+              you will reach one of us directly, not a scheduling queue in another state.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">Veteran-owned and operated</span>
+                <span className="text-gray-700 text-base font-medium">Local, veteran-owned dispatch instead of a national switchboard</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">Licensed, insured & bonded</span>
+                <span className="text-gray-700 text-base font-medium">TACLB133920E licensed, insured, and bonded</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">Same-day & emergency service</span>
+                <span className="text-gray-700 text-base font-medium">Warranty paperwork handled correctly, the first time</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">Upfront, transparent pricing</span>
+                <span className="text-gray-700 text-base font-medium">Same crew for a two-year-old Highlands build or a decades-old Porter Heights home</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium"><Link href="/financing" className="text-blue-600 hover:underline">Financing options</Link> available</span>
+                <span className="text-gray-700 text-base font-medium"><Link href="/financing" className="text-blue-600 hover:underline">Financing</Link> available on full system replacements</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
                 <span className="text-gray-700 text-base font-medium">5.0-star Google rating</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Common HVAC Problems Section */}
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4">
+            <h3 className="text-2xl md:text-3xl font-black text-center text-blue-900 mb-4 tracking-wide">
+              COMMON HVAC PROBLEMS IN PORTER
+            </h3>
+            <p className="text-gray-700 mb-8 leading-relaxed text-base md:text-lg text-center max-w-3xl mx-auto">
+              Porter's mix of brand-new subdivisions and a much older town center means we see two
+              very different failure patterns, sometimes on the same street.
+            </p>
+            <div className="grid md:grid-cols-2 gap-5">
+              <div className="bg-white rounded-lg p-5 shadow-sm">
+                <h4 className="font-bold text-blue-900 mb-2">Oversized Units Leaving Rooms Cold but Sticky</h4>
+                <p className="text-gray-700 text-base leading-relaxed">
+                  A system sized to cool a Highlands or Valley Ranch floor plan quickly can
+                  short-cycle before it ever pulls the humidity out of the air. The house hits the
+                  thermostat setting fast but still feels damp, and a musty smell starts showing up
+                  in closets and closed-off rooms.
+                </p>
+              </div>
+              <div className="bg-white rounded-lg p-5 shadow-sm">
+                <h4 className="font-bold text-blue-900 mb-2">Manufacturer Warranty Registration Missed at Closing</h4>
+                <p className="text-gray-700 text-base leading-relaxed">
+                  Most equipment manufacturers require the homeowner to register a new system online
+                  within 60 to 90 days of installation to lock in the full warranty term, and it is
+                  an easy step to lose in the shuffle of closing on a new Porter home. We help
+                  homeowners track down the model and serial numbers before that window closes.
+                </p>
+              </div>
+              <div className="bg-white rounded-lg p-5 shadow-sm">
+                <h4 className="font-bold text-blue-900 mb-2">One System Cooling Two Stories in Larger New Builds</h4>
+                <p className="text-gray-700 text-base leading-relaxed">
+                  Some of the larger two-story plans going up in Porter and New Caney West run a
+                  single system built to handle both floors. Downstairs feels fine while upstairs
+                  bedrooms run several degrees warmer by mid-afternoon, especially on the sunny side
+                  of the house.
+                </p>
+              </div>
+              <div className="bg-white rounded-lg p-5 shadow-sm">
+                <h4 className="font-bold text-blue-900 mb-2">R-22 Refrigerant Nobody Makes Anymore</h4>
+                <p className="text-gray-700 text-base leading-relaxed">
+                  Porter's growth spurt has largely passed by the streets around the original town
+                  center, the area that grew up around a sawmill and has had its own post office
+                  since 1892. Systems there commonly still run on R-22 refrigerant, which stopped
+                  being produced years back. When one of those units springs a leak, a simple
+                  recharge usually is not an option anymore, and the job turns into a full
+                  replacement instead.
+                </p>
               </div>
             </div>
           </div>
@@ -215,12 +271,12 @@ const PorterTX = () => {
               Serving Porter Neighborhoods
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              We provide HVAC service across Porter, including The Highlands, the 2,300-acre
-              master-planned community named 2024 Master Planned Community of the Year by the Greater
-              Houston Builders Association, along with Valley Ranch near the I-69 and Grand Parkway
-              interchange, Woodridge Forest, Auburn Trails, and Porter Heights. Whether you are in a
-              brand-new home in Fairway Pines near Highland Pines Golf Club or an established place off
-              Northpark Drive, AMW Cooling & Heating is ready to help.
+              From the master-planned community of The Highlands, the Greater Houston Builders
+              Association's 2024 Master Planned Community of the Year spread across 2,300 acres, to
+              Valley Ranch by the I-69 and Grand Parkway interchange, Woodridge Forest, Auburn
+              Trails, Porter Heights, and Fairway Pines near Highland Pines Golf Club, our trucks
+              are in Porter neighborhoods every week. With new sections opening every few months,
+              we would rather add a truck to the route early than fall behind the growth.
             </p>
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
@@ -245,11 +301,12 @@ const PorterTX = () => {
               Emergency HVAC Service in Porter
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              An AC failure on a 95-degree August afternoon does not wait for business hours, and
-              neither do we. Call AMW for same-day and emergency HVAC service in Porter, TX, and we
-              will get a technician headed your way fast, whether you are off FM 1485, along FM 1314
-              toward Conroe, near the Kelsey-Seybold Kingwood Clinic on US-59, or out in The Highlands
-              off the Grand Parkway. Our team is available from 8am to 9pm, seven days a week.
+              When a system fails in Porter, distance is rarely the holdup, since we are just a
+              few minutes down FM 1314 from Conroe. What matters more is timing: call before 9pm
+              and a technician can often be headed your way that same day, whether you are near
+              the Kelsey-Seybold Kingwood Clinic on US-59, off FM 1485, or out toward the Grand
+              Parkway in The Highlands. We hold those hours, 8am to 9pm seven days a week, because
+              breakdowns do not pick convenient days.
             </p>
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
@@ -277,11 +334,13 @@ const PorterTX = () => {
                 <span className="text-white text-sm font-semibold">Veteran-Owned & Operated</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
-                Contact AMW for HVAC Service in Porter
+                Porter Is Building Faster Than Most HVAC Schedules Can Absorb
               </h2>
               <p className="text-lg text-blue-200 max-w-xl mx-auto mb-8">
-                Ready to schedule service? Call us today or fill out our contact form. We are standing
-                by to help with all your heating and cooling needs in Porter, Texas.
+                Grand Parkway construction and new phases opening in The Highlands and
+                Valley Ranch keep our Porter calls coming in earlier in the season than
+                almost anywhere else we work. Calling (936) 331-1339 now, before the
+                calendar fills up, is the surest way to avoid a weekend with no relief.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a

@@ -171,35 +171,110 @@ const SplendoraTX = () => {
               WHY SPLENDORA CHOOSES AMW
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg text-center max-w-3xl mx-auto">
-              We are a local, veteran-owned team, not a national franchise handing
-              your call off to a center three states away. When a Splendora family calls AMW, they
-              reach people who know FM 2090, know the drive up Old Highway 59, and understand what
-              the Southeast Texas climate does to a system. We show up when we say we will.
+              Splendora has held onto its small-town, piney-woods character even as the growth
+              from New Caney and Porter creeps closer every year, and that is the kind of town our
+              technicians actually understand. Ask a crew from a national chain to find a house off
+              Old Highway 59 or explain what pine sap does to a condenser coil, and you will get a
+              shrug. Ask us, and we already know the answer, because Conroe is fifteen minutes away
+              and this is the area we grew up working in.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">&#10003;</span>
-                <span className="text-gray-700 text-base font-medium">Veteran-owned and operated</span>
+                <span className="text-gray-700 text-base font-medium">Comfortable on piney-woods acreage, not just subdivisions</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">&#10003;</span>
-                <span className="text-gray-700 text-base font-medium">Licensed, insured &amp; bonded</span>
+                <span className="text-gray-700 text-base font-medium">Local techs, local dispatch, no call center in the loop</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">&#10003;</span>
-                <span className="text-gray-700 text-base font-medium">Same-day &amp; emergency service</span>
+                <span className="text-gray-700 text-base font-medium">Licensed under TACLB133920E, insured, and bonded</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">&#10003;</span>
-                <span className="text-gray-700 text-base font-medium">Upfront, transparent pricing</span>
+                <span className="text-gray-700 text-base font-medium">Same-day and after-hours calls, 8am to 9pm daily</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">&#10003;</span>
-                <span className="text-gray-700 text-base font-medium"><Link href="/financing" className="text-blue-600 hover:underline">Financing options</Link> available</span>
+                <span className="text-gray-700 text-base font-medium">Upfront pricing with <Link href="/financing" className="text-blue-600 hover:underline">Synchrony and FTL financing</Link></span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">&#10003;</span>
-                <span className="text-gray-700 text-base font-medium">5.0-star Google rating</span>
+                <span className="text-gray-700 text-base font-medium">5.0-star Google rating from East Montgomery County neighbors</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Common HVAC Problems Section */}
+        <div className="h-1 bg-gradient-to-r from-blue-600 via-white to-red-500"></div>
+        <section className="py-12 bg-white">
+          <div className="max-w-4xl mx-auto px-4">
+            <h3 className="text-2xl md:text-3xl font-black text-center text-blue-900 mb-3 tracking-wide">
+              COMMON HVAC PROBLEMS WE FIX IN SPLENDORA
+            </h3>
+            <p className="text-gray-700 mb-8 leading-relaxed text-base md:text-lg text-center max-w-3xl mx-auto">
+              Splendora&apos;s piney-woods setting and its mix of decades-old ranch homes and brand-new
+              construction create a specific set of headaches. Here is what our technicians run into
+              most often around town.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-gray-50 rounded-lg p-5 shadow-sm flex items-start gap-4">
+                <div className="w-10 h-10 bg-blue-900 rounded-full flex items-center justify-center flex-shrink-0">
+                  <FaLeaf className="w-4 h-4 text-white" />
+                </div>
+                <div>
+                  <p className="font-bold text-blue-900 mb-1">Pine Straw and Pollen-Clogged Condensers</p>
+                  <p className="text-gray-700 text-sm leading-relaxed">
+                    The tree canopy that gives Splendora its shade also drops pine straw, needles, and
+                    heavy spring pollen onto outdoor condenser coils. A clogged coil forces the
+                    compressor to work harder and can drive your electric bill up long before the unit
+                    actually fails.
+                  </p>
+                </div>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-5 shadow-sm flex items-start gap-4">
+                <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <FaThermometerHalf className="w-4 h-4 text-white" />
+                </div>
+                <div>
+                  <p className="font-bold text-blue-900 mb-1">Undersized Systems in Older Ranch Homes</p>
+                  <p className="text-gray-700 text-sm leading-relaxed">
+                    A lot of Splendora&apos;s half-acre-plus lots carry original or close-to-original
+                    1980s equipment. Single-stage units that were adequate 30 years ago often cannot
+                    keep up with today&apos;s humidity load, especially in additions or converted rooms
+                    that were never on the original duct plan.
+                  </p>
+                </div>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-5 shadow-sm flex items-start gap-4">
+                <div className="w-10 h-10 bg-blue-900 rounded-full flex items-center justify-center flex-shrink-0">
+                  <FaFan className="w-4 h-4 text-white" />
+                </div>
+                <div>
+                  <p className="font-bold text-blue-900 mb-1">Weak Airflow on Larger Acreage Lots</p>
+                  <p className="text-gray-700 text-sm leading-relaxed">
+                    Out toward Northcrest Ranch, the bigger the property, the longer the duct runs and
+                    refrigerant lines between the condenser and the house. That distance often shows up
+                    as weak airflow in the rooms farthest from the unit or a system that short-cycles
+                    trying to compensate.
+                  </p>
+                </div>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-5 shadow-sm flex items-start gap-4">
+                <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <FaTools className="w-4 h-4 text-white" />
+                </div>
+                <div>
+                  <p className="font-bold text-blue-900 mb-1">Builder-Grade Systems Sized for the Spec Sheet, Not the House</p>
+                  <p className="text-gray-700 text-sm leading-relaxed">
+                    New homes going up in The Canopies and Townsend Reserve often ship with equipment
+                    sized to a standard spec, not the actual floor plan. Open-concept layouts and
+                    vaulted ceilings can leave one part of the house noticeably warmer than the rest,
+                    even on a system that is only a year or two old.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -213,25 +288,27 @@ const SplendoraTX = () => {
               Serving Splendora Neighborhoods
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              We provide HVAC service throughout Splendora and the surrounding 77372 area. That
-              includes newer master-planned neighborhoods like The Canopies and the growth out in
-              Townsend Reserve, established subdivisions such as Rio Vista with its larger, more
-              spacious lots, and the acreage and ranch-style properties out on Northcrest Ranch.
-              Whether you are near the Splendora ISD campuses off FM 2090 or set back on a wooded
-              parcel closer to Old Highway 59, AMW Cooling &amp; Heating is ready to help.
+              Splendora doesn't cluster into a tidy grid, so our coverage stretches wherever the
+              town does. That reaches the newer streets of The Canopies and the growth
+              filling in at Townsend Reserve, the bigger lots of Rio Vista, and the acreage and
+              ranch-style properties out on Northcrest Ranch. Near the Splendora ISD campuses off
+              FM 2090 or tucked back on a wooded lot closer to Old Highway 59, call the number
+              above and we will find you.
             </p>
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
               <span className="w-8 h-1 bg-blue-600 rounded"></span>
-              New Construction and Warranty Protection
+              The Fine Print on a Brand-New Splendora System
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              As suburban development pushes north up the US-59 / I-69 corridor, communities like
-              The Canopies are filling in with brand-new homes, and a lot of those systems are still
-              under manufacturer warranty. Most of those warranties require documented annual
-              maintenance, and skipping it can void your coverage. Our maintenance visits keep your
-              equipment running efficiently through the Texas heat and keep that warranty intact, so
-              a future repair does not come out of your own pocket.
+              The Canopies and the other new subdivisions climbing the US-59 / I-69 corridor mean a
+              growing share of Splendora's HVAC equipment is barely out of the box and still carries
+              its manufacturer warranty. That coverage is not automatic: most manufacturers only
+              honor it if you can produce a dated, professional maintenance record for every year
+              the system has been in service, and a missed visit is grounds for a denied claim. We
+              build that paperwork trail into every tune-up we run in The Canopies, so if a
+              compressor or coil ever fails under warranty, the claim goes through instead of
+              landing back on your own bill.
             </p>
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
@@ -239,15 +316,13 @@ const SplendoraTX = () => {
               Emergency HVAC Service in Splendora
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              A dead AC on a 95-degree August afternoon and a furnace that will not fire on a cold
-              December morning are both real emergencies for a Splendora family, and we treat them
-              that way. We are open 8am to 9pm, seven days a week, with after-hours emergency service
-              from 5pm to 9pm, so call AMW for same-day and emergency HVAC service in Splendora, TX,
-              covering heating and cooling alike. We will get a technician headed your way fast,
-              whether you are near City Hall and City Park on FM 2090 East or out toward the Grand
-              Parkway (SH 99) a short drive away. We also serve nearby New Caney, Porter, Cleveland,
-              and the rest of East Montgomery County. Additional charges may apply for after-hours
-              calls.
+              Regular business hours run 8am to 9pm, seven days a week, and after-hours emergency
+              coverage picks up from 5pm to 9pm on top of that, because a furnace that quits on a
+              cold December morning does not check the clock first, and neither does a compressor
+              that gives out in August. Dial (936) 331-1339 and we will get someone routed to you,
+              whether that is near City Hall and City Park on FM 2090 East or out toward the Grand
+              Parkway (SH 99). New Caney, Porter, and Cleveland fall inside our coverage area too.
+              Note that after-hours calls carry an additional charge.
             </p>
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
@@ -275,11 +350,13 @@ const SplendoraTX = () => {
                 <span className="text-white text-sm font-semibold">Veteran-Owned &amp; Operated</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
-                Contact AMW for HVAC Service in Splendora
+                Pine Sap and Back Roads Do Not Slow This Crew Down
               </h2>
               <p className="text-lg text-blue-200 max-w-xl mx-auto mb-8">
-                Ready to schedule service? Call us today or fill out our contact form. We are standing
-                by to help with all your heating and cooling needs in Splendora, Texas.
+                A clogged coil from pine straw or a house that takes an extra ten minutes to
+                find off Old Highway 59 barely registers as unusual to a crew that grew up
+                working this part of East Montgomery County. Ring (936) 331-1339 and expect
+                a callback from an actual technician, never a call-center script.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a

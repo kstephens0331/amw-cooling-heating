@@ -6,17 +6,17 @@ export default function SpringTXPage() {
   return (
     <>
       <Head>
-        <title>AC Repair Spring TX | AMW Cooling & Heating</title>
-        <meta name="description" content="AC repair & HVAC services in Spring, TX. Serving Old Town Spring & Champions area. Veteran-owned & licensed. (936) 331-1339." />
+        <title>HVAC Repair & Installation in Spring, TX | AMW Cooling & Heating</title>
+        <meta name="description" content="Veteran-owned HVAC in Spring, TX, from Old Town Spring's older homes to newer builds near Gleannloch Farms. AC repair, heating, and system replacement across Champions Forest, Klein, and Cypresswood. Call (936) 331-1339." />
         <link rel="canonical" href="https://amwairconditioning.com/locations/spring-tx" />
-        <meta name="keywords" content="AC repair Spring TX, HVAC Spring TX, heating repair Spring, air conditioning Spring, HVAC company near me Spring TX" />
-        <meta property="og:title" content="AC Repair Spring TX | AMW Cooling & Heating" />
-        <meta property="og:description" content="AC repair & HVAC services in Spring, TX. Serving Old Town Spring & Champions area. Veteran-owned & licensed." />
+        <meta name="keywords" content="HVAC Spring TX, AC repair Spring TX, heating repair Spring TX, Old Town Spring HVAC, Champions Forest AC repair, Klein TX HVAC, Gleannloch Farms HVAC, Cypresswood AC repair, veteran owned HVAC Harris County" />
+        <meta property="og:title" content="HVAC Repair & Installation in Spring, TX | AMW Cooling & Heating" />
+        <meta property="og:description" content="Veteran-owned HVAC in Spring, TX, from Old Town Spring's older homes to newer builds near Gleannloch Farms. AC repair, heating, and system replacement across Champions Forest, Klein, and Cypresswood. Call (936) 331-1339." />
         <meta property="og:url" content="https://amwairconditioning.com/locations/spring-tx" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AC Repair Spring TX | AMW Cooling & Heating" />
-        <meta name="twitter:description" content="AC repair & HVAC services in Spring, TX. Serving Old Town Spring & Champions area. Veteran-owned." />
+        <meta name="twitter:title" content="HVAC Repair & Installation in Spring, TX | AMW Cooling & Heating" />
+        <meta name="twitter:description" content="Veteran-owned HVAC in Spring, TX, from Old Town Spring's older homes to newer builds near Gleannloch Farms. AC repair, heating, and system replacement across Champions Forest, Klein, and Cypresswood. Call (936) 331-1339." />
       </Head>
       <SpringTX />
     </>

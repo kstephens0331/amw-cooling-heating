@@ -100,6 +100,71 @@ const ConroeTX = () => {
           </div>
         </section>
 
+        {/* Common Problems Section */}
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4">
+            <h3 className="text-2xl md:text-3xl font-bold text-blue-900 mb-4">
+              Common HVAC Problems in Conroe
+            </h3>
+            <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
+              Being on the water and sitting on a mix of decades-old and brand-new
+              construction gives Conroe its own particular set of HVAC headaches. Here is
+              what we get called out for most:
+            </p>
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="bg-white rounded-lg p-5 shadow-sm">
+                <div className="flex items-center gap-3 mb-2">
+                  <FaThermometerHalf className="text-blue-900 w-5 h-5 flex-shrink-0" />
+                  <span className="font-bold text-blue-900">Humidity from Lake Conroe</span>
+                </div>
+                <p className="text-gray-700 text-base">
+                  Homes near the water fight extra moisture in the air almost year-round.
+                  We see it as evaporator coils icing over, systems that run constantly but
+                  never quite feel like they are keeping up, and musty smells that point to
+                  a dehumidification problem rather than a dirty filter.
+                </p>
+              </div>
+              <div className="bg-white rounded-lg p-5 shadow-sm">
+                <div className="flex items-center gap-3 mb-2">
+                  <FaWrench className="text-blue-900 w-5 h-5 flex-shrink-0" />
+                  <span className="font-bold text-blue-900">Aging equipment in established neighborhoods</span>
+                </div>
+                <p className="text-gray-700 text-base">
+                  In River Plantation, April Sound, and other older Conroe neighborhoods,
+                  we regularly find original equipment on its second or third capacitor,
+                  older refrigerant lines starting to leak, and thermostats that have never
+                  been swapped out for anything smarter.
+                </p>
+              </div>
+              <div className="bg-white rounded-lg p-5 shadow-sm">
+                <div className="flex items-center gap-3 mb-2">
+                  <FaTools className="text-blue-900 w-5 h-5 flex-shrink-0" />
+                  <span className="font-bold text-blue-900">Builder-grade sizing in new construction</span>
+                </div>
+                <p className="text-gray-700 text-base">
+                  Around Crighton Ridge and other newer sections of town, the equipment
+                  installed during construction is often sized to code minimums rather than
+                  for how the home is actually used, which shows up as one room that never
+                  cools down or a system that short-cycles on the hottest afternoons.
+                </p>
+              </div>
+              <div className="bg-white rounded-lg p-5 shadow-sm">
+                <div className="flex items-center gap-3 mb-2">
+                  <FaFan className="text-blue-900 w-5 h-5 flex-shrink-0" />
+                  <span className="font-bold text-blue-900">Breakers tripping on peak summer days</span>
+                </div>
+                <p className="text-gray-700 text-base">
+                  When the outside unit has to work hardest, on the hottest stretch of
+                  August, we get calls about breakers tripping as the compressor kicks on.
+                  It is sometimes the panel, sometimes the condenser drawing more current
+                  than it should, and worth having checked before it happens twice in one
+                  week.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Services Grid Section */}
         <section className="py-12 bg-blue-900">
           <div className="max-w-5xl mx-auto px-4">
@@ -175,36 +240,37 @@ const ConroeTX = () => {
               WHY CONROE RESIDENTS CHOOSE AMW
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg text-center max-w-3xl mx-auto">
-              As a local, veteran-owned HVAC company, we're invested in the Conroe community.
-              We're not a franchise or national chain - we're your neighbors, and our shop is
-              right here in town. When you call AMW, you get personalized service from
-              technicians who understand Conroe's climate and care about your comfort. We hold
-              Texas license TACLB133920E.
+              Our shop sits at 2346 Strong Horse Dr, right here in Conroe, which makes this
+              city different from every other town on our map: it is not just a place we
+              cover, it is the place we work out of. That means the technician headed to
+              your address already knows the shortcut to River Plantation, already knows the
+              wiring quirks common to the older homes downtown, and is not driving in from
+              across the county to get to you.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">Veteran-owned and operated</span>
+                <span className="text-gray-700 text-base font-medium">Shortest drive time of anywhere we serve</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">Licensed, insured & bonded</span>
+                <span className="text-gray-700 text-base font-medium">Veteran-owned, dispatched from right here in Conroe</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">Same-day & emergency service</span>
+                <span className="text-gray-700 text-base font-medium">Licensed under TACLB133920E, insured, and bonded</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">Upfront, transparent pricing</span>
+                <span className="text-gray-700 text-base font-medium">Price quoted before any tool comes off the truck</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium"><Link href="/financing" className="text-blue-600 hover:underline">Financing options</Link> available</span>
+                <span className="text-gray-700 text-base font-medium"><Link href="/financing" className="text-blue-600 hover:underline">Payment plans</Link> through Synchrony and FTL Finance</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">5.0-star Google rating</span>
+                <span className="text-gray-700 text-base font-medium">5.0 stars on Google, earned one Montgomery County home at a time</span>
               </div>
             </div>
           </div>
@@ -218,12 +284,12 @@ const ConroeTX = () => {
               Serving Conroe Neighborhoods
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              We provide HVAC service throughout Conroe, the Montgomery County seat sitting
-              on the shores of Lake Conroe just off Interstate 45. That covers Downtown
-              Conroe's historic core, the established neighborhoods of River Plantation and
-              April Sound, the newer builds going up around Crighton Ridge, and every other
-              Conroe neighborhood in between. No matter where you are in the Conroe area,
-              AMW Cooling & Heating is ready to help.
+              Conroe is home base for us, so these are the streets our trucks know best:
+              Downtown Conroe's historic core, the established neighborhoods of River
+              Plantation and April Sound, the newer builds going up around Crighton Ridge,
+              and every other block inside the city limits. Because we start each run from
+              our own shop instead of a dispatch center in another county, a Conroe address
+              is usually the shortest drive on our whole schedule.
             </p>
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
@@ -245,10 +311,11 @@ const ConroeTX = () => {
               Emergency HVAC Service in Conroe
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              HVAC emergencies don't wait for business hours, and neither do we. When your
-              air conditioning fails on a 95-degree day or your heating goes out on a cold
-              night, call AMW for same-day and emergency HVAC service in Conroe, TX. We'll
-              get a technician to your location fast.
+              Because our shop is minutes from most of Conroe, an emergency call here
+              typically gets answered faster than anywhere else on our route. If the AC
+              quits on a July afternoon or the heat fails during a rare hard freeze, do not
+              try to wait it out. Call and we will have a technician moving toward you right
+              away, day or night within our service hours.
             </p>
 
 
@@ -278,10 +345,13 @@ const ConroeTX = () => {
                 <span className="text-white text-sm font-semibold">Veteran-Owned & Operated</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
-                Contact AMW for HVAC Service in Conroe
+                Your Neighbors Down the Street, Not Across the County
               </h2>
               <p className="text-lg text-blue-200 max-w-xl mx-auto mb-8">
-                Ready to schedule service? Call us today or fill out our contact form. We're standing by to help with all your heating and cooling needs in Conroe, Texas.
+                Our shop sits right on Strong Horse Dr, so a call from a Conroe address
+                rarely means a long wait behind other jobs. Dial (936) 331-1339 and there
+                is a good chance you will be talking to the same technician who ends up in
+                your driveway, not a scheduler working three towns away.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a

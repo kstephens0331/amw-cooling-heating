@@ -169,35 +169,84 @@ const NewCaneyTX = () => {
               WHY NEW CANEY CHOOSES AMW
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg text-center max-w-3xl mx-auto">
-              We are a local, veteran-owned team, not a national franchise routing your call to a
-              center three states away. When a New Caney family calls AMW, they reach people who
-              know the area, know the Southeast Texas climate, and show up when they say they will.
-              We hold Texas license TACLB133920E.
+              New Caney's newest streets went up fast, and a lot of the systems behind those front
+              doors are still on their first or second summer of manufacturer warranty. AMW crews
+              are in Tavola and Valley Ranch often enough to know which builders' HVAC packages
+              need extra attention early on, and exactly what documentation your warranty paperwork
+              requires so a covered repair does not get denied on a technicality. We dispatch out
+              of our own Conroe shop just up US-59, carry Texas license TACLB133920E, and staff
+              every call ourselves instead of routing it through a call center in another state.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">Veteran-owned and operated</span>
+                <span className="text-gray-700 text-base font-medium">Maintenance visits documented to satisfy your manufacturer's warranty file</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">Licensed, insured & bonded</span>
+                <span className="text-gray-700 text-base font-medium">Regular hands-on work in Tavola and Valley Ranch, not a first-time guess</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">Same-day & emergency service</span>
+                <span className="text-gray-700 text-base font-medium">Same-day scheduling with no dispatch center between you and a technician</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">Upfront, transparent pricing</span>
+                <span className="text-gray-700 text-base font-medium">A written, upfront price before any tool touches your system</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium"><Link href="/financing" className="text-blue-600 hover:underline">Financing options</Link> available</span>
+                <span className="text-gray-700 text-base font-medium"><Link href="/financing" className="text-blue-600 hover:underline">Financing</Link> through Synchrony and FTL Finance for new installs</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">5.0-star Google rating</span>
+                <span className="text-gray-700 text-base font-medium">A 5.0-star Google rating built by East Montgomery County neighbors</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Common HVAC Problems Section */}
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4">
+            <h3 className="text-2xl md:text-3xl font-black text-center text-blue-900 mb-8 tracking-wide">
+              COMMON HVAC PROBLEMS IN NEW CANEY
+            </h3>
+            <div className="grid md:grid-cols-2 gap-5">
+              <div className="bg-white rounded-lg p-5 shadow-sm">
+                <h4 className="font-bold text-blue-900 mb-2">Airflow That Was Never Balanced After Move-In</h4>
+                <p className="text-gray-700 text-base leading-relaxed">
+                  Builders install the same equipment package across an entire Tavola or Valley
+                  Ranch phase, regardless of which lot gets more afternoon sun or how far the
+                  ductwork has to stretch to a back bedroom. The usual result is one room that
+                  never quite cools while the rest of the house is fine.
+                </p>
+              </div>
+              <div className="bg-white rounded-lg p-5 shadow-sm">
+                <h4 className="font-bold text-blue-900 mb-2">Warranty-Voiding Maintenance Gaps</h4>
+                <p className="text-gray-700 text-base leading-relaxed">
+                  Manufacturer coverage on a lot of these newer systems requires a documented
+                  service visit every year, and that fine print is easy for a first-time
+                  homeowner to miss. Skip the paperwork and a covered compressor failure can
+                  turn into an out-of-pocket repair.
+                </p>
+              </div>
+              <div className="bg-white rounded-lg p-5 shadow-sm">
+                <h4 className="font-bold text-blue-900 mb-2">Factory Thermostat Settings Nobody Reset</h4>
+                <p className="text-gray-700 text-base leading-relaxed">
+                  Move-in day usually leaves the thermostat on whatever schedule the builder
+                  programmed for final inspection, not how your household actually uses the
+                  house. Left alone, it drives up summer bills and can short-cycle the system.
+                </p>
+              </div>
+              <div className="bg-white rounded-lg p-5 shadow-sm">
+                <h4 className="font-bold text-blue-900 mb-2">Aging Equipment Near the Old Town Center</h4>
+                <p className="text-gray-700 text-base leading-relaxed">
+                  Not everything in New Caney is new construction. Homes near Caney Creek and the
+                  original town center often run systems installed well before the recent growth,
+                  and units in the 12 to 15 year range start needing more frequent repairs as
+                  parts wear out.
+                </p>
               </div>
             </div>
           </div>
@@ -211,15 +260,16 @@ const NewCaneyTX = () => {
               Serving New Caney Neighborhoods
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              We provide HVAC service across New Caney, including Tavola, Valley Ranch, New Caney
-              Heights, and Caney Creek Estates, along with the growing developments near Valley
-              Ranch Town Center and the Grand Parkway. Whether you are in a brand-new build off
-              SH-99 or an established home closer to FM 1485, AMW Cooling & Heating is ready to help.
+              New Caney has grown fast enough that our route list keeps expanding with it. Tavola,
+              Valley Ranch, New Caney Heights, and Caney Creek Estates are where our trucks stay
+              busiest, along with the newer developments filling in near Valley Ranch Town Center
+              and the Grand Parkway. From a first-year system still covered by its builder warranty
+              to a decades-old unit off FM 1485, our service trucks run that whole stretch daily.
             </p>
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
               <span className="w-8 h-1 bg-blue-600 rounded"></span>
-              New Construction and Warranty Protection
+              Keeping a Tavola or Valley Ranch Warranty Valid
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
               With so many new homes going up across New Caney, a lot of systems are still under
@@ -234,10 +284,11 @@ const NewCaneyTX = () => {
               Emergency HVAC Service in New Caney
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              An AC failure on a 95-degree August afternoon is not something that waits for business
-              hours, and neither do we. Call AMW for same-day and emergency HVAC service in New
-              Caney, TX, and we will get a technician headed your way fast. We also serve nearby
-              Porter, Splendora, Kingwood, and the rest of East Montgomery County.
+              Texas heat does not check the clock before it takes down a compressor, and neither
+              do we wait for one. Whether your AC quits on a July afternoon or your furnace will
+              not fire on a January cold snap, call (936) 331-1339 and we will dispatch a
+              technician the same day, covering New Caney along with nearby Porter, Splendora,
+              Kingwood, and the rest of East Montgomery County.
             </p>
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
@@ -265,11 +316,13 @@ const NewCaneyTX = () => {
                 <span className="text-white text-sm font-semibold">Veteran-Owned & Operated</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
-                Contact AMW for HVAC Service in New Caney
+                Our Regular Route Already Covers Tavola and Valley Ranch
               </h2>
               <p className="text-lg text-blue-200 max-w-xl mx-auto mb-8">
-                Ready to schedule service? Call us today or fill out our contact form. We are standing
-                by to help with all your heating and cooling needs in New Caney, Texas.
+                New Caney adds streets faster than most Montgomery County towns, and our
+                Conroe-based crew has kept pace with every phase of it. If your system is
+                still under a builder's warranty, mention it when you call (936) 331-1339,
+                and we will handle the documentation along with the repair.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
