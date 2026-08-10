@@ -4,19 +4,19 @@
   "profileUrl": "https://www.google.com/maps?cid=14977632959753518383&hl=en",
   "averageRating": 5,
   "totalReviews": 77,
-  "scrapedAt": "2026-08-09T14:00:53.798Z",
+  "scrapedAt": "2026-08-10T14:00:51.754Z",
   "note": "Live aggregate and reviews pulled directly from AMW's Google Maps listing via scripts/scrape-google-reviews.js. Reviews are verbatim from Google (author names and text unchanged); reviews where the customer left only a star rating with no written text are omitted here. Re-run the scraper to refresh.",
   "reviews": [
     {
       "name": "Ron Claver",
       "rating": 5,
-      "date": "Edited 4 days ago",
+      "date": "Edited 5 days ago",
       "text": "Can't say enough about Josh and his service. Let me say first that we had a different company come out and wanted to charge $3800 for freon and a new drip pan because it was so rusted. I had told the guy it was a lot of money for that so he dropped the price real quick to $2,400 then again to $1200. I didn't think that was good so we called Josh with AMW COOLING & Heating! Totally different story. Josh is awesome. He found a bad fan motor and replaced it. Our system didn't need freon and it didn't need the drip pan. Josh had great communication and explained everything, showed photos before and after and gave suggestions for a yearly maintenance plan. We will be using him again. Thank you Josh for our cold AC again!! Great pricing!! Trustworthy!"
     },
     {
       "name": "Laura Carrillo",
       "rating": 5,
-      "date": "a week ago",
+      "date": "2 weeks ago",
       "text": "As we searched, we ended finding out that AMW Cooling and Heating, LLC was rated #2 on the top 10 list per CHAT GPT based on ratings. At this point we were without AC for a day already and just went out on a limb. Fortunately for us, we made the right decision going with AMW. They were wonderful from the start. They are so professional, fast, efficient and very economical!! Just what we needed as a family of 5! They not only do excellent work, but guarantee their work for at least a year and did a thorough follow up as part of their service! We haven’t had any issues since they’ve repaired things! They are trustworthy and I love supporting local, small businesses, and with AMW you will get taken care of for sure, plus they are veteran owned! Thank you for your excellent service AMW! We appreciate your hard work with us! Can’t express it enough!"
     },
     {
@@ -40,7 +40,7 @@
     {
       "name": "Andy Keeton",
       "rating": 5,
-      "date": "4 weeks ago",
+      "date": "a month ago",
       "text": "Thank you all! Joshua with AMW just left. He was extremely helpful, knowledgeable, and took the time to actually show me what the issue was instead of trying to sell me something I didn’t need. You can tell he takes pride in his workmanship and genuinely cares about helping people. I never felt like he was just trying to make a sale, he was honest, straightforward, and explained everything clearly. That kind of service is hard to find these days. We will definitely be using AMW again in the future. I just wish we could have met under better circumstances where it could have been a “little cooler”!😂"
     },
     {
@@ -70,7 +70,7 @@
     {
       "name": "Pravin Rama",
       "rating": 5,
-      "date": "Edited a month ago",
+      "date": "Edited 2 months ago",
       "text": "Excellent services ."
     },
     {
