@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ServiceSchema, BreadcrumbSchema, LocalBusinessSchema, FAQSchema } from '../../../components/StructuredData';
 import Link from 'next/link';
-import { FaPhone, FaCalendarCheck, FaShieldAlt, FaFire, FaChevronDown, FaTools, FaExclamationTriangle, FaWrench, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaPhone, FaCalendarCheck, FaShieldAlt, FaFire, FaTools, FaExclamationTriangle, FaWrench, FaMapMarkerAlt } from 'react-icons/fa';
 import ManufacturerCarousel from '../../../components/ManufacturerCarousel';
 import MapSection from '../../../components/MapSectionWrapper';
 import Footer from '../../../components/Footer';
+import FaqAccordion from '../../../components/FaqAccordion';
 import { SERVICE_TOWNS } from '../../../data/serviceTowns';
 import { trackPhoneClick } from '../../../utils/analytics';
 
@@ -105,7 +106,6 @@ const PREVENT_NOTE = {
 
 const HeatingRepairTown = ({ townKey }) => {
   const t = SERVICE_TOWNS[townKey];
-  const [openFaq, setOpenFaq] = useState(null);
   const profile = TOWN_PROFILE[townKey] || 'variedAge';
   const problemCards = PROBLEM_CARDS[profile];
   const causeText = CAUSE_TEXT[profile];
@@ -314,31 +314,13 @@ const HeatingRepairTown = ({ townKey }) => {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-12 bg-white">
-          <div className="max-w-4xl mx-auto px-4">
-            <h3 className="text-2xl md:text-3xl font-bold text-center text-blue-900 mb-8">
-              {t.name} Heating Repair Questions
-            </h3>
-            <div className="space-y-2">
-              {faqs.map((faq, idx) => (
-                <div key={idx} className="border border-gray-200 rounded-lg overflow-hidden bg-gray-50">
-                  <button
-                    onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                    className="w-full text-left px-4 py-3 flex justify-between items-center hover:bg-gray-100 transition"
-                  >
-                    <span className="font-medium text-blue-900 pr-4">{faq.question}</span>
-                    <FaChevronDown className={`w-4 h-4 text-gray-400 flex-shrink-0 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`} />
-                  </button>
-                  {openFaq === idx && (
-                    <div className="px-4 pb-4 text-gray-600 leading-relaxed">
-                      {faq.answer}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqAccordion
+          heading={`${t.name} Heating Repair Questions`}
+          faqs={faqs}
+          sectionClassName="py-12 bg-white"
+          cardClassName="border border-gray-200 rounded-lg overflow-hidden bg-gray-50"
+          buttonHoverClassName="hover:bg-gray-100"
+        />
 
         {/* Related Links Section */}
         <section className="py-12 bg-gray-50">

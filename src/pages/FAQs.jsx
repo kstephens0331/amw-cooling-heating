@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useId, useState } from 'react';
 import Link from 'next/link';
 import { FaPhone, FaCalendarCheck, FaChevronDown, FaChevronRight, FaQuestionCircle, FaTools, FaWrench, FaCog, FaCreditCard } from 'react-icons/fa';
 import FinancingCTA from '../components/FinancingCTA';
@@ -451,9 +451,15 @@ const schemaFaqs = [
 export default function FAQs() {
   const [activeCategory, setActiveCategory] = useState(0);
   const [activeQuestion, setActiveQuestion] = useState(null);
+  const baseId = useId();
 
   const toggleQuestion = (questionIdx) => {
     setActiveQuestion(activeQuestion === questionIdx ? null : questionIdx);
+  };
+
+  const selectCategory = (idx) => {
+    setActiveCategory(idx);
+    setActiveQuestion(null);
   };
 
   return (
@@ -515,10 +521,9 @@ export default function FAQs() {
               return (
                 <button
                   key={idx}
-                  onClick={() => {
-                    setActiveCategory(idx);
-                    setActiveQuestion(null);
-                  }}
+                  onClick={() => selectCategory(idx)}
+                  aria-expanded={activeCategory === idx}
+                  aria-controls={`${baseId}-category-panel-${idx}`}
                   className={`inline-flex items-center gap-2 px-5 py-3 rounded-lg text-sm font-bold transition shadow-lg ${
                     activeCategory === idx
                       ? 'bg-red-500 text-white'
@@ -532,34 +537,53 @@ export default function FAQs() {
             })}
           </div>
 
-          {/* Questions List */}
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden border-l-4 border-blue-600">
-            <div className="divide-y divide-gray-100">
-              {faqs[activeCategory]?.questions.map((q, questionIdx) => {
-                const isActive = activeQuestion === questionIdx;
-                return (
-                  <div key={questionIdx}>
-                    <button
-                      onClick={() => toggleQuestion(questionIdx)}
-                      className="w-full text-left px-6 py-4 flex justify-between items-center hover:bg-gray-50 transition"
-                    >
-                      <span className="font-medium text-blue-900 pr-4">{q.question}</span>
-                      <FaChevronDown
-                        className={`w-4 h-4 text-gray-400 flex-shrink-0 transition-transform ${
-                          isActive ? 'rotate-180' : ''
-                        }`}
-                      />
-                    </button>
-                    {isActive && (
-                      <div className="px-6 pb-5 text-gray-600 leading-relaxed border-l-2 border-blue-500 ml-6 mr-6 mb-4">
-                        {q.answer}
+          {/* Questions List - every category is rendered into the HTML (so all
+              answers stay visible to crawlers and match the FAQPage schema
+              below); only the active tab's panel is shown via CSS. */}
+          {faqs.map((category, catIdx) => (
+            <div
+              key={catIdx}
+              id={`${baseId}-category-panel-${catIdx}`}
+              className={activeCategory === catIdx ? '' : 'hidden'}
+            >
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden border-l-4 border-blue-600">
+                <div className="divide-y divide-gray-100">
+                  {category.questions.map((q, questionIdx) => {
+                    const isActive = activeCategory === catIdx && activeQuestion === questionIdx;
+                    const panelId = `${baseId}-faq-panel-${catIdx}-${questionIdx}`;
+                    return (
+                      <div key={questionIdx}>
+                        <button
+                          type="button"
+                          onClick={() => toggleQuestion(questionIdx)}
+                          aria-expanded={isActive}
+                          aria-controls={panelId}
+                          className="w-full text-left px-6 py-4 flex justify-between items-center hover:bg-gray-50 transition"
+                        >
+                          <span className="font-medium text-blue-900 pr-4">{q.question}</span>
+                          <FaChevronDown
+                            className={`w-4 h-4 text-gray-400 flex-shrink-0 transition-transform ${
+                              isActive ? 'rotate-180' : ''
+                            }`}
+                          />
+                        </button>
+                        <div
+                          id={panelId}
+                          className={`grid transition-all duration-300 ease-in-out ${isActive ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}
+                        >
+                          <div className="overflow-hidden">
+                            <div className="px-6 pb-5 text-gray-600 leading-relaxed border-l-2 border-blue-500 ml-6 mr-6 mb-4">
+                              {q.answer}
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                    )}
-                  </div>
-                );
-              })}
+                    );
+                  })}
+                </div>
+              </div>
             </div>
-          </div>
+          ))}
 
           {/* Question Count */}
           <p className="text-center text-sm text-blue-200 mt-6">
