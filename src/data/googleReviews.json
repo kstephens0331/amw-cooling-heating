@@ -3,10 +3,16 @@
   "businessName": "AMW Cooling & Heating LLC",
   "profileUrl": "https://www.google.com/maps?cid=14977632959753518383&hl=en",
   "averageRating": 5,
-  "totalReviews": 77,
-  "scrapedAt": "2026-08-12T14:00:50.028Z",
+  "totalReviews": 78,
+  "scrapedAt": "2026-08-13T14:00:52.416Z",
   "note": "Live aggregate and reviews pulled directly from AMW's Google Maps listing via scripts/scrape-google-reviews.js. Reviews are verbatim from Google (author names and text unchanged); reviews where the customer left only a star rating with no written text are omitted here. Re-run the scraper to refresh.",
   "reviews": [
+    {
+      "name": "lynne keys",
+      "rating": 5,
+      "date": "17 hours ago",
+      "text": "A man and company of their word. Hard to find these days! Thank you for coming quickly and assuring me."
+    },
     {
       "name": "Ron Claver",
       "rating": 5,
@@ -41,7 +47,7 @@
       "name": "Andy Keeton",
       "rating": 5,
       "date": "a month ago",
-      "text": "Thank you all! Joshua with AMW just left. He was extremely helpful, knowledgeable, and took the time to actually show me what the issue was instead of trying to sell me something I didn’t need. You can tell he takes pride in his workmanship and genuinely cares about helping people. I never felt like he was just trying to make a sale, he was honest, straightforward, and explained everything clearly. That kind of service is hard to find these days. We will definitely be using AMW again in the future. I just wish we could have met under better circumstances where it could have been a “little cooler”!😂"
+      "text": "Thank you all! Joshua with AMW just left. He was extremely helpful, knowledgeable, and took the time to actually show me what the issue was instead of trying to sell me something I didn’t need. …"
     },
     {
       "name": "Me Xochi",
@@ -96,6 +102,30 @@
       "rating": 5,
       "date": "2 months ago",
       "text": "Great experience! He was helpful and fast. Highly recommend"
+    },
+    {
+      "name": "James Kent",
+      "rating": 5,
+      "date": "2 months ago",
+      "text": "I’ve been using this company for my AC maintenance and I can’t recommend them highly enough. From the first visit, it was clear I was dealing with someone genuinely honest — no upselling, no inventing problems that don’t exist, just straight answers about what my system actually needs. That kind of integrity is rare and it’s the main reason I keep calling them back. He’s reliable in every sense: shows up when he says he will, communicates clearly about timing, and does what he promises. My AC has run noticeably better since he started maintaining it, and I have real peace of mind knowing it’s being looked after by someone who knows what he’s doing and stands behind his work. What stands out most is the trust. I never feel like I’m being taken advantage of, the pricing is fair and transparent, and he takes the time to explain what he’s doing and why. If you’re looking for an AC technician who is honest, dependable, and genuinely good at the work, this is who you want. Highly recommended."
+    },
+    {
+      "name": "Jose Amparo",
+      "rating": 5,
+      "date": "3 months ago",
+      "text": "Excellent service and response time from Joshua. Have emergency he’s your guy to call."
+    },
+    {
+      "name": "Stacy Gregory",
+      "rating": 5,
+      "date": "3 months ago",
+      "text": "I used AMW for cleaning my dryer vent. The service was excellent! He even returned a second time to replace a worn piece, without charge. He was thorough and honest. He even helped us with an unrelated item that will need roofing attention. I highly recommend! We will be using AMW for future service."
+    },
+    {
+      "name": "Jaclyn Franks",
+      "rating": 5,
+      "date": "4 months ago",
+      "text": "AMW came out immediately when I called. They were thorough, looked at everything, and made recommendations on what to do going forward."
     }
   ]
 }
