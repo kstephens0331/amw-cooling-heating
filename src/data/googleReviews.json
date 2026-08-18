@@ -4,13 +4,13 @@
   "profileUrl": "https://www.google.com/maps?cid=14977632959753518383&hl=en",
   "averageRating": 5,
   "totalReviews": 78,
-  "scrapedAt": "2026-08-17T14:00:56.222Z",
+  "scrapedAt": "2026-08-18T14:00:51.838Z",
   "note": "Live aggregate and reviews pulled directly from AMW's Google Maps listing via scripts/scrape-google-reviews.js. Reviews are verbatim from Google (author names and text unchanged); reviews where the customer left only a star rating with no written text are omitted here. Re-run the scraper to refresh.",
   "reviews": [
     {
       "name": "lynne keys",
       "rating": 5,
-      "date": "4 days ago",
+      "date": "5 days ago",
       "text": "A man and company of their word. Hard to find these days! Thank you for coming quickly and assuring me."
     },
     {
@@ -34,7 +34,7 @@
     {
       "name": "Gerry King",
       "rating": 5,
-      "date": "3 weeks ago",
+      "date": "4 weeks ago",
       "text": "After hour's work went extra mile"
     },
     {
@@ -118,7 +118,7 @@
     {
       "name": "Stacy Gregory",
       "rating": 5,
-      "date": "3 months ago",
+      "date": "4 months ago",
       "text": "I used AMW for cleaning my dryer vent. The service was excellent! He even returned a second time to replace a worn piece, without charge. He was thorough and honest. He even helped us with an unrelated item that will need roofing attention. I highly recommend! We will be using AMW for future service."
     },
     {
