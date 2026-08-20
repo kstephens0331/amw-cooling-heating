@@ -4,13 +4,13 @@
   "profileUrl": "https://www.google.com/maps?cid=14977632959753518383&hl=en",
   "averageRating": 5,
   "totalReviews": 78,
-  "scrapedAt": "2026-08-19T14:01:22.735Z",
+  "scrapedAt": "2026-08-20T14:00:54.947Z",
   "note": "Live aggregate and reviews pulled directly from AMW's Google Maps listing via scripts/scrape-google-reviews.js. Reviews are verbatim from Google (author names and text unchanged); reviews where the customer left only a star rating with no written text are omitted here. Re-run the scraper to refresh.",
   "reviews": [
     {
       "name": "lynne keys",
       "rating": 5,
-      "date": "6 days ago",
+      "date": "a week ago",
       "text": "A man and company of their word. Hard to find these days! Thank you for coming quickly and assuring me."
     },
     {
