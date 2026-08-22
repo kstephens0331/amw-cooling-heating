@@ -3,14 +3,14 @@
   "businessName": "AMW Cooling & Heating LLC",
   "profileUrl": "https://www.google.com/maps?cid=14977632959753518383&hl=en",
   "averageRating": 5,
-  "totalReviews": 79,
-  "scrapedAt": "2026-08-21T14:00:56.482Z",
+  "totalReviews": 80,
+  "scrapedAt": "2026-08-22T14:01:03.400Z",
   "note": "Live aggregate and reviews pulled directly from AMW's Google Maps listing via scripts/scrape-google-reviews.js. Reviews are verbatim from Google (author names and text unchanged); reviews where the customer left only a star rating with no written text are omitted here. Re-run the scraper to refresh.",
   "reviews": [
     {
       "name": "Kathy Durham",
       "rating": 5,
-      "date": "11 hours ago",
+      "date": "a day ago",
       "text": "Had my capacitor back up within 15 minutes..."
     },
     {
@@ -102,6 +102,30 @@
       "rating": 5,
       "date": "Edited 2 months ago",
       "text": "Amazing service each time. We will continue use this company for all heating and cooling needs on our house. They were quick and he explained everything in detail to help us understand why he was doing what he was doing."
+    },
+    {
+      "name": "Jordan Hoffart",
+      "rating": 5,
+      "date": "3 months ago",
+      "text": "Great experience! He was helpful and fast. Highly recommend"
+    },
+    {
+      "name": "James Kent",
+      "rating": 5,
+      "date": "3 months ago",
+      "text": "I’ve been using this company for my AC maintenance and I can’t recommend them highly enough. From the first visit, it was clear I was dealing with someone genuinely honest — no upselling, no inventing problems that don’t exist, just …"
+    },
+    {
+      "name": "Jose Amparo",
+      "rating": 5,
+      "date": "3 months ago",
+      "text": "Excellent service and response time from Joshua. Have emergency he’s your guy to call."
+    },
+    {
+      "name": "Stacy Gregory",
+      "rating": 5,
+      "date": "4 months ago",
+      "text": "I used AMW for cleaning my dryer vent. The service was excellent! He even returned a second time to replace a worn piece, without charge. He was thorough and honest. He even helped us with an unrelated item that will need roofing attention. I highly recommend! We will be using AMW for future service."
     }
   ]
 }
