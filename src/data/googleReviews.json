@@ -4,13 +4,13 @@
   "profileUrl": "https://www.google.com/maps?cid=14977632959753518383&hl=en",
   "averageRating": 5,
   "totalReviews": 80,
-  "scrapedAt": "2026-08-22T14:01:03.400Z",
+  "scrapedAt": "2026-08-23T14:00:54.329Z",
   "note": "Live aggregate and reviews pulled directly from AMW's Google Maps listing via scripts/scrape-google-reviews.js. Reviews are verbatim from Google (author names and text unchanged); reviews where the customer left only a star rating with no written text are omitted here. Re-run the scraper to refresh.",
   "reviews": [
     {
       "name": "Kathy Durham",
       "rating": 5,
-      "date": "a day ago",
+      "date": "2 days ago",
       "text": "Had my capacitor back up within 15 minutes..."
     },
     {
@@ -64,7 +64,7 @@
     {
       "name": "Ramon Rodriguez",
       "rating": 5,
-      "date": "a month ago",
+      "date": "2 months ago",
       "text": "Great customer service and quick response. Very knowledgeable. 100% recommended."
     },
     {
