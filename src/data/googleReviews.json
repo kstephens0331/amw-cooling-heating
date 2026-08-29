@@ -4,13 +4,19 @@
   "profileUrl": "https://www.google.com/maps?cid=14977632959753518383&hl=en",
   "averageRating": 5,
   "totalReviews": 80,
-  "scrapedAt": "2026-08-27T14:01:04.844Z",
+  "scrapedAt": "2026-08-29T14:00:49.104Z",
   "note": "Live aggregate and reviews pulled directly from AMW's Google Maps listing via scripts/scrape-google-reviews.js. Reviews are verbatim from Google (author names and text unchanged); reviews where the customer left only a star rating with no written text are omitted here. Re-run the scraper to refresh.",
   "reviews": [
     {
+      "name": "Gerry King",
+      "rating": 5,
+      "date": "Edited 20 hours ago",
+      "text": "After hour's work went extra mile. Extra work done without asking super helpful"
+    },
+    {
       "name": "Kathy Durham",
       "rating": 5,
-      "date": "Edited a day ago",
+      "date": "Edited 3 days ago",
       "text": "Maintenance done, but need a new box."
     },
     {
@@ -36,12 +42,6 @@
       "rating": 5,
       "date": "a month ago",
       "text": "Josh was amazing! I had an emergency with my A/C and he came right out. He was extremely professional and knowledgeable. I highly recommend AMW Cooling and Heating! I will definitely be signing up for the maintenance program. Love that this is a Veteran owned company. Thank you Josh!!"
-    },
-    {
-      "name": "Gerry King",
-      "rating": 5,
-      "date": "a month ago",
-      "text": "After hour's work went extra mile"
     },
     {
       "name": "Jaime Monica",
@@ -100,7 +100,7 @@
     {
       "name": "Darien Silvestri",
       "rating": 5,
-      "date": "Edited 2 months ago",
+      "date": "Edited 3 months ago",
       "text": "Amazing service each time. We will continue use this company for all heating and cooling needs on our house. They were quick and he explained everything in detail to help us understand why he was doing what he was doing."
     },
     {
