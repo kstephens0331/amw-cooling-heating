@@ -4,19 +4,19 @@
   "profileUrl": "https://www.google.com/maps?cid=14977632959753518383&hl=en",
   "averageRating": 5,
   "totalReviews": 80,
-  "scrapedAt": "2026-08-29T14:00:49.104Z",
+  "scrapedAt": "2026-08-30T14:00:49.766Z",
   "note": "Live aggregate and reviews pulled directly from AMW's Google Maps listing via scripts/scrape-google-reviews.js. Reviews are verbatim from Google (author names and text unchanged); reviews where the customer left only a star rating with no written text are omitted here. Re-run the scraper to refresh.",
   "reviews": [
     {
       "name": "Gerry King",
       "rating": 5,
-      "date": "Edited 20 hours ago",
+      "date": "Edited a day ago",
       "text": "After hour's work went extra mile. Extra work done without asking super helpful"
     },
     {
       "name": "Kathy Durham",
       "rating": 5,
-      "date": "Edited 3 days ago",
+      "date": "Edited 4 days ago",
       "text": "Maintenance done, but need a new box."
     },
     {
@@ -118,7 +118,7 @@
     {
       "name": "Jose Amparo",
       "rating": 5,
-      "date": "3 months ago",
+      "date": "4 months ago",
       "text": "Excellent service and response time from Joshua. Have emergency he’s your guy to call."
     },
     {
