@@ -4,19 +4,19 @@
   "profileUrl": "https://www.google.com/maps?cid=14977632959753518383&hl=en",
   "averageRating": 5,
   "totalReviews": 80,
-  "scrapedAt": "2026-08-31T14:00:45.401Z",
+  "scrapedAt": "2026-09-01T14:00:53.286Z",
   "note": "Live aggregate and reviews pulled directly from AMW's Google Maps listing via scripts/scrape-google-reviews.js. Reviews are verbatim from Google (author names and text unchanged); reviews where the customer left only a star rating with no written text are omitted here. Re-run the scraper to refresh.",
   "reviews": [
     {
       "name": "Gerry King",
       "rating": 5,
-      "date": "Edited 2 days ago",
+      "date": "Edited 3 days ago",
       "text": "After hour's work went extra mile. Extra work done without asking super helpful"
     },
     {
       "name": "Kathy Durham",
       "rating": 5,
-      "date": "Edited 5 days ago",
+      "date": "Edited 6 days ago",
       "text": "Maintenance done, but need a new box."
     },
     {
