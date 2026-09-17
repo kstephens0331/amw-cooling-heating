@@ -4,7 +4,7 @@
   "profileUrl": "https://www.google.com/maps?cid=14977632959753518383&hl=en",
   "averageRating": 5,
   "totalReviews": 81,
-  "scrapedAt": "2026-09-16T14:01:14.682Z",
+  "scrapedAt": "2026-09-17T14:01:12.375Z",
   "note": "Live aggregate and reviews pulled directly from AMW's Google Maps listing via scripts/scrape-google-reviews.js. Reviews are verbatim from Google (author names and text unchanged); reviews where the customer left only a star rating with no written text are omitted here. Re-run the scraper to refresh.",
   "reviews": [
     {
@@ -34,7 +34,7 @@
     {
       "name": "Sam Cracraft",
       "rating": 5,
-      "date": "2 months ago",
+      "date": "3 months ago",
       "text": "Thanks to Josh and the team at AMW Cooling & Heating for get our HVAC system up and running like it never has. AMW did an awesome job of fine tunning our new system. We haven't had our AC working like it is now. Our system is saving us money each and every month. We love that!!"
     }
   ]
