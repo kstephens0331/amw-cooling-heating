@@ -3,14 +3,14 @@
   "businessName": "AMW Cooling & Heating LLC",
   "profileUrl": "https://www.google.com/maps?cid=14977632959753518383&hl=en",
   "averageRating": 5,
-  "totalReviews": 81,
-  "scrapedAt": "2026-09-18T14:01:11.355Z",
+  "totalReviews": 82,
+  "scrapedAt": "2026-09-19T14:01:12.184Z",
   "note": "Live aggregate and reviews pulled directly from AMW's Google Maps listing via scripts/scrape-google-reviews.js. Reviews are verbatim from Google (author names and text unchanged); reviews where the customer left only a star rating with no written text are omitted here. Re-run the scraper to refresh.",
   "reviews": [
     {
       "name": "James Kent",
       "rating": 5,
-      "date": "3 months ago",
+      "date": "4 months ago",
       "text": "I’ve been using this company for my AC maintenance and I can’t recommend them highly enough. From the first visit, it was clear I was dealing with someone genuinely honest — no upselling, no inventing problems that don’t exist, just …"
     },
     {
