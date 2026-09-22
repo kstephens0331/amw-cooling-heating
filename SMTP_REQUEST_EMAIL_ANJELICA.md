@@ -54,14 +54,6 @@ through a shared password manager. If you'd rather not hand it over at all, get
 me on a short screen share and I'll walk you through where it goes while it stays
 on your side.
 
-**Step 5 — Confirm your mail server settings**
-I expect these to be the Microsoft 365 defaults — server `smtp.office365.com`,
-port `587`, STARTTLS. Just confirm nothing custom is set up on the tenant.
-
-**Step 6 — Tell me who manages your DNS**
-Whoever controls DNS for amwairconditioning.com. I may need an SPF record
-adjustment so the form emails don't get flagged as spam.
-
 If it's easier, I'm happy to hop on a quick call and go through Steps 3 and 4
 with you — it's about a ten minute job.
 
