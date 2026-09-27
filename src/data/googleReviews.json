@@ -4,7 +4,7 @@
   "profileUrl": "https://www.google.com/maps?cid=14977632959753518383&hl=en",
   "averageRating": 5,
   "totalReviews": 83,
-  "scrapedAt": "2026-09-26T14:01:10.110Z",
+  "scrapedAt": "2026-09-27T14:01:11.374Z",
   "note": "Live aggregate and reviews pulled directly from AMW's Google Maps listing via scripts/scrape-google-reviews.js. Reviews are verbatim from Google (author names and text unchanged); reviews where the customer left only a star rating with no written text are omitted here. Re-run the scraper to refresh.",
   "reviews": [
     {
@@ -22,7 +22,7 @@
     {
       "name": "Laura Carrillo",
       "rating": 5,
-      "date": "a month ago",
+      "date": "2 months ago",
       "text": "As we searched, we ended finding out that AMW Cooling and Heating, LLC was rated #2 on the top 10 list per CHAT GPT based on ratings. At this point we were without AC for a day already and just went out on a limb. Fortunately for us, we …"
     },
     {
