@@ -63,7 +63,7 @@ const MapSection = () => {
   const serviceAreas = [
     'Conroe', 'The Woodlands', 'Spring', 'Montgomery', 'Willis',
     'Magnolia', 'New Caney', 'Porter', 'Splendora', 'Cut and Shoot',
-    'Tomball', 'Humble', 'Huntsville'
+    'Tomball', 'Humble'
   ];
 
   return (
