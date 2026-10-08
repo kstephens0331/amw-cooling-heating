@@ -95,7 +95,8 @@ const Footer = () => {
           </div>
 
           <div className="text-xs text-white leading-snug md:text-right">
-            <p><strong>Hours:</strong> 8am–9pm, 7 Days a Week</p>
+            <p><strong>Hours:</strong> Mon–Sat 8am–9pm, Closed Sunday</p>
+            <p>Emergency service available Sundays</p>
           </div>
 
           {/* Certification Badges */}

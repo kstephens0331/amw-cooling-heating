@@ -39,17 +39,17 @@ const MapSection = () => {
     loadLeaflet();
   }, []);
   const serviceAreaCoords = [
-    [30.58, -95.5],
-    [30.5, -95.35],
-    [30.45, -95.1],      // Extended east towards Cleveland
-    [30.35, -95.05],     // Cleveland area
-    [30.2, -95.08],      // Extended east
-    [30.05, -95.15],     // Atascocita area
-    [30.0, -95.35],      // Bottom east
-    [30.10, -95.55],
-    [30.25, -95.8],      // Extended west to include Montgomery
-    [30.45, -95.78],     // Montgomery area
-    [30.55, -95.65],     // Northwest
+    [30.491, -95.485],
+    [30.437, -95.385],
+    [30.404, -95.219],   // Extended east towards Cleveland
+    [30.337, -95.185],   // Cleveland area
+    [30.237, -95.205],   // Extended east
+    [30.137, -95.252],   // Atascocita area
+    [30.104, -95.385],   // Bottom east
+    [30.171, -95.519],
+    [30.271, -95.685],   // Extended west to include Montgomery
+    [30.404, -95.672],   // Montgomery area
+    [30.471, -95.585],   // Northwest
   ];
 
   const cities = [
@@ -63,7 +63,7 @@ const MapSection = () => {
   const serviceAreas = [
     'Conroe', 'The Woodlands', 'Spring', 'Montgomery', 'Willis',
     'Magnolia', 'New Caney', 'Porter', 'Splendora', 'Cut and Shoot',
-    'Tomball', 'Humble'
+    'Tomball'
   ];
 
   return (
@@ -86,7 +86,7 @@ const MapSection = () => {
             Serving <span className="text-red-500">Texas</span> Families
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Proudly serving Conroe, The Woodlands, Spring, and surrounding communities within a 30-mile radius.
+            Proudly serving Conroe, The Woodlands, Spring, and surrounding communities within a 20-mile radius.
           </p>
         </div>
 

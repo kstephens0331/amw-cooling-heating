@@ -84,7 +84,7 @@ const faqs = [
         question: 'What is your service area radius?',
         answer: (
           <span>
-            We typically serve a 30-mile radius around Conroe, TX. If you’re outside this range,{' '}
+            We typically serve a 20-mile radius around Conroe, TX. If you’re outside this range,{' '}
             <a href="/contact" className="text-blue-600 underline hover:text-orange-500">contact us</a> to see if we can accommodate your needs.
           </span>
         ),
