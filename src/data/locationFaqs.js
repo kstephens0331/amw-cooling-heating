@@ -102,7 +102,7 @@ export const LOCATION_FAQS = {
       },
       {
         question: 'Can you get to Montgomery the same day?',
-        answer: 'Usually. Montgomery sits just west of our Conroe shop, so most calls, lakefront or downtown, get a technician out the same day. Our hours run 8am to 9pm daily, and if your system quits after that, our after-hours emergency line covers you until 9pm. Reach us at (936) 331-1339.'
+        answer: 'Usually. Montgomery sits just west of our Conroe shop, so most calls, lakefront or downtown, get a technician out the same day. Our hours run 8am to 9pm Monday through Saturday, and if your system quits after that, our after-hours emergency line covers you until 9pm. Reach us at (936) 331-1339.'
       },
       {
         question: 'Do you offer financing on new systems in Montgomery?',
@@ -123,7 +123,7 @@ export const LOCATION_FAQS = {
       },
       {
         question: 'How quickly can you reach Willis for emergency HVAC service?',
-        answer: 'Most Willis calls get a same-day appointment, and often faster, since Conroe is just down I-45. Our regular hours run 8am to 9pm every day, with emergency coverage extending from 5pm to 9pm on top of that. Dial (936) 331-1339 and tell us what is going on.'
+        answer: 'Most Willis calls get a same-day appointment, and often faster, since Conroe is just down I-45. Our regular hours run 8am to 9pm Monday through Saturday, with emergency coverage extending from 5pm to 9pm on top of that. Dial (936) 331-1339 and tell us what is going on.'
       },
       {
         question: 'What HVAC brands do you install and repair in Willis?',
@@ -177,7 +177,7 @@ export const LOCATION_FAQS = {
       },
       {
         question: 'Do you offer emergency heating and cooling service in Tomball?',
-        answer: 'We do, and Tomball\'s spread from downtown to the 249 corridor does not slow us down. Our regular hours run 8am to 9pm every day, and we cover after-hours AC and heating emergencies from 5pm to 9pm as well. Call (936) 331-1339; after-hours calls carry an additional charge, which we will confirm with you before dispatching.'
+        answer: 'We do, and Tomball\'s spread from downtown to the 249 corridor does not slow us down. Our regular hours run 8am to 9pm Monday through Saturday, and we cover after-hours AC and heating emergencies from 5pm to 9pm as well. Call (936) 331-1339; after-hours calls carry an additional charge, which we will confirm with you before dispatching.'
       },
       {
         question: 'Do you offer financing and maintenance plans in Tomball?',
@@ -248,7 +248,7 @@ export const LOCATION_FAQS = {
       },
       {
         question: 'How fast can you reach Porter for emergency AC repair?',
-        answer: 'Porter sits close enough to our Conroe shop, just down US-59, that a technician reaching you the same day is the norm, and the newer Grand Parkway segments have only shaved more time off that drive. If your AC dies well after most companies have gone home, we are still taking calls right up until 9pm, seven nights a week, so you are not stuck waiting until morning. Call (936) 331-1339.'
+        answer: 'Porter sits close enough to our Conroe shop, just down US-59, that a technician reaching you the same day is the norm, and the newer Grand Parkway segments have only shaved more time off that drive. If your AC dies well after most companies have gone home, we are still taking calls right up until 9pm, Monday through Saturday, with emergency service on Sundays, so you are not stuck waiting until morning. Call (936) 331-1339.'
       },
       {
         question: 'What HVAC brands do you install and repair in Porter?',
@@ -269,7 +269,7 @@ export const LOCATION_FAQS = {
       },
       {
         question: 'How fast can AMW respond to a service call in Cut and Shoot?',
-        answer: 'Six miles is not much of a drive, which is the point of running our shop out of Conroe. Repair, install, or a maintenance visit, a same-day appointment is realistic for most Cut and Shoot calls along SH-105. Doors are open 8am to 9pm every day, and if your system goes down after that, our after-hours emergency line runs until 9pm. Reach us at (936) 331-1339.'
+        answer: 'Six miles is not much of a drive, which is the point of running our shop out of Conroe. Repair, install, or a maintenance visit, a same-day appointment is realistic for most Cut and Shoot calls along SH-105. Doors are open 8am to 9pm Monday through Saturday, and if your system goes down after that, our after-hours emergency line runs until 9pm. Reach us at (936) 331-1339.'
       },
       {
         question: 'Do you service HVAC on rural and acreage properties near Cut and Shoot?',
@@ -298,7 +298,7 @@ export const LOCATION_FAQS = {
       },
       {
         question: 'Do you offer emergency heating and cooling service in Shenandoah?',
-        answer: 'Yes, and same-day is the norm here rather than the exception, since Shenandoah sits close to our Conroe base. Regular hours run 8am to 9pm every day, with after-hours emergency coverage from 5 to 9pm, so a Friday-night rooftop unit failure at Metropark Square gets the same response as a Tuesday-morning house call in Shenandoah Valley. Reach us at (936) 331-1339.'
+        answer: 'Yes, and same-day is the norm here rather than the exception, since Shenandoah sits close to our Conroe base. Regular hours run 8am to 9pm Monday through Saturday, with after-hours emergency coverage from 5 to 9pm, so a Friday-night rooftop unit failure at Metropark Square gets the same response as a Tuesday-morning house call in Shenandoah Valley. Reach us at (936) 331-1339.'
       },
       {
         question: 'What HVAC equipment do you service in Shenandoah?',

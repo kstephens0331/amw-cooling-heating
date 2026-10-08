@@ -193,7 +193,7 @@ const SplendoraTX = () => {
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">&#10003;</span>
-                <span className="text-gray-700 text-base font-medium">Same-day and after-hours calls, 8am to 9pm daily</span>
+                <span className="text-gray-700 text-base font-medium">Same-day and after-hours calls, 8am to 9pm Monday through Saturday</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">&#10003;</span>

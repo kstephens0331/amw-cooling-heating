@@ -178,7 +178,7 @@ const PorterTX = () => {
               technicians who actually know the ground. AMW is not one of those. We are
               veteran-owned, we run out of a shop up FM 1314 in Conroe, and the same crew that
               services new construction in The Highlands and Valley Ranch also handles the older
-              homes near Porter's original town center. Call before 9pm any night of the week and
+              homes near Porter's original town center. Call before 9pm Monday through Saturday and
               you will reach one of us directly, not a scheduling queue in another state.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">

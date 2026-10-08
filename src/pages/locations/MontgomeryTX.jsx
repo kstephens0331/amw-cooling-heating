@@ -224,7 +224,7 @@ const MontgomeryTX = () => {
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
-                <span className="text-gray-700 text-base font-medium">Same-day and after-hours calls covered, 8am to 9pm every day</span>
+                <span className="text-gray-700 text-base font-medium">Same-day and after-hours calls covered, 8am to 9pm Monday through Saturday</span>
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-start gap-3">
                 <span className="text-green-500 font-bold text-lg mt-0.5">✓</span>
@@ -277,7 +277,7 @@ const MontgomeryTX = () => {
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
               Heat and humidity off Lake Conroe do not check the clock before an AC gives out, and
-              neither do we. The phones are covered 8am to 9pm every day, with after-hours emergency
+              neither do we. The phones are covered 8am to 9pm Monday through Saturday, with after-hours emergency
               coverage until 9pm, so whether the call comes from a dock house on the water or a
               place near the historic square, we get a technician moving the same day.
             </p>

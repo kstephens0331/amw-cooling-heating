@@ -233,7 +233,7 @@ const MagnoliaTX = () => {
               Emergency HVAC Service in Magnolia
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              A breakdown does not check whether you are five minutes from Magnolia's town center or a long gravel drive off FM 1774. We keep the schedule open from 8am to 9pm every day and staff dedicated after-hours coverage from 5pm to 9pm, so a Saturday night failure does not have to sit until Monday morning. Call (936) 331-1339 and we will start routing a technician your way.
+              A breakdown does not check whether you are five minutes from Magnolia's town center or a long gravel drive off FM 1774. We keep the schedule open from 8am to 9pm Monday through Saturday, with emergency service on Sundays, and staff dedicated after-hours coverage from 5pm to 9pm, so a Saturday night failure does not have to sit until Monday morning. Call (936) 331-1339 and we will start routing a technician your way.
             </p>
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">

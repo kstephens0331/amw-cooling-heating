@@ -250,7 +250,7 @@ const WillisTX = () => {
               Emergency HVAC Service in Willis
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              Lake air holds more moisture than the rest of Montgomery County, and that extra load is usually what pushes an already-weak system over the edge, often on the worst afternoon possible. Our regular hours are 8am to 9pm daily, and we keep taking emergency calls until 9pm on top of that. Reach us at (936) 331-1339 and we will get someone routed out to you, whether that is a dock-side condenser in Point Aquarius or a unit at the end of a long driveway on FM 830.
+              Lake air holds more moisture than the rest of Montgomery County, and that extra load is usually what pushes an already-weak system over the edge, often on the worst afternoon possible. Our regular hours are 8am to 9pm Monday through Saturday, and we keep taking emergency calls until 9pm on top of that. Reach us at (936) 331-1339 and we will get someone routed out to you, whether that is a dock-side condenser in Point Aquarius or a unit at the end of a long driveway on FM 830.
             </p>
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">

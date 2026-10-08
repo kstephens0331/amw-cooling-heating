@@ -307,8 +307,8 @@ const CutAndShootTX = () => {
               Out on acreage, a dead AC in August is not something you can count on a neighbor to
               notice, since the nearest one might be a quarter mile down the road. When your system
               quits, call (936) 331-1339 and we will send a technician east on SH 105 from our
-              Conroe shop, same day whenever we can manage it, doors open 8am to 9pm every day of
-              the week. We also run calls to nearby Conroe, Cleveland out toward US 59, and the rest
+              Conroe shop, same day whenever we can manage it, doors open 8am to 9pm Monday through
+              Saturday. We also run calls to nearby Conroe, Cleveland out toward US 59, and the rest
               of eastern Montgomery County.
             </p>
 
