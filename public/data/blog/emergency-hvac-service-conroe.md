@@ -10,7 +10,7 @@ It's 2 AM on a scorching July night in Conroe, and your air conditioner has stop
 
 At AMW Cooling & Heating LLC, we've responded to thousands of emergency HVAC calls throughout Montgomery County. While not every system problem requires immediate attention, some situations absolutely demand urgent professional service. Knowing the difference can prevent property damage, protect your family's safety, and potentially save you thousands of dollars in unnecessary repairs.
 
-**Facing an HVAC emergency right now?** [Call AMW at (936) 331-1339](tel:+19363311339) for immediate assistance. We're open 8am-9pm, 7 days a week, with after-hours emergency dispatch throughout Conroe, The Woodlands, Spring, and Montgomery County.
+**Facing an HVAC emergency right now?** [Call AMW at (936) 331-1339](tel:+19363311339) for immediate assistance. We're open 8am-9pm, Monday through Saturday, with emergency service on Sundays and after-hours emergency dispatch throughout Conroe, The Woodlands, Spring, and Montgomery County.
 
 ---
 
@@ -317,7 +317,7 @@ When your HVAC system fails, you need a company you can trust to respond quickly
 
 ### **Call AMW Now: (936) 331-1339**
 
-**Regular service hours:** 8am-9pm, 7 days a week
+**Regular service hours:** 8am-9pm, Monday through Saturday (closed Sunday)
 **After-hours emergency service:** 5pm-9pm
 
 **[Schedule non-emergency service online](/contact-us)** or call during business hours for faster scheduling and lower service rates.

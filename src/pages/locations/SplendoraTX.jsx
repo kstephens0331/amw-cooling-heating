@@ -316,7 +316,7 @@ const SplendoraTX = () => {
               Emergency HVAC Service in Splendora
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              Regular business hours run 8am to 9pm, seven days a week, and after-hours emergency
+              Regular business hours run 8am to 9pm, Monday through Saturday, and after-hours emergency
               coverage picks up from 5pm to 9pm on top of that, because a furnace that quits on a
               cold December morning does not check the clock first, and neither does a compressor
               that gives out in August. Dial (936) 331-1339 and we will get someone routed to you,

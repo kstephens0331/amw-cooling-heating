@@ -116,7 +116,7 @@ const HeatingRepairTown = ({ townKey }) => {
   const faqs = [
     {
       question: `Do you offer emergency heating repair in ${t.name}?`,
-      answer: `Yes. When a cold front hits and the heat goes out, we offer after-hours emergency service from 5pm to 9pm on top of our regular 8am to 9pm hours, seven days a week. Since we're ${t.drive}, we can usually get a technician to your ${t.name} home quickly. Call (936) 331-1339. Additional charges may apply for after-hours calls.`
+      answer: `Yes. When a cold front hits and the heat goes out, we offer after-hours emergency service from 5pm to 9pm on top of our regular 8am to 9pm hours, Monday through Saturday, and emergency service is available on Sundays. Since we're ${t.drive}, we can usually get a technician to your ${t.name} home quickly. Call (936) 331-1339. Additional charges may apply for after-hours calls.`
     },
     {
       question: `What types of heating systems do you repair in ${t.name}?`,

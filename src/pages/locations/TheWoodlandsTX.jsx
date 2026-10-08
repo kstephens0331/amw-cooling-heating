@@ -263,7 +263,7 @@ const TheWoodlandsTX = () => {
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
               In a home this size, when one zone fails the rest of the system usually is not far
               behind, so we do not make Woodlands residents wait on a callback. We run 8am to 9pm
-              every day of the week, with after-hours emergency coverage on top of that, and since
+              Monday through Saturday, with after-hours emergency coverage on top of that, and since
               our Conroe shop sits about 20 minutes north, a technician can typically reach Town
               Center, Alden Bridge, or any other village the same day.
             </p>

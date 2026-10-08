@@ -289,7 +289,7 @@ const TomballTX = () => {
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
               Emergency HVAC service in Tomball means reaching both ends of town fast, whether
               that is a downtown home two blocks off Main Street or a new build off the 249
-              corridor. We keep the phones open 8am to 9pm, seven days a week, and dispatch
+              corridor. We keep the phones open 8am to 9pm, Monday through Saturday, and dispatch
               after-hours emergency calls from 5pm to 9pm for AC and heating breakdowns alike.
               Call (936) 331-1339 and tell us where you are; we will get a technician moving
               right away.

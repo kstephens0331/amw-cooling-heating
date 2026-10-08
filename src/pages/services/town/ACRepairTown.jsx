@@ -147,7 +147,7 @@ const ACRepairTown = ({ townKey }) => {
   const faqs = [
     {
       question: `How fast can you get to my home in ${t.name} for AC repair?`,
-      answer: `We are ${t.drive}, so ${t.name} is one of the areas we can usually reach the same day, and fast for emergencies. We are open 8am to 9pm seven days a week, with after-hours emergency service from 5pm to 9pm. Call (936) 331-1339 when your AC quits.`
+      answer: `We are ${t.drive}, so ${t.name} is one of the areas we can usually reach the same day, and fast for emergencies. We are open 8am to 9pm Monday through Saturday, with after-hours emergency service from 5pm to 9pm and emergency service available on Sundays. Call (936) 331-1339 when your AC quits.`
     },
     {
       question: `How much does AC repair cost in ${t.name}?`,
@@ -294,7 +294,7 @@ const ACRepairTown = ({ townKey }) => {
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
               An AC failure on a 95-degree afternoon does not wait for business hours, and neither do we. We are open
-              8am to 9pm seven days a week, with after-hours emergency service from 5pm to 9pm, so a {t.name} family
+              8am to 9pm Monday through Saturday, with after-hours emergency service from 5pm to 9pm, so a {t.name} family
               is never stuck in a hot house for long. Additional charges may apply for after-hours calls.
             </p>
           </div>

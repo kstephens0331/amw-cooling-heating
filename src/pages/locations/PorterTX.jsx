@@ -305,7 +305,7 @@ const PorterTX = () => {
               few minutes down FM 1314 from Conroe. What matters more is timing: call before 9pm
               and a technician can often be headed your way that same day, whether you are near
               the Kelsey-Seybold Kingwood Clinic on US-59, off FM 1485, or out toward the Grand
-              Parkway in The Highlands. We hold those hours, 8am to 9pm seven days a week, because
+              Parkway in The Highlands. We hold those hours, 8am to 9pm Monday through Saturday, with emergency service on Sundays, because
               breakdowns do not pick convenient days.
             </p>
 

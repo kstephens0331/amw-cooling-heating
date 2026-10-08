@@ -1,7 +1,7 @@
 // Per-town FAQ content for the location pages. Answers are plain ASCII strings
 // so the same text feeds both the on-page accordion and the FAQPage JSON-LD.
 // Facts used here are drawn from the rest of the site: hours are 8am to 9pm
-// seven days a week, after-hours emergency service runs 5pm to 9pm (additional
+// Monday through Saturday (emergency service on Sundays), after-hours emergency service runs 5pm to 9pm (additional
 // charges may apply), the company is licensed under TACLB133920E, financing is
 // offered through Synchrony and FTL Finance, and the Google rating is 5.0 stars.
 
@@ -19,7 +19,7 @@ export const LOCATION_FAQS = {
       },
       {
         question: 'How fast can AMW respond to an HVAC emergency in Conroe?',
-        answer: 'Since we are based right here in Conroe, we are usually the closest HVAC company to you, and we can typically reach you the same day for both cooling and heating emergencies. We are open 8am to 9pm seven days a week, with after-hours emergency service from 5pm to 9pm.'
+        answer: 'Since we are based right here in Conroe, we are usually the closest HVAC company to you, and we can typically reach you the same day for both cooling and heating emergencies. We are open 8am to 9pm Monday through Saturday, with after-hours emergency service from 5pm to 9pm and emergency service available on Sundays.'
       },
       {
         question: 'Are you licensed and insured to work in Conroe?',
@@ -52,7 +52,7 @@ export const LOCATION_FAQS = {
       },
       {
         question: 'Do you offer emergency AC repair in The Woodlands?',
-        answer: 'We do, and because The Woodlands is one of our closest, busiest service areas, a technician is rarely far away when a system quits after hours. Our after-hours window runs 5pm to 9pm on top of the normal 8am to 9pm day, seven days a week. Dial (936) 331-1339 as soon as the AC stops keeping up; after-hours calls carry an additional charge.'
+        answer: 'We do, and because The Woodlands is one of our closest, busiest service areas, a technician is rarely far away when a system quits after hours. Our after-hours window runs 5pm to 9pm on top of the normal 8am to 9pm day, Monday through Saturday, and emergency service is available on Sundays. Dial (936) 331-1339 as soon as the AC stops keeping up; after-hours calls carry an additional charge.'
       },
       {
         question: 'Is financing available for a new system in The Woodlands?',
@@ -77,7 +77,7 @@ export const LOCATION_FAQS = {
       },
       {
         question: 'Can you come out the same day for a Spring HVAC emergency?',
-        answer: 'In most cases, yes. We are a short drive south of our Conroe shop, so Spring is one of the areas we can typically reach the same day. We are open 8am to 9pm, seven days a week, with after-hours emergency service from 5pm to 9pm. Call (936) 331-1339 and we will get a technician headed your way.'
+        answer: 'In most cases, yes. We are a short drive south of our Conroe shop, so Spring is one of the areas we can typically reach the same day. We are open 8am to 9pm, Monday through Saturday, with after-hours emergency service from 5pm to 9pm and emergency service available on Sundays. Call (936) 331-1339 and we will get a technician headed your way.'
       },
       {
         question: 'Do you offer financing and maintenance plans in Spring?',
@@ -152,7 +152,7 @@ export const LOCATION_FAQS = {
       },
       {
         question: 'Do you offer same-day and emergency service in Magnolia?',
-        answer: 'Yes, and it is not limited to daytime hours. Our regular schedule runs 8am to 9pm seven days a week, with dedicated after-hours emergency coverage from 5pm to 9pm for anything that cannot wait until morning. Call (936) 331-1339 and tell us what is going on; additional charges apply outside normal business hours.'
+        answer: 'Yes, and it is not limited to daytime hours. Our regular schedule runs 8am to 9pm Monday through Saturday, with dedicated after-hours emergency coverage from 5pm to 9pm for anything that cannot wait until morning, and emergency service is available on Sundays. Call (936) 331-1339 and tell us what is going on; additional charges apply outside normal business hours.'
       },
       {
         question: 'Is financing available for HVAC work in Magnolia?',
@@ -223,7 +223,7 @@ export const LOCATION_FAQS = {
       },
       {
         question: 'Does AMW provide emergency heating and cooling service in Splendora?',
-        answer: 'We treat a dead AC in August and a furnace that will not fire in December the same way: as an emergency, not something that waits for the next opening. Because we are based in Conroe, most Splendora calls, whether you are near FM 2090 or out toward Old Highway 59, get a technician out same-day. We are open 8am to 9pm seven days a week, and after-hours emergency service runs from 5pm to 9pm. Call (936) 331-1339.'
+        answer: 'We treat a dead AC in August and a furnace that will not fire in December the same way: as an emergency, not something that waits for the next opening. Because we are based in Conroe, most Splendora calls, whether you are near FM 2090 or out toward Old Highway 59, get a technician out same-day. We are open 8am to 9pm Monday through Saturday, after-hours emergency service runs from 5pm to 9pm, and emergency service is available on Sundays. Call (936) 331-1339.'
       },
       {
         question: 'Is AMW licensed, insured, and veteran owned to work in Splendora?',
@@ -327,7 +327,7 @@ export const LOCATION_FAQS = {
       },
       {
         question: 'How quickly can AMW respond to a heating or cooling emergency in Pinehurst?',
-        answer: 'Pinehurst is an easy run down FM 1774 from the Conroe and Magnolia area, so we can usually get to you the same day, whether the problem is a failed air conditioner or a furnace that will not start. We are open 8am to 9pm seven days a week, with after-hours emergency service from 5pm to 9pm. Call (936) 331-1339 for any heating or cooling emergency.'
+        answer: 'Pinehurst is an easy run down FM 1774 from the Conroe and Magnolia area, so we can usually get to you the same day, whether the problem is a failed air conditioner or a furnace that will not start. We are open 8am to 9pm Monday through Saturday, with after-hours emergency service from 5pm to 9pm and emergency service available on Sundays. Call (936) 331-1339 for any heating or cooling emergency.'
       },
       {
         question: 'Do you offer financing for a new system in Pinehurst?',

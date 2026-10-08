@@ -326,7 +326,7 @@ const ShenandoahTX = () => {
               In Shenandoah a system failure rarely picks a convenient moment. It is a compressor
               going out in a Shenandoah Valley house on a Saturday afternoon, or a rooftop unit
               dropping out over a packed dining room at Metropark Square on a Friday night. We keep
-              the schedule open for both: 8am to 9pm, seven days a week, with after-hours emergency
+              the schedule open for both: 8am to 9pm, Monday through Saturday, with after-hours emergency
               dispatch from 5pm to 9pm, and a technician sent down I-45 the same day whenever we can
               manage it.
             </p>

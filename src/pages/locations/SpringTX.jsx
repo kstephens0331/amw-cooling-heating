@@ -231,7 +231,7 @@ const SpringTX = () => {
               Emergency HVAC Service in Spring
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-              Old equipment tends to pick the worst possible moment to quit, usually the hottest afternoon of the week, and we plan our schedule around that reality. We are open 8am to 9pm, seven days a week, with after-hours emergency coverage until 9pm, so if a Spring system goes down, get in touch and we will route a technician to you as quickly as the day allows.
+              Old equipment tends to pick the worst possible moment to quit, usually the hottest afternoon of the week, and we plan our schedule around that reality. We are open 8am to 9pm, Monday through Saturday, with after-hours emergency coverage until 9pm, so if a Spring system goes down, get in touch and we will route a technician to you as quickly as the day allows.
             </p>
 
             <h3 className="text-2xl font-bold text-blue-900 mt-8 mb-4 flex items-center gap-2">
