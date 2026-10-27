@@ -4,7 +4,7 @@
   "profileUrl": "https://www.google.com/maps?cid=14977632959753518383&hl=en",
   "averageRating": 5,
   "totalReviews": 85,
-  "scrapedAt": "2026-10-26T14:01:15.198Z",
+  "scrapedAt": "2026-10-27T14:01:13.005Z",
   "note": "Live aggregate and reviews pulled directly from AMW's Google Maps listing via scripts/scrape-google-reviews.js. Reviews are verbatim from Google (author names and text unchanged); reviews where the customer left only a star rating with no written text are omitted here. Re-run the scraper to refresh.",
   "reviews": [
     {
@@ -20,22 +20,22 @@
       "text": "Josh was amazing! I had an emergency with my A/C and he came right out. He was extremely professional and knowledgeable. I highly recommend AMW Cooling and Heating! I will definitely be signing up for the maintenance program. Love that this is a Veteran owned company. Thank you Josh!!"
     },
     {
-      "name": "Laura Carrillo",
-      "rating": 5,
-      "date": "2 months ago",
-      "text": "As we searched, we ended finding out that AMW Cooling and Heating, LLC was rated #2 on the top 10 list per CHAT GPT based on ratings. At this point we were without AC for a day already and just went out on a limb. Fortunately for us, we …"
-    },
-    {
-      "name": "Andy Keeton",
-      "rating": 5,
-      "date": "3 months ago",
-      "text": "Thank you all! Joshua with AMW just left. He was extremely helpful, knowledgeable, and took the time to actually show me what the issue was instead of trying to sell me something I didn’t need. …"
-    },
-    {
       "name": "Sam Cracraft",
       "rating": 5,
       "date": "4 months ago",
       "text": "Thanks to Josh and the team at AMW Cooling & Heating for get our HVAC system up and running like it never has. AMW did an awesome job of fine tunning our new system. We haven't had our AC working like it is now. Our system is saving us money each and every month. We love that!!"
+    },
+    {
+      "name": "Laura Carrillo",
+      "rating": 5,
+      "date": "3 months ago",
+      "text": "As we searched, we ended finding out that AMW Cooling and Heating, LLC was rated #2 on the top 10 list per CHAT GPT based on ratings. At this point we were without AC for a day already and just went out on a limb. Fortunately for us, we …"
+    },
+    {
+      "name": "Don Tollefson",
+      "rating": 5,
+      "date": "3 weeks ago",
+      "text": "Josh at AMW Cooling & Heating is prompt, personal and professional. He has handled our HVAC needs extremely well. We are exceptionally pleased and heartily recommend his service."
     }
   ]
 }
