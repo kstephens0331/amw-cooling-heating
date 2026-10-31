@@ -3,8 +3,8 @@
   "businessName": "AMW Cooling & Heating LLC",
   "profileUrl": "https://www.google.com/maps?cid=14977632959753518383&hl=en",
   "averageRating": 5,
-  "totalReviews": 85,
-  "scrapedAt": "2026-10-30T14:01:03.111Z",
+  "totalReviews": 86,
+  "scrapedAt": "2026-10-31T14:01:02.785Z",
   "note": "Live aggregate and reviews pulled directly from AMW's Google Maps listing via scripts/scrape-google-reviews.js. Reviews are verbatim from Google (author names and text unchanged); reviews where the customer left only a star rating with no written text are omitted here. Re-run the scraper to refresh.",
   "reviews": [
     {
@@ -34,7 +34,7 @@
     {
       "name": "Don Tollefson",
       "rating": 5,
-      "date": "3 weeks ago",
+      "date": "4 weeks ago",
       "text": "Josh at AMW Cooling & Heating is prompt, personal and professional. He has handled our HVAC needs extremely well. We are exceptionally pleased and heartily recommend his service."
     }
   ]
