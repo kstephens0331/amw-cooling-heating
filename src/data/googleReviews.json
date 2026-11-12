@@ -3,16 +3,10 @@
   "businessName": "AMW Cooling & Heating LLC",
   "profileUrl": "https://www.google.com/maps?cid=14977632959753518383&hl=en",
   "averageRating": 5,
-  "totalReviews": 86,
-  "scrapedAt": "2026-11-02T14:01:06.555Z",
+  "totalReviews": 87,
+  "scrapedAt": "2026-11-12T14:01:00.265Z",
   "note": "Live aggregate and reviews pulled directly from AMW's Google Maps listing via scripts/scrape-google-reviews.js. Reviews are verbatim from Google (author names and text unchanged); reviews where the customer left only a star rating with no written text are omitted here. Re-run the scraper to refresh.",
   "reviews": [
-    {
-      "name": "James Kent",
-      "rating": 5,
-      "date": "5 months ago",
-      "text": "I’ve been using this company for my AC maintenance and I can’t recommend them highly enough. From the first visit, it was clear I was dealing with someone genuinely honest — no upselling, no inventing problems that don’t exist, just …"
-    },
     {
       "name": "Kimberly Greenup",
       "rating": 5,
@@ -20,10 +14,16 @@
       "text": "Josh was amazing! I had an emergency with my A/C and he came right out. He was extremely professional and knowledgeable. I highly recommend AMW Cooling and Heating! I will definitely be signing up for the maintenance program. Love that this is a Veteran owned company. Thank you Josh!!"
     },
     {
-      "name": "Sam Cracraft",
+      "name": "James Kent",
       "rating": 5,
-      "date": "4 months ago",
-      "text": "Thanks to Josh and the team at AMW Cooling & Heating for get our HVAC system up and running like it never has. AMW did an awesome job of fine tunning our new system. We haven't had our AC working like it is now. Our system is saving us money each and every month. We love that!!"
+      "date": "5 months ago",
+      "text": "I’ve been using this company for my AC maintenance and I can’t recommend them highly enough. From the first visit, it was clear I was dealing with someone genuinely honest — no upselling, no inventing problems that don’t exist, just …"
+    },
+    {
+      "name": "K Mills",
+      "rating": 5,
+      "date": "a month ago",
+      "text": "Awesome company, awesome service. I was having issues with my dryer and knew it was airflow but the vents were not reachable by me. They kept me informed, showed up and did a great job. They educated me on what was going on and fixed it! Reasonable prices and I will use them going forward for all my HVAC needs."
     },
     {
       "name": "Laura Carrillo",
@@ -34,7 +34,7 @@
     {
       "name": "Don Tollefson",
       "rating": 5,
-      "date": "4 weeks ago",
+      "date": "a month ago",
       "text": "Josh at AMW Cooling & Heating is prompt, personal and professional. He has handled our HVAC needs extremely well. We are exceptionally pleased and heartily recommend his service."
     }
   ]
