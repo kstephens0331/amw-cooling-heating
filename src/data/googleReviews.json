@@ -4,15 +4,9 @@
   "profileUrl": "https://www.google.com/maps?cid=14977632959753518383&hl=en",
   "averageRating": 5,
   "totalReviews": 87,
-  "scrapedAt": "2026-11-12T14:01:00.265Z",
+  "scrapedAt": "2026-11-13T14:01:01.734Z",
   "note": "Live aggregate and reviews pulled directly from AMW's Google Maps listing via scripts/scrape-google-reviews.js. Reviews are verbatim from Google (author names and text unchanged); reviews where the customer left only a star rating with no written text are omitted here. Re-run the scraper to refresh.",
   "reviews": [
-    {
-      "name": "Kimberly Greenup",
-      "rating": 5,
-      "date": "3 months ago",
-      "text": "Josh was amazing! I had an emergency with my A/C and he came right out. He was extremely professional and knowledgeable. I highly recommend AMW Cooling and Heating! I will definitely be signing up for the maintenance program. Love that this is a Veteran owned company. Thank you Josh!!"
-    },
     {
       "name": "James Kent",
       "rating": 5,
@@ -30,6 +24,12 @@
       "rating": 5,
       "date": "3 months ago",
       "text": "As we searched, we ended finding out that AMW Cooling and Heating, LLC was rated #2 on the top 10 list per CHAT GPT based on ratings. At this point we were without AC for a day already and just went out on a limb. Fortunately for us, we …"
+    },
+    {
+      "name": "Kimberly Greenup",
+      "rating": 5,
+      "date": "3 months ago",
+      "text": "Josh was amazing! I had an emergency with my A/C and he came right out. He was extremely professional and knowledgeable. I highly recommend AMW Cooling and Heating! I will definitely be signing up for the maintenance program. Love that this is a Veteran owned company. Thank you Josh!!"
     },
     {
       "name": "Don Tollefson",
