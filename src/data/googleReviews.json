@@ -4,7 +4,7 @@
   "profileUrl": "https://www.google.com/maps?cid=14977632959753518383&hl=en",
   "averageRating": 5,
   "totalReviews": 87,
-  "scrapedAt": "2026-11-15T14:01:02.460Z",
+  "scrapedAt": "2026-11-16T14:00:59.884Z",
   "note": "Live aggregate and reviews pulled directly from AMW's Google Maps listing via scripts/scrape-google-reviews.js. Reviews are verbatim from Google (author names and text unchanged); reviews where the customer left only a star rating with no written text are omitted here. Re-run the scraper to refresh.",
   "reviews": [
     {
@@ -20,6 +20,12 @@
       "text": "Awesome company, awesome service. I was having issues with my dryer and knew it was airflow but the vents were not reachable by me. They kept me informed, showed up and did a great job. They educated me on what was going on and fixed it! Reasonable prices and I will use them going forward for all my HVAC needs."
     },
     {
+      "name": "Marlowe Wicks",
+      "rating": 5,
+      "date": "Edited 5 days ago",
+      "text": "Josh performed maintenance on our AC and Heating systems. He explained how the systems worked. His inspection identified opportunities for improvement to improve the distribution of air through the house. We decided to enter a maintenance …"
+    },
+    {
       "name": "Laura Carrillo",
       "rating": 5,
       "date": "3 months ago",
@@ -30,12 +36,6 @@
       "rating": 5,
       "date": "3 months ago",
       "text": "Josh was amazing! I had an emergency with my A/C and he came right out. He was extremely professional and knowledgeable. I highly recommend AMW Cooling and Heating! I will definitely be signing up for the maintenance program. Love that this is a Veteran owned company. Thank you Josh!!"
-    },
-    {
-      "name": "Don Tollefson",
-      "rating": 5,
-      "date": "a month ago",
-      "text": "Josh at AMW Cooling & Heating is prompt, personal and professional. He has handled our HVAC needs extremely well. We are exceptionally pleased and heartily recommend his service."
     }
   ]
 }
