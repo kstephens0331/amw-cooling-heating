@@ -4,7 +4,7 @@
   "profileUrl": "https://www.google.com/maps?cid=14977632959753518383&hl=en",
   "averageRating": 5,
   "totalReviews": 87,
-  "scrapedAt": "2026-11-17T14:01:03.371Z",
+  "scrapedAt": "2026-11-18T14:01:00.502Z",
   "note": "Live aggregate and reviews pulled directly from AMW's Google Maps listing via scripts/scrape-google-reviews.js. Reviews are verbatim from Google (author names and text unchanged); reviews where the customer left only a star rating with no written text are omitted here. Re-run the scraper to refresh.",
   "reviews": [
     {
@@ -22,7 +22,7 @@
     {
       "name": "Marlowe Wicks",
       "rating": 5,
-      "date": "Edited 6 days ago",
+      "date": "Edited a week ago",
       "text": "Josh performed maintenance on our AC and Heating systems. He explained how the systems worked. His inspection identified opportunities for improvement to improve the distribution of air through the house. We decided to enter a maintenance …"
     },
     {
