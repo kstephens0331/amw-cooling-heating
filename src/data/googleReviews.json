@@ -4,7 +4,7 @@
   "profileUrl": "https://www.google.com/maps?cid=14977632959753518383&hl=en",
   "averageRating": 5,
   "totalReviews": 87,
-  "scrapedAt": "2026-11-19T14:01:13.475Z",
+  "scrapedAt": "2026-11-20T14:01:15.966Z",
   "note": "Live aggregate and reviews pulled directly from AMW's Google Maps listing via scripts/scrape-google-reviews.js. Reviews are verbatim from Google (author names and text unchanged); reviews where the customer left only a star rating with no written text are omitted here. Re-run the scraper to refresh.",
   "reviews": [
     {
@@ -16,7 +16,7 @@
     {
       "name": "K Mills",
       "rating": 5,
-      "date": "a month ago",
+      "date": "2 months ago",
       "text": "Awesome company, awesome service. I was having issues with my dryer and knew it was airflow but the vents were not reachable by me. They kept me informed, showed up and did a great job. They educated me on what was going on and fixed it! Reasonable prices and I will use them going forward for all my HVAC needs."
     },
     {
